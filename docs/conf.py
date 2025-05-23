@@ -22,10 +22,8 @@ import yaml
 #######################
 
 # Project name
-#
-# TODO: Update with the official name of your project or product
 
-project = "Documentation starter pack"
+project = "Ubuntu Desktop"
 author = "Canonical Ltd."
 
 
