@@ -7,4 +7,6 @@ maintaining, and contributing to the starter pack.
 :maxdepth: 1
 
 log-in-using-a-smart-card
+
+enable-smart-cards-in-snapped-browsers
 :::

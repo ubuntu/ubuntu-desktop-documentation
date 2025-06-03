@@ -1,3 +1,4 @@
+(log-in-using-a-smart-card)=
 # Log in using a smart card
 
 <!--
@@ -16,7 +17,7 @@ You'll learn how to configure smart card authentication in the SSSD authenticati
 If you want to use your smart card in a different way:
 
 - To enable smart cards on a **server**, see [Smart card authentication](https://documentation.ubuntu.com/server/security-smart-cards/) in the Ubuntu Server documentation.
-- To sign content in the **web browser** with your smart card, see [Enable smart cards in snapped browsers](https://ubuntu.com/tutorials/enable-smart-cards-in-snapped-browsers).
+- To sign content in the **web browser** with your smart card, see {ref}`enable-smart-cards-in-snapped-browsers`.
 
 ### What you'll learn
 
