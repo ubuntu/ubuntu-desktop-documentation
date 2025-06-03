@@ -9,6 +9,7 @@ fonts
 freefont
 FreeIPA
 github
+GDM
 GPG
 GSettings
 gyre
@@ -21,6 +22,7 @@ latexmk
 LDAP
 lockdown
 Multipass
+NSS
 OpenSC
 OpenSSL
 otf
@@ -32,6 +34,7 @@ QEMU
 Rockcraft
 rst
 SSSD
+SSSD’s
 SVG
 tex
 texlive
@@ -47,4 +50,5 @@ whitespaces
 wordlist
 xetex
 xindy
-Yubikey
+YubiKey
+

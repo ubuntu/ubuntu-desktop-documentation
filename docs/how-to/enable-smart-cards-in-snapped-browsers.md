@@ -145,7 +145,7 @@ Did it work? If not:
 
 ### Report any bugs
 
-* If your card is supported by OpenSC and you encounter an issue with the workflow, please add your comment to [Opensc smart cards do not work in the snapped browsers (LP#2089141)](https://launchpad.net/bugs/2089141).
+* If your card is supported by OpenSC and you encounter an issue with the workflow, please add your comment to [OpenSC smart cards do not work in the snapped browsers (LP#2089141)](https://launchpad.net/bugs/2089141).
 
 * If you provided a proprietary smart card driver, it might not work for a variety of reasons. Please file a new issue at [Launchpad Bugs](https://launchpad.net/bugs).
 
@@ -161,5 +161,5 @@ Did it work? If not:
 
 ### Additional resources
 
-This tutorial connects the `pcscd` smart card plug to the web browser snap. For details about `pcscd`, see [The pcscd interface](https://snapcraft.io/docs/pcscd-interface).
+This tutorial connects the `pcscd` smart card plug to the web browser snap. For details about `pcscd`, see [The `pcscd` interface](https://snapcraft.io/docs/pcscd-interface).
 
