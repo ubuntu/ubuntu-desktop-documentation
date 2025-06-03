@@ -35,6 +35,7 @@ Rockcraft
 rst
 SSSD
 SSSD’s
+SSSD's
 SVG
 tex
 texlive
