@@ -152,7 +152,7 @@ You can check this:
 
 ### Disclaimer
 
-SSSD is the default authentication daemon in Ubuntu it and supports various identity managers. Configuring them (such as FreeIPA, LDAP, Kerberos and others) is out the scope of this guide, but you can refer to [`man sssd.conf`](https://manpages.ubuntu.com/manpages/jammy/en/man5/sssd.conf.5.html) and [SSSD official documentation](https://sssd.io/docs/introduction.html) for further reference on the topic.
+SSSD is the default authentication daemon in Ubuntu it and supports various identity managers. Configuring them (such as FreeIPA, LDAP, Kerberos and others) is out the scope of this guide, but you can refer to [`man sssd.conf`](https://manpages.ubuntu.com/manpages/noble/en/man5/sssd.conf.5.html) and [SSSD official documentation](https://sssd.io/docs/introduction.html) for further reference on the topic.
 
 For the purpose of this guide, we're going to show how SSSD should be configured for local user access, that is still something useful to enhance the security of a desktop computer, so that the user login is protected by a stronger authentication mechanism.
 
@@ -344,7 +344,7 @@ pam_cert_auth = True
 ```
 
 In general what's in the configuration file will affect the way SSSD will call the `p11_child` tool (that is the one in charge for the actual authentication).
-Check [`man sssd.conf`](https://manpages.ubuntu.com/manpages/jammy/en/man5/sssd.conf.5.html) for details.
+Check [`man sssd.conf`](https://manpages.ubuntu.com/manpages/noble/en/man5/sssd.conf.5.html) for details.
 
 Every time the configuration is changed SSSD should be restarted (`systemctl restart sssd`).
 
@@ -399,7 +399,7 @@ sudo -u gdm env DCONF_PROFILE=gdm gsettings set org.gnome.login-screen enable-sm
 These GSettings can be locked for users so that for example it's possible to use smart cards only to login but they are disabled for unlock, or to ensure that user can't disable smart card authentication for unlocking.
 
 :::{note}
-This is done through the GNOME `dconf` locking system. You can read more about this at [`man dconf.7`](https://manpages.ubuntu.com/manpages/jammy/en/man7/dconf.7.html) or in the [GNOME documentation](https://help.gnome.org/admin/system-admin-guide/stable/dconf-lockdown.html.en).
+This is done through the GNOME `dconf` locking system. You can read more about this at [`man dconf.7`](https://manpages.ubuntu.com/manpages/noble/en/man7/dconf.7.html) or in the [GNOME documentation](https://help.gnome.org/admin/system-admin-guide/stable/dconf-lockdown.html.en).
 :::
 
 An example to configure it could be:
@@ -524,7 +524,7 @@ Valid values are `none`, `lock-screen` or `force-logout`.
 This value can be locked down at user level by system administrators
 
 :::{note}
-This is done through the GNOME `dconf` locking system. You can read more about this at [`man dconf.7`](https://manpages.ubuntu.com/manpages/jammy/en/man7/dconf.7.html) or in the [GNOME documentation](https://help.gnome.org/admin/system-admin-guide/stable/dconf-lockdown.html.en).
+This is done through the GNOME `dconf` locking system. You can read more about this at [`man dconf.7`](https://manpages.ubuntu.com/manpages/noble/en/man7/dconf.7.html) or in the [GNOME documentation](https://help.gnome.org/admin/system-admin-guide/stable/dconf-lockdown.html.en).
 :::
 
 In particular an example could be:
