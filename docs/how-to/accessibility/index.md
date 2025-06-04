@@ -10,5 +10,7 @@ read-screen-aloud
 read-screen-in-braille
 adjust-the-contrast
 change-text-size-on-the-screen
+magnify-a-screen-area
+make-the-keyboard-cursor-blink
 :::
 

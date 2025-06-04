@@ -12,12 +12,9 @@ To start Orca using the keyboard, press {kbd}`Super+Alt+S`.
 Or to start Orca using a mouse and keyboard:
 
 1. Open the Activities overview and start typing **accessibility**.
-
 2. Click {guilabel}`Accessibility` to open the panel.
-
-3. Select the {guilabel}`Seeing` section to open it.
-
-4. Enable the {guilabel}`Screen Reader` switch.
+3. Open the {guilabel}`Seeing` section.
+4. Enable the {guilabel}`Screen Reader` option.
 
 :::{tip}
 You can turn Screen Reader on and off by clicking the {ref}`accessibility icon <find-the-accessibility-menu>` in the top bar and selecting {guilabel}`Screen Reader`.
