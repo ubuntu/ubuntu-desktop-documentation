@@ -3,7 +3,9 @@
 
 The *accessibility menu* is where you can turn on some of the accessibility settings. You can find this menu by clicking the icon which looks like a person on the top bar.
 
+<!--
 ![The accessibility menu can be found on the top bar.](person.png)
+-->
 
 If you do not see the accessibility menu, you can enable it from the Accessibility settings panel:
 
