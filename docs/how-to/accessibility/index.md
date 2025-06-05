@@ -18,5 +18,6 @@ click-and-move-the-mouse-pointer-using-the-keypad
 adjust-the-double-click-speed
 simulate-a-right-mouse-click
 simulate-clicking-by-hovering
+keyboard-navigation
 :::
 
