@@ -11,7 +11,7 @@ If you cannot use a pointing device like a mouse, you can control the mouse poin
 
 :::{list-table}
    :header-rows: 1
-   :widths: 1 3
+   :widths: 1 2
 
 * - Keys
   - Action
@@ -53,7 +53,8 @@ If you cannot use a pointing device like a mouse, you can control the mouse poin
 * - {kbd}`Ctrl+F10`
   - In the file manager, pop up the context menu for the current folder, as if you had right-clicked on the background and not on any item.
 
-* - {kbd}`Ctrl+PageUp` and {kbd}`Ctrl+PageDown`
+* - {kbd}`Ctrl+PageUp` and\
+    {kbd}`Ctrl+PageDown`
   - In a tabbed interface, switch to the tab to the left or right.
 :::
 
@@ -61,7 +62,7 @@ If you cannot use a pointing device like a mouse, you can control the mouse poin
 
 :::{list-table}
    :header-rows: 1
-   :widths: 1 3
+   :widths: 1 2
 
 * - Keys
   - Action
@@ -71,7 +72,75 @@ If you cannot use a pointing device like a mouse, you can control the mouse poin
 
 * - {kbd}`Super+Tab`
   - Quickly switch between windows. Hold down {kbd}`Shift` for reverse order.
+
+* - ```{eval-rst}
+    :kbd:`Super+``
+    ```
+  - Switch between windows from the same application, or from the selected application after {kbd}`Super+Tab`.
+
+    This shortcut uses **\`** on US keyboards, where the **\`** key is above {kbd}`Tab`. On all other keyboards, the shortcut is {kbd}`Super` plus the key above {kbd}`Tab`.
+
+* - {kbd}`Ctrl+Alt+Tab`
+  - Give keyboard focus to the top bar. In the Activities overview, switch keyboard focus between the top bar, dash, windows overview, applications list, and search field. Use the arrow keys to navigate.
+
+* - {kbd}`Super+Page Up` and\
+    {kbd}`Super+Page Down`
+  - Switch between workspaces.
+
+* - {kbd}`Alt+F6`
+  - Cycle through windows in the same application. Hold down the {kbd}`Alt` key and press {kbd}`F6` until the window you want is highlighted, then release {kbd}`Alt`. This is similar to the {kbd}`Alt`+**\`** feature.
+
+* - {kbd}`Alt+Esc`
+  - Cycle through all open windows on a workspace.
+
+* - {kbd}`Super+V`
+  - Open the notification list. Press {kbd}`Esc` to close.
 :::
 
+## Navigate windows
 
+:::{list-table}
+   :header-rows: 1
+   :widths: 1 2
+
+* - Keys
+  - Action
+
+* - {kbd}`Alt+F4`
+  - Close the current window.
+
+* - {kbd}`Alt+F5` or {kbd}`Super+↓`
+  - Restore a maximized window to its original size. Use {kbd}`Alt+F10` to maximize. {kbd}`Alt+F10` both maximizes and restores.
+
+* - {kbd}`Alt+F7`
+  - Move the current window. Press {kbd}`Alt+F7`, then use the arrow keys to move the window. Press {kbd}`Enter` to finish moving the window, or {kbd}`Esc` to return it to its original place.
+
+* - {kbd}`Alt+F8`
+  - Resize the current window. Press {kbd}`Alt+F8`, then use the arrow keys to resize the window. Press {kbd}`Enter` to finish resizing the window, or {kbd}`Esc` to return it to its original size.
+
+* - {kbd}`Shift+Super+Page Up` and\
+    {kbd}`Shift+Super+Page Down`
+  - Move the current window to a different workspace.
+
+* - {kbd}`Shift+Super+←`
+  - Move the current window one monitor to the left.
+
+* - {kbd}`Shift+Super+→`
+  - Move the current window one monitor to the right.
+
+* - {kbd}`Alt+F10` or {kbd}`Super+↑`
+  - Maximize a window. Press {kbd}`Alt+F10` or {kbd}`Super+↓` to restore a maximized window to its original size.
+
+* - {kbd}`Super+H`
+  - Minimize a window.
+
+* - {kbd}`Super+←`
+  - Maximize a window vertically along the left side of the screen. Press again to restore the window to its previous size. Press {kbd}`Super+→` to switch sides.
+
+* - {kbd}`Super+→`
+  - Maximize a window vertically along the right side of the screen. Press again to restore the window to its previous size. Press {kbd}`Super+←` to switch sides.
+
+* - {kbd}`Alt+Space`
+  - Pop up the window menu, as if you had right-clicked on the titlebar.
+:::
 
