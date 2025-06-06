@@ -19,5 +19,10 @@ adjust-the-double-click-speed
 simulate-a-right-mouse-click
 simulate-clicking-by-hovering
 keyboard-navigation
+manage-repeated-key-presses
+turn-on-bounce-keys
+turn-on-slow-keys
+turn-on-sticky-keys
+use-an-on-screen-keyboard
 :::
 
