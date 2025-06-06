@@ -11,6 +11,7 @@ Line 2
 Tutorials </tutorial/index>
 How-to guides </how-to/index>
 Reference </reference/index>
+Explanation </explanation/index>
 :::
 
 ## In this documentation
@@ -39,5 +40,12 @@ Reference </reference/index>
 :link-type: doc
 
 **Technical information** - understand the automatic checks and Sphinx capabilities.
+:::
+
+:::{grid-item-card} Explanation
+:link: /explanation/index
+:link-type: doc
+
+TODO
 :::
 ::::
