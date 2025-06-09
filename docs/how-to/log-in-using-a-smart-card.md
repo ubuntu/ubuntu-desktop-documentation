@@ -364,7 +364,7 @@ The `gdm-smartcard` PAM configuration implementation can be selected just runnin
 
 Using this PAM configuration smart card access will be the sole method to login.
 
-This is the default configuration, but we document it it for completeness:
+This is the default configuration, but we document it for completeness:
 
 ```bash
 update-alternatives --set gdm-smartcard /etc/pam.d/gdm-smartcard-sssd-exclusive 
