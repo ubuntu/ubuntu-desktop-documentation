@@ -71,7 +71,7 @@ The Orca screen reader can display the user interface on a refreshable Braille d
 
 7. Click {guilabel}`OK` to confirm.
 
-8. Connect your Braille device to the system.
+8. Connect your Braille device to the system over USB, serial port or Bluetooth.
 
 ## Read a document in a different language
 
@@ -128,3 +128,21 @@ For an explanation of the Orca Braille settings, see [Braille Preferences](https
 
 ## Troubleshooting
 
+If your Braille devices isn't detected, try the following options.
+
+* Manually set the driver for your Braille device:
+
+    1. In the `/etc/brltty.conf` file, find the `braille-driver` directive.
+    2. Uncomment the line that lists your Braille device driver.
+
+* Manually set the connection method:
+
+
+    1. In the `/etc/brltty.conf` file, find the `braille-device` directive.
+    2. Uncomment the line that matches your connection method.
+
+        For example, to connect to the first paired Bluetooth device that matches your Braille driver, use the following line:
+
+        ```text
+        braille-device bluetooth:
+        ```
