@@ -9,5 +9,5 @@ Contents
 .. toctree::
    :maxdepth: 1
 
+   accessibility/index
    keyboard-navigation-shortcuts
-

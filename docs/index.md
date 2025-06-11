@@ -10,6 +10,7 @@ Line 2
 
 Tutorials </tutorial/index>
 How-to guides </how-to/index>
+Explanation </explanation/index>
 Reference </reference/index>
 Explanation </explanation/index>
 :::
@@ -49,3 +50,8 @@ Explanation </explanation/index>
 TODO
 :::
 ::::
+
+
+* **Accessibility**: [Accessible features in Desktop](how-to/accessibility/index.md) | [Accessibility stack](explanation/accessibility-architecture.md) 
+
+
