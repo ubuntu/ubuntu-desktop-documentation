@@ -1,0 +1,26 @@
+name: Vale documentation checks
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    paths:
+      - 'docs/**'   # Only run on changes to the docs directory
+
+  workflow_dispatch:
+    # Manual trigger
+
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  vale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: errata-ai/vale-action@v2.1.1
+    with:
+      working-directory: "docs"
+      fetch-depth: 0
