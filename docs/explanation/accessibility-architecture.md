@@ -6,48 +6,82 @@
 
 The Assistive Technology Service Provider Interface (AT-SPI) is a platform-neutral framework for bi-directional communication between assistive technologies (AT) and applications. 
 
-AT-SPI defines a set of interfaces which specify assistive technologies can get names, roles, states of interface objects, listen for events, or perform actions. 
+AT-SPI defines a set of interfaces for assistive technologies which allow to get names, roles and states of interface objects, listen for events, or perform actions. 
 
-AT-SPI uses D-Bus method calls and signals. D-Bus is an inter-process communication system in Linux which makes AT-SPI a default accessibility framework for distributions that use D-Bus.  
+AT-SPI uses D-Bus method calls and signals. D-Bus is an inter-process communication system in Linux, which makes AT-SPI a default accessibility framework for Linux.  
 
 AT-SPI is made of two components:
 
 * ``at-spi2-core``: a collection of XML interfaces for accessibility
-* ``at-spi2-atk``: a library that allows application made with GTK to register accessible objects with AT-SPI
+* ``at-spi2-atk``: a library that allows applications made with GTK 3 to register accessible objects with AT-SPI
 
-If you are building custom assistive technology tools or want to test accessibility of custom applications that were not built with GTK on Ubuntu Desktop, you must use [AT-SPI DBus XML Interfaces](../reference/accessibility/dbus/index.rst)
-
-### GTK3 and ATK 
-
-GTK is a cross-platform widget toolkit for creating graphical user interface, it is a set of user interface elements that allows developers to build apps quickly and in a consistent manner. The majority of applications within GNOME desktop environment are built with GTK.
-
-GTK3 version of the toolkit integrates with Accessibility Toolkit (ATK). Applications built with GTK3 expose the information about the UI objects using accessibility Accessibility Toolkit (ATK). ATK is an application programming interface which allows developers to avoid having to work with AT-SPI API directly as it provides a set of special input methods. 
+If you are building custom assistive technology tools or want to test the accessibility of custom applications that were not built with GTK on Ubuntu Desktop, you must use [AT-SPI DBus XML Interfaces](../reference/accessibility/dbus/index.rst)
 
 ### GTK4 and Gtk.Accessible
 
 GTK4 is a newer version of GTK that *does not* integrate with ATK. Instead, GTK4 implements its own [Gtk.Accessible](https://docs.gtk.org/gtk4/iface.Accessible.html) interface.
 
-If you are buildng an application for Ubuntu Desktop and want to make it accessible for Ubuntu Desktop's default assistive technologies such as Orca, it is recommended that you use GTK. Desktop's assistive solutions are able to access information about the apps built with both GTK3 and GTK4.
+If you are building an application for Ubuntu Desktop and want to make it accessible for Ubuntu Desktop's default assistive technologies such as Orca, it is recommended that you use GTK. Desktop's assistive solutions are able to access information about the apps built with both GTK3 and GTK4.
 
-If you are using a different UI toolkit, you must ensure it implements the AT-SPI D-Bus interfaces, otherwise Desktop's assistive technologies wouldn't be able to interact with it. 
+If you are using a different UI toolkit, you must ensure it implements the AT-SPI D-Bus interfaces; otherwise, Desktop's assistive technologies wouldn't be able to interact with it. 
+
+### GTK3 and ATK 
+
+GTK is a cross-platform widget toolkit for creating graphical user interfaces. It offers a set of user interface elements that allow developers to build apps quickly and in a consistent manner. The majority of applications within GNOME desktop environment are built with GTK.       
+
+GGTK3 version of the toolkit integrates with Accessibility Toolkit (ATK). Applications built with GTK3 expose information about UI objects using the ATK. ATK is an Application Programming Interface (API) that allows developers to avoid working  with AT-SPI API directly, as it provides a set of special input methods. 
 
 ### Flutter
 
-A small selection of applications on Ubuntu Desktop is built with Flutter.
+A small selection of applications on Ubuntu Desktop are built with Flutter.
 
 ### Overview of Ubuntu Desktop applications and their interfaces
 
 | Application              | Built with    | API                                                                |
 | ------------------------ | ------------- | ------------------------------------------------------------------ |
 | Gnome Initial Setup      | GTK4          | [Gtk.Accessible](https://docs.gtk.org/gtk4/iface.Accessible.html)  |        
-| Login and Lock screens   | ?             | ? |
-| System Settings app      | ?             | ? |
-| App Store                | ?             | ? |
-| Software and Updates     | ?             | ? |
+| Login and Lock screens   | GTK3          | [ATK](https://docs.gtk.org/atk/) |
+| System Settings app      | GTK4          | [Gtk.Accessible](https://docs.gtk.org/gtk4/iface.Accessible.html) |
+| App Store                | Flutter       | ? |
+| Software and Updates     | GTK3          | [ATK](https://docs.gtk.org/atk/) |
 
 
 ## Hardware interfaces for assistive technologies
 
-### USB HID
-### Bluetooth HID 
-### Sound output interface
+### USB 
+
+Ubuntu Desktop supports USB out of the box. 
+
+In Ubuntu, kernel USB drivers handle communications with USB devices such as, for example, ``usbhid`` which provides support for USB Human Interface Devices (HID) class. Kernel supports all [standard USB classes](https://www.usb.org/defined-class-codes).
+
+``udev`` is a device manager in Ubuntu that detects, adds and removed devices. ``udev`` stores the information about detected USB devices in the ``/dev`` directory.
+
+If your device conforms to a USB class, it will be assigned a /dev entry and recognized correctly.
+
+#### USB device requirements
+
+You can use USB to connect assistive devices for input/output such as Braille displays, sip-and-puff, foot pedals.
+
+To be able to work on Ubuntu properly, a USB device must:
+
+* use a standard USB class 
+* provide a proper USB descriptor so that Ubuntu can identify it
+* not require proprietary drivers
+
+If the device uses a custom class, it must provide a ``udev`` .rules file instead so that Ubuntu can identify it correctly, see [udev documentation](https://www.man7.org/linux/man-pages/man7/udev.7.html) 
+
+### Bluetooth 
+
+Ubuntu Desktop supports Bluetooth out of the box. [BlueZ](https://www.bluez.org/) is the official Bluetooth stack for Linux distributions, including Ubuntu Desktop.
+
+BlueZ implements various Bluetooth profiles such as HID, A2DP, HFP, SPP, and others. See [BlueZ supported profiles](https://www.bluez.org/profiles/). If a device is compliant with one of the supported profiles, BlueZ automatically detects, pairs, and exposes it as an input device on Linux. 
+
+#### Bluetooth device requirements
+
+You can use Bluetooth to connect wireless assistive devices such as switch control devices or head trackers.
+
+To be able to work on Ubuntu properly, a Bluetooth device must:
+
+* use HID for input devices 
+* use A2DP/HFP for audio output
+

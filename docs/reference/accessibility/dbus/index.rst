@@ -1,4 +1,4 @@
-AT-SPI DBus XML Interfaces
+AT-SPI DBus XML interfaces
 ==========================
 
 .. toctree::
