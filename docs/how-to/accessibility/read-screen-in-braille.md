@@ -93,5 +93,38 @@ If you're reading a document in a language different than your system language, 
     text-table	it
     ```
 
+## Configure the Braille screen reader
+
+You can configure how Orca presents information on the Braille display.
+
+1. Open Orca preferences:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock+Space`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`Insert+Space`
+    :::
+
+    :::{tab-item} Command
+    :sync: orca-command
+
+    ```bash
+    orca -s
+    ```
+    :::
+    ::::
+
+2. Go to the {guilabel}`Braille` tab.
+
+For an explanation of the Orca Braille settings, see [Braille Preferences](https://help.gnome.org/users/orca/stable/preferences_braille.html.en) in the Orca documentation.
+
+
 ## Troubleshooting
 
