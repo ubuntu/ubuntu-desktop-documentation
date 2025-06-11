@@ -21,6 +21,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: errata-ai/vale-action@v2.1.1
-    with:
-      working-directory: "docs"
-      fetch-depth: 0
+        with:
+          working-directory: "docs"
+          fetch-depth: 0
