@@ -29,7 +29,7 @@ Explanation </explanation/index>
 :link: /how-to/index
 :link-type: doc
 
-**Step-by-step guides** - learn key operations and customisation.
+**Step-by-step guides** - learn key operations and customization.
 :::
 ::::
 

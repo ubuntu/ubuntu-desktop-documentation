@@ -45,7 +45,7 @@ If you cannot use a pointing device like a mouse, you can control the mouse poin
   - Exit a menu, popup, switcher, or dialog window.
 
 * - {kbd}`F10`
-  - Open the first menu on the menubar of a window. Use the arrow keys to navigate the menus.
+  - Open the first menu on the menu bar of a window. Use the arrow keys to navigate the menus.
 
 * - {kbd}`Shift+F10` or {kbd}`Menu`
   - Pop up the context menu for the current selection, as if you had right-clicked.
@@ -141,6 +141,6 @@ If you cannot use a pointing device like a mouse, you can control the mouse poin
   - Maximize a window vertically along the right side of the screen. Press again to restore the window to its previous size. Press {kbd}`Super+←` to switch sides.
 
 * - {kbd}`Alt+Space`
-  - Pop up the window menu, as if you had right-clicked on the titlebar.
+  - Pop up the window menu, as if you had right-clicked on the title bar.
 :::
 

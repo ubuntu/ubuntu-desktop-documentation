@@ -5,6 +5,8 @@ BRLTTY
 CapsLock
 Charmcraft
 cjk
+crosshair
+crosshairs
 Ctrl
 cryptographically
 dvipng
@@ -41,6 +43,7 @@ plantuml
 PNG
 Pygments
 QEMU
+refreshable
 Rockcraft
 rst
 SSSD
@@ -53,6 +56,7 @@ TOC
 toctree
 touchpad
 txt
+uncomment
 uncommenting
 utils
 VMs
@@ -60,6 +64,8 @@ WCAG
 whitespace
 whitespaces
 wordlist
+workspace
+workspaces
 xetex
 xindy
 YubiKey
