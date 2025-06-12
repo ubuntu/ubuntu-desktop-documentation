@@ -3,11 +3,7 @@
 
 You can navigate the Ubuntu Desktop interface without a mouse, touchpad or another pointing device, using only the keyboard. This is necessary for visually impaired users who are using the screen reader, also known as Orca. However, any Desktop user can use keyboard navigation.
 
-## Launch applications
-
-GNOME has multiple ways to launch applications using the keyboard. 
-
-### Launch applications using Activities
+## Launch applications using Activities
 
 1. Press the {kbd}`Super` key on your keyboard, otherwise known as the Windows key.
 
@@ -22,7 +18,7 @@ GNOME has multiple ways to launch applications using the keyboard.
 3. You can use {kbd}`Tab` or the arrow keys to browse the search results and find what you are looking for.
 
 
-### Launch applications using the dash
+## Launch applications using the dash
 
 The dash is the panel on the left side of the screen that contains application launchers, removable media and other icons. It's also known as the dock. You can control it using the keyboard.
 
@@ -40,9 +36,8 @@ The dash is the panel on the left side of the screen that contains application l
 If you know the position of the application in the dash, you can activate it by pressing {kbd}`Super+Number`.
 :::
 
-## Switch between applications
 
-### Switch between applications using the application switcher
+## Switch between applications using the application switcher
 
 1. Press {kbd}`Super+Tab`.
 
@@ -56,7 +51,8 @@ If you know the position of the application in the dash, you can activate it by 
 
 4. To activate the application, release {kbd}`Super`.
 
-### Switch between applications using the dash
+
+## Switch between applications using the dash
 
 1. Activate the dash interface using {kbd}`Ctrl+Alt+Tab`.
 2. Select an application using the arrow keys or {kbd}`Tab`.
@@ -75,15 +71,38 @@ If you know the position of the application in the dash, you can activate it by 
 
     If an application is running but it isn't pinned to the dash, you can add it by selecting {guilabel}`Pin to Dash`.
 
-## Navigate application menus and system indicators
 
-Most applications that are used in Ubuntu have a menu bar. The menu bar allows you to access many different functions of an application. There are 2 ways to get to the menus and menu items. If you know the shortcut for a particular menu in question, you can press and hold the Alt key, and then press the letter for the mnu in question. For example, if you want to access the file menu of an application, you would hold Alt, and press F. If you don't know what menus are available, and wish to browse the available menus and items, you can press Alt + F10 to get to the menu bar. You will be moved to the first menu in the menu bar. For most applications, this is likely File, or something similar. Use the down and up arrow keys to browse the currently opened menu, and use the left and right arrows to move between menus.
+## Navigate application menus
 
-System indicators are used to display useful information to the user, such as current date and time, network connection status, sound, and much more. The system indicators share the same menu bar as application menus, so it is possible to navigate to them using the keyboard. As per above, you access the menu bar with Alt + F10, and navigate through the menus using the arrow keys. To navigate directly to the system indicators, press the left arrow key after pressing Alt + F10. This will move you to the system menu, which allows you to access system settings, shut down, restart, or lock your screen. Other indicators such as network, report your current network connection status, and allow you to connect to any available wireless network.
+Some applications such as LibreOffice have a menu bar. The menu bar enables you to access different functions of the application. You can access items in the menu bar using the following ways:
+
+* If you know the shortcut for the menu item, press {kbd}`Alt` + the letter for the menu item.
+
+    For example, if you want to access the {guilabel}`File` menu of an application, press {kbd}`Alt+F`.
+
+* If you don't know the menu shortcut, browse the available menus and items.
+
+    Press {kbd}`Alt+F10` to open the menu bar. Use {kbd}`↑` and {kbd}`↓` to browse the current menu, and use {kbd}`←` and {kbd}`→` to move between menus.
+
 
 ## Navigate the panel
 
-Like Unity, GNOME shell also has a top panel that lets you access some application menus, system settings and network configuration. To access the top panel, press and hold Control + Alt, and press the tab key until you hear Orca announce "Top Bar". Release Control and Alt, and use the arrow keys to navigate the items on the top panel. Press enter to open a menu, and use arrow to move through the available options. To return to an application, switch apps as per the documentation above.
+The top panel contains the clock, app indicators, system settings and network configuration. You can access it using the keyboard:
+
+1. Press {kbd}`Ctrl+Alt+Tab` to cycle through the user interface elements.
+2. Select {guilabel}`Top Bar`.
+3. Use {kbd}`Tab` or the arrow keys to navigate the items on the top panel.
+4. Press {kbd}`Enter` to open a menu.
+5. Use {kbd}`Tab` to move through the menu options.
+
+    :::{note}
+    Depending on the menu layout, you can also browse it using the arrow keys.
+
+    However, in certain menus such as the System Menu, the items are arranged from the top to the bottom, and also from the left to the right. You can only use the arrow keys if you can visually see the elements and know their relative positions.
+    :::
+
+6. To return to applications, press {kbd}`Super+Tab`.
+
 
 ## Additional resources
 
