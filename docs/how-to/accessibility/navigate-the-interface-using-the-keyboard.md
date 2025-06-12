@@ -1,17 +1,25 @@
 (navigate-the-interface-using-the-keyboard)=
 # Navigate the interface using the keyboard
 
+You can navigate the Ubuntu Desktop interface without a mouse, touchpad or another pointing device, using only the keyboard. This is necessary for visually impaired users who are using the screen reader, also known as Orca. However, any Desktop user can use keyboard navigation.
+
 ## Launch applications
 
 GNOME has multiple ways to launch applications using the keyboard. 
 
 ### Launch applications using Activities
 
-The quickest way is to press the Super key on your keyboard, otherwise known as the Windows key. You will then be placed in a search text field where you can start typing keywords to find the application you are looking for. Terms such as "web browser" or "email" should help you find useful apps for browsing the web such as Firefox and Thunderbird.
+1. Press the {kbd}`Super` key on your keyboard, otherwise known as the Windows key.
 
-GNOME
+    The Activities overview opens, although Orca doesn't announce it.
 
-The most prominent being searching for and activating apps from the search results. To search for and launch an application, press the Super key, aka the Windows key. Orca will announce "Window", although no more information is given. You can then start typing the app name or keywords to find he app you are looking for. As you type, Orca will announce the first result that appears. Once you have entered your search terms, you can then use the arrow keys to find what you are looking for.
+2. Start typing keywords to find the application that you are looking for.
+
+    For example, terms such as *web browser* or *email* help you find applications for browsing the web such as Firefox and Thunderbird.
+
+    As you type each letter, Orca announces the first available search result.
+
+3. You can use {kbd}`Tab` or the arrow keys to browse the search results and find what you are looking for.
 
 
 ### Launch applications using the dock
@@ -42,9 +50,7 @@ Most applications that are used in Ubuntu have a menu bar. The menu bar allows y
 
 System indicators are used to display useful information to the user, such as current date and time, network connection status, sound, and much more. The system indicators share the same menu bar as application menus, so it is possible to navigate to them using the keyboard. As per above, you access the menu bar with Alt + F10, and navigate through the menus using the arrow keys. To navigate directly to the system indicators, press the left arrow key after pressing Alt + F10. This will move you to the system menu, which allows you to access system settings, shut down, restart, or lock your screen. Other indicators such as network, report your current network connection status, and allow you to connect to any available wireless network.
 
-## GNOME
-
-### navigating the panel
+## Navigate the panel
 
 Like Unity, GNOME shell also has a top panel that lets you access some application menus, system settings and network configuration. To access the top panel, press and hold Control + Alt, and press the tab key until you hear Orca announce "Top Bar". Release Control and Alt, and use the arrow keys to navigate the items on the top panel. Press enter to open a menu, and use arrow to move through the available options. To return to an application, switch apps as per the documentation above.
 
