@@ -69,6 +69,7 @@ simulate-clicking-by-hovering
 :::{toctree}
 :maxdepth: 2
 
+navigate-the-interface-using-the-keyboard
 manage-repeated-key-presses
 turn-on-bounce-keys
 turn-on-slow-keys
