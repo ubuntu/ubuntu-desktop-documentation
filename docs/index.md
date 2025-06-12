@@ -51,6 +51,6 @@ TODO
 ::::
 
 
-* **Accessibility**: [Accessible features in Desktop](how-to/accessibility/index.md) | [Accessibility stack](explanation/accessibility-architecture.md) 
+* **Accessibility**: [Accessible features in Desktop](how-to/accessibility/index.md) | [Accessibility stack](explanation/accessibility-architecture.md) | [AT-SPI DBus XML interfaces](reference/accessibility/index.md)
 
 

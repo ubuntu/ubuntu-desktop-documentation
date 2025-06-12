@@ -12,8 +12,8 @@ AT-SPI uses D-Bus method calls and signals. D-Bus is an inter-process communicat
 
 AT-SPI is made of two components:
 
-* ``at-spi2-core``: a collection of XML interfaces for accessibility
-* ``at-spi2-atk``: a library that allows applications made with GTK 3 to register accessible objects with AT-SPI
+* `at-spi2-core`: a collection of XML interfaces for accessibility
+* `at-spi2-atk`: a library that allows applications made with GTK 3 to register accessible objects with AT-SPI
 
 If you are building custom assistive technology tools or want to test the accessibility of custom applications that were not built with GTK on Ubuntu Desktop, you must use [AT-SPI DBus XML Interfaces](../reference/accessibility/dbus/index.rst)
 
@@ -52,9 +52,9 @@ A small selection of applications on Ubuntu Desktop are built with Flutter.
 
 Ubuntu Desktop supports USB out of the box. 
 
-In Ubuntu, kernel USB drivers handle communications with USB devices such as, for example, ``usbhid`` which provides support for USB Human Interface Devices (HID) class. Kernel supports all [standard USB classes](https://www.usb.org/defined-class-codes).
+In Ubuntu, kernel USB drivers handle communications with USB devices such as, for example, `usbhid` which provides support for USB Human Interface Devices (HID) class. Kernel supports all [standard USB classes](https://www.usb.org/defined-class-codes).
 
-``udev`` is a device manager in Ubuntu that detects, adds and removed devices. ``udev`` stores the information about detected USB devices in the ``/dev`` directory.
+`udev` is a device manager in Ubuntu that detects, adds and removed devices. `udev` stores the information about detected USB devices in the `/dev` directory.
 
 If your device conforms to a USB class, it will be assigned a /dev entry and recognized correctly.
 
@@ -68,7 +68,7 @@ To be able to work on Ubuntu properly, a USB device must:
 * provide a proper USB descriptor so that Ubuntu can identify it
 * not require proprietary drivers
 
-If the device uses a custom class, it must provide a ``udev`` .rules file instead so that Ubuntu can identify it correctly, see [udev documentation](https://www.man7.org/linux/man-pages/man7/udev.7.html) 
+If the device uses a custom class, it must provide a `udev` .rules file instead so that Ubuntu can identify it correctly, see [udev documentation](https://www.man7.org/linux/man-pages/man7/udev.7.html) 
 
 ### Bluetooth 
 
