@@ -44,11 +44,17 @@ If you know the position of the application in the dash, you can activate it by 
 
 ### Switch between applications using the application switcher
 
-There are 2 ways to switch between applications, via the Unity launcher as previously mentioned, and the application switcher. The application switcher is accessed by pressing and holding Alt, and pressing tab. Orca will announce that you are in the switcher window, and announce the currently selected application. If you only have one application open, then it will be selected. Otherwise, the next application in the list will be selected. TO move through the available options, keep holding the Alt key, and press tab. When you find what you are looking for, release the Alt key, and you will switch to the selected application. Note you can also go to the desktop from the application switcher. TO go to the desktop, look for "Show Desktop" in the switcher.
+1. Press {kbd}`Super+Tab`.
 
-GNOME
+    Orca announces the currently selected application.
 
-The application switcher is accessed by pressing and holding Alt, and pressing tab. Orca will announce that you are in the switcher window, and announce the currently selected application. If you only have one application open, then it will be selected. Otherwise, the next application in the list will be selected. TO move through the available options, keep holding the Alt key, and press tab. When you find what you are looking for, release the Alt key, and you will switch to the selected application.
+    If only one application is open, the switcher selects it. Otherwise, it sellects the next application in the list.
+
+2. To move through the application, keep holding {kbd}`Super` and press {kbd}`Tab`.
+
+3. If multiple windows of this application are open, Orca says *collapsed*. You can then browse the windows using {kbd}`Super` + they key between {kbd}`Tab` and {kbd}`Escape`. On standard English layout, this is the **`** key.
+
+4. To activate the application, release {kbd}`Super`.
 
 ### Switch between applications using the dash
 
@@ -68,8 +74,6 @@ The application switcher is accessed by pressing and holding Alt, and pressing t
     You can quit the application by selecting {guilabel}`Quit`.
 
     If an application is running but it isn't pinned to the dash, you can add it by selecting {guilabel}`Pin to Dash`.
-
-### Switch between applications using Activities
 
 ## Navigate application menus and system indicators
 
