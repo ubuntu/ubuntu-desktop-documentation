@@ -62,7 +62,7 @@ The Orca screen reader can display the user interface on a refreshable Braille d
     :sync: orca-command
 
     ```bash
-    orca -s
+    orca --setup
     ```
     :::
     ::::
