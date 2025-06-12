@@ -18,7 +18,7 @@ The Orca screen reader can display the user interface on a refreshable Braille d
 3. Add your user to the `brlapi` group to allow access to the Braille device:
 
     ```bash
-    sudo usermod --append -G brlapi user-name
+    sudo usermod --append -G brlapi <user-name>
     ```
 
 4. Enable the BRLTTY service:
