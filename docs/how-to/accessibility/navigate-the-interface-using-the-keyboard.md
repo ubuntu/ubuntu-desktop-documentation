@@ -22,27 +22,54 @@ GNOME has multiple ways to launch applications using the keyboard.
 3. You can use {kbd}`Tab` or the arrow keys to browse the search results and find what you are looking for.
 
 
-### Launch applications using the dock
+### Launch applications using the dash
 
-The Unity launcher is used to access regularly used applications, access files on removable media, and switch between running applications. The Unity launcher is accessible with the keyboard. To move to it, press Alt + F1 on your keyboard. You should hear Orca announce the first item on the launcher, which is "Search your computer and online sources". Using the arrow keys, you can move through the list of pinned applications, access any connected removable media, and access the Dash. The first icon that gets focus once you move to the launcher is another way you can get to the dash. Moving through the list of items on the Launcher, you will find some commonly useful applications and utilities. Files lets you access the contents of your home folder, Firefox is Ubuntu's default web browser, LibreOffice is the office suite shipped with Ubuntu, etc. To load an application, or open a file browser window for removable media, select the desired item with the arrow keys, and press enter.
+The dash is the panel on the left side of the screen that contains application launchers, removable media and other icons. It's also known as the dock. You can control it using the keyboard.
 
-Navigating the launcher can also tell you what applications you currently have open and running. For example, if you have Firefox open and you then navigate through the Launcher, when you navigate over the Firefox web browser item, you will be told that it is running. You should also hear the number of windows that are open for that application. Note that if an application is not running, you are given no information as to that applications' current state.
+1. Press {kbd}`Ctrl+Alt+Tab` to cycle through the user interface elements.
+2. Select {guilabel}`Dash`.
+3. Orca announces the first item in the dash, which is {guilabel}`Firefox` by default.
+4. Using the arrow keys or {kbd}`Tab`, move through the list of pinned applications, access any connected removable media, and access the Dash.
 
-If you load an application and wish to keep it on the launcher, you need to pin it. This is done by navigating to the application on the launcher, pressing the right arrow key to open its context menu, otherwise known as a quicklist, and selecting the "Lock to Launcher" option. Other useful options are also provided by the quicklist, and the number of options available depends on the application in question.
+    Moving through the list of items in the dash, you find commonly used applications and utilities: {guilabel}`Files` lets you access the content of your home folder, {guilabel}`Firefox` is Ubuntu's default web browser, {guilabel}`LibreOffice` is the office suite.
 
-GNOME
+5. To start an application, select the item and press {kbd}`Enter`.
+6. If you can't find the application in the dash, select the {guilabel}`Show Apps` item. Browse the list of all installed applications using {kbd}`Tab` and the arrow keys.
 
-To search through a list of available applications, press the super key, and then press and hold Control + Alt. Use the tab key to cycle through the available system windows until you find the dash option. Release Control and Alt. You are now in the list of pinned applications. Due to being more difficult to access via keyboard, this list of pinned apps is not as useful as it is in unity, so pinning applications will not be covered. At the bottom of the list, you will find the "Show Apps" option. Press enter, and then use the arrow keys to navigate all available applications.
+:::{tip}
+If you know the position of the application in the dash, you can activate it by pressing {kbd}`Super+Number`.
+:::
 
 ## Switch between applications
 
-There are 2 ways to switch between applications, via the Unity launcher as previously mentioned, and the application switcher. The application switcher is accessed by pressing and holding Alt, and pressing tab. Orca will announce that you are in the switcher window, and announce the currently selected application. If you only have one application open, then it will be selected. Otherwise, the next application in the list will be selected. TO move through the available options, keep holding the Alt key, and press tab. When you find what you are looking for, release the Alt key, and you will switch to the selected application. Note you can also go to the desktop from the application switcher. TO go to the desktop, look for "Show Desktop" in the switcher.
+### Switch between applications using the application switcher
 
-You can also switch between apps using the Unity launcher. To move to the launcher, press Alt + F1. Use the arrow keys to move through the available options on the launcher. Orca will notify you if the currently selected item is a running application, and if so, how many windows are open. TO switch to the selected application, press the enter key.
+There are 2 ways to switch between applications, via the Unity launcher as previously mentioned, and the application switcher. The application switcher is accessed by pressing and holding Alt, and pressing tab. Orca will announce that you are in the switcher window, and announce the currently selected application. If you only have one application open, then it will be selected. Otherwise, the next application in the list will be selected. TO move through the available options, keep holding the Alt key, and press tab. When you find what you are looking for, release the Alt key, and you will switch to the selected application. Note you can also go to the desktop from the application switcher. TO go to the desktop, look for "Show Desktop" in the switcher.
 
 GNOME
 
 The application switcher is accessed by pressing and holding Alt, and pressing tab. Orca will announce that you are in the switcher window, and announce the currently selected application. If you only have one application open, then it will be selected. Otherwise, the next application in the list will be selected. TO move through the available options, keep holding the Alt key, and press tab. When you find what you are looking for, release the Alt key, and you will switch to the selected application.
+
+### Switch between applications using the dash
+
+1. Activate the dash interface using {kbd}`Ctrl+Alt+Tab`.
+2. Select an application using the arrow keys or {kbd}`Tab`.
+3. Open the menu using the {kbd}`Menu` key or {kbd}`Shift+F10`.
+4. If Orca announces *All Windows*, the application is running.
+
+    You can expand the list of open windows using {kbd}`Enter`, {kbd}`Space` or {kbd}`→`.
+
+    Browse the open windows using the arrow keys.
+
+    To close the list of windows, press {kbd}`Esc` or {kbd}`←`.
+
+5. You can remove the application from the dash by selecting {guilabel}`Unpin`.
+
+    You can quit the application by selecting {guilabel}`Quit`.
+
+    If an application is running but it isn't pinned to the dash, you can add it by selecting {guilabel}`Pin to Dash`.
+
+### Switch between applications using Activities
 
 ## Navigate application menus and system indicators
 
