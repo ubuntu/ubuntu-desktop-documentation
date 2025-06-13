@@ -1,4 +1,4 @@
-# Contribute to this documentation {#contribute}
+# Contribute to this documentation
 
 Contributing to documentation can be a fantastic way to get started as a contributor to open source projects, no matter your level of experience!
 
