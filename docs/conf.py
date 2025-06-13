@@ -131,7 +131,7 @@ html_context = {
     #
     # NOTE: If set, links for viewing the documentation source files
     #       and creating GitHub issues are added at the bottom of each page.
-    "github_url": "https://github.com/canonical/ubuntu-desktop-documentation",
+    "github_url": "https://github.com/ubuntu/ubuntu-desktop-documentation",
     # Docs branch in the repo; used in links for viewing the source files
     #
     # TODO: To customise the branch, uncomment and update as needed.
@@ -159,9 +159,9 @@ html_context = {
 # - https://launchpad.net/example
 # - https://git.launchpad.net/example
 #
-# html_theme_options = {
-# 'source_edit_link': 'https://github.com/canonical/sphinx-docs-starter-pack',
-# }
+html_theme_options = {
+'source_edit_link': 'https://github.com/ubuntu/ubuntu-desktop-documentation',
+}
 
 # Project slug; see https://meta.discourse.org/t/what-is-category-slug/87897
 #
