@@ -6,6 +6,8 @@ The Ubuntu Desktop guide is under construction. The current state you are seeing
 This version is unstable: URLs might change at any time. Some content is not in properly reviewed yet. Proceed with caution and be aware of technical inaccuracies.
 :::
 
+This is an incredibly long paragraph with unbroken lead-on sentences, it should be pretty hard to read, it's easily the worst sentence there is in this documentation with typoos and everything you don't want to find in technical documentation, so I really hope that Vale complains here. This is an incredibly long paragraph with unbroken lead-on sentences, it should be pretty hard to read, it's easily the worst sentence there is in this documentation with typoos and everything you don't want to find in technical documentation, so I really hope that Vale complains here.
+
 Ubuntu Desktop is a secure, modern operating system used by millions of users at home, for development and in enterprise.
 
 Ubuntu offers essential applications for web browsing, messaging, gaming, and content creation, including Firefox, Chrome, Discord, Steam, and OBS Studio, supporting all your daily computing needs.
