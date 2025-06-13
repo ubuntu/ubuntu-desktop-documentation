@@ -7,6 +7,9 @@ on:
     paths:
       - 'docs/**'   # Only run on changes to the docs directory
 
+  workflow_dispatch:
+    # Manual trigger
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
