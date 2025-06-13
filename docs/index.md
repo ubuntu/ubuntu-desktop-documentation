@@ -28,7 +28,7 @@ Reference </reference/index>
 :link: /tutorial/index
 :link-type: doc
 
-**Get started:** a hands-on introduction to Ubuntu Desktop for new users
+**Get started**: a hands-on introduction to Ubuntu Desktop for new users
 :::
 
 :::{grid-item-card} How-to guides
@@ -45,14 +45,14 @@ Reference </reference/index>
 :link: /reference/index
 :link-type: doc
 
-**Technical information:** cheat sheets, specifications, APIs, architecture
+**Technical information**: cheat sheets, specifications, APIs, architecture
 :::
 
 :::{grid-item-card} Explanation
 :link: /explanation/index
 :link-type: doc
 
-**Concepts:** discussion and clarification of key topics
+**Concepts**: discussion and clarification of key topics
 :::
 ::::
 
