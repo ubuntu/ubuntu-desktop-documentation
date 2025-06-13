@@ -1,6 +1,6 @@
 # Reference
 
-These documents provide an overview of different features of the starter pack.
+These documents provide technical information such as cheat sheets, specifications, APIs and architecture overviews.
 
 :::{toctree}
 :maxdepth: 1
@@ -8,3 +8,4 @@ These documents provide an overview of different features of the starter pack.
 accessibility/index
 keyboard-navigation-shortcuts
 :::
+
