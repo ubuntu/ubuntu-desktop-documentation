@@ -1,4 +1,4 @@
-name: Vale documentation checks
+name: Vale style checks
 
 on:
   push:
@@ -10,14 +10,16 @@ on:
   workflow_dispatch:
     # Manual trigger
 
-
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  vale:
+  vale-style:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: errata-ai/vale-action@v2.1.1
+        with:
+          files: docs
+          vale_flags: "--config=.vale-style.ini"

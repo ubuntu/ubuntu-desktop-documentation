@@ -1,0 +1,51 @@
+name: Vale readability checks
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    paths:
+      - 'docs/**'   # Only run on changes to the docs directory
+
+  workflow_dispatch:
+    # Manual trigger
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  vale-readability:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: errata-ai/vale-action@v2.1.1
+        with:
+          files: docs
+          vale_flags: "--config=.vale-readability.ini"
+          # reporter: github-pr-check
+          fail_on_error: true
+          level: warning
+
+# name: Vale readability checks
+# description: 'Analyze all documentation files for readability metrics'
+# on:
+#   push:
+#     branches: [ main ]
+#   pull_request:
+#     paths:
+#       - 'docs/**'   # Only run on changes to the docs directory
+# concurrency:
+#   group: ${{ github.workflow }}-${{ github.ref }}
+#   cancel-in-progress: true
+# jobs:
+#   vale-readability:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: 'Install Vale'
+#         run: 'sudo snap install vale'
+#       - name: 'What directory am I even in?'
+#         run: 'realpath $(pwd) && ls -a'
+#       - name: 'Calculate readability metrics'
+#         run: 'vale --config=.vale-readability.ini --output=line'
+
