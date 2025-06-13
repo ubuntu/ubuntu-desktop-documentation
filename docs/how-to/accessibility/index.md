@@ -77,7 +77,7 @@ turn-on-sticky-keys
 use-an-on-screen-keyboard
 :::
 
-### See also
+### Additional resources
 
 * {ref}`what-is-the-menu-key`
 
