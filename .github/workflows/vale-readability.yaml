@@ -1,4 +1,4 @@
-name: Vale documentation checks
+name: Vale readability checks
 
 on:
   push:

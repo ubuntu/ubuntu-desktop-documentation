@@ -1,4 +1,4 @@
-name: Vale documentation checks
+name: Vale style checks
 
 on:
   push:
