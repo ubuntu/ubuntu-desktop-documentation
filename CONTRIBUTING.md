@@ -56,6 +56,10 @@ For spelling and grammatical changes on a page, which are quick and easy to subm
 
 Make sure you check the issue list before submitting a PR -- if you start working on a task that is listed and already assigned to someone else, we won't be able to accept your PR.
 
+## Ensure accessibility
+
+TODO
+
 ## Thank you!
 
 Lastly, we would like to thank you for spending your time to help make the Ubuntu Desktop documentation better. Every step in the right direction is a step worth taking, no matter how large or small.
