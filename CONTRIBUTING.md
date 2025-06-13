@@ -14,7 +14,7 @@ Check out the CODA repository for guidance and useful resources on getting start
 
 ## Prerequisites
 
-There are some prerequisites to contributing to Ubuntu Server documentation.
+There are some prerequisites to contributing to Ubuntu Desktop documentation.
 
 - **Code of Conduct**
 
