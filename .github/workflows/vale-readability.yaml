@@ -42,9 +42,9 @@ concurrency:
 jobs:
   vale-readability:
     runs-on: ubuntu-latest
-    container:
-      image: jdkato/vale
     steps:
+      - name: 'Install Vale'
+        run: 'snap install vale'
       - name: 'Calculate readability metrics'
         run: 'vale --config=.vale-readability.ini --output=line'
 
