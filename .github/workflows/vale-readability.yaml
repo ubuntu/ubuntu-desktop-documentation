@@ -24,4 +24,4 @@ jobs:
         with:
           files: docs
           vale_flags: "--config=.vale-readability.ini"
-          reporter: github-pr-annotations
+          reporter: local
