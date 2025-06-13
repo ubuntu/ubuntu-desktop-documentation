@@ -23,4 +23,4 @@ jobs:
       - uses: errata-ai/vale-action@v2.1.1
         with:
           files: docs
-          vale_flags: "--output=line --config=.vale-readability.ini"
+          vale_flags: "--config=.vale-readability.ini"
