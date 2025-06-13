@@ -6,9 +6,9 @@ The Ubuntu Desktop guide is under construction. The current state you are seeing
 This version is unstable: URLs might change at any time. Some content is not in properly reviewed yet. Proceed with caution and be aware of technical inaccuracies.
 :::
 
-Line 1
+Ubuntu Desktop is a secure, modern operating system used by millions of users at home, for development and in enterprise.
 
-Line 2
+Ubuntu offers essential applications for web browsing, messaging, gaming, and content creation, including Firefox, Chrome, Discord, Steam, and OBS Studio, supporting all your daily computing needs.
 
 :::{toctree}
 :hidden:
@@ -28,14 +28,14 @@ Reference </reference/index>
 :link: /tutorial/index
 :link-type: doc
 
-**Get started** - use Sphinx and Read the Docs to host and test your documentation.
+**Get started:** a hands-on introduction to Ubuntu Desktop for new users
 :::
 
 :::{grid-item-card} How-to guides
 :link: /how-to/index
 :link-type: doc
 
-**Step-by-step guides** - learn key operations and customization.
+**Step-by-step guides** covering key operations and common tasks
 :::
 ::::
 
@@ -45,14 +45,14 @@ Reference </reference/index>
 :link: /reference/index
 :link-type: doc
 
-**Technical information** - understand the automatic checks and Sphinx capabilities.
+**Technical information:** cheat sheets, specifications, APIs, architecture
 :::
 
 :::{grid-item-card} Explanation
 :link: /explanation/index
 :link-type: doc
 
-TODO
+**Concepts:** discussion and clarification of key topics
 :::
 ::::
 
