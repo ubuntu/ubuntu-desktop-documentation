@@ -1,3 +1,4 @@
+(at-spi-dbus-xml-interfaces)=
 # AT-SPI DBus XML interfaces
 
 AT-SPI (Assistive Technology Service Provider Interface) is the core of an accessibility stack for Ubuntu Desktop. 
