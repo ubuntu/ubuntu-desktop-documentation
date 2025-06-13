@@ -16,10 +16,11 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  vale:
+  vale-readability:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: errata-ai/vale-action@v2.1.1
         with:
           files: docs
+          vale_flags: "--output=line --config=.vale-readability.ini"
