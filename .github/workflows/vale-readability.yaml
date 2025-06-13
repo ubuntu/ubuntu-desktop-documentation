@@ -44,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'Install Vale'
-        run: 'snap install vale'
+        run: 'sudo snap install vale'
       - name: 'Calculate readability metrics'
         run: 'vale --config=.vale-readability.ini --output=line'
 
