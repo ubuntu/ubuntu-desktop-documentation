@@ -5,6 +5,6 @@ Our explanatory and conceptual guides are written to provide a better understand
 :::{toctree}
 :maxdepth: 2
 
+accessibility-architecture
 what-is-the-menu-key
 :::
-
