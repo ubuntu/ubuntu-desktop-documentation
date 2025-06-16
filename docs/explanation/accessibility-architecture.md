@@ -1,6 +1,6 @@
 # Architecture of the accessibility stack
 
-## Software Interfaces for assistive technologies
+## Software interfaces for assistive technologies
 
 ### AT-SPI
 
@@ -48,4 +48,39 @@ A selection of applications on Ubuntu Desktop such as [App Center](https://githu
 | System Settings app      | GTK4          | [Gtk.Accessible](https://docs.gtk.org/gtk4/iface.Accessible.html) |
 | App Center               | Flutter       | [Flutter API](https://docs.flutter.dev/ui/accessibility-and-internationalization/accessibility) |
 | Software and Updates     | GTK3          | [ATK](https://docs.gtk.org/atk/) |
+
+
+## Screen reader and speech synthethis 
+
+Speech synthesizers converts text to human-sounding speech. Typically, they are offered as a backend for screen readers, but they can also be used as standalone programs. Orca is the default screen reader on Ubuntu Desktop. eSpeak and Speech Dispatcher are the 
+speech synthesizers that Orca depends on. When Orca identifies the text, it passes it to the Speech Dispatcher for speech synthesis; the Speech Dispatcher then passes the synthesized speech to eSpeak, which plays the sound.
+
+### Orca
+
+Orca is screen reading software for vision impaired and blind users. 
+
+Orca is preinstalled on Ubuntu Desktop and can be enabled and used out-of-box. To learn how to configure Orca, go to [Read the screen aloud](../how-to/accessibility/read-screen-aloud.md). 
+
+### BRLTTY
+
+The Orca screen reader can display the user interface on a refreshable Braille display. It uses the BRLTTY service, which provides access to the Linux console for a blind person using a refreshable Braille display. 
+
+As Orca, BRLTTY is preinstalled and can be enabled and used without any additional configurations, see [Read the screen in Braille](../how-to/accessibility/read-screen-in-braille.md).
+
+### eSpeak
+
+eSpeak is a speech synthesizer that supports English. eSpeak can be used as a standalalone tool or as a backend component for screen readers, see [eSpeak website](https://espeak.sourceforge.net/)
+
+### Speech dispatcher
+
+Speech dispatcher is a device-independent high-level interface for speech synthesis. It can be used by other software and hardware speech synthesizers as a backend, see [Speech Dispatcher website](https://freebsoft.org/speechd).
+
+Therefore, Speech Dispatcher is the layer that allows you to switch between TTS solutions.
+
+## On-screen keyboards
+
+### GNOME on-screen keyboard
+
+Ubuntu Desktop comes with a GNOME on-screen keyboard preinstalled, it is the on-screen keyboard that we recommend for Desktop. To start using it, see [How to use an on-screen keyboard](../how-to/accessibility/use-an-on-screen-keyboard).
+
 
