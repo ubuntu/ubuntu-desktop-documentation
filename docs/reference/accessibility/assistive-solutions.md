@@ -18,7 +18,7 @@ As Orca, BRLTTY is preinstalled and can be enabled and used without any addition
 
 Yasr is a a general-purpose console screen reader. The name Yasr is an acronym that can stand for either "Yet Another Screen Reader" or "Your All-purpose Screen Reader".
 
-Yasr works by opening a pseudo-terminal and running a shell, intercepting all input and output. It looks at the escape sequences being sent and maintains a virtual window that contains what it believes to be on the screen. It does not use any features specific to Linux and can be ported to other UNIX-like operating systems. 
+Yasr works by opening a pseudo-terminal and running a shell, intercepting all input and output. It looks at the escape sequences being sent and maintains a virtual window that contains what it believes to be on the screen.
 
 Yasr must be installed manually. To learn more about the tool and its features, consult [Yasr GitHub repository](https://github.com/mgorse/yasr). 
 
