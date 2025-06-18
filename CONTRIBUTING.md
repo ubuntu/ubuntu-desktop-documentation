@@ -58,7 +58,15 @@ Make sure you check the issue list before submitting a PR -- if you start workin
 
 ## Ensure accessibility
 
-TODO
+We want to make Ubuntu Desktop accessible and usable for everyone. Please make sure that your contribution follows the best practices:
+
+- Add alternative text to all your images. For details, go to [Images](https://www.markdownguide.org/basic-syntax/#images-1) in the Markdown Guide.
+
+- Check the readability index of the files that you edit:
+
+    In your pull request, open **Checks** and look for errors in **Vale readability checks**.
+
+    Use simple words and short sentences. To learn what makes for readable text, use the interactive [Hemingway Editor](https://hemingwayapp.com/).
 
 ## Thank you!
 
