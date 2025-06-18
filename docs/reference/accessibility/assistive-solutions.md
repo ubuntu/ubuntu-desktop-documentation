@@ -25,10 +25,6 @@ All of the speech synthethizers in this category are free open-source projects t
 
 eSpeak is a speech synthesizer that supports English. eSpeak can be used as a standalalone tool or as a backend component for screen readers, see [eSpeak website](https://espeak.sourceforge.net/)
 
-### Festival
-
-Festival is a speech synthesiser that supports multiple languages. Festival an be used as a standalalone tool or as a backend component for screen readers. It is developed by the Centre for Speech Technology Research at the University of Edinburgh. For mor information, see [Festival website](http://www.cstr.ed.ac.uk/projects/festival/).
-
 ### Speech dispatcher
 
 Speech dispatcher is a device-independent high-level interface for speech synthesis. It can be used by other software and hardware speech synthesizers as backend, see [Speech Dispatcher website](https://freebsoft.org/speechd).
