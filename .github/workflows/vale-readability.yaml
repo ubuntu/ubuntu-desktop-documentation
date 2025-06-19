@@ -44,10 +44,13 @@ jobs:
     container:
       image: jdkato/vale
       volumes:
-        - ${{ github.workspace }}:/mnt
+        - ${{ github.workspace }}
     steps:
+      - uses: actions/checkout@v4
       - name: 'What directory am I even in?'
-        run: 'cd /mnt && realpath $(pwd) && ls -a'
+        run: 'realpath $(pwd) && ls -a'
+      - name "What's in /github/workspace?"
+        run: 'ls -al /github/workspace'
       - name: 'Calculate readability metrics'
         run: 'vale --config=.vale-readability.ini --output=line'
 
