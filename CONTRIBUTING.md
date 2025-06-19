@@ -64,7 +64,7 @@ We want to make Ubuntu Desktop accessible and usable for everyone. Please make s
 
 - Check the readability index of the files that you edit:
 
-    In your pull request, open **Checks** and look for errors in **Vale readability checks**.
+    In your pull request, open **Checks** and look for errors in **Vale readability checks**. We try to stay below [SMOG](https://en.wikipedia.org/wiki/SMOG) grade 11. Higher grades result in an error.
 
     Use simple words and short sentences. To learn what makes for readable text, use the interactive [Hemingway Editor](https://hemingwayapp.com/).
 
