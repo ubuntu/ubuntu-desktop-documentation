@@ -48,7 +48,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: 'Synchronize Vale modules'
-        run: 'vale sync --config=.vale-readability.ini'
+        run: 'vale sync --config=.vale/readability.ini'
       - name: 'Calculate readability metrics'
         run: 'find docs -name \*.md | xargs vale --config=.vale/readability.ini'
 
