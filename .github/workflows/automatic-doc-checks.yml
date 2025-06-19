@@ -22,3 +22,14 @@ jobs:
     with:
       working-directory: "docs"
       fetch-depth: 0
+
+  # Run Vale with the default Canonical style. Post notes in the PR.
+  vale-style:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: errata-ai/vale-action@v2.1.1
+        with:
+          working-directory: "docs"
+          vale_flags: "--config=.sphinx/vale.ini"
+
