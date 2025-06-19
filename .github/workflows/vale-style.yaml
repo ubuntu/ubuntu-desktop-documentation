@@ -1,3 +1,4 @@
+# Run Vale with basic style rules. Post notes in the PR
 name: Vale style checks
 
 on:
@@ -22,4 +23,4 @@ jobs:
       - uses: errata-ai/vale-action@v2.1.1
         with:
           files: docs
-          vale_flags: "--config=.sphinx/vale.ini"
+          vale_flags: "--config=.vale/style.ini"
