@@ -59,7 +59,7 @@ Reference </reference/index>
 
 ### Accessibility
 
-[Accessible features in Desktop](how-to/accessibility/index.md) | [Our accessibility stack](explanation/accessibility-architecture.md) | [AT-SPI DBus XML interfaces](reference/accessibility/index.md)
+* **Accessibility**: [Accessible features in Desktop](how-to/accessibility/index.md) | [Accessibility stack](explanation/accessibility-stack.md) | [AT-SPI DBus XML interfaces](reference/accessibility/index.md)
 
 ## Open-source contributors
 

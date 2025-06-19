@@ -82,6 +82,6 @@ use-an-on-screen-keyboard
 ### Additional resources
 
 * {ref}`what-is-the-menu-key`
-* {ref}`accessibility-architecture`
+* {ref}`accessibility-stack`
 
 
