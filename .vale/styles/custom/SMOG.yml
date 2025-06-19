@@ -1,7 +1,7 @@
 # Let's use the SMOG metric as our default. Customize it.
 extends: metric
 # Increase the reporting threshold from grade 10 to grade 11 to limit false positives.
-message: "Try to keep the SMOG grade (%s) below 11."
+message: "Keep the SMOG grade (%s) below 11. Use simpler words."
 # Fail the build if it reports hard-to-read files.
 level: error
 link: https://en.wikipedia.org/wiki/SMOG
