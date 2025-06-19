@@ -49,6 +49,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: 'What directory am I even in?'
         run: 'realpath $(pwd) && ls -a'
+      - name: 'Synchronize Vale modules'
+        run: 'vale sync --config=.vale-readability.ini'
       - name: 'Calculate readability metrics'
         run: 'vale --config=.vale-readability.ini --output=line'
 
