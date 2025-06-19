@@ -44,7 +44,7 @@ jobs:
     container:
       image: jdkato/vale
       volumes:
-        - "."
+        - ${{ github.workspace }}
     steps:
       - name: 'What directory am I even in?'
         run: 'realpath $(pwd) && ls -a'
