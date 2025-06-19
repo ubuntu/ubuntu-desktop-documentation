@@ -43,9 +43,9 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: jdkato/vale
-      steps:
-        - name: 'What directory am I even in?'
-          run: 'realpath $(pwd) && ls -a'
-        - name: 'Calculate readability metrics'
-          run: 'vale --config=.vale-readability.ini --output=line'
+    steps:
+      - name: 'What directory am I even in?'
+        run: 'realpath $(pwd) && ls -a'
+      - name: 'Calculate readability metrics'
+        run: 'vale --config=.vale-readability.ini --output=line'
 
