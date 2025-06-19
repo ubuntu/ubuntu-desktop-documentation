@@ -41,9 +41,11 @@ concurrency:
 jobs:
   vale-readability:
     runs-on: ubuntu-latest
-    steps:
-      - name: 'What directory am I even in?'
-        run: 'realpath $(pwd) && ls -a'
-      - name: 'Calculate readability metrics'
-        run: 'docker run --rm -v ${{ github.workspace }}:/tmp -w /tmp jdkato/vale vale --config=.vale-readability.ini --output=line'
+    container:
+      image: jdkato/vale
+      steps:
+        - name: 'What directory am I even in?'
+          run: 'realpath $(pwd) && ls -a'
+        - name: 'Calculate readability metrics'
+          run: 'vale --config=.vale-readability.ini --output=line'
 
