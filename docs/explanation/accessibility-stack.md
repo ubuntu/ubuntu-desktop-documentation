@@ -1,4 +1,5 @@
-# Architecture of the accessibility stack
+(accessibility-stack)=
+# Accessibility stack
 
 ## Software Interfaces for assistive technologies
 
@@ -48,4 +49,45 @@ A selection of applications on Ubuntu Desktop such as [App Center](https://githu
 | System Settings app      | GTK4          | [Gtk.Accessible](https://docs.gtk.org/gtk4/iface.Accessible.html) |
 | App Center               | Flutter       | [Flutter API](https://docs.flutter.dev/ui/accessibility-and-internationalization/accessibility) |
 | Software and Updates     | GTK3          | [ATK](https://docs.gtk.org/atk/) |
+
+
+## Hardware interfaces for assistive technologies
+
+### USB 
+
+Ubuntu Desktop supports USB out of the box. 
+
+In Ubuntu, kernel USB drivers handle communications with USB devices such as, for example, `usbhid` which provides support for USB Human Interface Devices (HID) class. Kernel supports all [standard USB classes](https://www.usb.org/defined-class-codes).
+
+`udev` is a device manager in Ubuntu that detects, adds and removes devices. `udev` provides access to the detected USB devices in the `/dev` directory.
+
+If your device conforms to a USB class, it will be assigned a `/dev` entry and recognized correctly.
+
+#### USB device requirements
+
+You can use USB to connect assistive devices for input/output such as Braille displays, sip-and-puff, foot pedals.
+
+To be able to work on Ubuntu properly, a USB device must:
+
+* use a standard USB class 
+* provide a proper USB descriptor so that Ubuntu can identify it
+* not require proprietary drivers
+
+If the device uses a custom class, it must provide a `udev` `.rules` file instead so that Ubuntu can identify it correctly. See [udev documentation](https://www.man7.org/linux/man-pages/man7/udev.7.html) 
+
+### Bluetooth 
+
+While the Ubuntu Desktop team continuously tries to improve the experience with Bluetooth, the Bluetooth stack is complex and consists of many dependencies on the kernel, firmwave, middleware, and userspace levels. This complex set of dependencies makes it difficult to guarantee consistent compatibility with all Bluetooth devices. For an in-depth explanation of Ubuntu's hardware architecture, see {ref}`hardware-stack`.
+
+Ubuntu uses BlueZ as its core Bluetooth stack. 
+
+To be able to work on Desktop, a device must:
+
+- be HCI-compliant
+- have a corresponding firmare provided by the manufacturer as part of the `linux-firmware` package
+- use the [profiles supported by BlueZ](https://www.bluez.org/profiles/).
+
+## See also
+
+* {ref}`troubleshoot-bluetooth`
 
