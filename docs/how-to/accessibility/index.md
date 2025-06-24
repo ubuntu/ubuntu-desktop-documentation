@@ -21,6 +21,8 @@ Orca is an assistive technology for people with visual impairments. Using variou
 
 read-screen-aloud
 read-screen-in-braille
+navigate-the-screen-using-the-screen-reader
+read-documents-and-web-pages-using-the-screen-reader
 :::
 
 ### Low vision
