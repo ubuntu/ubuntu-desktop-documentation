@@ -54,6 +54,8 @@ The Orca screen reader can speak the user interface.
     :::
     ::::
 
+4. If you use Firefox, close it and reopen it. Orca can then read the browser content.
+
 
 The screen reader stays active the next time that you log in.
 

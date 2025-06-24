@@ -73,6 +73,9 @@ The Orca screen reader can display the user interface on a refreshable Braille d
 
 8. Connect your Braille device to the system over USB, serial port or Bluetooth.
 
+9. If you use Firefox, close it and reopen it. Orca can then read the browser content.
+
+
 ## Read a document in a different language
 
 If you're reading a document in a language different than your system language, set the language text table in BRLTTY.
