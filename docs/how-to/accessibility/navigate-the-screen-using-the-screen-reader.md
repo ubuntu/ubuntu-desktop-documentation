@@ -50,8 +50,6 @@ Orca provides the following Where Am I commands:
     :::
     ::::
 
-In addition to the dedicated Where Am I commands, Orca has additional commands related to obtaining information about your present location:
-
 * Present the title bar:
 
     ::::{tab-set}
@@ -81,6 +79,392 @@ In addition to the dedicated Where Am I commands, Orca has additional commands r
     :sync: orca-desktop
 
     {kbd}`Insert` + double-press {kbd}`Enter` on the numeric keypad
+    :::
+    ::::
+
+
+## Examine a window
+
+Orca's Flat Review feature allows you to spatially review the contents, both text and widgets, of the active window. In this mode, Orca treats the window as if it were a two-dimensional sheet of text, eliminating any notion of widget hierarchy or other logical grouping within the window.
+
+The "flattened" contents, also known as the Flat Review context, can be navigated by line, by word, by character, and by object. In addition, you can perform a left-click or right-click on the object being reviewed. Finally, you can use Orca Find, a Flat-Review-based feature to search the active window's contents.
+
+Because the Flat Review context is a spatial representation of the active window's contents, it is created when you first enter Flat Review and only contains those objects which are visible. As a result, you will not be able to use Flat Review to access items which are in the window but currently off-screen. In addition, if the window's contents change of their own accord, the Flat Review context will not automatically be updated. You can cause a new context to be built by toggling Flat Review off and back on.
+
+Finally, Flat Review by its nature is a mode that cannot be used at the same time that Orca is tracking focus. Thus if you are in Flat Review and then use the application's navigation commands to move the caret or to give focus to another object, you will automatically leave Flat Review.
+
+* Toggle flat review (refreshes the flat review context):
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock+P`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`Insert+-` on the numeric keypad
+    :::
+    ::::
+
+* Review current item/widget:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock+Ctrl+K`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`Insert+5` on the numeric keypad
+    :::
+    ::::
+
+* Use Say All to review the current dialog or window:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock` + double-press {kbd}`;`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    Double-press {kbd}`+` on the numeric keypad
+    :::
+    ::::
+
+
+### Review by line
+
+* First line (The "home" position):
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock+Ctrl+U`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`Insert+7` on the numeric keypad
+    :::
+    ::::
+
+* Previous line:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock+U`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`7` on the numeric keypad
+    :::
+    ::::
+
+* Current line:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock+I`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`8` on the numeric keypad
+    :::
+    ::::
+
+* Spell current line:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock` + double-press {kbd}`I`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    Double-press {kbd}`8` on the numeric keypad
+    :::
+    ::::
+
+* Phonetically spell current line:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock` + triple-press {kbd}`I`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    Triple-press {kbd}`8` on the numeric keypad
+    :::
+    ::::
+
+* Next line:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock+O`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`9` on the numeric keypad
+    :::
+    ::::
+
+* Last line (the "end" position):
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock+Ctrl+O`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`Insert+9` on the numeric keypad
+    :::
+    ::::
+
+### Review by word
+
+* Word above:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock+Ctrl+J`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`Insert+4` on the numeric keypad
+    :::
+    ::::
+
+* Previous word:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock+J`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`4` on the numeric keypad
+    :::
+    ::::
+
+* Current word:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock+K`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`5` on the numeric keypad
+    :::
+    ::::
+
+* Spell current word:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock` + double-press {kbd}`K`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    Double-press {kbd}`5` on the numeric keypad
+    :::
+    ::::
+
+* Phonetically spell current word:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock` + triple-press {kbd}`K`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    Triple-press {kbd}`5` on the numeric keypad
+    :::
+    ::::
+
+* Next word:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock+L`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`6` on the numeric keypad
+    :::
+    ::::
+
+* Word below:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock+Ctrl+L`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`Insert+6` on the numeric keypad
+    :::
+    ::::
+
+### Review by character
+
+* Previous character:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock+M`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`1` on the numeric keypad
+    :::
+    ::::
+
+* Current character:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock+,`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`2` on the numeric keypad
+    :::
+    ::::
+
+* Phonetically speak current character:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock` + double-press {kbd}`,`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    Double-press {kbd}`2` on the numeric keypad
+    :::
+    ::::
+
+* Speak Unicode value of current character:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock` + triple-press {kbd}`,`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    Triple-press {kbd}`2` on the numeric keypad
+    :::
+    ::::
+
+* Next character:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock+.`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`3` on the numeric keypad
+    :::
+    ::::
+
+* Last character on current line:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock+Ctrl+M`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`Insert+1` on the numeric keypad
     :::
     ::::
 
