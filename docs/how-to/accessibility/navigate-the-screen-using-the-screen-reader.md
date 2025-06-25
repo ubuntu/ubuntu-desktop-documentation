@@ -535,13 +535,20 @@ You can use Orca's Find feature to quickly locate objects that are visible on-sc
 
 ## What's under the mouse cursor?
 
-Orca's Mouse Review feature causes Orca to present the object under the mouse pointer. Unlike Orca's Flat Review feature, Mouse Review is not limited to the active window; instead, Orca will attempt to identify what accessible object, if any, is visually under the pointer as you move the mouse. If you have moved the pointer over an accessible object with information to present, Orca will present that object and its information to you.
+With the Mouse Review feature, Orca identifies the object that's visually under the cursor as you move the mouse. If you move the cursor over an accessible object with information to present, Orca presents that object and its information to you. Mouse Review isn't limited to the active window.
 
-Because enabling Mouse Review causes Orca to listen for, and then process, all changes in the position of the Mouse Pointer, this feature is disabled by default. To have it always enabled, check the Speak object under mouse checkbox found on the General page of Orca's Preferences dialog. In addition, you will find an unbound command named Toggle mouse review mode on the Key Bindings page of that same dialog box. By binding this command, as described in the Introduction to Key Bindings, you can enable and disable Mouse Review on an as-needed basis.
-Default Settings and Keybindings Are Independent of One Another
+Mouse Review is disabled by default because it processes all the changes in the position of the cursor.
+
+* You can enable it permanently:
+
+    Enable the {guilabel}`Speak object under mouse` checkbox on the {guilabel}`General` page of Orca's Preferences dialog.
+
+* You can also set a keyboard shortcut to enable Mouse Review for a short time:
+
+    On the {guilabel}`Key Bindings` page of Orca Preferences, bind the command named {guilabel}`Toggle mouse review mode` to a keyboard shortcut. Then you can enable and disable Mouse Review on an as-needed basis.
 
 :::{note}
-Note that you can choose to have Mouse Review always enabled or not and still toggle it on and off by binding and using the Toggle mouse review mode command. It is not necessary to enable it in order to toggle it because settings and keybindings are independent of one another.
+You can choose to have Mouse Review always enabled or not and still toggle it on and off by binding and using the Toggle mouse review mode command. It is not necessary to enable it in order to toggle it because settings and keybindings are independent of one another.
 :::
 
 
