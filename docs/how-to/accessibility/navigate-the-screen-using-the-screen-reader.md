@@ -92,9 +92,11 @@ Orca's Flat Review feature allows you to spatially review the contents, both tex
 
 The "flattened" contents, also known as the Flat Review context, can be navigated by line, by word, by character, and by object. In addition, you can perform a left-click or right-click on the object being reviewed. Finally, you can use Orca Find, a Flat-Review-based feature to search the active window's contents.
 
-Because the Flat Review context is a spatial representation of the active window's contents, it is created when you first enter Flat Review and only contains those objects which are visible. As a result, you will not be able to use Flat Review to access items which are in the window but currently off-screen. In addition, if the window's contents change of their own accord, the Flat Review context will not automatically be updated. You can cause a new context to be built by toggling Flat Review off and back on.
+Because the Flat Review context is a spatial representation of the active window's contents, it is created when you first enter Flat Review and only contains those objects which are visible. As a result, you will not be able to use Flat Review to access items which are in the window but currently off-screen.
 
-Finally, Flat Review by its nature is a mode that cannot be used at the same time that Orca is tracking focus. Thus if you are in Flat Review and then use the application's navigation commands to move the caret or to give focus to another object, you will automatically leave Flat Review.
+Flat Review by its nature is a mode that cannot be used at the same time that Orca is tracking focus. Thus if you are in Flat Review and then use the application's navigation commands to move the caret or to give focus to another object, you will automatically leave Flat Review.
+
+If the window's contents change of their own accord, the Flat Review context will not automatically be updated. You can cause a new context to be built by toggling Flat Review off and back on.
 
 * Toggle flat review (refreshes the flat review context):
 
@@ -112,7 +114,7 @@ Finally, Flat Review by its nature is a mode that cannot be used at the same tim
     :::
     ::::
 
-* Review current item/widget:
+* Review the current item or widget:
 
     ::::{tab-set}
     :::{tab-item} Laptop layout
@@ -145,7 +147,7 @@ Finally, Flat Review by its nature is a mode that cannot be used at the same tim
     ::::
 
 
-### Review by line
+### Review the window by line
 
 * First line (the "home" position):
 
@@ -259,7 +261,7 @@ Finally, Flat Review by its nature is a mode that cannot be used at the same tim
     :::
     ::::
 
-### Review by word
+### Review the window by word
 
 * Word above:
 
@@ -373,7 +375,7 @@ Finally, Flat Review by its nature is a mode that cannot be used at the same tim
     :::
     ::::
 
-### Review by character
+### Review the window by character
 
 * Previous character:
 
@@ -423,7 +425,7 @@ Finally, Flat Review by its nature is a mode that cannot be used at the same tim
     :::
     ::::
 
-* Speak Unicode value of current character:
+* Speak the Unicode value of the current character:
 
     ::::{tab-set}
     :::{tab-item} Laptop layout
@@ -455,7 +457,7 @@ Finally, Flat Review by its nature is a mode that cannot be used at the same tim
     :::
     ::::
 
-* Last character on current line:
+* Last character on the current line:
 
     ::::{tab-set}
     :::{tab-item} Laptop layout
@@ -475,7 +477,6 @@ Finally, Flat Review by its nature is a mode that cannot be used at the same tim
 ## Find objects in a window
 
 You can use Orca's Find feature to quickly locate objects that are visible on-screen within the current window.
-
 
 1. Open the Orca Find dialog:
 
