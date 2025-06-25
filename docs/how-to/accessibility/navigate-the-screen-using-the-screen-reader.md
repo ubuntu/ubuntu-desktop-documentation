@@ -3,52 +3,11 @@
 
 ## Where am I?
 
-In addition to dedicated commands for reading the title bar and the status bar, Orca provides two context-sensitive Where Am I commands: Basic Where Am I and Detailed Where Am I. Basic Where Am I is implemented for all objects. Detailed Where Am I is implemented just for those objects for which there is a significant amount of information you may wish to know, but likely will not wish to know all of the time.
+Orca provides context-sensitive commands that describe the active window and the active object on the screen.
 
-The best way to become familiar with what Where Am I will present is to give the Where Am I commands a try. However, to give you a better idea of the context-sensitive nature of Orca's Where Am I feature, consider the following:
+### Window information
 
-For most widgets, you will at least be told the label and/or name, the type or role of the widget, and the mnemonic and/or accelerator key if they happen to exist. In addition:
-
- If you are in the spell checker of an application where Orca provides enhanced support, a basic Where Am I will repeat the error respecting your spell check preferences. A detailed Where Am I will cause Orca to present the full details of the error.
-
-***
-
-
-Orca's Where Am I feature gives you context-sensitive details about your present location. For instance, in tables, Where Am I will give you details about the table cell you are in, but in text it will present the current line along with any text which happens to be selected. The full list of what you can expect Orca to present can be found in the Introduction to Where Am I.
-
-Orca provides the following Where Am I commands:
-
-* Perform basic Where Am I:
-
-    ::::{tab-set}
-    :::{tab-item} Laptop layout
-    :sync: orca-laptop
-
-    {kbd}`CapsLock+Enter`
-    :::
-
-    :::{tab-item} Desktop layout
-    :sync: orca-desktop
-
-    {kbd}`Insert+Enter`
-    :::
-    ::::
-
-* Perform detailed Where Am I:
-
-    ::::{tab-set}
-    :::{tab-item} Laptop layout
-    :sync: orca-laptop
-
-    {kbd}`CapsLock` + double-press {kbd}`Enter`
-    :::
-
-    :::{tab-item} Desktop layout
-    :sync: orca-desktop
-
-    {kbd}`Insert` + double-press {kbd}`Enter`
-    :::
-    ::::
+Find out which window is active.
 
 * Present the title bar:
 
@@ -79,6 +38,50 @@ Orca provides the following Where Am I commands:
     :sync: orca-desktop
 
     {kbd}`Insert` + double-press {kbd}`Enter` on the numeric keypad
+    :::
+    ::::
+
+### Basic information
+
+You can ask Orca for the _basic Where Am I_ with any object on the screen. For most widgets, Orca at least tells you the label or name, the type or role of the widget, and the mnemonic or accelerator key if they exist.
+
+For example, in tables, basic Where Am I gives you details about the table cell that you are in, but in text, it presents the current line along with any text which is selected.
+
+* Perform basic Where Am I:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock+Enter`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`Insert+Enter`
+    :::
+    ::::
+
+### Detailed information
+
+Only certain objects provide the _detailed Where Am I_ information. These are objects for which there is a significant amount of information that you may wish to know, but only on demand.
+
+For example, if you are in the spell checker of an application where Orca provides enhanced support, the basic Where Am I repeats the spelling error. The detailed Where Am I presents the full details of the error. The detailed Where Am I also tells you the position in a progress bar, the status of check boxes and radio buttons, the children in a tree object, the type of a link or the cell coordinates in a table.
+
+* Perform detailed Where Am I:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock` + double-press {kbd}`Enter`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`Insert` + double-press {kbd}`Enter`
     :::
     ::::
 
@@ -144,7 +147,7 @@ Finally, Flat Review by its nature is a mode that cannot be used at the same tim
 
 ### Review by line
 
-* First line (The "home" position):
+* First line (the "home" position):
 
     ::::{tab-set}
     :::{tab-item} Laptop layout
