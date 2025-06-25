@@ -468,3 +468,177 @@ Finally, Flat Review by its nature is a mode that cannot be used at the same tim
     :::
     ::::
 
+
+## Find objects in a window
+
+You can use Orca's Find feature to quickly locate objects that are visible on-screen within the current window.
+
+
+1. Open the Orca Find dialog:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock+[`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`Delete` on the numeric keypad
+    :::
+    ::::
+
+2. A dialog box opens. Enter the search term.
+
+    You can specify several options such as case sensitivity, where the search starts or whether it wraps around the end of the document back to the start.
+
+3. When the search finds a match, Flat Review automatically activates and the matching item or text becomes the current review item.
+
+    Note that the search doesn't modify the focus within the application and it doesn't reposition the caret. If you need to accomplish either, please see Orca's Mouse/Pointer-Related Commands.
+
+4. You can quickly search for the next or previous match:
+
+    * Move flat review to the next instance of a string:
+
+        ::::{tab-set}
+        :::{tab-item} Laptop layout
+        :sync: orca-laptop
+
+        {kbd}`CapsLock+]`
+        :::
+
+        :::{tab-item} Desktop layout
+        :sync: orca-desktop
+
+        {kbd}`Insert+Delete` on the numeric keypad
+        :::
+        ::::
+
+    * Move flat review to the previous instance of a string:
+
+        ::::{tab-set}
+        :::{tab-item} Laptop layout
+        :sync: orca-laptop
+
+        {kbd}`CapsLock+Ctrl+]`
+        :::
+
+        :::{tab-item} Desktop layout
+        :sync: orca-desktop
+
+        {kbd}`Insert+Shift+Delete` on the numeric keypad
+        :::
+        ::::
+
+
+## What's under the mouse cursor?
+
+Orca's Mouse Review feature causes Orca to present the object under the mouse pointer. Unlike Orca's Flat Review feature, Mouse Review is not limited to the active window; instead, Orca will attempt to identify what accessible object, if any, is visually under the pointer as you move the mouse. If you have moved the pointer over an accessible object with information to present, Orca will present that object and its information to you.
+
+Because enabling Mouse Review causes Orca to listen for, and then process, all changes in the position of the Mouse Pointer, this feature is disabled by default. To have it always enabled, check the Speak object under mouse checkbox found on the General page of Orca's Preferences dialog. In addition, you will find an unbound command named Toggle mouse review mode on the Key Bindings page of that same dialog box. By binding this command, as described in the Introduction to Key Bindings, you can enable and disable Mouse Review on an as-needed basis.
+Default Settings and Keybindings Are Independent of One Another
+
+:::{note}
+Note that you can choose to have Mouse Review always enabled or not and still toggle it on and off by binding and using the Toggle mouse review mode command. It is not necessary to enable it in order to toggle it because settings and keybindings are independent of one another.
+:::
+
+
+## Bookmark objects for later
+
+Orca's Bookmarks support allows you to indicate that an object is of interest. It includes the following features:
+
+*  You are not limited to a single object: You can set up to six bookmarks per environment. You can also save bookmarks so that they will persist from Orca session to Orca session.
+
+* Having set a bookmark you can navigate to it later, and do so regardless of whether or not you have chosen to permanently save the bookmarks associated with your current environment. Navigation can be based on the number of the bookmark should you wish to jump directly to a specific item. Alternatively, you can navigate to the next or previous bookmark just like you can a Structural Navigation object.
+
+* Bookmarkable objects can be widgets within an application or objects on the web page you are reading. Which environment you are in determines what happens as you navigate amongst bookmarks: If you are in web content, the caret will be moved to the bookmark so that you can continue reading; otherwise, Flat Review will be activated with the bookmark becoming the current review item.
+
+The specific keybindings associated with each of the above tasks can be found in Bookmark Commands.
+
+***
+
+Orca provides several commands which can be used to "bookmark" a given object for the purpose of navigating back to it later.
+
+* Save a bookmark to the numbered slot:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock+Alt` + a number from {kbd}`1` to {kbd}`6`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`Insert+Alt` + a number from {kbd}`1` to {kbd}`6`
+    :::
+    ::::
+
+* Save the defined bookmarks for the application or page:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock+Alt+B`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`Insert+Alt+B`
+    :::
+    ::::
+
+* Go to a specific, numbered bookmark:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock` + a number from {kbd}`1` to {kbd}`6`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`Insert` + a number from {kbd}`1` to {kbd}`6`
+    :::
+    ::::
+
+* Go to the previous bookmark for the application or page:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock+Shift+B`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`Insert+Shift+B`
+    :::
+    ::::
+
+* Go to the next bookmark for the application or page:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock+B`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`Insert+B`
+    :::
+    ::::
+
+
