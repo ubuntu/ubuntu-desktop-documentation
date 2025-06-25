@@ -552,21 +552,16 @@ You can choose to have Mouse Review always enabled or not and still toggle it on
 :::
 
 
-## Bookmark objects for later
+## Bookmark an object for later
 
-Orca's Bookmarks support allows you to indicate that an object is of interest. It includes the following features:
-
-*  You are not limited to a single object: You can set up to six bookmarks per environment. You can also save bookmarks so that they will persist from Orca session to Orca session.
-
-* Having set a bookmark you can navigate to it later, and do so regardless of whether or not you have chosen to permanently save the bookmarks associated with your current environment. Navigation can be based on the number of the bookmark should you wish to jump directly to a specific item. Alternatively, you can navigate to the next or previous bookmark just like you can a Structural Navigation object.
-
-* Bookmarkable objects can be widgets within an application or objects on the web page you are reading. Which environment you are in determines what happens as you navigate amongst bookmarks: If you are in web content, the caret will be moved to the bookmark so that you can continue reading; otherwise, Flat Review will be activated with the bookmark becoming the current review item.
-
-The specific keybindings associated with each of the above tasks can be found in Bookmark Commands.
-
-***
+You can indicate that an object on the screen is of interest and return to it later.
 
 Orca provides several commands which can be used to "bookmark" a given object for the purpose of navigating back to it later.
+
+### Save a bookmark
+
+
+You can set up to six bookmarks per environment. These can be objects such as widgets within an application or objects on a web page. You can also save bookmarks so that they persist between Orca sessions.
 
 * Save a bookmark to the numbered slot:
 
@@ -599,6 +594,12 @@ Orca provides several commands which can be used to "bookmark" a given object fo
     {kbd}`Insert+Alt+B`
     :::
     ::::
+
+### Return to a bookmark
+
+You can navigate to the bookmark later, even if you haven't permanently saved the bookmarks associated with your current environment. You can find the bookmark based on its number, or you can browse the saved bookmarks just like Structural Navigation objects.
+
+When you select a bookmark, the exact behavior depends on the current environment. If you are in web content, the caret moves to the bookmark so that you can continue reading. Otherwise, Flat Review activates and the bookmark becomes the current review item.
 
 * Go to a specific, numbered bookmark:
 
