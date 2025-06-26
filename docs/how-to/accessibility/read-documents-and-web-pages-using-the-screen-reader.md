@@ -1,5 +1,15 @@
 (read-documents-and-web-pages-using-the-screen-reader)=
 # Read documents and web pages using the screen reader
 
-See _Reading Documents and Web Pages_ in the [Orca Screen Reader documentation](https://help.gnome.org/users/orca/stable/index.html.en).
+## Read documents using caret mode
+
+## Examine text formatting
+
+## Navigate the document structure
+
+## Read tables
+
+## Fill out forms
+
+## Interact with live regions
 
