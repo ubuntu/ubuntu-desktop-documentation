@@ -45,7 +45,7 @@ Find out which window is active.
 
 You can ask Orca for the _basic Where Am I_ with any object on the screen. For most widgets, Orca at least tells you the label or name, the type or role of the widget, and the mnemonic or accelerator key if they exist.
 
-For example, in tables, basic Where Am I gives you details about the table cell that you are in, but in text, it presents the current line along with any text which is selected.
+For example, in tables, basic Where Am I gives you details about the table cell that you are in. In text, it presents the current line along with any text which is selected.
 
 * Perform basic Where Am I:
 
@@ -65,7 +65,7 @@ For example, in tables, basic Where Am I gives you details about the table cell 
 
 ### Detailed information
 
-Only certain objects provide the _detailed Where Am I_ information. These are objects for which there is a significant amount of information that you may wish to know, but only on demand.
+Only certain objects provide the _detailed Where Am I_ information. These objects contain a lot of information that you may wish to know, but only on demand.
 
 For example, if you are in the spell checker of an application where Orca provides enhanced support, the basic Where Am I repeats the spelling error. The detailed Where Am I presents the full details of the error. The detailed Where Am I also tells you the position in a progress bar, the status of check boxes and radio buttons, the children in a tree object, the type of a link or the cell coordinates in a table.
 
@@ -86,19 +86,18 @@ For example, if you are in the spell checker of an application where Orca provid
     ::::
 
 
+(orca-examine-a-window)=
 ## Examine a window
 
-Orca's Flat Review feature allows you to spatially review the contents, both text and widgets, of the active window. In this mode, Orca treats the window as if it were a two-dimensional sheet of text, eliminating any notion of widget hierarchy or other logical grouping within the window.
+With the **Flat Review** feature, you can review the text and widgets of the active window. In this mode, Orca treats the window as a two-dimensional sheet of text. It browses the objects in the foreground, ignoring widget hierarchy or other logical grouping within the window. It can't access window elements that are currently off-screen.
 
-The "flattened" contents, also known as the Flat Review context, can be navigated by line, by word, by character, and by object. In addition, you can perform a left-click or right-click on the object being reviewed. Finally, you can use Orca Find, a Flat-Review-based feature to search the active window's contents.
+You can navigate the "flattened" content by line, by word, by character, and by object. You can also perform a left-click or right-click on the selected object.
 
-Because the Flat Review context is a spatial representation of the active window's contents, it is created when you first enter Flat Review and only contains those objects which are visible. As a result, you will not be able to use Flat Review to access items which are in the window but currently off-screen.
+When you enter Flat Review mode, it captures the state of the window at that moment. If the content of the window changes, Flat Review doesn't update automatically. You can refresh the Flat Review context by toggling Flat Review off and back on.
 
-Flat Review by its nature is a mode that cannot be used at the same time that Orca is tracking focus. Thus if you are in Flat Review and then use the application's navigation commands to move the caret or to give focus to another object, you will automatically leave Flat Review.
+If you use the application's navigation commands to move the caret or to give focus to another object, you automatically leave Flat Review. 
 
-If the window's contents change of their own accord, the Flat Review context will not automatically be updated. You can cause a new context to be built by toggling Flat Review off and back on.
-
-* Toggle flat review (refreshes the flat review context):
+* Toggle Flat Review (refreshes the window content):
 
     ::::{tab-set}
     :::{tab-item} Laptop layout
@@ -478,6 +477,8 @@ If the window's contents change of their own accord, the Flat Review context wil
 
 You can use Orca's Find feature to quickly locate objects that are visible on-screen within the current window.
 
+Orca Find is based on the {ref}`Flat Review <orca-examine-a-window>` feature.
+
 1. Open the Orca Find dialog:
 
     ::::{tab-set}
@@ -563,7 +564,6 @@ You can indicate that an object on the screen is of interest and return to it la
 Orca provides several commands which can be used to "bookmark" a given object for the purpose of navigating back to it later.
 
 ### Save a bookmark
-
 
 You can set up to six bookmarks per environment. These can be objects such as widgets within an application or objects on a web page. You can also save bookmarks so that they persist between Orca sessions.
 
@@ -652,5 +652,4 @@ When you select a bookmark, the exact behavior depends on the current environmen
     {kbd}`Insert+B`
     :::
     ::::
-
 
