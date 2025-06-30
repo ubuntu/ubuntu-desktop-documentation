@@ -47,11 +47,45 @@ You can also customize text attribute presentation for each application that you
 
 ## Identify misspelled words
 
-Most applications and toolkits indicate that a word is misspelled by underlining that word with a red, squiggly line. The presence of this line is typically exposed to assistive technologies as a text attribute. As a result, you will find spelling errors amongst the text attributes you can choose. By default, the spelling error attribute is enabled for both speech and braille and will therefore be presented along with any other attributes whose indication you have enabled.
+You can learn about spelling issues in several ways:
 
-In addition to accessing the presence of spelling errors as a text attribute, if you have key echo and/or word echo enabled and type a word which is misspelled, when the spelling error indication appears, Orca will announce "misspelled" so that you can immediately go back and correct the error.
+* When you examine text formatting, Orca also announces spelling issues as one of the text attributes:
 
-Finally, when you are navigating within a document and the caret moves into a word which is misspelled, Orca will announce the presence of the spelling error.
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock+F`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`Insert+F`
+    :::
+    ::::
+
+    Orca recognizes the spelling issue by reading the underline formatting that applications use to mark errors.
+
+* Enable key echo or word echo. When you misspell a word, Orca announces "misspelled" so that you can immediately go back and correct the error.
+
+* When you move the caret into a word that's misspelled, Orca announces the presence of the spelling error.
+
+* Perform detailed Where Am I to learn more details about the spelling issue:
+    
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+        
+    {kbd}`CapsLock` + double-press {kbd}`Enter`
+    :::
+        
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+ 
+    {kbd}`Insert` + double-press {kbd}`Enter`
+    :::
+    ::::
 
 
 ## Navigate the document structure
