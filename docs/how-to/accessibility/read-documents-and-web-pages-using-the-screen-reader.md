@@ -23,17 +23,29 @@ To read, spell, and obtain the Unicode value for the current text, or to read th
 
 ## Examine text formatting
 
-The term "text attributes" refers to all of the font, style, alignment, and other formatting associated with a given character or series of characters.
+Let Orca speak the text attributes of the current object, such as the font, style, alignment, and other formatting associated with the given characters:
 
-### Obtaining Formatting Information
+::::{tab-set}
+:::{tab-item} Laptop layout
+:sync: orca-laptop
 
-When you press Orca Modifier+F, Orca will speak known text attribute information about an object. In addition, Orca will optionally indicate text attributes in braille by "underlining" them as you navigate a document.
+{kbd}`CapsLock+F`
+:::
 
-Because the number of text attributes is large, and not everyone cares about every attribute, the Text Attributes page of the preferences dialog allows you to customize which text attributes Orca will present in speech, along with the order in which they should be presented, and which ones Orca will indicate in braille.
+:::{tab-item} Desktop layout
+:sync: orca-desktop
 
-Because the Text Attributes page is also part of the application-specific settings, you can customize text attribute presentation on an as-needed basis for each application you use.
+{kbd}`Insert+F`
+:::
+::::
 
-### Identifying Misspelled Words
+### Preferences
+ 
+The number of text attributes is large. You can customize which text attributes Orca presents in speech, along with the order in which Orca lists them. Optionally, Orca can indicate text attributes in braille by "underlining" them as you navigate a document. Go to the {guilabel}`Text Attributes` page of the Orca preferences dialog to change these settings.
+
+You can also customize text attribute presentation for each application that you use in the application-specific settings.
+
+## Identify misspelled words
 
 Most applications and toolkits indicate that a word is misspelled by underlining that word with a red, squiggly line. The presence of this line is typically exposed to assistive technologies as a text attribute. As a result, you will find spelling errors amongst the text attributes you can choose. By default, the spelling error attribute is enabled for both speech and braille and will therefore be presented along with any other attributes whose indication you have enabled.
 
