@@ -3,25 +3,22 @@
 
 ## Read documents using caret mode
 
-To read the content of any document, use the application's built-in caret navigation mode. As you navigate within the text of the document, Orca presents your new location.
+In caret mode, also known as caret browsing or caret navigation, you navigate a document using the text cursor (caret). You move the cursor using the arrow keys. As you navigate within the text of the document, Orca presents your current location.
 
-Enabling Caret Navigation in an Application
+Enable caret navigation:
 
-Not all applications have caret navigation enabled by default. For many GNOME applications, caret navigation can be toggled on and off by pressing F7.
+* Applications with text input, such as text editors and word processors, enable caret navigation by default. The caret is the text cursor that you use to enter text in the window.
+* In many GNOME applications and in web browser such as Firefox and Chrome, you can enable caret navigation by pressing {kbd}`F7`.
+* For other applications, consult their documentation.
 
-As a result, you are likely already familiar with how to read a document using Orca. For instance:
+Read the document using caret navigation:
 
-* Use Left and Right to move and read by character.
+* Use {kbd}`Left` and {kbd}`Right` to move and read by character.
+* Use {kbd}`Ctrl+Left` and {kbd}`Ctrl+Right` to move and read by word.
+* Use {kbd}`Up` and {kbd}`Down` to move and read by line.
+* Use {kbd}`Shift` in combination with the previous commands to select and unselect text.
 
-* Use Ctrl+Left and Ctrl+Right to move and read by word.
-
-* Use Up and Down to move and read by line.
-
-* Use Shift in combination with the above commands to select and unselect text.
-
-In addition to reading a document by caret navigation, you may find it helpful to read, spell, and obtain the Unicode value for the current text. You can do these things through Orca's Flat Review feature.
-
-Finally, in order to have Orca speak the entire document from your present location, use the Say All command. It, along with a more complete listing of Orca's commands for accessing document text, can be found in the Reading Commands guide.
+To read, spell, and obtain the Unicode value for the current text, or to read the whole document, refer to {ref}`orca-examine-a-window`.
 
 
 ## Examine text formatting
