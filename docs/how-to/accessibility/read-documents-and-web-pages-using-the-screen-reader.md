@@ -88,6 +88,7 @@ You can learn about spelling issues in several ways:
     ::::
 
 
+(orca-navigate-the-document-structure)=
 ## Navigate the document structure
 
 The Structural Navigation feature enables you to browse elements in a document. The types of elements by which you can navigate include:

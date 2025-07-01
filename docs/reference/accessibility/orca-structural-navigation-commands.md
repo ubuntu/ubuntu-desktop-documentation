@@ -1,7 +1,7 @@
 (orca-structural-navigation-commands)=
 # Orca Structural Navigation commands
 
-The following commands navigate the document by headings, links and other elements. You can use them on web pages and in certain text editors. Learn more at {ref}`read-documents-and-web-pages-using-the-screen-reader`.
+The following commands navigate the document by headings, links and other elements. You can use them on web pages and in certain text editors. Learn more at {ref}`orca-navigate-the-document-structure`.
 
 Enable or disable Structural Navigation keys:
 
