@@ -40,6 +40,7 @@ Reference </reference/index>
 ::::
 
 ::::{grid} 1 1 2 2
+:reverse:
 
 :::{grid-item-card} Reference
 :link: /reference/index
