@@ -4,9 +4,9 @@
 
 ### AT-SPI
 
-The Assistive Technology Service Provider Interface (AT-SPI) is a platform-neutral framework for bi-directional communication between assistive technologies (AT) and applications. 
+The Assistive Technology Service Provider Interface (AT-SPI) is a platform-neutral framework for communication between assistive technologies (AT) and applications. 
 
-AT-SPI defines a set of interfaces for assistive technologies which allow to get names, roles and states of interface objects, listen for events, or perform actions. 
+AT-SPI defines a set of interfaces for assistive technologies which allow to get names, roles, and states of interface objects, listen for events, or perform actions. 
 
 AT-SPI uses D-Bus method calls and signals. D-Bus is an inter-process communication system in Linux, which makes AT-SPI a default accessibility framework for Linux.  
 
@@ -57,30 +57,31 @@ speech synthesizers that Orca depends on. When Orca identifies the text, it pass
 
 ### Orca
 
-Orca is screen reading software for vision impaired and blind users. 
+Orca is a screen reader for vision impaired and blind users. 
 
-Orca is preinstalled on Ubuntu Desktop and can be enabled and used out-of-box. To learn how to configure Orca, go to [Read the screen aloud](../how-to/accessibility/read-screen-aloud.md). 
+Orca is preinstalled on Ubuntu Desktop and can be used out-of-box. To learn how to configure it, go to {ref}`read-screen-aloud`.
 
 ### BRLTTY
 
 The Orca screen reader can display the user interface on a refreshable Braille display. It uses the BRLTTY service, which provides access to the Linux console for a blind person using a refreshable Braille display. 
 
-As Orca, BRLTTY is preinstalled and can be enabled and used without any additional configurations, see [Read the screen in Braille](../how-to/accessibility/read-screen-in-braille.md).
+As Orca, BRLTTY is preinstalled and can be enabled and used without any additional configurations, see {ref}`read-screen-in-braille`.
 
 ### eSpeak
 
-eSpeak is a speech synthesizer that supports English. eSpeak can be used as a standalalone tool or as a backend component for screen readers, see [eSpeak website](https://espeak.sourceforge.net/)
+eSpeak is a speech synthesizer that supports over 100 languages and accents. eSpeak can be used as a standalalone tool or as a backend component for screen readers, see [eSpeak website](https://espeak.sourceforge.net/)
 
 ### Speech dispatcher
 
-Speech dispatcher is a device-independent high-level interface for speech synthesis. It can be used by other software and hardware speech synthesizers as a backend, see [Speech Dispatcher website](https://freebsoft.org/speechd).
+Speech dispatcher is a device-independent high-level interface for speech synthesis. It can be used by other software and hardware speech synthesizers as a backend, see [Speech Dispatcher website](https://freebsoft.org/speechd). 
 
-Therefore, Speech Dispatcher is the layer that allows you to switch between TTS solutions.
+Therefore, Speech Dispatcher is the layer that allows you to switch between text-to-speech (TTS) solutions.
 
 ## On-screen keyboards
 
 ### GNOME on-screen keyboard
 
-Ubuntu Desktop comes with a GNOME on-screen keyboard preinstalled, it is the on-screen keyboard that we recommend for Desktop. To start using it, see [How to use an on-screen keyboard](../how-to/accessibility/use-an-on-screen-keyboard).
+Ubuntu Desktop comes with a GNOME on-screen keyboard preinstalled, it is the on-screen keyboard that we recommend for Desktop. To start using it, see {ref}`use-an-on-screen-keyboard`.
+
 
 
