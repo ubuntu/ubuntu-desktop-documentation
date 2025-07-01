@@ -90,40 +90,50 @@ You can learn about spelling issues in several ways:
 
 ## Navigate the document structure
 
-Orca's Structural Navigation feature allows you to navigate amongst elements in a document. The types of elements by which you can navigate include:
+The Structural Navigation feature enables you to browse elements in a document. The types of elements by which you can navigate include:
 
 * Headings and other text blocks
 * Form controls
 * Links
 * Lists and list items
-* Landmarks, separators, and anchors
+* Landmarks, separators and anchors
 * Tables and table cells
 
-A full list of individual elements and their associated keybindings can be found in Structural Navigation Commands.
+Structural Navigation is available in the following environments:
 
-### Supported Applications
+* On **web pages**, you can navigate the full range of elements.
+* In **LibreOffice Writer** and OpenOffice Writer, you can navigate table cells.
 
-Currently, Structural Navigation is fully implemented for web content, including the help content you are reading now. Orca's Structural Navigation support for table cells has also been implemented for OpenOffice Writer and LibreOffice Writer. Implementing the remainder of the Structural Navigation objects to these office suites requires changes to be made by their respective developers. Implementing any Structural Navigation features within Evince will require a similar effort on the part of its developers.
-Don't Forget To Toggle Structural Navigation On!
+### Navigate a web page
 
-Depending on where you are, it may be necessary for you to explicitly toggle Structural Navigation on before you can use it.
+On web pages, you usually read the content without editing it. You can use the Structural Navigation commands directly. Refer to {ref}`orca-structural-navigation-commands`.
 
-#### When Toggling Structural Navigation On Is Required
+### Navigate elements in a text editor
 
-In web pages, explicitly toggling Structural Navigation on is generally unnecessary because your interaction with the document largely consists of reading its content. Thus there is no question as to whether the 'H' you just pressed was meant to be a writing command or a navigation command.
+In editable documents, such as those in **LibreOffice Writer** or an **online text editor**, pressing letters on the keyboard types text in the editor.
 
-On the other hand, in editable documents such as those found in OpenOffice and LibreOffice, it is far more difficult for Orca to accurately predict what you expect to have happen as a result of pressing 'H'. Therefore, before you can use any Structural Navigation command in an editable document, you must first toggle Structural Navigation on by pressing Orca Modifier+Z. When you are finished navigating and ready to resume writing, press Orca Modifier+Z again to toggle Structural Navigation off.
+Enable Structural Navigation to use letters as navigation shortcuts:
 
-### Available Settings
+::::{tab-set}
+:::{tab-item} Laptop layout
+:sync: orca-laptop
+    
+{kbd}`CapsLock+Z`
+:::
+    
+:::{tab-item} Desktop layout
+:sync: orca-desktop
 
-In addition to the aforementioned commands, Orca has a number of configurable options available specifically for applications in which there is structural navigation support.
-Configuring Structural Navigation
+{kbd}`Insert+Z`
+:::
+::::
 
-1. Give focus to an application for which Orca has Structural Navigation support.
-2. Get into the Orca Preferences dialog box for the current application by pressing Ctrl+Orca Modifier+Space.
-3. Navigate to the last page of the dialog box which should be named according to the name of your current application.
-4. Examine and change the settings as you see fit.
-5. Press the OK button.
+Browse elements using Structural Navigation commands:
+
+* On web pages, refer to {ref}`orca-structural-navigation-commands`.
+* In Writer, you can only use the commands for {ref}`orca-structural-navigation-commands-tables`.
+
+To go back to writing, disable Structural Navigation using the same shortcut that enables it.
 
 
 ## Read tables
