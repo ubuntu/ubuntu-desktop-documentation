@@ -139,17 +139,15 @@ To go back to writing, disable Structural Navigation using the same shortcut tha
 
 ## Read tables
 
-Orca provides several features specifically designed to improve access to tables found in web pages and other documents: configurable cell versus row reading, Structural Navigation and Dynamic Headers.
+Orca provides several features to access tables on web pages and in other documents.
 
-### Cell Versus Row Reading
+### Read the cell or the row
 
-Consider the process of examining the list of messages in your Inbox. In order to have Orca announce the sender, subject, date, and presence of attachments you would need Orca to speak the row. On the other hand, when navigating amongst rows in a spreadsheet, hearing the full row may not be desired if for no other reason than the sheer number of cells in each row. Thus in that case, you would want Orca to only speak the cell with focus. Similar situations occur in document tables.
+Consider the list of **messages in your Inbox**. To hear the sender, subject, date and presence of attachments, you want Orca to **speak the row**.
 
-Orca allows you to customize whether only the cell should be read, or if the full row should be, for GUI tables, document tables, and spreadsheets. Because these settings are independent of one another, you do not have to choose one table reading mode to fit multiple types of tables.
+On the other hand, consider the **rows in a spreadsheet**. You might not want to hear the full row because of the large number of cells in each row. In that case, you want Orca to only **speak the cell with focus**. Similar situations occur in document tables.
 
-You can set each of Orca's table reading preferences Orca wide as well as on an application-by-application basis. How to do each is described in the guide on Orca's preferences dialogs. The settings can be found on the Speech page.
-
-Lastly, there is also an Orca command which allows you to toggle cell versus row reading on the fly for the currently-active table:
+You can switch between cell and row reading for the current table:
 
 ::::{tab-set}
 :::{tab-item} Laptop layout
@@ -165,19 +163,18 @@ Lastly, there is also an Orca command which allows you to toggle cell versus row
 :::
 ::::
 
+You can customize whether Orca reads the cell or the full row by default. You can also choose different table reading modes for each type of table and for specific applications. To edit the options, go to the {guilabel}`Speech` page of Orca preferences.
+
 ### Structural Navigation
 
 Orca's table Structural Navigation commands make it possible for you to quickly locate tables, jump immediately to a table's first or last cell, and move to the next cell in any direction.
 
 As you navigate amongst and within tables using Structural Navigation, Orca will announce additional details to help you understand your position, such as the dimensions of the table you just entered and the fact that you have reached the edge of the table in the direction you are moving.
 
-In addition, Orca provides configurable presentation options which work in conjunction with Structural Navigation and allow you to control whether or not cell coordinates are presented, multiple cell spans are indicated, and cell headers are announced.
+For details, refer to {ref}`orca-navigate-the-document-structure`.
 
-:::{note}
-Don't Forget To Toggle Structural Navigation On!
+In addition, Orca provides configurable [presentation options](https://help.gnome.org/users/orca/stable/preferences_table_navigation.html.en) which work in conjunction with Structural Navigation and allow you to control whether or not cell coordinates are presented, multiple cell spans are indicated, and cell headers are announced.
 
-Depending on where you are, it may be necessary for you to explicitly toggle Structural Navigation on before you can use it. To learn more, read when toggling Structural Navigation on is required.
-:::
 
 ### Dynamic Headers
 
