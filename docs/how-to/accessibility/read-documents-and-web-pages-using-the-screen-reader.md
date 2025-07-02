@@ -111,9 +111,7 @@ On web pages, you usually read the content without editing it. You can use the S
 
 ### Navigate elements in a text editor
 
-In editable documents, such as those in **LibreOffice Writer** or an **online text editor**, pressing letters on the keyboard types text in the editor.
-
-Enable Structural Navigation to use letters as navigation shortcuts:
+In editable documents, such as those in **LibreOffice Writer** or an **online text editor**, pressing letters on the keyboard types text in the editor. Enable Structural Navigation to use letters as navigation shortcuts instead:
 
 ::::{tab-set}
 :::{tab-item} Laptop layout
@@ -167,60 +165,57 @@ You can customize whether Orca reads the cell or the full row by default. You ca
 
 ### Structural Navigation
 
-Orca's table Structural Navigation commands make it possible for you to quickly locate tables, jump immediately to a table's first or last cell, and move to the next cell in any direction.
+With Structural Navigation commands, you can locate tables, jump to the first or last cell and move to the next cell in any direction.
 
-As you navigate amongst and within tables using Structural Navigation, Orca will announce additional details to help you understand your position, such as the dimensions of the table you just entered and the fact that you have reached the edge of the table in the direction you are moving.
+As you navigate the table, Orca announces the details about your position, such as the dimensions of the table or that you have reached the edge of the table.
 
 For details, refer to {ref}`orca-navigate-the-document-structure`.
 
-In addition, Orca provides configurable [presentation options](https://help.gnome.org/users/orca/stable/preferences_table_navigation.html.en) which work in conjunction with Structural Navigation and allow you to control whether or not cell coordinates are presented, multiple cell spans are indicated, and cell headers are announced.
+### Mark a row or column as a header
 
+Many tables have incorrectly marked headers. A row or column often serves as a header but it only uses bold or large text instead of semantic markup. In other cases, the header might be correct but the application or the toolkit don't provide the information to the screen reader.
 
-### Dynamic Headers
+In those cases, you can manually mark a row or column as a header using the Dynamic Header feature.
 
-Many of the tables you will encounter while reading have cells which serve as the header for a row or a column. Whether or not the creator of that table correctly marked those cells as headers is hard to say. In many cases, the text was simply formatted to be larger and/or bold. And even if the table is correctly marked up, that is no guarantee that the application or toolkit exposes that text as header information to assistive technologies. Orca's Dynamic Header support makes it possible to overcome these challenges.
+#### Set a row as a header
 
-#### Setting Column Headers
+Tell Orca that the current row is the one with the headers:
 
-1. Move to the row which contains all of the column headers.
-2. Tell Orca that the current row is the one with the headers:
+::::{tab-set}
+:::{tab-item} Laptop layout
+:sync: orca-laptop
 
-    ::::{tab-set}
-    :::{tab-item} Laptop layout
-    :sync: orca-laptop
+{kbd}`CapsLock+R`
+:::
 
-    {kbd}`CapsLock+R`
-    :::
+:::{tab-item} Desktop layout
+:sync: orca-desktop
 
-    :::{tab-item} Desktop layout
-    :sync: orca-desktop
+{kbd}`Insert+R`
+:::
+::::
 
-    {kbd}`Insert+R`
-    :::
-    ::::
+#### Set a column as a header
 
-#### Setting Row Headers
+Tell Orca that the current column is the one with the headers:
 
-1. Move to the column which contains all of the row headers.
-2. Tell Orca that the current column is the one with the headers:
+::::{tab-set}
+:::{tab-item} Laptop layout
+:sync: orca-laptop
 
-    ::::{tab-set}
-    :::{tab-item} Laptop layout
-    :sync: orca-laptop
+{kbd}`CapsLock+C`
+:::
 
-    {kbd}`CapsLock+C`
-    :::
+:::{tab-item} Desktop layout
+:sync: orca-desktop
 
-    :::{tab-item} Desktop layout
-    :sync: orca-desktop
+{kbd}`Insert+C`
+:::
+::::
 
-    {kbd}`Insert+C`
-    :::
-    ::::
+#### Reset the custom header
 
-Having set either the column headers or the row headers, you should find that as you navigate amongst the cells, Orca will present each header that has changed. Or to put it another way, Orca will not present the column header over and over again as you move up or down within the current column. Likewise, it will not present the row header over and over again as you move left or right within the current row. However, if you change rows and there are row headers, the header associated with the new row will be presented. And if you change columns and there are column headers, the header associated with the new column will be presented.
-
-To clear headers, simply double-click the command you used to set them. Thus double-clicking Orca Modifier+R tells Orca there are no column headers. Double-clicking Orca Modifier+C tells Orca there are no row headers.
+To clear headers, double-press the command that you used to set them. This removes all custom row headers or column headers.
 
 
 ## Fill out forms
