@@ -58,6 +58,15 @@ Reference </reference/index>
 ::::
 
 
-* **Accessibility**: [Accessible features in Desktop](how-to/accessibility/index.md) | [Accessibility stack](explanation/accessibility-architecture.md) | [AT-SPI DBus XML interfaces](reference/accessibility/index.md)
+### Accessibility
 
+[Accessible features in Desktop](how-to/accessibility/index.md) | [Accessibility stack](explanation/accessibility-architecture.md) | [AT-SPI DBus XML interfaces](reference/accessibility/index.md)
+
+## Open-source contributors
+
+Large parts of this guide are based on documentation written by open-source communities. We wish to thank them for their work:
+
+* The [GNOME User Documentation](https://gitlab.gnome.org/GNOME/gnome-user-docs) project
+* The [Orca screen reader](https://gitlab.gnome.org/GNOME/orca) documentation
+* The [Ubuntu Desktop Guide](https://launchpad.net/ubuntu/+source/ubuntu-docs) project
 
