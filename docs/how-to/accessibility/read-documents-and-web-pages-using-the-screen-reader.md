@@ -225,51 +225,99 @@ In browse mode, you can read forms. In focus mode, you can fill out form fields.
 
 ### Read or write
 
-Use the following shortcut to switch between the modes:
+* Switch between the modes:
 
-::::{tab-set}
-:::{tab-item} Laptop layout
-:sync: orca-laptop
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
 
-{kbd}`CapsLock+A`
-:::
+    {kbd}`CapsLock+A`
+    :::
 
-:::{tab-item} Desktop layout
-:sync: orca-desktop
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
 
-{kbd}`Insert+A`
-:::
-::::
+    {kbd}`Insert+A`
+    :::
+    ::::
 
-To enable **sticky focus mode**, double-press the shortcut. To enable **sticky browse mode**, triple-press the shortcut.
+* To enable **sticky focus mode**, double-press the shortcut.
+
+* To enable **sticky browse mode**, triple-press the shortcut.
 
 ### Browse form fields
 
 In **browse** and **focus mode**, you can browse all focusable objects using {kbd}`Tab` and {kbd}`Shift+Tab`. After the last form field, you exit the form.
 
-In **browse mode**:
+In **browse mode**, you can also use the following navigation:
 
 * To navigate to a specific form field, use Structural Navigation commands for {ref}`orca-structural-navigation-commands-forms`.
 
 * To leave the form and navigate to another object, use {ref}`orca-structural-navigation-commands`.
 
-* In certain forms and applications, you can also use {ref}`caret mode <orca-read-documents-using-caret-mode>`.
+* In certain forms and applications, you can use {ref}`caret mode <orca-read-documents-using-caret-mode>`.
 
 
-## Interact with live regions
+## Read live regions
 
-A live region is a dynamically-updated portion of a web page, such as a table of sports statistics, a list of current stock prices, a log from a chat, or an alert displayed by the page you are reading. While live regions appear quite frequently, fully accessible web pages with live regions are encountered less often. This problem is actively being addressed by a number of organizations.
+A live region is a dynamically-updated portion of a web page, such as a table of sports statistics, a list of current stock prices, a log from a chat, or an alert displayed by the page you are reading.
 
-### Live Region Politeness Levels
+Live regions are common on the web. However, not many web pages with live regions are fully accessible.
 
-Live regions have an associated "politeness" level which is set by the author as a means to convey the importance of the information and to suggest when users should be informed by their assistive technology of updates made within that region. Live regions can be "off", "polite", or "assertive" to the point of being "rude."
+### Browse live regions
 
-### Orca's Support for Live Regions
+* Monitor live regions:
 
-Because you might not agree with the politeness level specified by the author whose page you are viewing, Orca provides a number of live region commands which allow you to modify the level of any or all of the regions on a page. In addition, you can:
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
 
-* Turn live region support on or off
-* Jump to the next and previous live region spatially
-* Jump to the last live region which presented information
-* Review the last nine live region messages which were presented
+    {kbd}`CapsLock+Shift+\`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`Insert+Shift+\`
+    :::
+    ::::
+
+* Go to the next live region: {kbd}`D`
+
+* Go to the previous live region: {kbd}`Shift+D`
+
+* Go to last live region that made an announcement: {kbd}`Y`
+
+* Review the last **nine** announcements:
+
+    ::::{tab-set}
+    :::{tab-item} Laptop layout
+    :sync: orca-laptop
+
+    {kbd}`CapsLock` + {kbd}`F1` through {kbd}`F9`
+    :::
+
+    :::{tab-item} Desktop layout
+    :sync: orca-desktop
+
+    {kbd}`Insert` + {kbd}`F1` through {kbd}`F9`
+    :::
+    ::::
+
+### Adjust live region politeness
+
+Live regions have a "politeness" level. It tells your screen reader how important the information is and when you should hear the updates in that region.
+
+In increasing order of importance, the politeness levels are:
+
+1. Off
+2. Polite
+3. Assertive
+4. Rude
+
+You might not agree with the politeness level that the page author specified. In that case, you can modify the politeness level of live regions on the page:
+
+* Cycle between politeness levels: {kbd}`\`
+
+* Set the default politeness level to _off_: {kbd}`Shift+\`
 
