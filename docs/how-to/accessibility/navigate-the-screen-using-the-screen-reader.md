@@ -653,3 +653,7 @@ When you select a bookmark, the exact behavior depends on the current environmen
     :::
     ::::
 
+## Keyboard navigation shortcuts
+
+For keyboard shortcuts that launch applications, switch between desktop elements and navigate desktop menus, refer to {ref}`navigate-the-interface-using-the-keyboard`.
+

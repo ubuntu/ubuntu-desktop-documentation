@@ -40,6 +40,7 @@ Reference </reference/index>
 ::::
 
 ::::{grid} 1 1 2 2
+:reverse:
 
 :::{grid-item-card} Reference
 :link: /reference/index
@@ -56,7 +57,15 @@ Reference </reference/index>
 :::
 ::::
 
+### Accessibility
 
-* **Accessibility**: [Accessible features in Desktop](how-to/accessibility/index.md) |[Our accessibility stack](explanation/accessibility-architecture.md) | [AT-SPI DBus XML interfaces](reference/accessibility/index.md)
+[Accessible features in Desktop](how-to/accessibility/index.md) |[Our accessibility stack](explanation/accessibility-architecture.md) | [AT-SPI DBus XML interfaces](reference/accessibility/index.md)
 
+## Open-source contributors
+
+Large parts of this guide are based on documentation written by open-source communities. We wish to thank them for their work:
+
+* The [GNOME User Documentation](https://gitlab.gnome.org/GNOME/gnome-user-docs) project
+* The [Orca screen reader](https://gitlab.gnome.org/GNOME/orca) documentation
+* The [Ubuntu Desktop Guide](https://launchpad.net/ubuntu/+source/ubuntu-docs) project
 
