@@ -1,6 +1,7 @@
 (read-documents-and-web-pages-using-the-screen-reader)=
 # Read documents and web pages using the screen reader
 
+(orca-read-documents-using-caret-mode)=
 ## Read documents using caret mode
 
 In caret mode, also known as caret browsing or caret navigation, you navigate a document using the text cursor (caret). You move the cursor using the arrow keys. As you navigate within the text of the document, Orca presents your current location.
@@ -220,31 +221,39 @@ To clear headers, double-press the command that you used to set them. This remov
 
 ## Fill out forms
 
-When interacting with web pages and other documents using Orca, you are interacting with the document itself; not a buffered copy of that document. Orca's browse and focus modes let you switch between reading and filling out forms.
+In browse mode, you can read forms. In focus mode, you can fill out form fields.
 
-### Navigating Amongst Form Fields
+### Read or write
 
-To navigate amongst form fields, you have several options:
+Use the following shortcut to switch between the modes:
 
-* Use {kbd}`Tab` and {kbd}`Shift+Tab` to navigate amongst focusable objects, regardless of type.
-* Use Orca's structural navigation commands for forms.
-* Depending on the form and the application, you may also be able to use the arrow keys to navigate to a given form field.
+::::{tab-set}
+:::{tab-item} Laptop layout
+:sync: orca-laptop
 
-:::{note}
-In order to use Orca's caret navigation or structural navigation commands to navigate to a form field, you must be in browse mode. If you are in focus mode, you can switch to browse mode by pressing Orca Modifier+A.
+{kbd}`CapsLock+A`
 :::
 
-### Exiting Form Fields
+:::{tab-item} Desktop layout
+:sync: orca-desktop
 
-To exit a form field, you have several options:
-
-* Use {kbd}`Tab` and {kbd}`Shift+Tab` if you wish to leave the currently-focused form field and move to the next/previous focusable object, regardless of type.
-* Use Orca's structural navigation commands for forms to move to the next or previous form field.
-* Depending on the form and the application, you may also be able to use the arrow keys to navigate out of a given form field.
-
-:::{note}
-In order to use Orca's caret navigation or structural navigation commands to exit a form field, you must be in browse mode. If you are in focus mode, you can switch to browse mode by pressing Orca Modifier+A.
+{kbd}`Insert+A`
 :::
+::::
+
+To enable **sticky focus mode**, double-press the shortcut. To enable **sticky browse mode**, triple-press the shortcut.
+
+### Browse form fields
+
+In **browse** and **focus mode**, you can browse all focusable objects using {kbd}`Tab` and {kbd}`Shift+Tab`. After the last form field, you exit the form.
+
+In **browse mode**:
+
+* To navigate to a specific form field, use Structural Navigation commands for {ref}`orca-structural-navigation-commands-forms`.
+
+* To leave the form and navigate to another object, use {ref}`orca-structural-navigation-commands`.
+
+* In certain forms and applications, you can also use {ref}`caret mode <orca-read-documents-using-caret-mode>`.
 
 
 ## Interact with live regions

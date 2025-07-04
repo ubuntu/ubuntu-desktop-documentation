@@ -74,6 +74,7 @@ Enable or disable Structural Navigation keys:
   - {kbd}`Alt+Shift+6`
 :::
 
+(orca-structural-navigation-commands-forms)=
 ## Forms
 
 :::{list-table}
