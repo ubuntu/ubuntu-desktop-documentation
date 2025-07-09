@@ -16,8 +16,8 @@ Ubuntu offers essential applications for web browsing, messaging, gaming, and co
 
 Tutorials </tutorial/index>
 How-to guides </how-to/index>
-Explanation </explanation/index>
 Reference </reference/index>
+Explanation </explanation/index>
 :::
 
 ## In this documentation
