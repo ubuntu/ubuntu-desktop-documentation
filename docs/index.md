@@ -16,8 +16,8 @@ Ubuntu offers essential applications for web browsing, messaging, gaming, and co
 
 Tutorials </tutorial/index>
 How-to guides </how-to/index>
-Explanation </explanation/index>
 Reference </reference/index>
+Explanation </explanation/index>
 :::
 
 ## In this documentation
@@ -57,9 +57,8 @@ Reference </reference/index>
 :::
 ::::
 
-### Accessibility
-
-* **Accessibility**: [Accessible features in Desktop](how-to/accessibility/index.md) | [Accessibility stack](explanation/accessibility-stack.md) | [AT-SPI DBus XML interfaces](reference/accessibility/index.md)
+Accessibility
+: [Accessible features in Desktop](how-to/accessibility/index.md) | [Accessibility stack](explanation/accessibility-stack.md) | [AT-SPI DBus XML interfaces](reference/accessibility/index.md)
 
 ## Open-source contributors
 
