@@ -9,4 +9,5 @@ record-the-screen
 log-in-using-a-smart-card
 enable-smart-cards-in-snapped-browsers
 accessibility/index
+troubleshoot/index
 :::
