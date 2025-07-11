@@ -3,15 +3,52 @@
 
 Ubuntu 24.04 LTS has certain known issues when using the screen reader. If you encounter them, you can use the following ways to improve accessibility.
 
-## Orca modifier
+## Reconfigure the Orca modifier
 
-If the Caps Lock Orca modifier is unreliable, you can either connect a full-size keyboard or you can switch to a different modifier while keeping the laptop layout.
+With the laptop layout, Orca uses {kbd}`CapsLock` as the Orca modifier in keyboard shortcuts. Sometimes, {kbd}`CapsLock` is unreliable as the modifier and doesn't trigger the intended command. The {kbd}`Insert` modifier is more reliable.
 
-## Replace GTK4 and Flutter applications
+To work around the issue, you have several options:
 
-The screen reader works fine in GTK3 applications, but in GTK4 and Flutter, you can only browse interactive elements using Tab. You can’t use other Orca commands like Flat Review or object search. Therefore, you can’t read non-interactive elements.
+* Connect a full-size keyboard with a numeric keypad.
 
-## Upgrade to the latest Ubuntu
+    In Orca preferences on the {guilabel}`General` tab, make sure that Orca switches to the desktop layout.
 
-Ubuntu 25.04 and 25.10 greatly improves the screen reader experience.
+* Switch to the {kbd}`Insert` modifier while keeping the laptop layout.
+
+    In Orca preferences on the {guilabel}`Key Bindings` tab, switch {guilabel}`Screen Reader Modifier Key(s)` to Insert.
+
+    Next time you enter Orca commands, remember that you're still using the laptop layout but with {kbd}`Insert` rather than {kbd}`CapsLock`.
+
+## Replace GTK4 applications
+
+GTK4 is the latest version of the GTK toolkit for creating GNOME application interfaces. Applications using the previous GTK3 toolkit are fully accessible. However, GTK4 applications in Ubuntu 24.04 only expose interactive elements such as buttons to the screen reader. You can navigate interactive elements using {kbd}`Tab`. Generally, the screen reader can't read static text such as document content in these applications. Features like Flat Review don't work.
+
+To work around the issue, replace the GTK4 applications that pose issues to you with GTK3 applications:
+
+Files
+: Replace with Caja, which is available from the `caja` package.
+
+    To launch Caja, press {kbd}`Alt+F2` and enter `caja`.
+
+Text Editor
+: Replace with Gedit, which is available from the `gedit` package.
+
+Calculator
+: Replace with MATE Calculator, which is available from the `mate-calc` package.
+
+## Replace Flutter applications
+
+TODO
+
+## Try different keyboard layouts
+
+If you use a mix of various user interface languages and localized keyboard layouts, the screen reader might be using a different keyboard layout for its commands than your active layout. For example, You might be using the French layout but the screen reader commands treat your keyboard as if it had the American English layout.
+
+If screen reader commands don't work, try pressing the key as if another relevant layout was active.
+
+## Upgrade to the latest Ubuntu release
+
+Ubuntu 25.04 and 25.10 greatly improves the screen reader experience. The {kbd}`CapsLock` modifier works as expected. GTK4 applications are fully accessible.
+
+However, Flutter applications still only expose interactive elements.
 
