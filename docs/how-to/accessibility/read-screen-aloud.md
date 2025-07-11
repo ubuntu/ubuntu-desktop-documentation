@@ -3,6 +3,10 @@
 
 The Orca screen reader can speak the user interface.
 
+:::{warning}
+Ubuntu 24.04 LTS has certain known issues when using the screen reader. If you encounter them, you can use the following ways to improve         accessibility: {ref}`work-around-known-screen-reader-issues`.
+:::
+
 1. Make sure that Orca is installed:
 
     ```bash
