@@ -13,13 +13,13 @@ To work around the issue, you have several options:
 
     In Orca preferences on the {guilabel}`General` tab, make sure that Orca switches to the desktop layout.
 
-* Switch to the {kbd}`Insert` modifier while keeping the laptop layout.
+* If your keyboard has the {kbd}`Insert` key, switch to the {kbd}`Insert` modifier while keeping the laptop layout.
 
-    In Orca preferences on the {guilabel}`Key Bindings` tab, switch {guilabel}`Screen Reader Modifier Key(s)` to Insert.
+    In Orca preferences on the {guilabel}`Key Bindings` tab, switch {guilabel}`Screen Reader Modifier Key(s)` to {guilabel}`Insert, KP_Insert`.
 
     Next time you enter Orca commands, remember that you're still using the laptop layout but with {kbd}`Insert` rather than {kbd}`CapsLock`.
 
-* Switch from the Wayland session to X11 (X.org).
+* Switch from the Wayland session to X11 (X\.org).
 
     Although the X11 session is deprecated, the {kbd}`CapsLock` modifier is more reliable there in Ubuntu 24.04.
 
@@ -49,7 +49,17 @@ System Monitor
 
 ## Replace Flutter applications
 
-TODO
+Flutter is the toolkit used to create Ubuntu applications such as the App Center or Firmware Updater. Currently, screen reader support is limited in Flutter applications across all Ubuntu releases. If you experience issues with these applications, consider replacing them with alternative ones:
+
+App Center
+: App Center manages Deb packages and snaps.
+
+    The Synaptic application is a more accessible interface to Deb packages. It's available from the `synaptic` package.
+
+    No alternative snap interface is currently more accessible than App Center.
+
+Firmware Updater
+: Replace with the GNOME Firmware application, which is available from the `gnome-firmware` package.
 
 ## Try different keyboard layouts
 
@@ -57,9 +67,9 @@ If you use a mix of various user interface languages and localized keyboard layo
 
 If screen reader commands don't work, try pressing the key as if another relevant layout was active.
 
-## Upgrade to the latest Ubuntu release
+## Consider upgrading to the latest Ubuntu release
 
-Ubuntu 25.04 and 25.10 greatly improves the screen reader experience. The {kbd}`CapsLock` modifier works as expected. GTK4 applications are fully accessible.
+Ubuntu 25.04 and 25.10 greatly improve the screen reader experience. The {kbd}`CapsLock` modifier works as expected. GTK4 applications are fully accessible.
 
 However, Flutter applications still only expose interactive elements.
 
