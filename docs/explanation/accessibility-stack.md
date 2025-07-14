@@ -39,7 +39,7 @@ GTK3 version of the GTK toolkit that integrates with Accessibility Toolkit (ATK)
 
 ### Flutter
 
-A selection of applications on Ubuntu Desktop such as [App Center](https://github.com/ubuntu/app-center) are built with Flutter. Flutter engine has compatibility issues with AT-SPI. To learn how to make Fluuter applications that would be compatible with Ubuntu Desktop's default assistive solutions, reach out to the development team at [Discourse](https://discourse.ubuntu.com/tag/flutter).
+A selection of applications on Ubuntu Desktop such as [App Center](https://github.com/ubuntu/app-center) are built with Flutter. Flutter engine has compatibility issues with AT-SPI. To learn how to make Flutter applications that would be compatible with Ubuntu Desktop's default assistive solutions, reach out to the development team at [Discourse](https://discourse.ubuntu.com/tag/flutter).
 
 
 ### Overview of Ubuntu Desktop applications and their interfaces
@@ -53,7 +53,7 @@ A selection of applications on Ubuntu Desktop such as [App Center](https://githu
 | Software and Updates     | GTK3          | [ATK](https://docs.gtk.org/atk/) |
 
 
-## Screen reader and speech synthethis 
+## Screen reader and speech synthesis 
 
 Speech synthesizers converts text to human-sounding speech. Typically, they are offered as a backend for screen readers, but they can also be used as standalone programs. Orca is the default screen reader on Ubuntu Desktop. eSpeak and Speech Dispatcher are the 
 speech synthesizers that Orca depends on. When Orca identifies the text, it passes it to the Speech Dispatcher for speech synthesis; the Speech Dispatcher then passes the synthesized speech to eSpeak, which plays the sound.
@@ -122,7 +122,7 @@ Ubuntu uses BlueZ as its core Bluetooth stack.
 To be able to work on Desktop, a device must:
 
 - be HCI-compliant
-- have a corresponding firmare provided by the manufacturer as part of the `linux-firmware` package
+- have a corresponding firmware provided by the manufacturer as part of the `linux-firmware` package
 - use the [profiles supported by BlueZ](https://www.bluez.org/profiles/).
 
 ## See also

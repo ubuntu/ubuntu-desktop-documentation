@@ -1,4 +1,6 @@
 # Leave a blank line at the end of this file to support concatenation
+atspi
+ATK
 backend
 backends
 BRLTTY
@@ -11,6 +13,7 @@ Ctrl
 cryptographically
 dvipng
 Esc
+eSpeak
 Fn
 fonts
 freefont

@@ -27,11 +27,11 @@ Once a Bluetooth device is connected to the machine, the hardware driver such as
 
 HCI (Host Controller Interface) is a Bluetooth specification that defines how a host can communicate with a device. HCI defines commands which the host can send to the device such as *Connect* or *Reset* and events that the device can send back. For example, *Connection established* in response to the *Connect* command. 
 
-Once the device is initalized, it is ready to accept the HCI commands. The `bluetooth` module sends a basic HCI command to the device to verify that the device can be communicated with. If it is successful, `bluetooth` then registers the device as an HCI controller, assigns it the name `hciX` and adds a special file with this name to `/sys/class/bluetooth/`.   
+Once the device is initialized, it is ready to accept the HCI commands. The `bluetooth` module sends a basic HCI command to the device to verify that the device can be communicated with. If it is successful, `bluetooth` then registers the device as an HCI controller, assigns it the name `hciX` and adds a special file with this name to `/sys/class/bluetooth/`.   
 
 ### Bluetooth profiles
 
-For most devices, being able to receive and send HCI commands and events is not enough to ensure appropriate fucntionality. A keyboard and a hands-free device for a car must perform drastically different operations and exchange different data with the host. HCI defines only the core communications that are universal for all Bluetooth devices.
+For most devices, being able to receive and send HCI commands and events is not enough to ensure appropriate functionality. A keyboard and a hands-free device for a car must perform drastically different operations and exchange different data with the host. HCI defines only the core communications that are universal for all Bluetooth devices.
 
 Bluetooth [profiles](https://www.bluez.org/profiles/) are specifications that define *specific functionality* of the device. They define the device's behavior, data formats they can use, how authentication or reconnection should work, and many other specific behaviors.
 
