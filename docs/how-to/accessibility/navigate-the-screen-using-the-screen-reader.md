@@ -2,7 +2,7 @@
 # Navigate the screen using the screen reader
 
 :::{warning}
-Ubuntu 24.04 LTS has certain known issues when using the screen reader. If you encounter them, you can use the following ways to improve         accessibility: {ref}`work-around-known-screen-reader-issues`.
+Ubuntu 24.04 LTS has certain known issues when using the screen reader. If you encounter them, you can use the following ways to improve accessibility: {ref}`work-around-known-screen-reader-issues`.
 :::
 
 ## Where am I?
