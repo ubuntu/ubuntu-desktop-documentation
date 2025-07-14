@@ -19,6 +19,12 @@ To work around the issue, you have several options:
 
     Next time you enter Orca commands, remember that you're still using the laptop layout but with {kbd}`Insert` rather than {kbd}`CapsLock`.
 
+* Switch from the Wayland session to X11 (X.org).
+
+    Although the X11 session is deprecated, the {kbd}`CapsLock` modifier is more reliable there in Ubuntu 24.04.
+
+    The option to select X11 is at the login screen.
+
 ## Replace GTK4 applications
 
 GTK4 is the latest version of the GTK toolkit for creating GNOME application interfaces. Applications using the previous GTK3 toolkit are fully accessible. However, GTK4 applications in Ubuntu 24.04 only expose interactive elements such as buttons to the screen reader. You can navigate interactive elements using {kbd}`Tab`. Generally, the screen reader can't read static text such as document content in these applications. Features like Flat Review don't work.
@@ -35,6 +41,11 @@ Text Editor
 
 Calculator
 : Replace with MATE Calculator, which is available from the `mate-calc` package.
+
+System Monitor
+: Replace with MATE System Monitor, which is available from the `mate-system-monitor` package.
+
+    To launch it, press {kbd}`Alt+F2` and enter `mate-system-monitor`.
 
 ## Replace Flutter applications
 
