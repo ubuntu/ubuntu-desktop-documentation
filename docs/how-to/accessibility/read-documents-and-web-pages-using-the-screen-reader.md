@@ -1,9 +1,7 @@
 (read-documents-and-web-pages-using-the-screen-reader)=
 # Read documents and web pages using the screen reader
 
-:::{warning}
-Ubuntu 24.04 LTS has certain limitations when using the screen reader. If you encounter them, you can use the following ways to improve accessibility: {ref}`improve-screen-reader-usability`.
-:::
+{{a11y_limitations}}
 
 (orca-read-documents-using-caret-mode)=
 ## Read documents using caret mode

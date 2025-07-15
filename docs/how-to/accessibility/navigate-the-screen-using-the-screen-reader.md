@@ -1,9 +1,7 @@
 (navigate-the-screen-using-the-screen-reader)=
 # Navigate the screen using the screen reader
 
-:::{warning}
-Ubuntu 24.04 LTS has certain limitations when using the screen reader. If you encounter them, you can use the following ways to improve accessibility: {ref}`improve-screen-reader-usability`.
-:::
+{{a11y_limitations}}
 
 ## Where am I?
 

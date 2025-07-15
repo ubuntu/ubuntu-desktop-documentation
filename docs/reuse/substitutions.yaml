@@ -1,4 +1,9 @@
 # Key/value substitutions to use within the Sphinx doc.
-{version_number: "0.1.0",
- formatted_text: "*Multi-line* text\n that uses basic **markup**.",
- site_link: "[Website link](https://example.com)"}
+version_number: "0.1.0"
+formatted_text: "*Multi-line* text\n that uses basic **markup**."
+site_link: "[Website link](https://example.com)"
+a11y_limitations: |
+  :::{warning}
+  Ubuntu 24.04 LTS might present some challenges when using the screen reader. If you experience difficulty, refer to {ref}`improve-screen-reader-usability`.
+  :::
+
