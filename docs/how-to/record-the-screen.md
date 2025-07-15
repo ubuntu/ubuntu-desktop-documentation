@@ -1,7 +1,7 @@
 (record-the-screen)=
 # Record the screen
 
-You can record a video of your screen. The video either captures your whole screen or a selected region. It's saved as a WebM video file.
+You can record a video of your screen. The video either captures your whole screen or a selected region. It's saved as a WebM or MP4 video file.
 
 1. Press {kbd}`PrintScr` and switch to {guilabel}`Record Screen`.
 
@@ -23,15 +23,21 @@ You can record a video of your screen. The video either captures your whole scre
 
 ## Hardware acceleration for improved recording
 
-To improve performance and save battery life on laptops, you can enable hardware acceleration for video encoding. 
+To improve performance and save battery life on laptops, you can enable hardware acceleration for video encoding.
 
-By default, your screen recording relies on your CPU. This might cause skipped frames or higher resource usage, even if you don't immediately notice stuttering. Many computers have dedicated hardware for video encoding, which is more efficient.
+By default, your screen recording relies on your CPU. This might cause skipped frames or higher resource usage, even if you don't immediately notice stuttering. Many computers have dedicated hardware for video encoding using VA-API (Video Acceleration API), which is more efficient.
 
-To enable hardware acceleration, install the VA-API (Video Acceleration API) drivers and GStreamer plugins:
+* When installing Ubuntu 25.10 or later, you can select third-party drivers in the installer to enable the VA-API hardware acceleration.
 
-```bash
-sudo apt install gstreamer1.0-plugins-bad
-```
+* On any Ubuntu release that's already installed and running, install packages that provide hardware acceleration:
 
-When installing Ubuntu 25.10 or later, you can select third-party drivers in the installer to enable the VA-API hardware acceleration.
+    ```bash
+    sudo apt install gstreamer1.0-plugins-bad
+    ```
+
+By default, screen recording uses the WebM format, which isn't accelerated. After enabling hardware acceleration, the video files are saved in the MP4 format.
+
+:::{note}
+Certain hardware platforms don't support VA-API. Screen recording will always rely on the CPU even after installing the extra packages.
+:::
 
