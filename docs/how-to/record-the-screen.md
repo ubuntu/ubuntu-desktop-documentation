@@ -20,15 +20,18 @@ You can record a video of your screen. The video either captures your whole scre
 
 5. Find the recording in the `Videos/Screencasts` folder in your home directory.
 
-## Hardware acceleration
 
-If the recording has a reduced frame rate and stutters, enable hardware acceleration for video encoding.
+## Hardware acceleration for improved recording
 
-By default, your screen recording is limited by the CPU. If your CPU is slow, the recording skips frames. Instead, you can install VA-API (Video Acceleration API) drivers that encode the video with hardware acceleration, which captures your native screen rate:
+To improve performance and save battery life on laptops, you can enable hardware acceleration for video encoding. 
+
+By default, your screen recording relies on your CPU. This might cause skipped frames or higher resource usage, even if you don't immediately notice stuttering. Many computers have dedicated hardware for video encoding, which is more efficient.
+
+To enable hardware acceleration, install the VA-API (Video Acceleration API) drivers and GStreamer plugins:
 
 ```bash
 sudo apt install gstreamer1.0-plugins-bad
 ```
 
-With Ubuntu 25.10 or later, you can install VA-API drivers by selecting third-party drivers during the Ubuntu installation.
+When installing Ubuntu 25.10 or later, you can select third-party drivers in the installer to enable the VA-API hardware acceleration.
 
