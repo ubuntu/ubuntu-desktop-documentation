@@ -56,6 +56,9 @@ If you cannot use a pointing device like a mouse, you can control the mouse poin
 * - {kbd}`Ctrl+PageUp` and\
     {kbd}`Ctrl+PageDown`
   - In a tabbed interface, switch to the tab to the left or right.
+
+* - {kbd}`+` and {kbd}`-`
+  - Expand or collapse a tree of items, such as the components list in Software Updater.
 :::
 
 ## Navigate the desktop
