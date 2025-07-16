@@ -78,6 +78,53 @@ The Orca screen reader can display the user interface on a refreshable Braille d
 9. If you use Firefox, close it and reopen it. Orca can then read the browser content.
 
 
+## Braille display commands
+
+You can control the screen reader from your Braille device. Use the following commands:
+
+:::{list-table}
+   :header-rows: 1
+
+* - Action
+  - Key
+
+* - Pan Braille display to the left
+  - Line Left
+
+* - Pan Braille display to the right
+  - Line Right
+
+* - Toggle Flat Review mode
+  - Freeze
+
+* - Review the word above
+  - Line Up
+
+* - Review the word below
+  - Line Down
+
+* - Review bottom left
+  - Bottom Right
+
+* - Review the home position
+  - Top Left
+
+* - Contracted Braille
+  - Six Dots
+
+* - Mark the beginning of a text selection
+  - Cut Begin
+
+* - Mark the end of a text selection
+  - Cut Line
+
+* - Process a cursor routing key
+  - Cursor Routing
+
+* - Return to the object with keyboard focus
+  - Cursor Position
+:::
+
 ## Read a document in a different language
 
 If you're reading a document in a language different than your system language, set the language text table in BRLTTY.
@@ -142,7 +189,6 @@ If your Braille devices isn't detected, try the following options.
 
 * Manually set the connection method:
 
-
     1. In the `/etc/brltty.conf` file, find the `braille-device` directive.
     2. Uncomment the line that matches your connection method.
 
@@ -151,3 +197,4 @@ If your Braille devices isn't detected, try the following options.
         ```text
         braille-device bluetooth:
         ```
+
