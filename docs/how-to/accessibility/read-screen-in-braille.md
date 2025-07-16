@@ -78,6 +78,25 @@ The Orca screen reader can display the user interface on a refreshable Braille d
 9. If you use Firefox, close it and reopen it. Orca can then read the browser content.
 
 
+## Disable speech
+
+The screen reader speaks at the same time as it presents text on your Braille device. You can disable speech:
+
+::::{tab-set}
+:::{tab-item} Laptop layout
+:sync: orca-laptop
+
+{kbd}`CapsLock+S`
+:::
+
+:::{tab-item} Desktop layout
+:sync: orca-desktop
+
+{kbd}`Insert+S`
+:::
+::::
+
+
 ## Braille display commands
 
 You can control the screen reader from your Braille device. Use the following commands:
