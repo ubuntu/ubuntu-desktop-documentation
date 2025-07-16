@@ -655,6 +655,41 @@ When you select a bookmark, the exact behavior depends on the current environmen
     :::
     ::::
 
+## Obtain the time and date
+
+Say the current time:
+
+::::{tab-set}
+:::{tab-item} Laptop layout
+:sync: orca-laptop
+
+{kbd}`CapsLock+T`
+:::
+
+:::{tab-item} Desktop layout
+:sync: orca-desktop
+
+{kbd}`Insert+T`
+:::
+::::
+
+Say today's date:
+
+::::{tab-set}
+:::{tab-item} Laptop layout
+:sync: orca-laptop
+
+{kbd}`CapsLock` + double-press {kbd}`T`
+:::
+
+:::{tab-item} Desktop layout
+:sync: orca-desktop
+
+{kbd}`Insert` + double-press {kbd}`T`
+:::
+::::
+
+
 ## Keyboard navigation shortcuts
 
 For keyboard shortcuts that launch applications, switch between desktop elements and navigate desktop menus, refer to {ref}`navigate-the-interface-using-the-keyboard`.
