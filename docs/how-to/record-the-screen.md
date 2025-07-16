@@ -35,9 +35,7 @@ By default, your screen recording relies on your CPU. This might cause skipped f
     sudo apt install gstreamer1.0-plugins-bad
     ```
 
-By default, screen recording uses the WebM format, which isn't accelerated. After enabling hardware acceleration, the video files are saved in the MP4 format.
-
 :::{note}
-Certain hardware platforms don't support VA-API. Screen recording will always rely on the CPU even after installing the extra packages.
+Certain GPU models and drivers don't support VA-API. With these, screen recording will still rely on the CPU even after installing the extra packages.
 :::
 
