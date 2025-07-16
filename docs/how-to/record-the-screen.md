@@ -27,7 +27,7 @@ To improve performance and save battery life on laptops, you can enable hardware
 
 By default, your screen recording relies on your CPU. This might cause skipped frames or higher resource usage, even if you don't immediately notice stuttering. Many computers have dedicated hardware for video encoding using VA-API (Video Acceleration API), which is more efficient.
 
-* When installing Ubuntu 25.10 or later, you can select third-party drivers in the installer to enable the VA-API hardware acceleration.
+* When installing Ubuntu 25.10 or later, you can select third-party drivers in the installer to enable hardware acceleration.
 
 * On any Ubuntu release that's already installed and running, install packages that provide hardware acceleration:
 
