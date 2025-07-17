@@ -698,6 +698,25 @@ Say today's date:
 ::::
 
 
+## Read chat room messages
+
+In IRC (Internet Relay Chat) clients and other supported chat applications, you can browse the latest messages:
+
+::::{tab-set}
+:::{tab-item} Laptop layout
+:sync: orca-laptop
+
+{kbd}`CapsLock` + {kbd}`F1` through {kbd}`F9`
+:::
+
+:::{tab-item} Desktop layout
+:sync: orca-desktop
+
+{kbd}`Insert` + {kbd}`F1` through {kbd}`F9`
+:::
+::::
+
+
 ## Keyboard navigation shortcuts
 
 For keyboard shortcuts that launch applications, switch between desktop elements and navigate desktop menus, refer to {ref}`navigate-the-interface-using-the-keyboard`.
