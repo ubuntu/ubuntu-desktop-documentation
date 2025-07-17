@@ -24,10 +24,10 @@ If you cannot use a pointing device like a mouse, you can control the mouse poin
 * - Arrow keys
   - Move selection between items in a single control, or among a set of related controls. Use the arrow keys to focus buttons in a toolbar, select items in a list or grid view, or select a radio button from a group.
 
-* - {kbd}`Ctrl`+Arrow keys
+* - {kbd}`Ctrl` + Arrow keys
   - In a list or grid view, move the keyboard focus to another item without changing which item is selected.
 
-* - {kbd}`Shift`+Arrow keys
+* - {kbd}`Shift` + Arrow keys
   - In a list or grid view, select all items from the currently selected item to the newly focused item.
 
     In a tree view, items that have children can be expanded or collapsed, to show or hide their children: expand by pressing {kbd}`Shift+→`, and collapse by pressing {kbd}`Shift+←`.

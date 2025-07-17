@@ -56,8 +56,18 @@ The Orca screen reader can speak the user interface.
     :::
     ::::
 
+    To exit help mode, press {kbd}`Esc`.
+
 4. If you use Firefox, close it and reopen it. Orca can then read the browser content.
 
 
 The screen reader stays active the next time that you log in.
+
+
+## Controlling the screen reader
+
+The Orca screen reader recognizes many keyboard commands to navigate the user interface, interact with windows and read documents:
+
+* {ref}`navigate-the-screen-using-the-screen-reader`
+* {ref}`read-documents-and-web-pages-using-the-screen-reader`
 
