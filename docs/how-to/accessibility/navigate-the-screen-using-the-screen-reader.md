@@ -540,6 +540,13 @@ Orca Find is based on the {ref}`Flat Review <orca-examine-a-window>` feature.
         ::::
 
 
+<!--
+This feature doesn't work at all and leaves Orca in a stuck, unusable state. Commenting out for now.
+
+Mouse commands don't work either but at least they don't permanently disable Orca:
+https://help.gnome.org/users/orca/stable/commands_mouse.html.en
+
+
 ## What's under the mouse cursor?
 
 With the Mouse Review feature, Orca identifies the object that's visually under the cursor as you move the mouse. If you move the cursor over an accessible object with information to present, Orca presents that object and its information to you. Mouse Review isn't limited to the active window.
@@ -557,6 +564,7 @@ Mouse Review is disabled by default because it processes all the changes in the 
 :::{note}
 You can choose to have Mouse Review always enabled or not and still toggle it on and off by binding and using the Toggle mouse review mode command. It is not necessary to enable it in order to toggle it because settings and keybindings are independent of one another.
 :::
+-->
 
 
 ## Bookmark an object for later
