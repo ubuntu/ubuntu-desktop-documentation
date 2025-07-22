@@ -93,7 +93,7 @@ For example, if you are in the spell checker of an application where Orca provid
 
 With the **Flat Review** feature, you can review the text and widgets of the active window. In this mode, Orca treats the window as a two-dimensional sheet of text. It browses the objects in the foreground, ignoring widget hierarchy or other logical grouping within the window. It can't access window elements that are currently off-screen.
 
-You can navigate the "flattened" content by line, by word, by character, and by object. You can also perform a left-click or right-click on the selected object.
+You can navigate the "flattened" content by line, by word, by character, and by object.
 
 When you enter Flat Review mode, it captures the state of the window at that moment. If the content of the window changes, Flat Review doesn't update automatically. You can refresh the Flat Review context by toggling Flat Review off and back on.
 
