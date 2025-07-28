@@ -5,7 +5,6 @@ These guides accompany you through the complete Ubuntu Desktop operations lifecy
 :::{toctree}
 :maxdepth: 1
 
-install-ubuntu-desktop
 record-the-screen
 log-in-using-a-smart-card
 enable-smart-cards-in-snapped-browsers
