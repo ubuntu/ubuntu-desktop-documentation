@@ -37,11 +37,11 @@ To install Ubuntu Desktop, write your downloaded ISO to a USB stick to create th
 
 This tutorial uses [balenaEtcher](https://etcher.balena.io/) because it runs on Linux, Windows and macOS. Choose the version that corresponds to your current operating system, download and install the tool.
 
-![|624x519](https://assets.ubuntu.com/v1/4d1a1dbd-create-a-bootable-usb-stick.png)
+![The Download Etcher page](/images/download-etcher.png)
 
 Select your downloaded ISO, choose your USB flash drive, and then click {guilabel}`Flash!` to write your image.
 
-![|624x408](https://assets.ubuntu.com/v1/a40f15d2-select-iso.png)
+![The Select target step in Etcher](/images/select-iso.png)
 
 ## Boot from USB flash drive
 
