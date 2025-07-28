@@ -304,6 +304,9 @@ To help us improve our tutorials, please let us know how you got on!
 
 Survey:
 
+<!--
+This was a poll in the original tutorial.
+
 #### I found this tutorial helpful
 
 [poll name="helpful"]
@@ -329,6 +332,7 @@ Survey:
 * Very Difficult
 
 [/poll]
+-->
 
 ## (Additional) Installing Ubuntu alongside Windows with BitLocker
 
