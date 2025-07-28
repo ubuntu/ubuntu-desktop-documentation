@@ -179,21 +179,21 @@ On this screen, you will be prompted to enter your name and the name of your com
 
 You can choose to log in automatically or require a password. If you are using your device while traveling, it’s recommended to keep {guilabel}`Require my password to log in` enabled.
 
-![Screenshot from 2024-04-12 14-53-04|800x496](upload://gLbGlF0fzRrkzaqbgX7txM8wE31.jpeg)
+![The Create your account page](/images/installer/create-your-account.jpeg)
 
 
 ## Choose your Location
 
 Select your location and timezone from the map screen and click {guilabel}`Continue`. This information will be detected automatically if you are connected to the internet.
 
-![Screenshot from 2024-04-12 14-53-11|800x496](upload://jMs9EYQ2tw9Wr9nFPqTI0nBLZte.jpeg)
+![The Select your timezone page](/images/installer/select-your-timezone.jpeg)
 
 
 ## Ready to install
 
 Clicking {guilabel}`Next` will take you to a summary of your installation configuration to give you a chance to confirm your setup before clicking {guilabel}`Install`.
 
-![Screenshot from 2024-04-12 14-53-16|800x496](upload://gKJgczRhsaiSpA2fRzxdDgwYuxb.jpeg)
+![The Ready to install page](/images/installer/ready-to-install.jpeg)
 
 :::{note}
 If you had chosen to import an autoinstall configuration at the start of the installation process you would be taken immediately to this screen to confirm that your configuration has been installed correctly.
@@ -205,7 +205,7 @@ Once you proceed, Ubuntu will begin the installation process.
 
 Sit back and enjoy the slideshow as Ubuntu installs in the background.
 
-![Screenshot from 2024-04-12 14-53-23|800x496](upload://8BTthc9wh60tXLijM0FpreZzTFf.jpeg)
+![The installation slideshow](/images/installer/slideshow.jpeg)
 
 Alternatively you can see a detailed output of the installation process by clicking the icon in the bottom right corner of the window.
 
@@ -213,25 +213,28 @@ Once the installation has completed, you will be prompted to restart your machin
 
 Click {guilabel}`Restart Now`.
 
-![Screenshot from 2024-04-12 14-59-20|800x496](upload://2cbsw060EZSPvcie1XMSGcY6SHZ.jpeg)
+![The Installation complete page](/images/installer/installation-complete.jpeg)
 
 When you restart, you will be prompted to remove your USB flash drive from the device. Once you’ve done this, press {guilabel}`Enter`.
 
-![Screenshot from 2024-04-12 15-01-13|800x450](upload://7dEpfpMgKf8fQ6CS2zS8qq7wGtm.png)
+![The Remove the installation medium prompt](/images/installer/remove-the-installation-medium.png)
+
+
+## Your new system is starting
 
 Enter your encryption password if you created one.
 
-![Screenshot from 2024-04-12 15-01-26|800x450](upload://mU2tU4SPbwHQEqokqOkEiJS1pZZ.png)
+![The disk passphrase prompt](/images/unlock-disk.png)
 
 This is then followed by the login screen, where you can enter your username and password.
 
 
-![Screenshot from 2024-04-12 15-01-53|800x450](upload://sUz5Tq77qNcGpJ0PzYUzrbeV8HR.png)
+![The Ubuntu login screen](/images/login-screen.png)
 
 
 And that’s it. Welcome to your new Ubuntu Desktop!
 
-![Screenshot from 2024-04-12 15-05-18|800x410](upload://zBNTISkQTOXPIl8JDF7LSVw854D.jpeg)
+![The Ubuntu 24.04 desktop](/images/ubuntu-24-04-desktop.jpeg)
 
 
 The welcome widget will help you with some additional setup options:
@@ -246,7 +249,7 @@ The welcome widget will help you with some additional setup options:
 
 * Downloading additional apps from App Center.
 
-![Screenshot from 2024-04-12 15-03-03|800x450](upload://zJvISzS5XwtGG6vJj7dGEJuwvbN.jpeg)
+![The Ubuntu welcome widget](/images/welcome-widget.jpeg)
 
 
 
@@ -256,7 +259,7 @@ It’s always good practice to ensure your system is up to date, especially afte
 
 The easiest way to do this is via the **Software Updater** app. Search for Software Updater via the app menu (the icon with 9 squares in the bottom corner of your window) and it will check for updates and apply them.
 
-![|624x200](https://assets.ubuntu.com/v1/90b51fc1-software-updater.png)
+![The Ubuntu Software Updater](/images/software-updater.png)
 
 You can also update Ubuntu using the terminal.
 
@@ -336,7 +339,7 @@ This was a poll in the original tutorial.
 
 During the installation type step, you may find that you are unable to proceed with the installation without first deactivating Windows Bitlocker.
 
-![image|690x490](upload://f1i0zJXdSGidjJzzsCJ0o3f13kN.png) 
+![The BitLocker is enabled page](/images/installer/bitlocker-is-enabled.png) 
 
 [BitLocker Drive Encryption](https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-overview) is a data protection feature that integrates with the Windows operating system. When activated, it will encrypt the contents of the hard drives in Windows, making the data inaccessible without the correct decryption key. It is designed to minimize the risk of data theft or exposure from lost or stolen computers.
 
@@ -374,17 +377,17 @@ If you decide to proceed with the third option, you will need to do the followin
 
     Alternatively, open {menuselection}`Control Panel --> System and Security --> BitLocker Drive Encryption`.
 
-    ![bitlocker-turn-off](upload://kEP4hn6LET2cuCmPMd1QdQ0UPZp)
+    ![The BitLocker Drive Encryption settings in Windows](/images/bitlocker-drive-encryption.png)
 
     Windows will now inform you that it is going to decrypt the data.
 
-    ![bitlocker-decryption-warning|440x205](upload://4NAnBO1Y3wRfZEGlPo6WxRAEfdC)
+    ![The Turn off BitLocker dialog](/images/turn-off-bitlocker.png)
 
     This process can take a little bit of time:
 
-    ![bitlocker-decrypting|442x266](upload://54E0znCrp7Qx4MlmiXGzIqIvnFS)
+    ![The BitLocker decryption progress dialog](/images/bitlocker-decryption-progres.png)
 
-    ![bitlocker-decryption-complete|442x214](upload://g3JuPjDE5VVVeN2kUFpvJml3QcW)
+    ![The BitLocker decryption notice](/images/bitlocker-decryption-complete.png)
 
 4. Once the decryption is complete, reboot the computer.
 
