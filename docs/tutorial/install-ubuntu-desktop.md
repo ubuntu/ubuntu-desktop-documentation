@@ -28,7 +28,7 @@ Get the Ubuntu image from the [Download Ubuntu Desktop](https://ubuntu.com/downl
 
 If you are installing an older version of Ubuntu, such as Ubuntu 22.04 LTS, you will find that the visual presentation of the installer is different, but the overall flow should remain similar.
 
-![image|800x415](upload://qKKgKX2A76bi73MqCFD7GGUPIc0.png)
+![The Download Ubuntu Desktop page](/images/download-an-ubuntu-image.png)
  
 
 ## Create a bootable USB stick
