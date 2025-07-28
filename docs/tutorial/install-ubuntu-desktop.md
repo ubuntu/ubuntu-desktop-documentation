@@ -53,23 +53,23 @@ Insert the USB flash drive into the laptop or PC you want to use to install Ubun
 
 Once the installer has initialized, you are invited to choose your language.
 
-![Screenshot from 2024-04-12 14-50-14|800x496](upload://8lvVBLwxvAxJHBqXBObnxIKx1GD.jpeg)
+![The Choose your language page](/images/installer/choose-your-language.jpeg)
 
 And then presented with the option to select any accessibility settings your require.
 
-![Screenshot from 2024-04-12 14-50-21|800x496](upload://w3hsF4OgYADQRkQRQgliz8JvkWe.jpeg)
+![The Accessibility page](/images/installer/accessibility.jpeg)
 
 Your keyboard layout.
 
-![Screenshot from 2024-04-12 14-50-26|800x496](upload://4CeoXYuvyiLO8OubuoMKWtT2FGP.jpeg)
+![The Keyboard layout page](/images/installer/keyboard-layout.jpeg)
 
 And connect to your network. This allows Ubuntu to download updates and third party drivers (such as NVIDIA graphics drivers) during installation.
 
-![Screenshot from 2024-04-12 14-50-35|800x496](upload://lT5Ya2dWYxtoBQ8H2zCBBQ945JU.jpeg)
+![The Internet connection page](/images/installer/internet-connection.jpeg)
 
 You are then offered the choice to try or install Ubuntu.
 
-![Screenshot from 2024-04-12 14-50-43|800x496](upload://vZDIL6xS6IdrYz2UhnP6MM9HYVt.jpeg)
+![The Try or install Ubuntu page](/images/installer/try-or-install-ubuntu.jpeg)
 
 :::{note}
 If you click {guilabel}`Try Ubuntu`, you can preview Ubuntu without making any changes to your PC. You can return to the installer menu at any time by clicking the {guilabel}`Install Ubuntu` shortcut on the desktop.
