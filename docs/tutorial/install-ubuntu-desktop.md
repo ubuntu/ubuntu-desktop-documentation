@@ -85,18 +85,17 @@ Some PCs use Intel RST (Rapid Storage Technology), which is not supported by Ubu
 
 You will be prompted to choose between {guilabel}`Interactive installation` and {guilabel}`Automated Installation`. The interactive option is the standard route, but more advanced users can use the automated installation option to import a configuration file from a web server to standardize multiple installs and add further customization. An example tutorial for Automated installation is available at [Getting started with Autoinstall on Ubuntu Desktop 24.04 LTS](https://blog.local-optimum.net/getting-started-with-autoinstall-on-ubuntu-desktop-24-04-lts-147a1defb2de).
 
-![Screenshot from 2024-04-12 14-50-49|800x496](upload://zgV7aM9WlkPxe7BXBawE2K8ONPF.jpeg)
-
+![The Type of installation page](/images/installer/type-of-installation.jpeg)
 
 In this tutorial we will remain on the primary route.
 
 You will be prompted to choose between the {guilabel}`Default selection` and {guilabel}`Extended selection` options. The default installation comes with the basic essentials to get started which you can then expand on after install using the App Center. The extended selection contains additional office tools and utilities, useful for offline situations.
 
-![Screenshot from 2024-04-12 14-51-06|800x496](upload://tWc89CYKV5TXQBMWMDLXqnG3CZc.jpeg)
+![The Applications page](/images/installer/applications.jpeg)
 
 In the following screen you will be prompted to install third-party software that may improve device support and performance (for example, Nvidia graphics drivers) and support for additional media formats. It is recommended to check both of these boxes.
 
-![Screenshot from 2024-04-12 14-51-14|800x496](upload://AsEx4dUcJwHdx0dsqlwAZddfLsH.jpeg)
+![The Optimise your computer page](/images/installer/optimise-your-computer.jpeg)
 
 
 ## Type of installation
@@ -105,8 +104,7 @@ This screen allows you to configure your installation. If you would like Ubuntu 
 
 If your device currently has another operating system installed, you will receive additional options to install Ubuntu alongside that OS rather than replacing it.
 
-![Screenshot from 2024-04-12 14-51-22|800x496](upload://1mKtZYTsCW0crzZdTMbqRxONvRb.jpeg)
-
+![The Disk setup page](/images/installer/disk-setup.jpeg)
 
 Let’s take a moment to review all of the above options in detail.
 
@@ -116,19 +114,19 @@ If you select this option you will be given a simple interface that allows you t
 
 This view automatically selects the largest partition on the drive. For more fine-grained control you can switch to the {guilabel}`Manual partitioning` option that is detailed further down.
 
-![image|690x490](upload://znhwXn4CYHM67ptPUWUiBDFcexF.png) 
+![The Install Ubuntu alongside other partitions page](/images/installer/install-ubuntu-alongside-other-partitions.png) 
 
 ### Erase disk and install Ubuntu
 
 If you select this option Ubuntu will take up the entire disk space on the selected drive.
 
-![image|690x490](upload://8FYZPoU3GFfH2WF9bSdzTTZdTMX.png) 
+![The Erase disk and install Ubuntu page](/images/installer/erase-disk-and-install-ubuntu.png) 
 
 If your PC has multiple hard drives then this option allows you to install Ubuntu alongside an existing OS as long as they each have their own drive. Take care to ensure that you are selecting the right drive in this instance!
 
 This option also allows you to encrypt your entire drive using LVM, ZFS or using the Trusted Platform Module on the device. To do this, open the {guilabel}`Advanced features` option before proceeding to the above screen and select {guilabel}`Encrypt the new Ubuntu installation for security`.
 
-![Screenshot from 2024-04-12 14-51-29|800x496](upload://pUkW09OFykhxatLz6tjY2kHnfSc.jpeg)
+![The Advanced features dialog](/images/installer/advanced-features.jpeg)
 
 :::{note}
 LVM stands for Logical Volume Management. By using LVM during the setup, it makes it easier to create and manage partitions post installation.
@@ -144,7 +142,7 @@ TPM-backed full disk encryption is a new, highly experimental feature of Ubuntu 
 
 If you select either LVM or ZFS based encryption, you will be prompted to create a Security key that you will need to enter on boot before logging in with your user credentials.
 
-![Screenshot from 2024-04-12 14-52-25|800x496](upload://uZxzmyRCLpztjSpAD3S8AMzyydx.jpeg)
+![The Disk passphrase page](/images/installer/disk-passphrase.jpeg)
 
 If you are using TPM-based Full Disk Encryption you will be prompted to run the following command after installing to generate a recovery key:
 
@@ -162,7 +160,7 @@ Manual partitioning is designed for advanced users who want to create specific c
 
 Here, users can see all existing drives and partitions and create and manage new partition tables and configurations.
 
-![image|690x490](upload://wGnQN1ddXuzblwARipeNfm7GCFz.png) 
+![The Manual partitioning page](/images/installer/manual-partitioning.png) 
 
 ### (Alert) Windows BitLocker is enabled
 
@@ -170,7 +168,7 @@ If your device has Windows BitLocker Drive Encryption enabled then Ubuntu will n
 
 If this is the case, you will get a prompt to disable BitLocker in Windows before restarting the Ubuntu installer.
 
-![image|690x490](upload://f1i0zJXdSGidjJzzsCJ0o3f13kN.png) 
+![The BitLocker is enabled page](/images/installer/bitlocker-is-enabled.png) 
 
 Disabling Windows BitLocker is not required when fully erasing Windows or when there is a separate, unencrypted drive available for Ubuntu. For more information, see the final section at the end of this tutorial.
 
