@@ -168,6 +168,15 @@ If your device has Windows BitLocker Drive Encryption enabled then Ubuntu will n
 
 If this is the case, you will get a prompt to disable BitLocker in Windows before restarting the Ubuntu installer.
 
+<!--
+If the installer detects BitLocker, it points you to the help.ubuntu.com/bitlocker URL.
+
+This is a redirect to the last page of the installation tutorial, which explains BitLocker.
+
+The redirect is configured in the .htaccess file in the Help repository:
+https://code.launchpad.net/~ubuntu-core-doc/help.ubuntu.com/help.ubuntu.com
+-->
+
 ![The BitLocker is enabled page](/images/installer/bitlocker-is-enabled.png) 
 
 Disabling Windows BitLocker is not required when fully erasing Windows or when there is a separate, unencrypted drive available for Ubuntu. For more information, see the final section at the end of this tutorial.
