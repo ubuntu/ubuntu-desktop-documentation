@@ -24,6 +24,8 @@ When Orca is running it replaces many of your normal keyboard letters with comma
 When Orca is running, it replaces a large number of normal keyboard letters with commands for navigating the document according to its structure, as shown below. You can disable this behavior with the shortcut Orca Key Z.
 
 - https://help.gnome.org/users/orca/stable/howto_toggling_caps_lock.html.en
+
+Basic GNOME keyboard shortcuts.
 -->
 
 ## Enable the screen reader
@@ -92,7 +94,14 @@ Let's try an Orca command now.
     Orca says the date only as numbers. For example, if you hear "zero seven thirty two thousand twenty five", that represents July 30, 2025.
     
 
-## Basic navigation
+## Navigate the panel
+
+how-to/accessibility/navigate-the-interface-using-the-keyboard/#navigate-the-panel
+
+Make sure that you're connected to the internet.
+
+
+## Launch an application
 
 Let's try opening an application and learning where we are. In this example, we'll use the Firefox web browser.
 
@@ -120,9 +129,14 @@ Let's explore where we are:
 
     Right now, the active element should be the address bar in the new tab. Orca announces: "Navigation toolbar" and some additional details.
 
+
+## Read the application content
+
 Go to a sample page.
 
-* Say All
+* Say All.
+
+Orca’s Say All command speaks document content from your present location to the end of the document.
 
 * Flat Review?
 
@@ -130,26 +144,11 @@ Go to a sample page.
 
 * Caret navigation
 
-Basic GNOME keyboard shortcuts.
-
-
-## Navigate the panel
-
-how-to/accessibility/navigate-the-interface-using-the-keyboard/#navigate-the-panel
-
-
-## Reading text documents
-
-Maybe using Firefox as example is the safest option.
-
+read using caret mode. line up/down actually reads the whole line.
 use arrows and ctrl+arrows. use Tab for focusable elements. use Say All to read the whole document.
 
-read using caret mode. line up/down actually reads the whole line
 
-Orca’s Say All command speaks document content from your present location to the end of the document.
-
-
-## Browsing the web
+## Browsing the web using structural navigation
 
 Open Firefox and use structural navigation
 
