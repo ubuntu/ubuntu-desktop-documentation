@@ -28,6 +28,8 @@ When Orca is running, it replaces a large number of normal keyboard letters with
 
 ## Enable the screen reader
 
+First, close all windows. It's best to work on a clean desktop so that certain applications don't capture your keyboard commands.
+
 To start the screen reader, press {kbd}`Super+Alt+S`. What we call the {kbd}`Super` key is the key with the Windows logo on PC keyboards, or the {kbd}`Cmd` key on Apple keyboards.
 
 Orca immediately announces "screen reader on".
@@ -92,13 +94,43 @@ Let's try an Orca command now.
 
 ## Basic navigation
 
+Let's try opening an application and learning where we are. In this example, we'll use the Firefox web browser.
+
+Start Firefox:
+
+1. Press {kbd}`Super` to open the applications overview and search.
+
+2. Start typing _Firefox_. Type slowly letter by letter and listen to what Orca says.
+
+    Orca announces which application currently matches the search term. When you type "f", Firefox might already be the current match.
+
+3. When Firefox is the active search result, press {kbd}`Enter` to open Firefox.
+
+    When Firefox opens, Orca says: "Mozilla Firefox frame".
+
+In Firefox, open a new tab so that we're on the same page: press {kbd}`Ctrl+T`. Orca announces: "New Tab page tab".
+
+Let's explore where we are:
+
+* Ask for the window title. With the laptop layout, press {kbd}`CapsLock+/`. With the desktop layout, press {kbd}`Insert+Enter` on the numeric keypad.
+
+    Orca announces: "Mozilla Firefox".
+
+* Ask about the active element in the window. Press Orca modifier + {kbd}`Enter`. This is also called the *basic Where Am I*.
+
+    Right now, the active element should be the address bar in the new tab. Orca announces: "Navigation toolbar" and some additional details.
+
+Go to a sample page.
+
+* Say All
+
+* Flat Review?
+
+* Tab
+
+* Caret navigation
+
 Basic GNOME keyboard shortcuts.
-
-Use Orca Settings as an example?
-
-Where am I, Read the title bar, Read status bar
-
-Open a GTK3 application. Present the title. Say All. Tab.
 
 
 ## Navigate the panel
@@ -106,12 +138,9 @@ Open a GTK3 application. Present the title. Say All. Tab.
 how-to/accessibility/navigate-the-interface-using-the-keyboard/#navigate-the-panel
 
 
-## Time and date
-
-how-to/accessibility/navigate-the-screen-using-the-screen-reader/#obtain-the-time-and-date
-
-
 ## Reading text documents
+
+Maybe using Firefox as example is the safest option.
 
 use arrows and ctrl+arrows. use Tab for focusable elements. use Say All to read the whole document.
 
