@@ -76,18 +76,6 @@ The {guilabel}`Screen Reader Preferences` window opens again.
 -->
 
 
-<!--
-This might be redundant with this tutorial.
-
-## Learning mode
-
-- run the Orca help
-
-Using the learning mode
-  - F2 or F3 for shortcuts. navigate using up/down arrows.
-  - Escape to exit learning mode.
--->
-
 
 ## Ask for the time and date
 
@@ -153,8 +141,23 @@ structural navigation on the web. in editable documents, you have to activate it
 - Orca [structural navigation] supports the following applications: Firefox, LibreOffice, Thunderbird, Pidgin
 
 
-## Further reading
+## Learn more
 
-navigate-the-interface-using-the-keyboard
+Orca has a learning mode where keys and commands only tell you what their function is.
+
+To enter learning mode, press Orca modifier + {kbd}`H`. Try various Orca commands that you remember. Try pressing other keys with your Orca modifier. Each time, Orca tells you what the command does.
+
+Press {kbd}`F2` to open a list of Orca keyboard commands. You can browse the list using {kbd}`Up` and {kbd}`Down`.
+
+To exit learning mode, press {kbd}`Escape`.
+
+For more guidance, go to the following pages:
+
+* {ref}`navigate-the-screen-using-the-screen-reader`
+* {ref}`read-documents-and-web-pages-using-the-screen-reader`
+* {ref}`read-screen-in-braille`
+* {ref}`navigate-the-interface-using-the-keyboard`
+* {ref}`keyboard-navigation-shortcuts`
+* {ref}`improve-screen-reader-usability`
 
 
