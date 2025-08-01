@@ -94,11 +94,27 @@ Let's try an Orca command now.
     Orca says the date only as numbers. For example, if you hear "zero seven thirty two thousand twenty five", that represents July 30, 2025.
     
 
-## Navigate the panel
+## Check your internet connection
 
-how-to/accessibility/navigate-the-interface-using-the-keyboard/#navigate-the-panel
+In the following sections, we'll cover some basic Orca controls in a web browser. Before we launch the web browser, let's ensure that the internet connection is on. In the process, we're going to explore how to control the desktop interface from the keyboard.
 
-Make sure that you're connected to the internet.
+Network settings are available in the top bar. Press {kbd}`Ctrl+Alt+Tab` to cycle through the areas of the user interface. Notice that you can also focus the Dash, which contains application launchers, and the desktop icons frame. Select "Top Bar" and release the keys.
+
+Now, you can browse the elements in the top bar. Press {kbd}`Tab` until you hear "System Menu".
+
+Press {kbd}`Enter` to activate the menu and press {kbd}`Down` to descend into the quick settings menu.
+
+Inside the menu, you can again use {kbd}`Tab` to cycle through the menu items. You'll hear items such as the battery percentage, a screenshot button, a settings button, a screen lock button and a power off button.
+
+Eventually, you might arrive to the {guilabel}`Wired` toggle button. If Orca says that the button is "pressed", you're connected to wired network.
+
+You might also encounter the {guilabel}`Wi-Fi` toggle button. If it's "pressed", it means that the wireless subsystem is enabled. However, you might not be connected to any wireless network. Let's find out:
+
+1. Press {kbd}`Tab` again and go to the "Open Menu" button.
+2. Activate it and press {kbd}`Down` to descend into the list of wireless networks.
+3. If you're connected to a wireless network, it's the first one on the list. Orca tells you the network name, security, the signal strength, and says "checked".
+
+    If you're not connected to any wireless network, Orca doesn't say "checked". In that case, browse the network list using {kbd}`Up` and {kbd}`Down`. When you find your network, activate it, and if asked, enter the password.
 
 
 ## Launch an application
