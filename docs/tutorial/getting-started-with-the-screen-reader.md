@@ -148,40 +148,73 @@ Let's explore where we are:
 
 ## Read the application content
 
-Go to a sample page.
+Let's read some web pages. We'll start with a simple one.
 
-* Say All.
+Enter `example.org` in the Firefox address bar.
 
-Orca’s Say All command speaks document content from your present location to the end of the document.
+To read the entire page content, press Orca modifier + {kbd}`;`. The page contains one heading, two paragraphs and one link.
 
-* Flat Review?
+Let's compare that with another way to read the content of applications: Flat Review. To read the whole window, press Orca modifier and double-press {kbd}`;`. Orca starts reading the elements of the Firefox window first before it gets to the web page.
 
-* Tab
+Another common way to read text is caret navigation. Press {kbd}`F7` and confirm using {kbd}`Alt+Y`. Use the arrow keys to move your text cursor (caret) on the web page:
 
-* Caret navigation
+* Pressing {kbd}`Left` and {kbd}`Right` reads the text by letter.
+* Pressing {kbd}`Ctrl+Left` and {kbd}`Ctrl+Right` reads the text by word.
+* Pressing {kbd}`Up` and {kbd}`Down` reads the text by line.
 
-read using caret mode. line up/down actually reads the whole line.
-use arrows and ctrl+arrows. use Tab for focusable elements. use Say All to read the whole document.
+Try placing your cursor roughly to the middle of the document. When you press Orca modifier + {kbd}`;` to read the document, it starts reading from your current position to the end of the page.
 
 
-## Browsing the web using structural navigation
+## Focus elements
 
-Open Firefox and use structural navigation
+The `example.org` page contains one link. Press {kbd}`Tab` to switch focus to it.
 
-On web pages, you don't usually want to read the whole document. You want structural navigation instead.
+As you press {kbd}`Tab` again, the focus moves through interactive elements in the Firefox interface until it cycles back to the link.
 
-In order to use the structural navigation commands to exit a form field, you must be in browse mode. If you are in focus mode, you can switch to browse mode by pressing Orca Modifier+A.
+When you focus the link, Orca tells you where the link leads. To repeat the information, press Orca modifier + {kbd}`Enter`. The is the *basic Where Am I* command. To hear more information, press Orca modifier and double-press {kbd}`Enter`. This is the *detailed Where Am I* command.
+
+Press {kbd}`Enter` to activate the focused element. In this case, follow the link.
+
+
+## Browsing the web using Structural Navigation
+
+We've opened a longer, more complex web page: [Example Domains](https://www.iana.org/help/example-domains).
+
+If you press Orca modifier + {kbd}`;` to hear the whole page, you'll notice that you might not be interested in every part. Press {kbd}`Escape` to stop reading.
+
+With Structural Navigation, you can read the page by headings, links, lists and other elements:
+
+* To get a list of **headings** on this page, press {kbd}`Alt+Shift+H`.
+
+    Move through the headings using {kbd}`H` and {kbd}`Shift+H`.
+
+* To get a list of **links** on this page, press {kbd}`Alt+Shift+K`.
+
+    Move through the links using {kbd}`K` and {kbd}`Shift+K`.
+
+* To get a list of **lists** on this page, press {kbd}`Alt+Shift+L`.
+
+    Move through the lists using {kbd}`L` and {kbd}`Shift+L`.
+
+* To get a list of **paragraphs** on this page, press {kbd}`Alt+Shift+P`.
+
+    Move through the paragraphs using {kbd}`P` and {kbd}`Shift+P`.
+
+Orca supports many more Structural Navigation commands. You can find a complete reference at {ref}`orca-structural-navigation-commands`.
+
+:::{note}
+If a form field or another kind of text entry is focused, Structural Navigation commands don't work because you're typing text. To re-enable Structural Navigation, press Orca modifier + {kbd}`Z`. Alternatively, leave the field using {kbd}`Tab`.
+:::
+
+
+## Other applications
+
+What if I want to read outside of Firefox?
+
+Caret navigation. Say All. Read document. Tab. Improve usability.
 
 structural navigation on the web. in editable documents, you have to activate it first.
 
-- Moving by header
-- Moving by landmarks
-  - landmarks are elements like page header, search bar, main content.
-- Moving by links
-- Moving through lists
-
-- Firefox -> Ctrl+K to focus the search bar -> enter search terms -> Alt+Shift+K to get the list of links -> Enter to follow a link -> Alt+Shift+H to get the headings
-- deactivate focus mode to leave a focused form
 - Orca [structural navigation] supports the following applications: Firefox, LibreOffice, Thunderbird, Pidgin
 
 
