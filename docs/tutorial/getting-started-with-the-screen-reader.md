@@ -150,7 +150,7 @@ Let's explore where we are:
 
 Let's read some web pages. We'll start with a simple one.
 
-Enter `example.org` in the Firefox address bar.
+Enter [`example.org`](https://example.org) in the Firefox address bar.
 
 To read the entire page content, press Orca modifier + {kbd}`;`. The page contains one heading, two paragraphs and one link.
 
@@ -167,7 +167,7 @@ Try placing your cursor roughly to the middle of the document. When you press Or
 
 ## Focus elements
 
-The `example.org` page contains one link. Press {kbd}`Tab` to switch focus to it.
+The [`example.org`](https://example.org) page contains one link. Press {kbd}`Tab` to switch focus to it.
 
 As you press {kbd}`Tab` again, the focus moves through interactive elements in the Firefox interface until it cycles back to the link.
 
@@ -209,13 +209,17 @@ If a form field or another kind of text entry is focused, Structural Navigation 
 
 ## Other applications
 
-What if I want to read outside of Firefox?
+In other applications, you can use most of the commands that we've covered:
 
-Caret navigation. Say All. Read document. Tab. Improve usability.
+* Usually, you want to use {kbd}`Tab` to browse the interactive elements.
 
-structural navigation on the web. in editable documents, you have to activate it first.
+* In text editors, caret navigation works by default. In some other applications like document viewers, you can enable it using {kbd}`F7`.
 
-- Orca [structural navigation] supports the following applications: Firefox, LibreOffice, Thunderbird, Pidgin
+* Try using the commands to read the document and read the window: Orca modifier + {kbd}`;` and Orca modifier + {kbd}`;+;`. In some applications, such as text editors and other text entries, the commands might not work.
+
+* Only a couple of application support Structural Navigation: Firefox, LibreOffice, Thunderbird and Pidgin. In LibreOffice, you can only use Structural navigation to browse tables in Writer. In editable documents, enable Structural navigation using Orca modifier + {kbd}`Z`.
+
+If you experience difficulty with some applications, you can find tips in [Improve screen reader usability](improve-screen-reader-usability).
 
 
 ## Learn more
