@@ -21,7 +21,28 @@ Read the document using caret navigation:
 * Use {kbd}`Up` and {kbd}`Down` to move and read by line.
 * Use {kbd}`Shift` in combination with the previous commands to select and unselect text.
 
-To read, spell, and obtain the Unicode value for the current text, or to read the whole document, refer to {ref}`orca-examine-a-window`.
+To read, spell, and obtain the Unicode value for the current text, refer to {ref}`orca-examine-a-window`.
+
+
+## Read the entire document
+
+Read the whole document from your cursor position to the end:
+
+::::{tab-set}
+:::{tab-item} Laptop layout
+:sync: orca-laptop
+
+{kbd}`CapsLock+;`
+:::
+
+:::{tab-item} Desktop layout
+:sync: orca-desktop
+
+{kbd}`Insert+;`
+:::
+::::
+
+This is similar to the Say All command described in {ref}`orca-examine-a-window`. However, Say All reads the whole window including buttons and other interface elements, and it's limited to the currently visible content with no hierarchy. In contrast, reading the entire document respects more complex structure on web pages.
 
 
 ## Examine text formatting
