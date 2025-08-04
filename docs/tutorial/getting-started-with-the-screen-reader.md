@@ -85,7 +85,7 @@ You might also encounter the {guilabel}`Wi-Fi` toggle button. If it's "pressed",
     If you're not connected to any wireless network, Orca doesn't say "checked". In that case, browse the network list using {kbd}`Up` and {kbd}`Down`. When you find your network, activate it, and if asked, enter the password.
 
 
-## Launch an application
+## Launch Firefox
 
 Let's try opening an application and learning where we are. In this example, we'll use the Firefox web browser.
 
