@@ -3,30 +3,8 @@
 
 Ubuntu Desktop comes with the Orca screen reader. Orca is an open-source tool that reads text on your screen and lets you navigate the user interface using keyboard commands.
 
-Let's explore how to start the screen reader and use Ubuntu Desktop without relying on vision to control the interface.
+Let's explore how to start the screen reader and use the Ubuntu Desktop interface without relying on vision.
 
-
-<!--
-## Notes
-
-start Orca with Alt+F2 -> orca. stop it with killall orca.
-
-- basic Orca commands
-
-with the Czech layout, Shift+1 (which types 1) is actually interpreted as Shift+1 by Orca, which means navigating to the previous level 1 heading. to go to the next heading, you press + (no Shift + 1).
-
-I couldn't focus a search field to enter a term in it, even with focus mode :-/
-
-This toggles between two sets of key combinations, suitable for either narrow notebook keyboards or wider external keyboards with a dedicated numeric keypad. The keys on this keypad will be prefixed “KP”, KP Plus, for example, will refer to the Plus key on the keypad. Note that the numeric lock must be deactivated
-
-When Orca is running it replaces many of your normal keyboard letters with commands for navigating the document by structure (more on that below). You can toggle this behavior with Orca Modifier+z.
-...
-When Orca is running, it replaces a large number of normal keyboard letters with commands for navigating the document according to its structure, as shown below. You can disable this behavior with the shortcut Orca Key Z.
-
-- https://help.gnome.org/users/orca/stable/howto_toggling_caps_lock.html.en
-
-Basic GNOME keyboard shortcuts.
--->
 
 ## Enable the screen reader
 
@@ -69,16 +47,6 @@ Most of the keyboard commands that control Orca start with the *Orca modifier*. 
 * With the desktop layout, it's {kbd}`Insert`.
 
     Make sure to disable your {kbd}`NumLock`. Many commands on the desktop layout use keys on the numeric keypad, and they only work when {kbd}`NumLock` is disabled.
-
-<!--
-Re-open Orca preferences using Orca modifier + {kbd}`Space`:
-
-* With the laptop layout, that's {kbd}`CapsLock+Space`.
-* With the desktop layout, it's {kbd}`Insert+Space`.
-
-The {guilabel}`Screen Reader Preferences` window opens again.
--->
-
 
 
 ## Ask for the time and date
@@ -145,6 +113,11 @@ Let's explore where we are:
 
     Right now, the active element should be the address bar in the new tab. Orca announces: "Navigation toolbar" and some additional details.
 
+:::{note}
+You might be using multiple keyboard layouts or a different keyboard layout than your interface language. In that case, Orca commands might follow a different keyboard layout than expected.
+
+If some Orca commands work and others don't, try entering them as if another keyboard layout was active.
+:::
 
 ## Read the application content
 
@@ -240,5 +213,4 @@ For more guidance, go to the following pages:
 * {ref}`navigate-the-interface-using-the-keyboard`
 * {ref}`keyboard-navigation-shortcuts`
 * {ref}`improve-screen-reader-usability`
-
 
