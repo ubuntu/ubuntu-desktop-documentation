@@ -1,7 +1,9 @@
 (read-screen-aloud)=
 # Read the screen aloud
 
-The Orca screen reader can speak the user interface.
+You can enable the Orca screen reader, which speaks the user interface.
+
+To learn its basic control, go to {ref}`getting-started-with-the-screen-reader`.
 
 {{a11y_limitations}}
 

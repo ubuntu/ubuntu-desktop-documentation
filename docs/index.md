@@ -58,7 +58,7 @@ Explanation </explanation/index>
 ::::
 
 Accessibility
-: [Accessible features in Desktop](how-to/accessibility/index.md) | [Accessibility stack](explanation/accessibility-stack.md) | [AT-SPI DBus XML interfaces](reference/accessibility/index.md)
+: {ref}`Screen reader tutorial <getting-started-with-the-screen-reader>` | {ref}`Enable accessibility features <how-to-accessibility>` | {ref}`accessibility-stack` | {ref}`Reference <reference-accessibility>`
 
 ## Open-source contributors
 
