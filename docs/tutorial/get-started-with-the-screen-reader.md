@@ -1,5 +1,5 @@
-(getting-started-with-the-screen-reader)=
-# Getting started with the screen reader
+(get-started-with-the-screen-reader)=
+# Get started with the screen reader
 
 Ubuntu Desktop comes with the Orca screen reader. Orca is an open-source tool that reads text on your screen and lets you navigate the user interface using keyboard commands.
 

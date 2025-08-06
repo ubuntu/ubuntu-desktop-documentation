@@ -3,7 +3,7 @@
 
 You can enable the Orca screen reader, which speaks the user interface.
 
-To learn its basic control, go to {ref}`getting-started-with-the-screen-reader`.
+To learn its basic control, go to {ref}`get-started-with-the-screen-reader`.
 
 {{a11y_limitations}}
 

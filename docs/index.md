@@ -58,7 +58,7 @@ Explanation </explanation/index>
 ::::
 
 Accessibility
-: {ref}`Screen reader tutorial <getting-started-with-the-screen-reader>` | {ref}`Enable accessibility features <how-to-accessibility>` | {ref}`accessibility-stack` | {ref}`Reference <reference-accessibility>`
+: {ref}`Screen reader tutorial <get-started-with-the-screen-reader>` | {ref}`Enable accessibility features <how-to-accessibility>` | {ref}`accessibility-stack` | {ref}`Reference <reference-accessibility>`
 
 ## Open-source contributors
 

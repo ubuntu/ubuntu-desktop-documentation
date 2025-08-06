@@ -3,7 +3,7 @@
 
 You can use the following screen reader commands to identify windows, interact with interface elements and read text in applications.
 
-To start the screen reader and learn its basic control, go to {ref}`getting-started-with-the-screen-reader`.
+To start the screen reader and learn its basic control, go to {ref}`get-started-with-the-screen-reader`.
 
 {{a11y_limitations}}
 

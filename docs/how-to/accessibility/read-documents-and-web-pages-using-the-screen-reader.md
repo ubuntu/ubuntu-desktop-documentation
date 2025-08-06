@@ -3,7 +3,7 @@
 
 You can use the following screen reader commands to browse web pages, read longer text documents and navigate tables.
 
-To start the screen reader and learn its basic control, go to {ref}`getting-started-with-the-screen-reader`.
+To start the screen reader and learn its basic control, go to {ref}`get-started-with-the-screen-reader`.
 
 {{a11y_limitations}}
 
