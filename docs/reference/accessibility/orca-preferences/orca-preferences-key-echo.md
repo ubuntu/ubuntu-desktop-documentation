@@ -1,7 +1,7 @@
 
-## Key echo preferences
+# Key echo preferences
 
-### Enable Key Echo
+## Enable Key Echo
 
 Controls whether key presses are spoken.  
 **Default value:** `Checked`
@@ -37,7 +37,7 @@ Causes Orca to announce the character inserted, not just the key pressed.
 Key echo announces what you pressed.  
 Character echo announces what was inserted.
 
-### Enable Echo by Word / Sentence
+## Enable Echo by Word / Sentence
 
 - **Echo by word** — announces the word you just typed  
 - **Echo by sentence** — announces the sentence you just typed  
