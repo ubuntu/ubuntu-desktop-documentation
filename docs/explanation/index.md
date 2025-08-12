@@ -7,5 +7,6 @@ Our explanatory and conceptual guides are written to provide a better understand
 hardware-stack
 accessibility-stack
 what-is-the-menu-key
+intel-rst-during-ubuntu-installation
 :::
 
