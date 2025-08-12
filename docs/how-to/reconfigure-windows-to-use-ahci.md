@@ -1,23 +1,28 @@
 (reconfigure-windows-to-use-ahci)=
 # Reconfigure Windows to use AHCI
 
-How to safely re-configure Windows to use AHCI
+If the Ubuntu installer detects RST, and you have Windows installed on your system, perform these steps to allow Ubuntu to install side by side with Windows, without any loss of data and functionality.
 
-If the Ubuntu installer detects RST, and you have Windows installed on your system, there are several steps you need to do to allow Ubuntu to install side by side with Windows, without any loss of data and functionality.
 
 ## Back up your data
 
-Any hard drive structure or configuration change, or installation of new operating systems on a hard drive that already contains data can potentially lead to a data loss. You need to make sure your personal data is safe.
+Any hard drive structure or configuration change, or installation of new operating systems on a hard drive that already contains data might potentially lead to a data loss.
 
-Even simply copying the important files to an external drive can minimize the risk of data loss.
+Make sure that your personal data is safe. Even simply copying the important files to an external drive minimizes the risk of data loss.
+
+
+## Find the current controller mode
+
+1. Open the Device Manager.
+
+1. Under {guilabel}`IDE ATA/ATAPI controllers`, verify which controller mode is in use in Windows.
+
+    If the controller mode is set to anything other than {guilabel}`Standard SATA AHCI Controller`, you need to make a change that allows Windows to boot safely in AHCI mode. This can be done using the Registry Editor.
+
 
 ## Change the controller mode
 
-1. Verify which controller mode is in use in Windows. You can do this through the Device Manager.
-
-1. If the controller mode is set to anything other than “Standard SATA AHCI Controller”, then you will need to make a change that allows Windows to boot safely in AHCI mode. This can be done using the Registry Editor.
-
-1. Start Registry Editor, and navigate to:
+1. Start Registry Editor, and navigate to the following path:
 
     ```text
     HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\iaStorV\
@@ -25,9 +30,11 @@ Even simply copying the important files to an external drive can minimize the ri
 
     ![Regedit](/images/windows-ahci/Regedit.png)
 
-1. In the right column, double-click on the Start key, and change its value to 0.
+1. In the right column, double-click the `Start` key, and change its value to `0`.
 
-1. Double-click on the iaStorV entry in the left column to expand it, select the StartOverride entry, and then in the right column, change the value of the key 0 to 0.
+1. Double-click the `iaStorV` entry in the left column to expand it and select the `StartOverride` entry.
+
+1. In the right column, change the value of the key `0` to `0`.
 
     ![Regedit override](/images/windows-ahci/Regedit-override-dword.png)
 
@@ -39,44 +46,44 @@ Even simply copying the important files to an external drive can minimize the ri
 
 1. Reboot Windows and start your computer’s BIOS.
 
-    Normally, BIOS is accessed by hitting the F2 or Del key during the early boot sequence. In the BIOS menu, change the hard disk controller type to AHCI. The exact terminology and steps required to access and manage controller type in BIOS often depend on the specific implementation by the platform vendor.
+    Normally, BIOS is accessed by hitting the {kbd}`F2` or {kbd}`Del` key during the early boot sequence.
 
-1. Exit BIOS, and let the system boot. Windows should load normally, and you can check the controller mode in the Device Manager. It should read: Standard SATA AHCI Controller.
+1. In the BIOS menu, change the hard disk controller type to AHCI. The exact terminology and steps required to access and manage controller type in BIOS often depend on the specific implementation by the platform vendor.
+
+1. Exit BIOS, and let the system boot.
+
+    Windows should load normally, and you can check the controller mode in the Device Manager. It should read: {guilabel}`Standard SATA AHCI Controller`.
 
     ![Regedit override](/images/windows-ahci/Regedit-override.png)
 
 
 ## Troubleshooting boot problems
 
-After making the necessary changes to allow Ubuntu to install side by side with Windows, you may encounter a situation where Windows no longer boots. For instance, this could happen if you made the BIOS change without making the registry changes in Windows. In this case, you will need to recover your Windows.
+After making the necessary changes to allow Ubuntu to install side by side with Windows, you might encounter a situation where Windows no longer boots. For instance, this could happen if you made the BIOS change without making the registry changes in Windows. In this case, you will need to recover your Windows.
 
-Regedit override
+![The INACCESSIBLE BOOT DEVICE error screen](/images/windows-ahci/INACCESSIBLE-BOOT-DEVICE.png)
 
-You will most likely see a blue screen with a Stop code: INACCESSIBLE BOOT DEVICE.
+You will most likely see a blue screen with a Stop code: `INACCESSIBLE BOOT DEVICE`.
 
-Windows will attempt to restart and automatically diagnose and repair the boot-related problems, but it will most likely not be able to complete the task itself, and you will need to manually launch the command prompt from the recovery screen, and fix the issue.
-
-System boot
+Windows attempts to restart and automatically diagnose and repair the boot-related problems, but it will most likely not be able to complete the task itself. You need to manually launch the command prompt from the recovery screen and fix the issue.
 
 ### Open the command prompt
 
-Automatic repair
+1. On the screen that gives you the result of the Automatic Repair, click {guilabel}`Advanced Options`.
 
-On the screen that gives you the result of the Automatic Repair, click on Advanced Options. Under Choose an option, select Troubleshoot. Next, selected Advanced Options again. Finally, select Command Prompt.
+    ![The Automatic Repair screen](/images/windows-ahci/Automatic-repair.png)
 
-Automatic repair did not work
+1. From the {guilabel}`Choose an option` screen, go to {menuselection}`Troubleshoot --> Advanced Options --> Command Prompt`.
 
-Choose an option
-
-Troubleshoot
+    ![Automatic repair did not work](/images/windows-ahci/Automatic-repair-did-not-work.png)
 
 ### Diagnose the problem
 
-This will launch the Windows command prompt, where you can run commands to diagnose and repair problems, including boot-related issues. The first step is to run the disk partition tool to see and understand the disk layout.
+This will launch the Windows command prompt, where you can run commands to diagnose and repair problems, including boot-related issues.
 
-Command prompt
+![The command prompt](/images/windows-ahci/Windows-command-prompt.png)
 
-1. From the command prompt, start the `diskpart` utility:
+1. From the command prompt, run the disk partition tool to see and understand the disk layout:
 
     ```text
     diskpart
@@ -100,7 +107,7 @@ Command prompt
     assign letter=[letter]
     ```
 
-    For example, a "wrong" volume may be assigned the letter `C:`. Select it first, assign it a different letter (e.g. `F:` or `H:`), select the volume that contains Windows, and then assign it the letter `C:`.
+    For example, a "wrong" volume might be assigned the letter `C:`. Select it first, assign it a different letter (e.g. `F:` or `H:`), select the volume that contains Windows, and then assign it the letter `C:`.
 
 1. Activate the `C:` volume:
 
@@ -174,7 +181,16 @@ Assuming letter `F:` for the boot partition, use the following commands:
 
     The `bcdboot` command initializes the system partition by using BCD files from the `C:\Windows` folder.
 
-    Use the `en-us` locale (`/l en-us`), target the system partition assigned letter `F:` (`/s` option), and create boot files both for UEFI and BIOS (`/f ALL` option).
+    The options used in the command:
+
+    `/l en-us`
+    : Use the `en-us` locale.
+
+    `/s f:`
+    : Target the system partition assigned letter `F:`.
+
+    `/f ALL`
+    : Create boot files both for UEFI and BIOS.
 
 1. Once the previous command completes, reboot. Windows should start normally.
 
