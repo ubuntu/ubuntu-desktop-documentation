@@ -78,7 +78,9 @@ If you click {guilabel}`Try Ubuntu`, you can preview Ubuntu without making any c
 To proceed, click {guilabel}`Install Ubuntu`.
 
 :::{warning}
-Some PCs use Intel RST (Rapid Storage Technology), which is not supported by Ubuntu. If this is the case, you will not be able to proceed beyond this point without disabling RST in the BIOS menu of your machine. If you encounter this alert, visit [help.ubuntu.com/rst](https://help.ubuntu.com/rst/) for more information.
+Some PCs use Intel RST (Rapid Storage Technology), which is not supported by Ubuntu. If this is the case, you will not be able to proceed beyond this point without disabling RST in the BIOS menu of your machine.
+
+If you encounter this alert, see {ref}`reconfigure-windows-to-use-ahci` to resolve the issue. To learn more, see {ref}`intel-rst-during-ubuntu-installation`.
 :::
 
 ## Installation setup

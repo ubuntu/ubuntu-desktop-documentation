@@ -7,5 +7,6 @@ These documents provide technical information such as cheat sheets, specificatio
 
 accessibility/index
 keyboard-navigation-shortcuts
+intel-rst-during-ubuntu-installation
 :::
 

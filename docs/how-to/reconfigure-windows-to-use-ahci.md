@@ -1,7 +1,9 @@
 (reconfigure-windows-to-use-ahci)=
 # Reconfigure Windows to use AHCI
 
-If the Ubuntu installer detects RST, and you have Windows installed on your system, perform these steps to allow Ubuntu to install side by side with Windows, without any loss of data and functionality.
+If the Ubuntu installer detects RST, and Windows is installed on your system, these steps enable Ubuntu to install side by side with Windows, without any loss of data and functionality.
+
+To learn more about RST and its behavior with Ubuntu, see {ref}`intel-rst-during-ubuntu-installation`.
 
 
 ## Back up your data
@@ -44,42 +46,48 @@ Make sure that your personal data is safe. Even simply copying the important fil
     HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\storahci\
     ```
 
-1. Reboot Windows and start your computer’s BIOS.
+1. Reboot Windows and start your computer’s firmware (BIOS or UEFI).
 
-    Normally, BIOS is accessed by hitting the {kbd}`F2` or {kbd}`Del` key during the early boot sequence.
+    Usually, you can access the firmware by pressing the {kbd}`F2` or {kbd}`Del` key during the early boot sequence.
 
-1. In the BIOS menu, change the hard disk controller type to AHCI. The exact terminology and steps required to access and manage controller type in BIOS often depend on the specific implementation by the platform vendor.
+1. In the firmware menu, change the disk controller type to AHCI.
 
-1. Exit BIOS, and let the system boot.
+    The exact terminology and steps to manage the controller type in the firmware depend on the implementation by the platform vendor.
 
-    Windows should load normally, and you can check the controller mode in the Device Manager. It should read: {guilabel}`Standard SATA AHCI Controller`.
+1. Exit the firmware and let the system boot.
+
+    Windows should start normally.
+
+1. Check the controller mode in the Device Manager.
+
+    It should read: {guilabel}`Standard SATA AHCI Controller`.
 
     ![Regedit override](/images/windows-ahci/Regedit-override.png)
 
 
 ## Troubleshooting boot problems
 
-After making the necessary changes to allow Ubuntu to install side by side with Windows, you might encounter a situation where Windows no longer boots. For instance, this could happen if you made the BIOS change without making the registry changes in Windows. In this case, you will need to recover your Windows.
+After making the necessary changes to enable Ubuntu to install side by side with Windows, Windows might no longer boot. For instance, this might happen if you made the firmware change without making the registry changes in Windows. In this case, you need to recover your Windows installation.
 
 ![The INACCESSIBLE BOOT DEVICE error screen](/images/windows-ahci/INACCESSIBLE-BOOT-DEVICE.png)
 
 You will most likely see a blue screen with a Stop code: `INACCESSIBLE BOOT DEVICE`.
 
-Windows attempts to restart and automatically diagnose and repair the boot-related problems, but it will most likely not be able to complete the task itself. You need to manually launch the command prompt from the recovery screen and fix the issue.
+Windows attempts to restart and automatically diagnose and repair the boot-related problems, but it will probably fail to complete the task itself. You need to manually launch the command prompt from the recovery screen and fix the issue.
 
 ### Open the command prompt
 
-1. On the screen that gives you the result of the Automatic Repair, click {guilabel}`Advanced Options`.
+1. On the screen that gives you the result of the Automatic Repair, click {guilabel}`Advanced options`.
 
     ![The Automatic Repair screen](/images/windows-ahci/Automatic-repair.png)
 
-1. From the {guilabel}`Choose an option` screen, go to {menuselection}`Troubleshoot --> Advanced Options --> Command Prompt`.
+1. From the {guilabel}`Choose an option` screen, go to {menuselection}`Troubleshoot --> Advanced options --> Command Prompt`.
 
     ![Automatic repair did not work](/images/windows-ahci/Automatic-repair-did-not-work.png)
 
 ### Diagnose the problem
 
-This will launch the Windows command prompt, where you can run commands to diagnose and repair problems, including boot-related issues.
+The Windows command prompt opens. Here, you can run commands to diagnose and repair problems, including boot-related issues.
 
 ![The command prompt](/images/windows-ahci/Windows-command-prompt.png)
 
