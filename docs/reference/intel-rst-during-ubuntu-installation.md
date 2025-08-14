@@ -1,5 +1,5 @@
 ---
-relatedlinks: "[Intel &#32; RST &#32; documentation](https://www.intel.com/content/dam/support/us/en/documents/chipsets/imsm/sb/irst_user_guide.pdf)"
+relatedlinks: "[Intel &#32; RST &#32; documentation](https://www.intel.com/content/dam/support/us/en/documents/chipsets/imsm/sb/irst_user_guide.pdf), [Support &#32; for &#32; Intel® &#32; Rapid &#32; Storage &#32; Technology &#32; (Intel® &#32; RST)](http://www.intel.com/p/en_US/support/highlights/chpsts/imsm/)"
 ---
 
 (intel-rst-during-ubuntu-installation)=
