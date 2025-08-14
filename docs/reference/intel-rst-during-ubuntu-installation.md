@@ -43,7 +43,7 @@ Broadly, you might encounter the following configurations when you try to instal
 
 Based on the configuration, the following installation scenarios are possible:
 
-### Ubuntu can access the disks
+### When Ubuntu can access the disks
 
 The Ubuntu installer **correctly detects** the disks and can use them.
 
@@ -51,7 +51,7 @@ In this case, you can proceed with the Ubuntu installation as usual.
 
 If Windows is installed on the system, you need to create a side-by-side configuration for Windows and Ubuntu.
 
-### Ubuntu can't access the disks
+### When Ubuntu can't access the disks
 
 The Ubuntu installer **detects a conflict** with RST and notifies you that manual configuration is required.
 
