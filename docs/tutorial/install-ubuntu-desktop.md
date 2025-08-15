@@ -166,9 +166,7 @@ Here, users can see all existing drives and partitions and create and manage new
 
 ### (Alert) Windows BitLocker is enabled
 
-If your device has Windows BitLocker Drive Encryption enabled then Ubuntu will not be able to gather the drive information it needs to install Ubuntu safely alongside Windows.
-
-If this is the case, you will get a prompt to disable BitLocker in Windows before restarting the Ubuntu installer.
+If your device has Windows BitLocker Drive Encryption enabled, the installer can't access the encrypted Windows installation. Because of that, it can't install Ubuntu safely alongside Windows.
 
 <!--
 If the installer detects BitLocker, it points you to the help.ubuntu.com/bitlocker URL.
@@ -181,7 +179,9 @@ https://code.launchpad.net/~ubuntu-core-doc/help.ubuntu.com/help.ubuntu.com
 
 ![The BitLocker is enabled page](/images/installer/bitlocker-is-enabled.png) 
 
-Disabling Windows BitLocker is not required when fully erasing Windows or when there is a separate, unencrypted drive available for Ubuntu. For more information, see the final section at the end of this tutorial.
+You can either erase Windows and replace it with Ubuntu, or you can disable BitLocker and install Ubuntu alongside Windows. To disable BitLocker, see {ref}`turn-off-bitlocker-in-windows`. To learn more, see {ref}`bitlocker-during-ubuntu-installation`.
+
+Alternatively, you can install Ubuntu to a separate, unencrypted disk if it's available on the system.
 
 
 ## Create your login details
@@ -345,64 +345,4 @@ This was a poll in the original tutorial.
 
 [/poll]
 -->
-
-## (Additional) Installing Ubuntu alongside Windows with BitLocker
-
-During the installation type step, you may find that you are unable to proceed with the installation without first deactivating Windows Bitlocker.
-
-![The BitLocker is enabled page](/images/installer/bitlocker-is-enabled.png) 
-
-[BitLocker Drive Encryption](https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-overview) is a data protection feature that integrates with the Windows operating system. When activated, it will encrypt the contents of the hard drives in Windows, making the data inaccessible without the correct decryption key. It is designed to minimize the risk of data theft or exposure from lost or stolen computers.
-
-When a user starts their computer and properly authenticates with the correct credentials, BitLocker will decrypt the data and allow seamless usage of the hard drive and the data it contains. Without the correct credentials, the encrypted hard drive data will look like random noise.
-
-### BitLocker & Ubuntu installation
-
-If you plan to install Ubuntu side by side with Windows, you need to take into consideration the operational setup on your computer.
-
-* If you are not using BitLocker, Ubuntu will be able to see the correct hard drive structure, including any partitions and data stored on it. This allows the guided wizard to correctly map the data, and safely make adjustments to accommodate the additional installation of Ubuntu alongside Windows.
-
-* If you are using BitLocker, the hard drive contents will not be accessible, and they will appear as random noise. This means that the Ubuntu installer cannot correctly map data, and the additional installation cannot be safely performed without data loss. Additionally, some manufacturers ship systems with BitLocker enabled but the hard drive contents not yet encrypted. In this case, the Ubuntu installer will also not be able to correctly map data.
-
-What you can do:
-
-* Cancel the installation of Ubuntu and continue using Windows only.
-
-* Decide that the data stored in Windows is not important, and that you are willing to overwrite the data contents. The Ubuntu installer can then erase the entire contents of the hard drive and create its own structure (partitions and data). This is a destructive operation, with no option to recover any Windows data.
-
-* Decide to turn BitLocker off. This will turn off the encryption feature, and the hard drive and its data will be visible and accessible from the Ubuntu installer, allowing it to correctly and safely set up a side-by-side configuration. For systems with BitLocker enabled but not yet encrypted you will need to first turn BitLocker on and then turn it off.
-
-:::{note}
-Not all versions of Windows will allow you to re-enable BitLocker after disabling it. If you wish to re-encrypt your Windows partition after installing Ubuntu alongside it, please check that your version of Windows supports this.
-:::
-
-### Turn BitLocker off
-
-If you decide to proceed with the third option, you will need to do the following:
-
-1. Back up your data: any encryption procedure, hard drive structure change or installation of new operating systems on a hard drive that already contains data can potentially lead to a data loss. You need to make sure your personal data is safe. Even simply copying the important files to an external drive can minimize the risk of data loss.
-
-2. Quit the Ubuntu installer and reboot the computer into Windows.
-
-3. In Windows, open {menuselection}`Settings --> type Manage BitLocker` in the search box.
-
-    Alternatively, open {menuselection}`Control Panel --> System and Security --> BitLocker Drive Encryption`.
-
-    ![The BitLocker Drive Encryption settings in Windows](/images/bitlocker-drive-encryption.png)
-
-    Windows will now inform you that it is going to decrypt the data.
-
-    ![The Turn off BitLocker dialog](/images/turn-off-bitlocker.png)
-
-    This process can take a little bit of time:
-
-    ![The BitLocker decryption progress dialog](/images/bitlocker-decryption-progres.png)
-
-    ![The BitLocker decryption notice](/images/bitlocker-decryption-complete.png)
-
-4. Once the decryption is complete, reboot the computer.
-
-5. Log into Windows, to make sure everything works correctly, and that all your data is intact.
-
-6. Reboot your computer again, and launch the Ubuntu installer. At this point, you will be able to proceed with the hard disk configuration step.
 

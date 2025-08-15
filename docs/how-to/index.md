@@ -9,6 +9,7 @@ record-the-screen
 log-in-using-a-smart-card
 enable-smart-cards-in-snapped-browsers
 reconfigure-windows-to-use-ahci
+turn-off-bitlocker-in-windows
 accessibility/index
 troubleshoot/index
 :::
