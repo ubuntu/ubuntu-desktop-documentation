@@ -6,9 +6,17 @@ The Ubuntu Desktop guide is under construction. The current state you are seeing
 This version is unstable: URLs might change at any time. Some content is not in properly reviewed yet. Proceed with caution and be aware of technical inaccuracies.
 :::
 
-Ubuntu Desktop is a secure, modern operating system used by millions of users at home, for development and in enterprise.
+<!--
+This introduction of Ubuntu Desktop is mainly reused from <https://ubuntu.com/desktop>.
+-->
 
-Ubuntu offers essential applications for web browsing, messaging, gaming, and content creation, including Firefox, Chrome, Discord, Steam, and OBS Studio, supporting all your daily computing needs.
+Ubuntu Desktop is the number 1 open source operating system powering millions of PCs and laptops around the world.
+
+Ubuntu Desktop supports all your daily computing needs. It offers applications for web browsing, messaging, gaming and content creation, including Firefox, Chrome, Discord, Steam and OBS Studio. It's a primary platform for all major IDEs, game development tools and AI/ML software. 
+
+With regular updates and built-in security features, Ubuntu prioritizes user privacy and system integrity. It also aims to make Linux and open-source software easy and pleasant to use.
+
+Ubuntu Desktop is free to download, use and share. It's used by millions of users at home, for development and in enterprise. You can try it without making any permanent changes on your computer.
 
 :::{toctree}
 :hidden:
