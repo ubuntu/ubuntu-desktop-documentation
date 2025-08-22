@@ -60,7 +60,21 @@ Explanation </explanation/index>
 Accessibility
 : {ref}`Screen reader tutorial <get-started-with-the-screen-reader>` | {ref}`Enable accessibility features <how-to-accessibility>` | {ref}`accessibility-stack` | {ref}`Reference <reference-accessibility>`
 
-## Open-source contributors
+
+## Project and community
+
+Ubuntu Desktop is an open source project that warmly welcomes community projects, contributions, suggestions, fixes and constructive feedback.
+
+* [Code of conduct](https://ubuntu.com/community/code-of-conduct)
+* [Get support](https://ubuntu.com/support/community-support)
+* [Join our Discourse forum](https://discourse.ubuntu.com/c/project/desktop/)
+* Join our online chat on [Mattermost](https://chat.canonical.com/canonical/channels/desktop) or [Matrix](https://matrix.to/#/#desktop-dev:ubuntu.com)
+* [Contribute to this documentation](https://github.com/ubuntu/ubuntu-desktop-documentation/blob/main/CONTRIBUTING.md)
+* Release notes for Ubuntu [24.04 LTS](https://discourse.ubuntu.com/t/noble-numbat-release-notes/39890) or [25.04](https://discourse.ubuntu.com/t/ubuntu-25-04-plucky-puffin-released/59303)
+* [Ubuntu 25.10 Roadmap](https://discourse.ubuntu.com/t/ubuntu-desktop-25-10-the-questing-quokka-roadmap/)
+
+
+### Credits
 
 Large parts of this guide are based on documentation written by open-source communities. We wish to thank them for their work:
 
