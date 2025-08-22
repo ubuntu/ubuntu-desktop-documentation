@@ -10,13 +10,13 @@ This version is unstable: URLs might change at any time. Some content is not in 
 This introduction of Ubuntu Desktop is mainly reused from <https://ubuntu.com/desktop>.
 -->
 
-**What's Ubuntu Desktop?** It's the number 1 open source operating system powering millions of PCs and laptops around the world.
+**What's Ubuntu Desktop?** It's the number 1 open-source operating system powering millions of PCs and laptops around the world.
 
 **What can it do?** Ubuntu Desktop supports all your daily computing needs. It offers applications for web browsing, messaging, gaming and content creation, including Firefox, Chrome, Discord, Steam and OBS Studio. It's a primary platform for all major IDEs, game development tools and AI/ML software. 
 
-**How is it different?** With regular updates and built-in security features, Ubuntu prioritizes user privacy and system integrity. It aims to make Linux and open-source software easy and pleasant to use.
+**How is it different?** Ubuntu Desktop aims to make Linux and open-source software easy and pleasant to use. With regular updates and built-in security features, Ubuntu Desktop prioritizes user privacy and system integrity. It's free to download, use and share. 
 
-**Is it for me?** Ubuntu Desktop is used by millions of users at home, for development and in enterprise. It's free to download, use and share. You can try it without making any permanent changes on your computer.
+**Is it for me?** Ubuntu Desktop is used by millions of users at home, for development and in enterprise. You can try it without making any permanent changes on your computer.
 
 :::{toctree}
 :hidden:
