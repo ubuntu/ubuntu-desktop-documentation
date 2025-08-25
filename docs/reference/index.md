@@ -7,6 +7,7 @@ These documents provide technical information such as cheat sheets, specificatio
 
 accessibility/index
 keyboard-navigation-shortcuts
+advanced-disk-setup-features
 intel-rst-during-ubuntu-installation
 bitlocker-during-ubuntu-installation
 :::
