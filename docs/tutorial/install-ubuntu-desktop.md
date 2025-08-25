@@ -17,17 +17,20 @@ What you’ll need:
 
 * A laptop or PC with at least 25GB of storage space.
 
-* A flash drive (12GB or above recommended).
+* A flash drive, 12GB or above recommended.
 
 
 ## Will Ubuntu work on my computer?
 
-While Ubuntu works on a wide range of devices, it is recommended that you use a device listed on the [Ubuntu certified hardware](https://ubuntu.com/certified?q=&category=Laptop&category=Desktop&limit=20) page. These devices have been tested and confirmed to work well with Ubuntu.
+While Ubuntu works on a wide range of devices, it's best to use a device listed on the [Ubuntu certified hardware](https://ubuntu.com/certified?q=&category=Laptop&category=Desktop&limit=20) page. These devices have been tested and confirmed to work well with Ubuntu.
 
 
 ## Back up your data
 
-If you are installing Ubuntu on a PC or laptop that you have used previously, back up your data prior to installation.
+If you're installing Ubuntu on a PC or laptop that you've used previously, back up your data before you start the installation.
+
+Move any files that you want to keep to another storage device, such as an external disk or a USB drive.
+
 
 <!--
 The docs/reuse/boot-ubuntu-from-usb.md file is reused between the live system tutorial and the installation tutorial.
@@ -48,6 +51,7 @@ The docs/reuse/boot-ubuntu-from-usb.md file is reused between the live system tu
 
     If you encounter this alert, see {ref}`reconfigure-windows-to-use-ahci` to resolve the issue. To learn more, see {ref}`intel-rst-during-ubuntu-installation`.
     :::
+
 
 ## Installation setup
 
@@ -130,13 +134,17 @@ Keep your security key safe and don't lose it. Write it down and store it in a s
 
 ### Manual partitioning
 
-Manual partitioning is designed for advanced users who want to create specific configurations for their use-cases. As such, we assume that these users will be comfortable with this interface and will not go into detail during this tutorial on specific setups.
+Manual partitioning is designed for advanced users who want to create a specific configuration for their use case.
 
-Here, users can see all existing drives and partitions and create and manage new partition tables and configurations.
+If that's you, we assume that you know what you're doing and that you're comfortable with the installer interface.
+
+Here, you can see all existing drives and partitions. You can create and manage new partition tables and configurations.
 
 ![The Manual partitioning page](/images/installer/manual-partitioning.png) 
 
-### (Alert) Windows BitLocker is enabled
+If the interface doesn't make sense, we recommend that you pick one of the automated disk setup options instead.
+
+### Alert: Windows BitLocker is enabled
 
 If your device has Windows BitLocker Drive Encryption enabled, the installer can't access the encrypted Windows installation. Because of that, it can't install Ubuntu safely alongside Windows.
 
@@ -156,7 +164,7 @@ You can either erase Windows and replace it with Ubuntu, or you can disable BitL
 Alternatively, you can install Ubuntu to a separate, unencrypted disk if it's available on the system.
 
 
-## Create your login details
+## Create a user and set your password
 
 On this screen, you will be prompted to enter your name and the name of your computer as it will appear on the network. Finally, you will create a username and a strong password.
 
@@ -237,29 +245,33 @@ The welcome widget will help you with some additional setup options:
 
 It’s always good practice to ensure your system is up to date, especially after a fresh install.
 
-The easiest way to do this is via the **Software Updater** app. Search for Software Updater via the app menu (the icon with 9 squares in the bottom corner of your window) and it will check for updates and apply them.
+The easiest way to do this is via the **Software Updater** app. Search for Software Updater via the app menu (the Ubuntu icon in the bottom corner of your screen). It will check for updates and apply them.
 
 ![The Ubuntu Software Updater](/images/software-updater.png)
 
-You can also update Ubuntu using the terminal.
+You can also update Ubuntu using the terminal:
 
-Press {kbd}`Ctrl+Alt+T` to bring up a Terminal window (or click the terminal icon in the sidebar).
+1. Press {kbd}`Ctrl+Alt+T` to bring up a Terminal window.
 
-Type in:
+1. Type in:
 
-```bash
-sudo apt update
-```
+    ```bash
+    sudo apt update
+    ```
 
-You will be prompted to enter your login password.
+    You will be prompted to enter your login password.
 
-This will check for updates and tell you if there are any that need applying. To apply any updates, type:
+    This will check for updates and tell you if there are any that need applying.
 
-```bash
-sudo apt upgrade
-```
+1. To apply any updates, type:
 
-Type **Y**, then press {kbd}`Enter` to confirm to finish the update process.
+    ```bash
+    sudo apt upgrade
+    ```
+
+1. Type **Y**, then press {kbd}`Enter` to confirm to finish the update process.
+
+For details, see [Updating the system with APT](https://documentation.ubuntu.com/server/tutorial/managing-software/#updating-the-system-with-apt) in the Ubuntu Server documentation.
 
 ## You’ve installed Ubuntu
 
