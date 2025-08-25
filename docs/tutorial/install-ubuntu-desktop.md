@@ -38,7 +38,30 @@ The docs/reuse/boot-ubuntu-from-usb.md file is reused between the live system tu
 :::{include} ../reuse/boot-ubuntu-from-usb.md
 :::
 
-1. You are offered the choice to try or install Ubuntu.
+
+## Follow the installer
+
+The Ubuntu Desktop installer opens.
+
+1. Choose your language.
+
+    ![The Choose your language page](/images/installer/choose-your-language.jpeg)
+
+1. Select any accessibility settings that your require.
+
+    ![The Accessibility page](/images/installer/accessibility.jpeg)
+
+1. Select your keyboard layout.
+
+    ![The Keyboard layout page](/images/installer/keyboard-layout.jpeg)
+
+1. Connect to your network.
+
+    This allows Ubuntu to download updates and third party drivers, such as NVIDIA graphics drivers, during installation.
+
+    ![The Internet connection page](/images/installer/internet-connection.jpeg)
+
+1. The installer gives you the choice to try or install Ubuntu.
 
     If you click {guilabel}`Try Ubuntu`, you can preview Ubuntu without making any changes to your PC. You can use the preview to test if your hardware works correctly with Ubuntu. You can then return to the installer menu at any time by clicking the {guilabel}`Install Ubuntu` shortcut on the desktop.
 
@@ -47,7 +70,7 @@ The docs/reuse/boot-ubuntu-from-usb.md file is reused between the live system tu
     To proceed, click {guilabel}`Install Ubuntu`.
 
     :::{warning}
-    Some PCs use Intel RST (Rapid Storage Technology), which is not supported by Ubuntu. If this is the case, you will not be able to proceed beyond this point without disabling RST in the BIOS menu of your machine.
+    Some PCs use Intel RST (Rapid Storage Technology), which is not supported by Ubuntu. If this is the case, you won't be able to proceed beyond this point without disabling RST in the BIOS menu of your machine.
 
     If you encounter this alert, see {ref}`reconfigure-windows-to-use-ahci` to resolve the issue. To learn more, see {ref}`intel-rst-during-ubuntu-installation`.
     :::
@@ -173,7 +196,7 @@ You can choose to log in automatically or require a password. If you are using y
 ![The Create your account page](/images/installer/create-your-account.jpeg)
 
 
-## Choose your Location
+## Choose your location
 
 Select your location and timezone from the map screen and click {guilabel}`Continue`. This information will be detected automatically if you are connected to the internet.
 
@@ -206,7 +229,7 @@ Click {guilabel}`Restart Now`.
 
 ![The Installation complete page](/images/installer/installation-complete.jpeg)
 
-When you restart, you will be prompted to remove your USB flash drive from the device. Once you’ve done this, press {guilabel}`Enter`.
+When you restart, Ubuntu asks you to remove your USB flash drive from the device. Once you’ve done this, press {guilabel}`Enter`.
 
 ![The Remove the installation medium prompt](/images/installer/remove-the-installation-medium.png)
 

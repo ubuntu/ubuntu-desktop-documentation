@@ -42,21 +42,3 @@ This tutorial uses [balenaEtcher](https://etcher.balena.io/) because it runs on 
 
     {kbd}`F12` is the most common key for bringing up the system boot menu but {kbd}`Escape`, {kbd}`F2` and {kbd}`F10` are common alternatives. If unsure, look for a brief message when your system starts: this often informs you which key to press to access the boot menu.
 
-1. Once the installer has initialized, choose your language.
-
-    ![The Choose your language page](/images/installer/choose-your-language.jpeg)
-
-1. Select any accessibility settings that your require.
-
-    ![The Accessibility page](/images/installer/accessibility.jpeg)
-
-1. Select your keyboard layout.
-
-    ![The Keyboard layout page](/images/installer/keyboard-layout.jpeg)
-
-1. Connect to your network.
-
-    This allows Ubuntu to download updates and third party drivers, such as NVIDIA graphics drivers, during installation.
-
-    ![The Internet connection page](/images/installer/internet-connection.jpeg)
-
