@@ -66,7 +66,14 @@ Explanation </explanation/index>
 ::::
 
 Accessibility
-: {ref}`Screen reader tutorial <get-started-with-the-screen-reader>` | {ref}`Enable accessibility features <how-to-accessibility>` | {ref}`accessibility-stack` | {ref}`Reference <reference-accessibility>`
+: :::{hlist}
+  :columns: 4
+
+  * {ref}`Screen reader tutorial <get-started-with-the-screen-reader>`
+  * {ref}`Enable accessibility features <how-to-accessibility>`
+  * {ref}`accessibility-stack`
+  * {ref}`Reference <reference-accessibility>`
+:::
 
 
 ## Project and community
