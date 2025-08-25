@@ -213,16 +213,9 @@ This is then followed by the login screen, where you can enter your username and
 
 ![The Ubuntu login screen](/images/login-screen.png)
 
-If you selected TPM-based Full Disk Encryption during installation, you'll be prompted to generate a recovery key using the following command:
-
-```bash
-snap recovery --show-keys
-```
-
 And that’s it. Welcome to your new Ubuntu Desktop!
 
 ![The Ubuntu 24.04 desktop](/images/ubuntu-24-04-desktop.jpeg)
-
 
 The welcome widget will help you with some additional setup options:
 
@@ -287,38 +280,4 @@ As a next step, why not try:
 For users who need to run both Ubuntu and Windows, you can also install Ubuntu via Windows Subsystem for Linux (WSL):
 
 * [Install Ubuntu on Windows Subsystem for Linux (WSL)](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview)
-
-To help us improve our tutorials, please let us know how you got on!
-
-Survey:
-
-<!--
-This was a poll in the original tutorial.
-
-#### I found this tutorial helpful
-
-[poll name="helpful"]
-
-* Yes
-
-* No
-
-[/poll]
-
-#### I found Ubuntu easy to install
-
-[poll name="difficulty"]
-
-* Very Easy
-
-* Easy
-
-* Neutral
-
-* Difficult
-
-* Very Difficult
-
-[/poll]
--->
 
