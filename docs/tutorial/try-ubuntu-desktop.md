@@ -53,6 +53,8 @@ The Ubuntu Desktop installer opens. We'll use it to set a couple of options. The
 
     ![The Internet connection page](/images/installer/internet-connection.jpeg)
 
+    The network connection is optional. If you can't connect, the Ubuntu preview will still work.
+
 8. The installer gives you the choice to try or install Ubuntu.
 
     Click {guilabel}`Try Ubuntu` so that you can preview Ubuntu without making any changes to your PC.

@@ -1,21 +1,23 @@
 ## Download an Ubuntu image
 
-Get the Ubuntu image from the [Download Ubuntu Desktop](https://ubuntu.com/download/desktop) page. Save it to a memorable location on your PC. This tutorial uses the latest Ubuntu 24.04 LTS release.
+Get the Ubuntu installation image from the [Download Ubuntu Desktop](https://ubuntu.com/download/desktop) page. Save it to a memorable location on your PC. The downloaded file is called `ubuntu-24.04.3-desktop-amd64.iso` or similar. This tutorial uses the latest Ubuntu 24.04 LTS release.
 
-If you are installing an older version of Ubuntu, such as Ubuntu 22.04 LTS, the visual presentation of the installer will be different, but the overall flow should remain similar.
+:::{note}
+If you're installing an **older version** of Ubuntu, such as Ubuntu 22.04 LTS, the visual presentation of the installer will be different, but the overall flow should be similar.
+:::
 
 ![The Download Ubuntu Desktop page](/images/download-an-ubuntu-image.png)
  
 
 ## Create a bootable USB stick
 
-Write your downloaded ISO to a USB stick to create the installation media. This is not the same as copying the ISO and requires some special software.
+Write the downloaded Ubuntu image to a USB stick to create the installation media. This is not the same as copying the downloaded image file: you have to use special software.
 
-This tutorial uses [balenaEtcher](https://etcher.balena.io/) because it runs on Linux, Windows and macOS.
+We'll use the balenaEtcher application because it runs on Linux, Windows and macOS.
 
-1. Choose the version of balenaEtcher that corresponds to your current operating system.
+1. At the [balenaEtcher website](https://etcher.balena.io/), choose the version that corresponds to your current operating system.
 
-    Download and install the tool.
+1. Download and install the tool.
 
     ![The Download Etcher page](/images/download-etcher.png)
 
@@ -23,22 +25,24 @@ This tutorial uses [balenaEtcher](https://etcher.balena.io/) because it runs on 
 
 1. Open balenaEtcher.
 
-1. Select your downloaded ISO and your USB flash drive.
+1. Select the downloaded Ubuntu image and your USB flash drive.
 
     ![The Select target step in Etcher](/images/select-iso.png)
 
-1. Click {guilabel}`Flash!` to write your image.
+1. Click {guilabel}`Flash!` to write the image.
+
+Now you have a USB stick that works as Ubuntu installation media.
 
 
 ## Boot from the USB flash drive
 
-1. Insert the USB flash drive into the laptop or PC that you want to use to install Ubuntu.
+1. Insert the USB stick into the laptop or PC where you want to install Ubuntu.
 
-1. Start or restart the device.
+1. Restart the computer.
 
 1. Your device should recognize the installation media and launch the Ubuntu installer.
 
-    If not, try holding {kbd}`F12` during startup and selecting the USB device from the system-specific boot menu.
+    If not, restart it again. This time, hold {kbd}`F12` during startup. In the boot menu that appears, select your USB device.
 
-    {kbd}`F12` is the most common key for bringing up the system boot menu but {kbd}`Escape`, {kbd}`F2` and {kbd}`F10` are common alternatives. If unsure, look for a brief message when your system starts: this often informs you which key to press to access the boot menu.
+    {kbd}`F12` is the most common key for bringing up the system boot menu but {kbd}`Escape`, {kbd}`F2` and {kbd}`F10` are common alternatives. If unsure, look for a brief message when your system starts: this often informs you which key to press to access the boot menu. You can also find the right key in the documentation for your laptop or PC.
 

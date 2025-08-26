@@ -10,10 +10,10 @@ Original source: <https://discourse.ubuntu.com/t/install-ubuntu-desktop/25312/>
 Original author: Oliver Smith <oliversmith@canonical.com>
 -->
 
-In this tutorial, we will guide you through the steps required to install Ubuntu Desktop on your laptop or PC.
+In this tutorial, we'll download and install Ubuntu Desktop on your laptop or PC.
 
 
-What you’ll need:
+What you'll need:
 
 * A laptop or PC with at least 25GB of storage space.
 
@@ -61,6 +61,8 @@ The Ubuntu Desktop installer opens.
 
     ![The Internet connection page](/images/installer/internet-connection.jpeg)
 
+    The network connection is optional. If you can't connect, the Ubuntu installation will still work.
+
 1. The installer gives you the choice to try or install Ubuntu.
 
     If you click {guilabel}`Try Ubuntu`, you can preview Ubuntu without making any changes to your PC. You can use the preview to test if your hardware works correctly with Ubuntu. You can then return to the installer menu at any time by clicking the {guilabel}`Install Ubuntu` shortcut on the desktop.
@@ -69,14 +71,16 @@ The Ubuntu Desktop installer opens.
 
     To proceed, click {guilabel}`Install Ubuntu`.
 
-    :::{warning}
-    Some PCs use Intel RST (Rapid Storage Technology), which is not supported by Ubuntu. If this is the case, you won't be able to proceed beyond this point without disabling RST in the BIOS menu of your machine.
+:::{warning}
+Some PCs use Intel RST (Rapid Storage Technology), which is not supported by Ubuntu. If this is the case, you won't be able to proceed with the installation unless you disable RST on your machine.
 
-    If you encounter this alert, see {ref}`reconfigure-windows-to-use-ahci` to resolve the issue. To learn more, see {ref}`intel-rst-during-ubuntu-installation`.
-    :::
+If you encounter this alert, see {ref}`reconfigure-windows-to-use-ahci` to resolve the issue. To learn more, see {ref}`intel-rst-during-ubuntu-installation`.
+:::
 
 
-## Installation setup
+## Type of installation
+
+Here, you can select how you want to be guided through the installation and what software you want to install.
 
 1. Choose between {guilabel}`Interactive installation` and {guilabel}`Automated Installation`.
 
@@ -90,82 +94,88 @@ The Ubuntu Desktop installer opens.
 
 1. Choose between the {guilabel}`Default selection` and {guilabel}`Extended selection` options.
 
-    The default installation comes with the basic essentials to get started, which you can then expand on after install using the App Center. The extended selection contains additional office tools and utilities, useful for offline situations.
+    The default installation comes with the basic essentials to get started, which you can then expand on after install using the App Center. The extended selection contains additional office tools and utilities.
+
+    You can always install all these applications later if you have an internet connection.
 
     ![The Applications page](/images/installer/applications.jpeg)
 
-1. The next screen offers to install third-party software that can improve device support and performance (for example, Nvidia graphics drivers) and support for additional media formats.
+1. Here, you can install third-party software. It can improve device support and performance (for example, NVIDIA graphics drivers) and adds support for additional media formats.
 
-    It is recommended to check both of these boxes.
+    We recommend that you enable both options.
 
     ![The Optimise your computer page](/images/installer/optimise-your-computer.jpeg)
 
 
-## Type of installation
+## Disk setup
 
-Configure your installation:
+Select how Ubuntu should be installed on the disk:
 
-* If you'd like Ubuntu to be the only operating system on your hard drive, select {guilabel}`Erase disk and install Ubuntu`.
+* If you'd like Ubuntu to be the only operating system on your hard drive, select {guilabel}`Erase disk and install Ubuntu`. This is the easiest option.
 
-* If your device currently has another operating system installed, you also have the options to install Ubuntu alongside that OS rather than replacing it.
+* {guilabel}`Manual installation` is intended for expert users.
+
+* If your device currently has another operating system installed, you also have the options to install Ubuntu alongside that system.
 
 ![The Disk setup page](/images/installer/disk-setup.jpeg)
 
 Let’s take a moment to review all of the above options in detail.
 
-### Installing Ubuntu alongside another operating system
-
-If you select this option, you'll be able to select the drive where you want to install Ubuntu and the amount of disk space that you'd like Ubuntu to use. The available space is limited by the size that the files on the disk occupy. Ubuntu will preserve all existing files.
-
-This view automatically selects the largest partition on the drive. For more fine-grained control, you can switch to the {guilabel}`Manual partitioning` option that is detailed later.
-
-![The Install Ubuntu alongside other partitions page](/images/installer/install-ubuntu-alongside-other-partitions.png) 
-
 ### Erase disk and install Ubuntu
 
-If you select this option, Ubuntu will take up the entire disk space on the selected drive.
+If you select this option, Ubuntu takes up the entire disk space on the selected drive.
 
 ![The Erase disk and install Ubuntu page](/images/installer/erase-disk-and-install-ubuntu.png) 
 
-If your PC has multiple hard drives, this option allows you to install Ubuntu alongside an existing OS as long as they each have their own drive.
+If your PC has multiple hard drives, you can select where Ubuntu is installed. This option allows you to install Ubuntu alongside an existing OS as long as they each have their own drive.
 
 :::{warning}
-Ensure that you are selecting the right drive in this instance.
+Ensure that you're selecting the right drive in this case.
 :::
 
 ### Encrypt your data
 
-The {guilabel}`Erase disk and install Ubuntu` option also allows you to encrypt your entire drive using LVM, ZFS or using the Trusted Platform Module (TPM) on the device. To do this:
+If you want to encrypt your data, you can enable disk encryption with the {guilabel}`Erase disk and install Ubuntu` option:
 
-1. Open the {guilabel}`Advanced features` option.
-1. Go to the {guilabel}`Disk setup` screen.
+<!-- Not sure where this came from in the original tutorial:
 1. Select {guilabel}`Encrypt the new Ubuntu installation for security`.
+-->
+
+1. On the {guilabel}`Disk setup` screen, select {guilabel}`Erase disk and install Ubuntu`.
+
+1. Open {guilabel}`Advanced features`.
 
     ![The Advanced features dialog](/images/installer/advanced-features.jpeg)
 
-1. Select {guilabel}`Use LVM and encryption`, which is the recommended encryption option.
+1. Select a disk encryption method. {guilabel}`Use LVM and encryption` is the recommended encryption option.
 
 For a description of the advanced features, see {ref}`advanced-disk-setup-features`.
 
-If you select either LVM or ZFS encryption, the installer asks you to create a password that you'll need to enter during system startup before logging in with your user credentials.
+If you select either LVM or ZFS encryption, the installer asks you to create a passphrase that you'll need to enter during every system startup to unlock the disk.
 
 ![The Disk passphrase page](/images/installer/disk-passphrase.jpeg)
 
 :::{warning}
-Keep your security key safe and don't lose it. Write it down and store it in a safe place outside of your local system. **You won't be able to recover your data without the security key.**
+Keep your passphrase safe and don't lose it. Write it down and store it in a safe place outside of your local system. **You won't be able to recover your data without the password.**
 :::
 
 ### Manual partitioning
 
-Manual partitioning is designed for advanced users who want to create a specific configuration for their use case.
-
-If that's you, we assume that you know what you're doing and that you're comfortable with the installer interface.
+Manual partitioning is designed for **advanced users** who want to create a specific configuration for their use case. If that's you, we assume that you know what you're doing and that you're comfortable with the installer interface.
 
 Here, you can see all existing drives and partitions. You can create and manage new partition tables and configurations.
 
 ![The Manual partitioning page](/images/installer/manual-partitioning.png) 
 
 If the interface doesn't make sense, we recommend that you pick one of the automated disk setup options instead.
+
+### Installing Ubuntu alongside another operating system
+
+If you select this option, you'll be able to select the drive where you want to install Ubuntu and the amount of disk space that you'd like Ubuntu to use. The available space is limited by the size that the files on the disk occupy. Ubuntu will preserve all existing files.
+
+This view automatically selects the largest partition on the drive. For more control, you can switch to the {guilabel}`Manual partitioning` option.
+
+![The Install Ubuntu alongside other partitions page](/images/installer/install-ubuntu-alongside-other-partitions.png) 
 
 ### Alert: Windows BitLocker is enabled
 
@@ -187,7 +197,7 @@ You can either erase Windows and replace it with Ubuntu, or you can disable BitL
 Alternatively, you can install Ubuntu to a separate, unencrypted disk if it's available on the system.
 
 
-## Create a user and set your password
+## User and password
 
 On this screen, you will be prompted to enter your name and the name of your computer as it will appear on the network. Finally, you will create a username and a strong password.
 
