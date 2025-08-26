@@ -3,7 +3,7 @@
 
 ## Software interfaces for assistive technologies
 
-This section provides details on the components that make up Ubuntu Desktop's accessibility stack, their roles, interdependencies, and how they all work together. There are also recommendations for developers and integrators who want to create applications that will work with Desktop's default assistive solutions as well as developers who want to create their own assitive solutions that would work on Desktop.
+This section provides details on the components that make up Ubuntu Desktop's accessibility stack, their roles, dependencies, and how they all work together. There are also recommendations for developers and integrators who want to create applications that will work with Desktop's default assistive solutions as well as developers who want to create their own assistive solutions that would work on Desktop.
 
 ### AT-SPI
 
@@ -72,7 +72,7 @@ As Orca, BRLTTY is preinstalled and can be enabled and used without any addition
 
 ### eSpeak
 
-eSpeak is a speech synthesizer that supports over 100 languages and accents. eSpeak can be used as a standalalone tool or as a backend component for screen readers, see [eSpeak website](https://espeak.sourceforge.net/)
+eSpeak is a speech synthesizer that supports over 100 languages and accents. eSpeak can be used as a standalone tool or as a backend component for screen readers, see [eSpeak website](https://espeak.sourceforge.net/)
 
 ### Speech dispatcher
 

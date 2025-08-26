@@ -45,4 +45,4 @@ For a full list of standard profiles, see [Bluetooth specifications](https://www
 
 BlueZ also handles device profiles: it identifies profiles associated with the devices, loads appropriate plugins that provide support for the profiles, and register devices in the `/dev/` directory. `/dev/` is a collection of files that represent the devices.  See [BlueZ supported profiles](https://www.bluez.org/profiles/) to learn which Bluetooth profiles BlueZ supports.
 
-Once a device has been successfully identified by BlueZ, registered and a correspnding plugin has been loaded, it is fully functional.
+Once a device has been successfully identified by BlueZ, registered and a corresponding plugin has been loaded, it is fully functional.
