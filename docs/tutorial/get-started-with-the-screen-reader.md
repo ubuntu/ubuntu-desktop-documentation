@@ -1,3 +1,7 @@
+---
+sequential_nav: both
+---
+
 (get-started-with-the-screen-reader)=
 # Get started with the screen reader
 
