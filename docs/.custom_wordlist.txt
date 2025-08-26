@@ -3,6 +3,7 @@ atspi
 ATK
 backend
 backends
+balenaEtcher
 BRLTTY
 CapsLock
 Charmcraft
