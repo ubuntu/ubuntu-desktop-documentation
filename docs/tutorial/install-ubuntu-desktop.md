@@ -199,31 +199,32 @@ Alternatively, you can install Ubuntu to a separate, unencrypted disk if it's av
 
 ## User and password
 
-On this screen, you will be prompted to enter your name and the name of your computer as it will appear on the network. Finally, you will create a username and a strong password.
+On this screen, enter your name and pick a name for your computer as it will appear on the network. Enter your user name and a strong password.
 
-You can choose to log in automatically or require a password. If you are using your device while traveling, it’s recommended to keep {guilabel}`Require my password to log in` enabled.
+You can choose to log in automatically or require a password. If you use your device while traveling, it's recommended to keep {guilabel}`Require my password to log in` enabled.
 
 ![The Create your account page](/images/installer/create-your-account.jpeg)
 
 
-## Choose your location
+## Select your timezone
 
-Select your location and timezone from the map screen and click {guilabel}`Continue`. This information will be detected automatically if you are connected to the internet.
+Select your location and timezone from the map screen. Ubuntu can detect your location automatically if you're connected to the internet.
 
 ![The Select your timezone page](/images/installer/select-your-timezone.jpeg)
 
 
 ## Ready to install
 
-Clicking {guilabel}`Next` will take you to a summary of your installation configuration to give you a chance to confirm your setup before clicking {guilabel}`Install`.
+Here, you can see a summary of your installation configuration. Review  your setup before clicking {guilabel}`Install`.
 
 ![The Ready to install page](/images/installer/ready-to-install.jpeg)
 
 :::{note}
-If you had chosen to import an autoinstall configuration at the start of the installation process you would be taken immediately to this screen to confirm that your configuration has been installed correctly.
+If you choose to import an autoinstall configuration at the start of the installation process, the installer takes you directly to this screen to confirm that your configuration is correct.
 :::
 
-Once you proceed, Ubuntu will begin the installation process.
+Once you proceed, Ubuntu begins the installation process.
+
 
 ## Complete the installation
 
@@ -231,26 +232,24 @@ Sit back and enjoy the slideshow as Ubuntu installs in the background.
 
 ![The installation slideshow](/images/installer/slideshow.jpeg)
 
-Alternatively you can see a detailed output of the installation process by clicking the icon in the bottom right corner of the window.
+Alternatively, you can watch a detailed output of the installation process by clicking the icon in the lower right corner of the window.
 
-Once the installation has completed, you will be prompted to restart your machine.
-
-Click {guilabel}`Restart Now`.
+When the installation has completed, the installer prompts you to restart your machine. Click {guilabel}`Restart Now`.
 
 ![The Installation complete page](/images/installer/installation-complete.jpeg)
 
-When you restart, Ubuntu asks you to remove your USB flash drive from the device. Once you’ve done this, press {guilabel}`Enter`.
+When you restart, Ubuntu asks you to remove your USB flash drive from the device. Then, press {guilabel}`Enter`.
 
 ![The Remove the installation medium prompt](/images/installer/remove-the-installation-medium.png)
 
 
 ## Your new system is starting
 
-Enter your encryption password if you created one.
+Enter your disk encryption passphrase if you created one.
 
 ![The disk passphrase prompt](/images/unlock-disk.png)
 
-This is then followed by the login screen, where you can enter your username and password.
+At the login screen, enter your user name and password.
 
 ![The Ubuntu login screen](/images/login-screen.png)
 
@@ -274,7 +273,7 @@ The welcome widget will help you with some additional setup options:
 
 
 
-## Don’t forget to update
+## Don't forget to update
 
 It’s always good practice to ensure your system is up to date, especially after a fresh install.
 
@@ -306,7 +305,7 @@ You can also update Ubuntu using the terminal:
 
 For details, see [Updating the system with APT](https://documentation.ubuntu.com/server/tutorial/managing-software/#updating-the-system-with-apt) in the Ubuntu Server documentation.
 
-## You’ve installed Ubuntu
+## You've installed Ubuntu
 
 We hope you enjoy your new desktop.
 
@@ -316,13 +315,5 @@ If you have any issues, please contact us via the [Ubuntu Discourse](https://dis
 
 You can also read the latest news about Ubuntu Desktop on the [Ubuntu Blog](https://ubuntu.com/blog/desktop).
 
-As a next step, why not try:
-
-* [Installing Ubuntu Desktop on a Raspberry Pi 4](https://ubuntu.com/tutorials/how-to-install-ubuntu-desktop-on-raspberry-pi-4#1-overview)
-
-* [Using VirtualBox to try out different Ubuntu flavours](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview)
-
-For users who need to run both Ubuntu and Windows, you can also install Ubuntu via Windows Subsystem for Linux (WSL):
-
-* [Install Ubuntu on Windows Subsystem for Linux (WSL)](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview)
+If you need to run both Ubuntu and Windows, you can [install Ubuntu on Windows Subsystem for Linux (WSL)](https://documentation.ubuntu.com/wsl/stable/).
 

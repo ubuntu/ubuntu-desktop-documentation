@@ -2,10 +2,6 @@
 
 Get the Ubuntu installation image from the [Download Ubuntu Desktop](https://ubuntu.com/download/desktop) page. Save it to a memorable location on your PC. The downloaded file is called `ubuntu-24.04.3-desktop-amd64.iso` or similar. This tutorial uses the latest Ubuntu 24.04 LTS release.
 
-:::{note}
-If you're installing an **older version** of Ubuntu, such as Ubuntu 22.04 LTS, the visual presentation of the installer will be different, but the overall flow should be similar.
-:::
-
 ![The Download Ubuntu Desktop page](/images/download-an-ubuntu-image.png)
  
 
