@@ -33,9 +33,9 @@ Move any files that you want to keep to another storage device, such as an exter
 
 
 <!--
-The docs/reuse/boot-ubuntu-from-usb.md file is reused between the live system tutorial and the installation tutorial.
+The docs/reuse/boot-ubuntu-from-usb.txt file is reused between the live system tutorial and the installation tutorial.
 -->
-:::{include} ../reuse/boot-ubuntu-from-usb.md
+:::{include} ../reuse/boot-ubuntu-from-usb.txt
 :::
 
 
