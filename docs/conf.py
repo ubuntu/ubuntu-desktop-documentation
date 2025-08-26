@@ -208,7 +208,9 @@ else:
 # NOTE: If undefined, set to None, or empty,
 #       the sphinx_reredirects extension will be disabled.
 
-redirects = {}
+redirects = {
+        "tutorial/getting-started-with-the-screen-reader": "../../tutorial/get-started-with-the-screen-reader"
+        }
 
 
 ###########################

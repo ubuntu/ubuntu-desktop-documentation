@@ -95,8 +95,10 @@ The top panel contains the clock, app indicators, system settings and network co
 4. Press {kbd}`Enter` to open a menu.
 5. Use {kbd}`Tab` to move through the menu options.
 
+    If Orca only says "Tab", you need to descend into the menu first by pressing {kbd}`Down`.
+
     :::{note}
-    Depending on the menu layout, you can also browse it using the arrow keys.
+    Depending on the menu layout, you can also browse menus using the arrow keys.
 
     However, in certain menus such as the System Menu, the items are arranged from the top to the bottom, and also from the left to the right. You can only use the arrow keys if you can visually see the elements and know their relative positions.
     :::

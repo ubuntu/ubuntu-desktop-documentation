@@ -8,5 +8,6 @@ A hands-on introduction to Ubuntu Desktop for new users.
 
 try-ubuntu-desktop
 install-ubuntu-desktop
+get-started-with-the-screen-reader
 :::
 

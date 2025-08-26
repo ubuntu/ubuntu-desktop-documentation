@@ -1,6 +1,10 @@
 (navigate-the-screen-using-the-screen-reader)=
 # Navigate the screen using the screen reader
 
+You can use the following screen reader commands to identify windows, interact with interface elements and read text in applications.
+
+To start the screen reader and learn its basic control, go to {ref}`get-started-with-the-screen-reader`.
+
 {{a11y_limitations}}
 
 ## Where am I?

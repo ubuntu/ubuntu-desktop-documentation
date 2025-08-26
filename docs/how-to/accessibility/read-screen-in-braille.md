@@ -3,33 +3,24 @@
 
 The Orca screen reader can display the user interface on a refreshable Braille display. It uses the BRLTTY service, which provides access to the Linux console for a blind person using a refreshable Braille display. 
 
+To learn the basic control of the screen reader, go to {ref}`get-started-with-the-screen-reader`.
+
 {{a11y_limitations}}
 
-1. Make sure that Orca is installed:
 
-    ```bash
-    sudo apt install orca
-    ```
-
-2. Make sure that the BRLTTY service is installed:
-
-    ```bash
-    sudo apt install brltty brltty-espeak
-    ```
-
-3. Add your user to the `brlapi` group to allow access to the Braille device:
+1. Add your user to the `brlapi` group to allow access to the Braille device:
 
     ```bash
     sudo usermod --append -G brlapi <user-name>
     ```
 
-4. Enable the BRLTTY service:
+2. Enable the BRLTTY service:
 
     ```bash
     sudo systemctl enable --now brltty
     ```
 
-5. Start the Orca screen reader. If it's already enabled, restart it:
+3. Start the Orca screen reader. If it's already enabled, restart it:
 
     ::::{tab-set}
     :::{tab-item} Keyboard shortcut
@@ -45,7 +36,7 @@ The Orca screen reader can display the user interface on a refreshable Braille d
     :::
     ::::
 
-5. Open Orca preferences:
+4. Open Orca preferences:
 
     ::::{tab-set}
     :::{tab-item} Laptop layout
@@ -69,13 +60,13 @@ The Orca screen reader can display the user interface on a refreshable Braille d
     :::
     ::::
 
-6. Under the {guilabel}`Braille` tab, make sure that {guilabel}`Enable Braille support` is on.
+5. Under the {guilabel}`Braille` tab, make sure that {guilabel}`Enable Braille support` is on.
 
-7. Click {guilabel}`OK` to confirm.
+6. Click {guilabel}`OK` to confirm.
 
-8. Connect your Braille device to the system over USB, serial port or Bluetooth.
+7. Connect your Braille device to the system over USB, serial port or Bluetooth.
 
-9. If you use Firefox, close it and reopen it. Orca can then read the browser content.
+8. If you use Firefox, close it and reopen it. Orca can then read the browser content.
 
 
 ## Disable speech
@@ -198,6 +189,26 @@ For an explanation of the Orca Braille settings, see [Braille Preferences](https
 
 
 ## Troubleshooting
+
+Fix common issues with the Braille screen reader.
+
+### The screen reader isn't installed
+    
+Orca and Braille support are installed by default on Ubuntu Desktop. If you're using a custom desktop or package set, they might not be installed.
+    
+* Make sure that Orca is installed:
+
+    ```bash
+    sudo apt install orca
+    ```
+
+* Make sure that the BRLTTY service is installed:
+
+    ```bash
+    sudo apt install brltty brltty-espeak
+    ```
+
+### My Braille device isn't detected
 
 If your Braille devices isn't detected, try the following options.
 

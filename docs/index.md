@@ -6,9 +6,17 @@ The Ubuntu Desktop guide is under construction. The current state you are seeing
 This version is unstable: URLs might change at any time. Some content is not in properly reviewed yet. Proceed with caution and be aware of technical inaccuracies.
 :::
 
-Ubuntu Desktop is a secure, modern operating system used by millions of users at home, for development and in enterprise.
+<!--
+This introduction of Ubuntu Desktop is mainly reused from <https://ubuntu.com/desktop>.
+-->
 
-Ubuntu offers essential applications for web browsing, messaging, gaming, and content creation, including Firefox, Chrome, Discord, Steam, and OBS Studio, supporting all your daily computing needs.
+**What's Ubuntu Desktop?** It's the number 1 open-source operating system powering millions of PCs and laptops around the world.
+
+**What can it do?** Ubuntu Desktop supports all your daily computing needs. It offers applications for web browsing, messaging, gaming and content creation, including Firefox, Chrome, Discord, Steam and OBS Studio. It's a primary platform for all major IDEs, game development tools and AI/ML software. 
+
+**How is it different?** Ubuntu Desktop aims to make Linux and open-source software easy and pleasant to use. With regular updates and built-in security features, Ubuntu Desktop prioritizes user privacy and system integrity. It's free to download, use and share. 
+
+**Is it for me?** Ubuntu Desktop is used by millions of users at home, for development and in enterprise. You can try it without making any permanent changes on your computer.
 
 :::{toctree}
 :hidden:
@@ -58,9 +66,23 @@ Explanation </explanation/index>
 ::::
 
 Accessibility
-: [Accessible features in Desktop](how-to/accessibility/index.md) | [Accessibility stack](explanation/accessibility-stack.md) | [AT-SPI DBus XML interfaces](reference/accessibility/index.md)
+: {ref}`Screen reader tutorial <get-started-with-the-screen-reader>` | {ref}`Enable accessibility features <how-to-accessibility>` | {ref}`accessibility-stack` | {ref}`Reference <reference-accessibility>`
 
-## Open-source contributors
+
+## Project and community
+
+Ubuntu Desktop is an open source project that warmly welcomes community projects, contributions, suggestions, fixes and constructive feedback.
+
+* [Code of conduct](https://ubuntu.com/community/code-of-conduct)
+* [Get support](https://ubuntu.com/support/community-support)
+* [Join our Discourse forum](https://discourse.ubuntu.com/c/project/desktop/)
+* Join our online chat on [Mattermost](https://chat.canonical.com/canonical/channels/desktop) or [Matrix](https://matrix.to/#/#desktop-dev:ubuntu.com)
+* [Contribute to this documentation](https://github.com/ubuntu/ubuntu-desktop-documentation/blob/main/CONTRIBUTING.md)
+* Release notes for Ubuntu [24.04 LTS](https://discourse.ubuntu.com/t/noble-numbat-release-notes/39890) or [25.04](https://discourse.ubuntu.com/t/ubuntu-25-04-plucky-puffin-released/59303)
+* [Ubuntu 25.10 Roadmap](https://discourse.ubuntu.com/t/ubuntu-desktop-25-10-the-questing-quokka-roadmap/)
+
+
+### Credits
 
 Large parts of this guide are based on documentation written by open-source communities. We wish to thank them for their work:
 
