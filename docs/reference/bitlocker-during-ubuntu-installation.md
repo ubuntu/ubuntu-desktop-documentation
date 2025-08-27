@@ -5,7 +5,7 @@ relatedlinks: "[BitLocker &#32; overview &#32; by &#32; Microsoft](https://learn
 (bitlocker-during-ubuntu-installation)=
 # BitLocker during Ubuntu installation
 
-During the installation type step, the Ubuntu installer might inform you that you can't proceed without first deactivating Windows Bitlocker.
+During the installation type step, the Ubuntu installer might inform you that you can't proceed without first deactivating Windows BitLocker.
 
 ![The BitLocker is enabled page](/images/installer/bitlocker-is-enabled.png) 
 
