@@ -1,5 +1,5 @@
-(enable-hardware-backed-disk-encryption)=
-# Enable hardware-backed disk encryption
+(encrypt-your-disk-with-tpm-fde)=
+# Encrypt your disk with TPM FDE
 
 Hardware-backed disk encryption is a feature that lets you encrypt your computer’s disk with keys that are generated and stored safely in your computer.
 
