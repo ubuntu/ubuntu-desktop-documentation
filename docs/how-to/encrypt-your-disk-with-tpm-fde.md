@@ -1,9 +1,9 @@
 (encrypt-your-disk-with-tpm-fde)=
 # Encrypt your disk with TPM FDE
 
-Hardware-backed disk encryption is a feature that lets you encrypt your computer’s disk with keys that are generated and stored safely in your computer.
+Full-disk encryption (FDE) using the Trusted Platform Module (TPM) is an experimental feature to protect your data. It encrypts your Ubuntu installation and your whole disk. Compared to traditional encryption methods such as LUKS, it can provide more convenience or more security, depending on your configuration.
 
-The data in your disk will be decrypted automatically, while still keeping your data encrypted at rest. This eliminates the need to enter a passphrase every time you start up your machine: you will just need to enter your user password as usual to log in. Optionally, you can still set a passphrase for additional security.
+The data on your disk will be decrypted automatically, while still keeping your data encrypted at rest. This eliminates the need to enter a passphrase every time you start up your machine: you will just need to enter your user password as usual to log in. Optionally, you can still set a passphrase for additional security.
 
 To learn how this encryption works, see {ref}`hardware-backed-disk-encryption`.
 
