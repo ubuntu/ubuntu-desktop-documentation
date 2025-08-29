@@ -92,7 +92,11 @@ Store your new recovery key somewhere safe, such as in a password manager.
 
 ## What to do if you don’t have a recovery key
 
-If your computer is asking for a recovery key but you don’t have one, try undoing any recent changes to your computer. For example:
+Your computer might be asking for a recovery key but you don’t have one.
+
+If you're logged into your Ubuntu user account, you can retrieve or reset your recovery key. See {ref}`tpm-fde-get-a-new-recovery-key`.
+
+If your computer is asking for your recovery key during startup, try undoing any recent changes to your computer. For example:
 
 1. Remove any new hardware components.
 1. Undo any changes to boot settings.
