@@ -24,11 +24,13 @@ For technical details, see the [TPM-backed Full Disk Encryption is coming to Ubu
 
 Optionally, you can set a passphrase for additional security. The encryption passphrases is alphanumerical and you enter it every time your computer starts.
 
-When you set a passphrase, your disk is encrypted by both the automatically-generated encryption keys, stored in your TPM, and your passphrase. As a result, your passphrase is still needed to decrypt your disk even if the TPM gets compromised. For instance, the passphrase protects you against a malicious firmware update from the TPM manufacturer. This feature is particularly useful in the following cases:
+When you set a passphrase, your disk is encrypted by both the automatically-generated encryption keys, stored in your TPM, and your passphrase. As a result, your passphrase is still needed to decrypt your disk even if the TPM gets compromised. For instance, the passphrase protects you against a malicious firmware update from the TPM manufacturer.
+
+Enabling the passphrase is particularly useful in the following cases:
 
 * In security-conscious contexts
 * For users that handle sensitive data
-* For users that may be subject to targeted attacks
+* For users that might be subject to targeted attacks
 
 Consider the different impact on laptops, desktops and servers as well:
 
@@ -47,7 +49,7 @@ Once Ubuntu Desktop is installed, you receive a recovery key for your encrypted 
 
 If you lose your recovery key, you can retrieve it or replace it when you're logged in:
 
-* Ubuntu 24.04 LTS stores the recovery key is a readable form and you can retrieve it.
+* Ubuntu 24.04 LTS stores the recovery key in a readable form and you can retrieve it.
 * Starting with Ubuntu 25.10, the recovery key is stored in an encrypted form. You can't retrieve it but you can reset it in the Security Center to get a new one.
 
 For details, see {ref}`tpm-fde-get-a-new-recovery-key`.
@@ -65,7 +67,7 @@ You might be asked to provide your recovery key on startup if the system detects
 * Changes to certain settings, such as organization security policies
 * Resetting or clearing of the TPM module
 
-In these events, the state of your system changes and TPM needs you to confirm that you trust the new system state. By entering your recovery key, you confirm that the most recent change is safe. TPM will then automatically unlock the disk at startup until your system state changes again.
+In these events, the state of your system changes and TPM needs you to confirm that you trust the new system state. By entering your recovery key, you confirm that the most recent change is safe. TPM will then be able to automatically unlock the disk at startup until your system state changes again.
 
 :::{warning}
 If the system asks you for your recovery key even when no hardware or software on your computer has changed, it might be an attack that tries to gain access to your data.
