@@ -3,6 +3,8 @@
 
 Hardware-backed encryption is a convenient way to keep your data secure. Usually, you only need to enter your Ubuntu user password to get access to your data, unless you decide to set an optional passphrase for additional security.
 
+The data on your disk will be decrypted automatically, while still keeping your data encrypted at rest. This eliminates the need to enter a passphrase every time you start up your machine: you will just need to enter your user password as usual to log in. Optionally, you can still set a passphrase for additional security.
+
 
 ## How hardware-backed encryption works
 
@@ -13,6 +15,7 @@ Every startup, the TPM will verify that your computer's hardware and critical bo
 You can learn about the technical details in the [TPM-backed Full Disk Encryption is coming to Ubuntu](https://ubuntu.com/blog/tpm-backed-full-disk-encryption-is-coming-to-ubuntu) blog post.
 
 
+(tpm-fde-encryption-passphrase)=
 ## Encryption passphrase
 
 You can require a passphrase every time you start your computer for additional security. Encryption passphrases are alphanumerical.
@@ -20,6 +23,7 @@ You can require a passphrase every time you start your computer for additional s
 When you set a passphrase, your disk is encrypted by both the automatically-generated encryption keys, stored in your TPM, and your passphrase. As a result, your passphrase would still be needed to decrypt your disk even if the TPM gets compromised (for instance, because of a malicious firmware update from the TPM manufacturer). This feature is particularly useful in security-conscious contexts, for users that handle sensitive data or that may be subject to targeted attacks.
 
 You can enable the encryption passphrase during installation. After installation, you can change the passphrase in the Security Center, but you can't disable it.
+
 
 ## Recovery key
 
