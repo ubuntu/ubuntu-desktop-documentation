@@ -92,3 +92,8 @@ If you need to apply changes to your system, you can also disable BitLocker temp
 
 When using recovery keys for other platforms, see the relevant vendor’s documentation.
 
+
+## Enable hardware-backed disk encryption
+
+To protect your Ubuntu installation with TPM full-disk encryption, see {ref}`encrypt-your-disk-with-tpm-fde`.
+
