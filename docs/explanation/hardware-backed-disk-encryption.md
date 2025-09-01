@@ -7,50 +7,60 @@ relatedlinks: "[TPM-backed &#32; Full &#32; Disk &#32; Encryption &#32; is &#32;
 
 Hardware-backed disk encryption is a convenient way to keep your data secure. It automatically decrypts the data on your disk at startup, while keeping your data encrypted at rest. This eliminates the need to enter a passphrase every time you start up your machine: you just need to enter your user password to log in. Optionally, you can set a disk encryption passphrase for additional security.
 
+:::{warning}
+Hardware-backed disk encryption is currently an **experimental feature**. Use it only on systems where you don't mind if you accidentally lose   your data.
+:::
+
 
 ## How hardware-backed disk encryption works
 
 When you enable hardware-backed disk encryption, the encryption keys for your disk are automatically generated and stored safely in your computer’s Trusted Platform Module (TPM).
 
-At every startup, the TPM verifies that your computer's hardware and critical boot software have not been altered. If TPM detects any unauthorized changes, it refuses to unlock the disk, unless the user reverts the changes or provides a recovery key. This means that your data is protected even if your device is stolen: the bad actor can't unlock the disk if they remove the disk and install it in another computer.
+At every startup, the TPM verifies that your computer's hardware and critical boot software have not been altered. If TPM detects any unauthorized changes, it refuses to unlock the disk, unless the user reverts the changes or provides a recovery key. This means that your data is protected even if your device is stolen: the bad actor can't unlock your disk if they remove the disk and install it in another computer.
 
-In other words, anyone who wants to access your data must know your user password. This provides more security than an unencrypted Ubuntu installation, where the bad actor can just remove your disk and read your data, or start another system on your computer. This feature is also more convenient than traditional disk encryption, such as LUKS: you only have to remember one password, your user password, and there's no additional disk password.
+In other words, anyone who wants to access your data must know your user password. This provides more security than an unencrypted Ubuntu installation, where the bad actor can just remove your disk and read your data, or start another system on your computer. This feature is also more convenient than traditional disk encryption, such as LUKS: you only have to remember your user password and there's no additional disk password.
 
 For technical details, see [Full disk encryption (FDE)](https://documentation.ubuntu.com/security/docs/security-features/storage/encryption-full-disk/) in the Ubuntu security documentation.
 
 
 ## Recovery key
 
-Once Ubuntu Desktop is installed, you receive a recovery key for your encrypted disk. Save the recovery key somewhere safe outside of your computer, such as in a cloud-based password manager.
+A recovery key is a long string of numbers that you can use to recover the data on your encrypted disk. You receive the recovery key during or after the Ubuntu installation, depending on your Ubuntu release.
 
-If you lose your recovery key, you can retrieve it or replace it when you're logged in:
+You should store it somewhere safe outside of your computer, such as in a cloud-based password manager.
 
-* Ubuntu 24.04 LTS stores the recovery key in a readable form and you can retrieve it.
-* Starting with Ubuntu 25.10, the recovery key is stored in an encrypted form. You can't retrieve it but you can reset it in the Security Center to get a new one.
+Ubuntu 24.04 LTS stores the recovery key in a readable form and you can retrieve it. Starting with Ubuntu 25.10, the recovery key is stored in an encrypted form. There, you can't retrieve it but you can reset it in the Security Center to get a new one. However, in both cases you must be able to log into Ubuntu before you can get your recovery key.
 
-For details, see {ref}`tpm-fde-get-a-new-recovery-key`.
-
+:::{important}
+If you lose your recovery key, you might lose access to your data in certain scenarios. While you're logged in, replace the existing         recovery key as soon as possible. See {ref}`tpm-fde-get-a-new-recovery-key`.
+:::
 
 (tpm-fde-when-ubuntu-asks-for-your-recovery-key)=
 ### When Ubuntu asks for your recovery key
 
-You might be asked to provide your recovery key on startup if the system detects certain suspicious events:
+You need the recovery key in several different situations:
 
-* Changes to hardware components in your computer
-* Updates to BIOS, UEFI and firmware
-* Changes to boot settings, such as boot order or Secure Boot
-* Errors with authentication, such as entering a wrong password too many times
-* Changes to certain settings, such as organization security policies
-* Resetting or clearing of the TPM module
+* If you **move your disk** to a new computer, you need to enter your recovery key before your new computer can access the data.
 
-In these events, the state of your system changes and TPM needs you to confirm that you trust the new system state. By entering your recovery key, you confirm that the most recent change is safe. TPM will then be able to automatically unlock the disk at startup until your system state changes again.
+* If you **forget your disk passphrase**, Ubuntu asks for your recovery key to unlock the disk.
+
+* If you **change the hardware, firmware** or other components of your computer, you need to enter your recovery key to confirm that you trust the new configuration. This includes the following changes:
+
+    * Changes to hardware components in your computer
+    * Updates to BIOS, UEFI and firmware
+    * Changes to boot settings, such as boot order or Secure Boot
+    * Errors with authentication, such as entering a wrong password too many times
+    * Changes to certain settings, such as organization security policies
+    * Resetting or clearing of the TPM module
+
+If you're planning to do any of these changes on your computer, make sure that you know your recovery key first.
 
 :::{warning}
 If the system asks you for your recovery key even when no hardware or software on your computer has changed, it might be an attack that tries to gain access to your data.
 :::
 
 
-## Ubuntu installed alongside another encrypted system
+## Ubuntu alongside another encrypted system
 
 If you have additional encrypted drives or another encrypted operating system on your computer, make sure to safely store the recovery keys to all your drives.
 
@@ -72,7 +82,7 @@ When using recovery keys for other platforms, see the relevant vendor’s docume
 (tpm-fde-encryption-passphrase)=
 ## Encryption passphrase
 
-Optionally, you can set a passphrase for additional security. The encryption passphrases is alphanumerical and you enter it every time your computer starts.
+Optionally, you can set a passphrase for additional security. The encryption passphrase is alphanumerical and you enter it every time your computer starts.
 
 When you set a passphrase, your disk is encrypted by both the automatically-generated encryption keys, stored in your TPM, and your passphrase. As a result, your passphrase is still needed to decrypt your disk even if the TPM gets compromised. For instance, the passphrase protects you against a malicious firmware update from the TPM manufacturer.
 

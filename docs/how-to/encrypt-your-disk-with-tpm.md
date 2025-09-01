@@ -1,9 +1,13 @@
 (encrypt-your-disk-with-tpm)=
 # Encrypt your disk with TPM
 
-Hardware-backed disk encryption is an **experimental feature** to protect your data using the Trusted Platform Module (TPM) chip. It encrypts your Ubuntu installation and your whole disk. Compared to traditional encryption methods such as LUKS, hardware-backed disk encryption can provide more convenience or more security, depending on your configuration.
+Hardware-backed disk encryption protects the data on your disk using the Trusted Platform Module (TPM) chip. It encrypts your Ubuntu installation and your whole disk. Compared to traditional encryption methods such as LUKS, hardware-backed disk encryption can provide more convenience or more security, depending on your configuration.
 
 To learn how this encryption works, see {ref}`hardware-backed-disk-encryption`.
+
+:::{warning}
+Hardware-backed disk encryption is currently an **experimental feature**. Use it only on systems where you don't mind if you accidentally lose your data.
+:::
 
 
 ## Enable hardware-backed encryption during installation
@@ -50,7 +54,7 @@ To install Ubuntu with hardware-backed encryption:
 
     ::::
 
-    :::{warning}
+    :::{important}
     If you lose your recovery key, you might lose access to your data in certain scenarios. While you're logged in, replace the existing recovery key as soon as possible. See {ref}`tpm-fde-get-a-new-recovery-key`.
     :::
 
@@ -62,6 +66,10 @@ To install Ubuntu with hardware-backed encryption:
 Ubuntu Desktop shows you your disk recovery key right after installation. If you lose your recovery key, replace it as soon as possible. Otherwise, you risk losing access to your data.
 
 To get the recovery key, you must be logged into your Ubuntu user account.
+
+:::{important}
+If you can't log in, you have no way to get a new recovery key. In that case, follow {ref}`tpm-fde-no-recovery-key`.
+:::
 
 ::::{tab-set}
 
@@ -94,6 +102,7 @@ You need to be an administrator on your system to replace the recovery key.
 Store your new recovery key somewhere safe, such as in a password manager.
 
 
+(tpm-fde-no-recovery-key)=
 ## What to do if you don’t have a recovery key
 
 Your computer might be asking for a recovery key but you don’t have one.
