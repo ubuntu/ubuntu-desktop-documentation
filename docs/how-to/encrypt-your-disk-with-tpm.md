@@ -109,14 +109,12 @@ Your computer might be asking for a recovery key but you don’t have one.
 
 If you're logged into your Ubuntu user account, you can retrieve or reset your recovery key. See {ref}`tpm-fde-get-a-new-recovery-key`.
 
-If your computer is asking for your recovery key during startup, try undoing any recent changes to your computer. For example:
+If your computer is asking for your recovery key during startup, try undoing any {ref}`recent changes <tpm-fde-when-ubuntu-asks-for-your-recovery-key>` to your computer. For example:
 
 1. Remove any new hardware components.
 1. Undo any changes to boot settings.
 1. Reboot your computer.
 1. Try to log in again.
-
-For other changes that might require your recovery key, see {ref}`tpm-fde-when-ubuntu-asks-for-your-recovery-key`.
 
 You can also check if the recovery key was automatically stored in the cloud. Recovery keys for the Windows BitLocker encryption may be stored on your Microsoft Account or your organization account. See [Find your BitLocker recovery key](https://support.microsoft.com/en-us/windows/find-your-bitlocker-recovery-key-6b71ad27-0b89-ea08-f143-056f5ab347d6) in the Microsoft Windows documentation.
 
