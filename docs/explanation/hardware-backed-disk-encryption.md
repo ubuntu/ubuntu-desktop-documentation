@@ -16,31 +16,7 @@ At every startup, the TPM verifies that your computer's hardware and critical bo
 
 In other words, anyone who wants to access your data must know your user password. This provides more security than an unencrypted Ubuntu installation, where the bad actor can just remove your disk and read your data, or start another system on your computer. This feature is also more convenient than traditional disk encryption, such as LUKS: you only have to remember one password, your user password, and there's no additional disk password.
 
-For technical details, see the [TPM-backed Full Disk Encryption is coming to Ubuntu](https://ubuntu.com/blog/tpm-backed-full-disk-encryption-is-coming-to-ubuntu) blog post.
-
-
-(tpm-fde-encryption-passphrase)=
-## Encryption passphrase
-
-Optionally, you can set a passphrase for additional security. The encryption passphrases is alphanumerical and you enter it every time your computer starts.
-
-When you set a passphrase, your disk is encrypted by both the automatically-generated encryption keys, stored in your TPM, and your passphrase. As a result, your passphrase is still needed to decrypt your disk even if the TPM gets compromised. For instance, the passphrase protects you against a malicious firmware update from the TPM manufacturer.
-
-Enabling the passphrase is particularly useful in the following cases:
-
-* In security-conscious contexts
-* For users that handle sensitive data
-* For users that might be subject to targeted attacks
-
-Consider the different impact on laptops, desktops and servers as well:
-
-* In a **server** environment, it's more likely that somebody steals your disk rather than the whole computer. Therefore, you might prefer encryption without a passphrase, which ensures disk security and doesn't require physical access to reboot the server.
-
-* With a **laptop**, it's more likely that somebody steals your whole computer when traveling, for example. Therefore, you might want to add the disk encryption passphrase so that your data is protected even before the bad actor tries to break through your login screen.
-
-* With a **desktop** computer, consider which of the risk factors is more likely.
-
-You can enable the encryption passphrase during installation. After installation, you can change the passphrase in the Security Center, but you can't disable it.
+For technical details, see [Full disk encryption (FDE)](https://documentation.ubuntu.com/security/docs/security-features/storage/encryption-full-disk/) in the Ubuntu security documentation.
 
 
 ## Recovery key
@@ -56,7 +32,7 @@ For details, see {ref}`tpm-fde-get-a-new-recovery-key`.
 
 
 (tpm-fde-when-ubuntu-asks-for-your-recovery-key)=
-## When Ubuntu asks for your recovery key
+### When Ubuntu asks for your recovery key
 
 You might be asked to provide your recovery key on startup if the system detects certain suspicious events:
 
@@ -93,7 +69,31 @@ If you need to apply changes to your system, you can also disable BitLocker temp
 When using recovery keys for other platforms, see the relevant vendor’s documentation.
 
 
+(tpm-fde-encryption-passphrase)=
+## Encryption passphrase
+
+Optionally, you can set a passphrase for additional security. The encryption passphrases is alphanumerical and you enter it every time your computer starts.
+
+When you set a passphrase, your disk is encrypted by both the automatically-generated encryption keys, stored in your TPM, and your passphrase. As a result, your passphrase is still needed to decrypt your disk even if the TPM gets compromised. For instance, the passphrase protects you against a malicious firmware update from the TPM manufacturer.
+
+Enabling the passphrase is particularly useful in the following cases:
+
+* In security-conscious contexts
+* For users that handle sensitive data
+* For users that might be subject to targeted attacks
+
+Consider the different impact on laptops, desktops and servers as well:
+
+* In a **server** environment, it's more likely that somebody steals your disk rather than the whole computer. Therefore, you might prefer encryption without a passphrase, which ensures disk security and doesn't require physical access to reboot the server.
+
+* With a **laptop**, it's more likely that somebody steals your whole computer when traveling, for example. Therefore, you might want to add the disk encryption passphrase so that your data is protected even before the bad actor tries to break through your login screen.
+
+* With a **desktop** computer, consider which of the risk factors is more likely.
+
+You can enable the encryption passphrase during installation. After installation, you can change the passphrase in the Security Center, but you can't disable it.
+
+
 ## Enable hardware-backed disk encryption
 
-To protect your Ubuntu installation with TPM full-disk encryption, see {ref}`encrypt-your-disk-with-tpm-fde`.
+To protect your Ubuntu installation with TPM full-disk encryption, see {ref}`encrypt-your-disk-with-tpm`.
 

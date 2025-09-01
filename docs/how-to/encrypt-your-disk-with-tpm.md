@@ -1,7 +1,7 @@
-(encrypt-your-disk-with-tpm-fde)=
-# Encrypt your disk with TPM FDE
+(encrypt-your-disk-with-tpm)=
+# Encrypt your disk with TPM
 
-Full-disk encryption (FDE) using the Trusted Platform Module (TPM) is an **experimental feature** to protect your data. It encrypts your Ubuntu installation and your whole disk. Compared to traditional encryption methods such as LUKS, TPM FDE can provide more convenience or more security, depending on your configuration.
+Hardware-backed full-disk encryption is an **experimental feature** to protect your data using the Trusted Platform Module (TPM) chip. It encrypts your Ubuntu installation and your whole disk. Compared to traditional encryption methods such as LUKS, hardware-backed full-disk encryption can provide more convenience or more security, depending on your configuration.
 
 To learn how this encryption works, see {ref}`hardware-backed-disk-encryption`.
 
