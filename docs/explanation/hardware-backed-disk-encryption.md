@@ -5,7 +5,7 @@ relatedlinks: "[TPM-backed &#32; Full &#32; Disk &#32; Encryption &#32; is &#32;
 (hardware-backed-disk-encryption)=
 # Hardware-backed disk encryption
 
-Hardware-backed encryption is a convenient way to keep your data secure. It automatically decrypts the data on your disk at startup, while keeping your data encrypted at rest. This eliminates the need to enter a passphrase every time you start up your machine: you just need to enter your user password to log in. Optionally, you can set a disk encryption passphrase for additional security.
+Hardware-backed disk encryption is a convenient way to keep your data secure. It automatically decrypts the data on your disk at startup, while keeping your data encrypted at rest. This eliminates the need to enter a passphrase every time you start up your machine: you just need to enter your user password to log in. Optionally, you can set a disk encryption passphrase for additional security.
 
 
 ## How hardware-backed disk encryption works
@@ -54,7 +54,7 @@ If the system asks you for your recovery key even when no hardware or software o
 
 If you have additional encrypted drives or another encrypted operating system on your computer, make sure to safely store the recovery keys to all your drives.
 
-For example, if you install Ubuntu with TPM FDE alongside Microsoft Windows with BitLocker enabled, you need to store both recovery keys for Ubuntu and Windows.
+For example, if you install Ubuntu with hardware-backed disk encryption alongside Microsoft Windows with BitLocker enabled, you need to store both recovery keys for Ubuntu and Windows.
 
 You might need individual recovery keys for each drive in case of the events listed in {ref}`tpm-fde-when-ubuntu-asks-for-your-recovery-key`. Updating firmware with the Firmware Updater in Ubuntu might require you to provide recovery keys for non-Ubuntu drives, too.
 
@@ -95,5 +95,5 @@ You can enable the encryption passphrase during installation. After installation
 
 ## Enable hardware-backed disk encryption
 
-To protect your Ubuntu installation with TPM full-disk encryption, see {ref}`encrypt-your-disk-with-tpm`.
+To protect your Ubuntu installation with hardware-backed disk encryption, see {ref}`encrypt-your-disk-with-tpm`.
 

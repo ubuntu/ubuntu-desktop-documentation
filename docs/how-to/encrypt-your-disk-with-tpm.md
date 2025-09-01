@@ -1,7 +1,7 @@
 (encrypt-your-disk-with-tpm)=
 # Encrypt your disk with TPM
 
-Hardware-backed full-disk encryption is an **experimental feature** to protect your data using the Trusted Platform Module (TPM) chip. It encrypts your Ubuntu installation and your whole disk. Compared to traditional encryption methods such as LUKS, hardware-backed full-disk encryption can provide more convenience or more security, depending on your configuration.
+Hardware-backed disk encryption is an **experimental feature** to protect your data using the Trusted Platform Module (TPM) chip. It encrypts your Ubuntu installation and your whole disk. Compared to traditional encryption methods such as LUKS, hardware-backed disk encryption can provide more convenience or more security, depending on your configuration.
 
 To learn how this encryption works, see {ref}`hardware-backed-disk-encryption`.
 
@@ -31,17 +31,21 @@ To install Ubuntu with hardware-backed encryption:
     :::{tab-item} Ubuntu 24.04 LTS
     :sync: ubuntu-24-04
 
-    After installation, start your new system and display your recovery key in a terminal:
+    After installation, start your new system and enter the following command in a terminal:
 
     ```bash
     sudo snap recovery --show-keys
     ```
+
+    The command displays your recovery key.
     :::
 
     :::{tab-item} Ubuntu 25.10 and newer
     :sync: ubuntu-25-10
 
     The Ubuntu installer shows your recovery key when the installation is finished.
+
+    You can save the recovery key as a text file on another USB stick. You can also load the QR code with your phone or take a photo of the screen showing the recovery key.
     :::
 
     ::::
