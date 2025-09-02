@@ -7,6 +7,8 @@ To learn how this encryption works, see {ref}`hardware-backed-disk-encryption`.
 
 :::{warning}
 Hardware-backed disk encryption is currently an **experimental feature**. Use it only on systems where you don't mind if you accidentally lose your data.
+
+This feature currently supports only the generic kernel. This means that you can’t use this setup on machines that require additional drivers to support webcams or NVIDIA graphics cards. In addition, certain hardware vendors might enable BIOS options that alter the chain of trust.
 :::
 
 
