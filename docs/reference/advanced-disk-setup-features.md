@@ -19,7 +19,5 @@ Erase disk and use ZFS with encryption
 : Use ZFS and enable its data encryption feature.
 
 Enable hardware-backed full disk encryption
-: TPM-backed full disk encryption (FDE) is a new, **experimental** feature of Ubuntu Desktop that currently supports only the generic kernel. This means that you can't use this setup on machines that require additional drivers to support webcams or NVIDIA graphics cards. In addition, certain hardware vendors may have BIOS options enabled that alter the chain of trust.
-
-    For details, see {ref}`hardware-backed-disk-encryption`.
+: TPM-backed full disk encryption (FDE) is a new, **experimental** disk encryption feature of Ubuntu Desktop. For details, see {ref}`hardware-backed-disk-encryption`.
 

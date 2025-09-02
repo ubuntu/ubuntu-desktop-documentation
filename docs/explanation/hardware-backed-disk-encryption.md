@@ -9,6 +9,8 @@ Hardware-backed disk encryption is a convenient way to keep your data secure. It
 
 :::{warning}
 Hardware-backed disk encryption is currently an **experimental feature**. Use it only on systems where you don't mind if you accidentally lose   your data.
+
+This feature currently supports only the generic kernel. This means that you can't use this setup on machines that require additional drivers to support webcams or NVIDIA graphics cards. In addition, certain hardware vendors might enable BIOS options that alter the chain of trust.
 :::
 
 
@@ -40,7 +42,9 @@ If you lose your recovery key, you might lose access to your data in certain sce
 
 You need the recovery key in several different situations:
 
+<!-- To be implemented:
 * If you **move your disk** to a new computer, you need to enter your recovery key before your new computer can access the data.
+-->
 
 * If you **forget your disk passphrase**, Ubuntu asks for your recovery key to unlock the disk.
 
