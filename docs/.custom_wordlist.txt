@@ -78,6 +78,8 @@ WCAG
 whitespace
 whitespaces
 wordlist
+Wi
+Fi
 workspace
 workspaces
 xetex
