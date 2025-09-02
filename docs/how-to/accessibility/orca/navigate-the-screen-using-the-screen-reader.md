@@ -550,7 +550,7 @@ This feature doesn't work at all and leaves Orca in a stuck, unusable state. Com
 Mouse commands don't work either but at least they don't permanently disable Orca:
 https://help.gnome.org/users/orca/stable/commands_mouse.html.en
 
-
+(orca-mouse-review)=
 ## What's under the mouse cursor?
 
 With the Mouse Review feature, Orca identifies the object that's visually under the cursor as you move the mouse. If you move the cursor over an accessible object with information to present, Orca presents that object and its information to you. Mouse Review isn't limited to the active window.
