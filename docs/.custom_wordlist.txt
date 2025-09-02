@@ -5,6 +5,7 @@ backend
 backends
 balenaEtcher
 BRLTTY
+BrlTTY
 CapsLock
 Charmcraft
 cjk
@@ -12,6 +13,10 @@ crosshair
 crosshairs
 Ctrl
 cryptographically
+decrypt
+decrypted
+dialog
+dialogs
 dvipng
 Esc
 eSpeak
@@ -32,6 +37,7 @@ LaTeX
 latexmk
 LDAP
 lockdown
+LUKS
 Multipass
 NSS
 Num
@@ -47,9 +53,11 @@ plantuml
 PNG
 Pygments
 QEMU
+RGB
 refreshable
 Rockcraft
 rst
+spacebar
 SSSD
 SSSD’s
 SSSD's
@@ -58,6 +66,8 @@ tex
 texlive
 TOC
 toctree
+tooltip
+tooltips
 touchpad
 txt
 uncomment
@@ -68,6 +78,8 @@ WCAG
 whitespace
 whitespaces
 wordlist
+Wi
+Fi
 workspace
 workspaces
 xetex

@@ -43,7 +43,7 @@ If you know the position of the application in the dash, you can activate it by 
 
     Orca announces the currently selected application.
 
-    If only one application is open, the switcher selects it. Otherwise, it sellects the next application in the list.
+    If only one application is open, the switcher selects it. Otherwise, it selects the next application in the list.
 
 2. To move through the application, keep holding {kbd}`Super` and press {kbd}`Tab`.
 
