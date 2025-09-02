@@ -7,10 +7,10 @@ Orca preferences can be configured globally or on the application level. Applica
 
 ## Keyboard shortcuts to open preferences dialogs
 
-{kbd}`Orca+Modifier`+ {kbd}`Space`
+{kbd}`OrcaModifier+Space`
 : Open Orca's Preferences
 
-{kbd}`Ctrl`+ {kbd}`Orca+Modifier`+ {kbd}`Space`
+{kbd}`Ctrl+OrcaModifier+Space`
 : Open Orca's Preferences for the current application
 
 ## General preferences and profiles
