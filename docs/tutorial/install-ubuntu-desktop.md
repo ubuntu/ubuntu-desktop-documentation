@@ -10,7 +10,7 @@ Original source: <https://discourse.ubuntu.com/t/install-ubuntu-desktop/25312/>
 Original author: Oliver Smith <oliversmith@canonical.com>
 -->
 
-In this tutorial, we'll download and install Ubuntu Desktop on your laptop or PC.
+In this tutorial, we'll download and install Ubuntu Desktop 24.04 LTS on your laptop or PC.
 
 
 What you'll need:
@@ -25,11 +25,14 @@ What you'll need:
 While Ubuntu works on a wide range of devices, it's best to use a device listed on the [Ubuntu certified hardware](https://ubuntu.com/certified?q=&category=Laptop&category=Desktop&limit=20) page. These devices have been tested and confirmed to work well with Ubuntu.
 
 
+(installation-back-up-your-data)=
 ## Back up your data
 
 If you're installing Ubuntu on a PC or laptop that you've used previously, back up your data before you start the installation.
 
-Move any files that you want to keep to another storage device, such as an external disk or a USB drive.
+Move any **files** that you want to keep to another storage device, such as an external disk or a USB drive.
+
+To back up your **web browser**, connect your browser to an online account, such as a Firefox account or a Google account. After the Ubuntu installation, your browser synchronizes your data when you log into your account. Note that the Safari browser doesn't work on Ubuntu.
 
 
 <!--
@@ -308,6 +311,8 @@ For details, see [Updating the system with APT](https://documentation.ubuntu.com
 ## You've installed Ubuntu
 
 We hope you enjoy your new desktop.
+
+If you backed up your data, you can now move them back into Ubuntu. If you backed up your web browser account, log in to synchronize your data.
 
 Check out our picks for [Top 10 apps for a fresh Linux install in 2021](https://ubuntu.com/blog/top-10-apps-for-a-fresh-linux-install-in-2021).
 

@@ -1,6 +1,6 @@
 ## Download an Ubuntu image
 
-Get the Ubuntu installation image from the [Download Ubuntu Desktop](https://ubuntu.com/download/desktop) page. Save it to a memorable location on your PC. The downloaded file is called `ubuntu-24.04.3-desktop-amd64.iso` or similar. This tutorial uses the latest Ubuntu 24.04 LTS release.
+Get the Ubuntu installation image from the [Download Ubuntu Desktop](https://ubuntu.com/download/desktop) page. Save it to a memorable location on your PC. The downloaded file is called `ubuntu-24.04.3-desktop-amd64.iso` or similar.
 
 ![The Download Ubuntu Desktop page](/images/download-an-ubuntu-image.png)
  

@@ -5,7 +5,7 @@ sequential_nav: both
 (try-ubuntu-desktop)=
 # Try Ubuntu Desktop
 
-In this tutorial, you'll try Ubuntu Desktop on your computer without making any permanent changes. Ubuntu Desktop will run from a USB drive and your data will be safe.
+In this tutorial, you'll try Ubuntu Desktop 24.04 LTS on your computer without making any permanent changes. Ubuntu Desktop will run from a USB drive and your data will be safe.
 
 
 What you’ll need:
@@ -68,7 +68,10 @@ The installer closes. Use the preview to test if your hardware works correctly w
 
 Look around the interface and see what applications are available.
 
-If you decide to install Ubuntu, return to the installer menu at any time by clicking the {guilabel}`Install Ubuntu` shortcut on the desktop. See {ref}`install-ubuntu-desktop` to proceed with the installation.
+
+## Install Ubuntu or return to your system
+
+If you decide to install Ubuntu, return to the installer menu at any time by clicking the {guilabel}`Install Ubuntu` shortcut on the desktop. See {ref}`install-ubuntu-desktop` to proceed with the installation. If you have any data on your computer that you want to keep, make sure to {ref}`back up your data <installation-back-up-your-data>` first.
 
 When you're done testing Ubuntu and you don't want to install it, you can reboot the computer and return to your regular system:
 
