@@ -1,9 +1,7 @@
 # Ubuntu Desktop documentation
 
 :::{caution}
-The Ubuntu Desktop guide is under construction. The current state you are seeing now is a preview.
-
-This version is unstable: URLs might change at any time. Some content is not in properly reviewed yet. Proceed with caution and be aware of technical inaccuracies.
+The Ubuntu Desktop guide is under construction. The current state is a preview. URLs might change at any time and some content is unfinished.
 :::
 
 <!--
