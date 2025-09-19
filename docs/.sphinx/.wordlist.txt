@@ -35,6 +35,7 @@ balancer
 BAU
 BCD
 BitLocker
+blockquotes
 BlueZ
 BOM
 bootable
@@ -194,6 +195,7 @@ Linkerd
 linter
 LinuxONE
 Livepatch
+LOL
 LTS
 LTV
 LVM
@@ -223,6 +225,8 @@ MPA
 MQL
 MRE
 MSRP
+multicase
+MultiCaseString
 Multipass
 MyST
 Nagios
@@ -321,6 +325,7 @@ SFDC
 SIP
 SKU
 SLA
+sldr
 Snapcraft
 snapcrafting
 Snapd
