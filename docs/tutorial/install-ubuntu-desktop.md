@@ -12,6 +12,7 @@ Original author: Oliver Smith <oliversmith@canonical.com>
 
 In this tutorial, we'll download and install Ubuntu Desktop 24.04 LTS on your laptop or PC.
 
+If you've never installed an operating system, don't worry: Ubuntu makes the process very easy. You'll encounter a guided installer that will ask you a couple of questions. Whenever you're not sure what to pick, you can just select the default option, which ensures that you end up with a fully usable Ubuntu installation. No deep technical knowledge is required.
 
 What you'll need:
 
