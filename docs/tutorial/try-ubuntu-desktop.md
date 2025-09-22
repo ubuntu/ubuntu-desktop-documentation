@@ -66,7 +66,7 @@ The Ubuntu Desktop installer opens. We'll use it to set a couple of options. The
 
 The installer closes. Use the preview to test if your hardware works correctly with Ubuntu.
 
-Note that this preview of Ubuntu only uses open-source drivers. If your hardware requires proprietary drivers, such as for NVIDIA graphics cards, they are missing in this environment. You can enable them after the Ubuntu installation.
+Note that this preview of Ubuntu only uses open-source drivers. If your hardware requires proprietary drivers, such as for NVIDIA graphics cards, they are missing in this environment. You can enable them during the Ubuntu installation or later.
 
 Look around the interface. Try out how Ubuntu is controlled. See what applications are available.
 
