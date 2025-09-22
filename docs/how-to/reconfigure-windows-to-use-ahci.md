@@ -117,11 +117,7 @@ The Windows command prompt opens. Here, you can run commands to diagnose and rep
 
     For example, a "wrong" volume might be assigned the letter `C:`. Select it first, assign it a different letter (e.g. `F:` or `H:`), select the volume that contains Windows, and then assign it the letter `C:`.
 
-1. Activate the `C:` volume:
-
-    ```text
-    activate
-    ```
+    ![Disk partitioning example](/images/windows-ahci/windows-10-diskpart.png)
 
 1. Exit the `diskpart` utility:
 
