@@ -40,7 +40,7 @@ Make sure that your personal data is safe. Even simply copying the important fil
 
     ![Regedit override](/images/windows-ahci/Regedit-override-dword.png)
 
-1. Repeat this set of changes for the following path in the Registry Editor:
+1. Repeat these changes for the following path in the Registry Editor, if the path exists on your system:
 
     ```text
     HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\storahci\
