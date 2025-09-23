@@ -24,6 +24,10 @@ Make sure that your personal data is safe. Even simply copying the important fil
 
 ## Change the controller mode
 
+Use the following steps to switch your Windows storage controller to AHCI.
+
+### Change registry keys
+
 1. Start Registry Editor, and navigate to the following path:
 
     ```text
@@ -46,9 +50,19 @@ Make sure that your personal data is safe. Even simply copying the important fil
     HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\storahci\
     ```
 
+### Disable additional storage features
+
+* If your system uses BitLocker, disable it. See {ref}`turn-off-bitlocker-in-windows`.
+
+* If your system uses Intel Optane Memory, disable it. See [How to Disable System Acceleration with Intel® Optane™ Memory](https://www.intel.com/content/www/us/en/support/articles/000024626/memory-and-storage/intel-optane-memory.html).
+
+### Switch to safe boot mode
+
 1. Open the System Configuration app. You can find it by entering `msconfig` in the Windows search menu.
 
 1. On the {guilabel}`Boot` tab, enable {guilabel}`Safe boot` in the {guilabel}`Boot options` frame. Confirm by clicking {guilabel}`OK`.
+
+### Change firmware settings
 
 1. Reboot the system and start your computer’s firmware (BIOS or UEFI).
 
@@ -57,6 +71,8 @@ Make sure that your personal data is safe. Even simply copying the important fil
 1. In the firmware menu, change the disk controller type to AHCI.
 
     The exact terminology and steps to manage the controller type in the firmware depend on the implementation by the platform vendor.
+
+### Finish and verify the changes
 
 1. Exit the firmware and let the system boot.
 
