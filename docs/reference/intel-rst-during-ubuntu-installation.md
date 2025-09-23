@@ -18,7 +18,7 @@ The Ubuntu installer can detect certain RAID configurations, but it might not be
 
 If the Ubuntu installer can't detect the disks that you need, you must turn off RST in the computer’s firmware before you can install Ubuntu. The terminology and steps to access and manage RST in the firmware depend on the implementation by the platform vendor. For instance, Dell, Lenovo and HP computers all have different settings.
 
-Furthermore, Windows might be already installed on the computer that uses RST. If you disable RST in the firmware or change the RST configuration, Windows might become unable to start because it's no longer be able to find the disks.
+Furthermore, Windows might be already installed on the computer that uses RST. If you disable RST in the firmware or change the RST configuration, Windows might become unable to start because it's no longer able to find the disks.
 
 
 ## Possible installation scenarios
