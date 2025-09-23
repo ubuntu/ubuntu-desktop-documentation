@@ -78,13 +78,13 @@ Use the following steps to switch your Windows storage controller to AHCI.
 
     Windows enters safe mode and sets up the hardware using the temporarily enabled drivers.
 
+1. After Windows starts, open the System Configuration app again and disable {guilabel}`Safe boot`.
+
 1. Check the controller mode in the Device Manager.
 
     It should read: {guilabel}`Standard SATA AHCI Controller`.
 
     ![Regedit override](/images/windows-ahci/Regedit-override.png)
-
-1. Open the System Configuration app again and disable {guilabel}`Safe boot`.
 
 1. Reboot. Windows starts normally.
 
