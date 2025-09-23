@@ -46,7 +46,11 @@ Make sure that your personal data is safe. Even simply copying the important fil
     HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\storahci\
     ```
 
-1. Reboot Windows and start your computer’s firmware (BIOS or UEFI).
+1. Open the System Configuration app. You can find it by entering `msconfig` in the Windows search menu.
+
+1. On the {guilabel}`Boot` tab, enable {guilabel}`Safe boot` in the {guilabel}`Boot options` frame. Confirm by clicking {guilabel}`OK`.
+
+1. Reboot the system and start your computer’s firmware (BIOS or UEFI).
 
     Usually, you can access the firmware by pressing the {kbd}`F2` or {kbd}`Del` key during the early boot sequence.
 
@@ -56,7 +60,7 @@ Make sure that your personal data is safe. Even simply copying the important fil
 
 1. Exit the firmware and let the system boot.
 
-    Windows should start normally.
+    Windows enters safe mode and sets up the hardware using the temporarily enabled drivers.
 
 1. Check the controller mode in the Device Manager.
 
@@ -64,6 +68,9 @@ Make sure that your personal data is safe. Even simply copying the important fil
 
     ![Regedit override](/images/windows-ahci/Regedit-override.png)
 
+1. Open the System Configuration app again and disable {guilabel}`Safe boot`.
+
+1. Reboot. Windows starts normally.
 
 ## Troubleshooting boot problems
 
