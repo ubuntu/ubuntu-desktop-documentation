@@ -29,11 +29,13 @@ While Ubuntu works on a wide range of devices, it's best to use a device listed 
 (installation-back-up-your-data)=
 ## Back up your data
 
-If you're installing Ubuntu on a PC or laptop that you've used previously, back up your data before you start the installation.
+If you're installing Ubuntu on a PC or laptop that you've used previously, back up your data before you start the installation:
 
-Move any **files** that you want to keep to another storage device, such as an external disk or a USB drive.
+* Move any **files** that you want to keep to another storage device, such as an external disk or a USB drive.
 
-To back up your **web browser**, connect your browser to an online account, such as a Firefox account or a Google account. After the Ubuntu installation, your browser synchronizes your data when you log into your account. Note that the Safari browser doesn't work on Ubuntu.
+* To back up your **web browser**, connect your browser to an online account, such as a Firefox account or a Google account. After the Ubuntu installation, your browser synchronizes your data when you log into your account. Note that the Safari browser doesn't work on Ubuntu.
+
+Back up your files from the **USB flash drive**. The drive will be erased.
 
 
 <!--

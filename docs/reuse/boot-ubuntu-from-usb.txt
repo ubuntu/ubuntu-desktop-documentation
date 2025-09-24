@@ -11,6 +11,10 @@ Write the downloaded Ubuntu image to a USB stick to create the installation medi
 
 We'll use the balenaEtcher application because it runs on Linux, Windows and macOS.
 
+:::{warning}
+This will erase your USB stick. Back up your files first.
+:::
+
 1. At the [balenaEtcher website](https://etcher.balena.io/), choose the version that corresponds to your current operating system.
 
 1. Download and install the tool.
