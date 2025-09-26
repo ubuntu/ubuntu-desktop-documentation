@@ -21,9 +21,11 @@ If you wish to re-encrypt your Windows partition after installing Ubuntu alongsi
 
     ![The BitLocker Drive Encryption settings in Windows](/images/bitlocker-drive-encryption.png)
 
-1. Click {guilabel}`Turn off BitLocker`.
+1. If the status is "BitLocker waiting for activation", it means that BitLocker is enabled but your data isn't encrypted yet.
 
-    If BitLocker is enabled but your data isn't encrypted yet, turn BitLocker on and then off.
+    Enable BitLocker first by clicking {guilabel}`Turn on BitLocker`. Then proceed.
+
+1. Click {guilabel}`Turn off BitLocker`.
 
 1. Windows informs you that it is going to decrypt the data.
 
