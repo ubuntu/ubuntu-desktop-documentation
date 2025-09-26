@@ -15,6 +15,10 @@ We'll use the balenaEtcher application because it runs on Linux, Windows and mac
 This will erase your USB stick. Back up your files first.
 :::
 
+:::{note}
+balenaEther is an open-source application but it isn't developed by the Ubuntu community. Recently, we've [learned](https://tails.net/news/rufus/) that it shares some information about your usage with the Balena company. If this a concern for you, consider using an alternative application: Startup Disk Creator or GNOME Disks on Linux, Rufus on Windows or Raspberry Pi Imager on any platform.
+:::
+
 1. At the [balenaEtcher website](https://etcher.balena.io/), choose the version that corresponds to your current operating system.
 
 1. Download and install the tool.
