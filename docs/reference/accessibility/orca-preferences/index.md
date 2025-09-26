@@ -7,11 +7,30 @@ Orca preferences can be configured globally or on the application level. Applica
 
 ## Keyboard shortcuts to open preferences dialogs
 
-{kbd}`OrcaModifier+Space`
+::::{tab-set}
+:::{tab-item} Laptop layout
+:sync: orca-laptop
+
+{kbd}`CapsLock+Space`
 : Open Orca's Preferences
 
-{kbd}`Ctrl+OrcaModifier+Space`
+{kbd}`Ctrl+CapsLock+Space`
 : Open Orca's Preferences for the current application
+:::
+
+:::{tab-item} Desktop layout
+:sync: orca-desktop
+
+{kbd}`Insert+Space`
+: Open Orca's Preferences
+
+{kbd}`Ctrl+Insert+Space`
+: Open Orca's Preferences for the current application
+:::
+::::
+
+
+
 
 ## General preferences and profiles
 

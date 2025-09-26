@@ -71,3 +71,6 @@ If screen reader commands don't work, try pressing the key as if another relevan
 
 The Ubuntu Desktop team continues to improve the screen reader experience in each release. In Ubuntu 25.04 and 25.10, the {kbd}`CapsLock` modifier behaves more consistently, and screen reader support in GTK4 applications is enhanced.
 
+## Enable Orca before running applications
+
+This issue affects Firefox and Chromium-based browsers in particular but can occur with other applications. If Orca is enabled and works in your desktop environment but does not work properly in the application, for example, it does not read web pages in your browser, try closing the application and restarting Orca *before* launching the application again.

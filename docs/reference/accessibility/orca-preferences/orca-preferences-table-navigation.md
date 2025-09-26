@@ -1,6 +1,6 @@
 # Table navigation preferences
 
-The following options allow you to customize how Orca behaves when navigating within a table in applications that suppoirt Structural Naviation, see {ref}`orca-navigate-the-document-structure`.
+The following options allow you to customize how Orca behaves when navigating within a table in applications that support Structural Navigation, see {ref}`orca-navigate-the-document-structure`.
 
 ## Speak cell coordinates
 
