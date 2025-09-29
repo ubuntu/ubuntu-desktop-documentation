@@ -223,7 +223,9 @@ redirects = {
 
 linkcheck_ignore = [
     "http://127.0.0.1:8000",
-    "https://github.com/canonical/ACME/*"
+    "https://github.com/canonical/ACME/*",
+    # The link checker tries to treat the part after # as an anchor and fails.
+    "https://matrix.to/#/#desktop-dev:ubuntu.com",
     ]
 
 

@@ -9,7 +9,7 @@ Text attributes include font, style, alignment, and other formatting features.
 Each row contains:
 
 - **Attribute Name:** name of the attribute
-- **Speak:** whether Orca speaks it (`Orca Modifier + F`)
+- **Speak:** whether Orca speaks it ({kbd}`CapsLock+F` or {kbd}`Insert+F`)
 - **Mark in Braille:** whether to underline the attribute in braille
 - **Present Unless:**  condition to suppress the attribute
 
