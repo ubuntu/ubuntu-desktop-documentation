@@ -35,7 +35,7 @@ The default terminal is the terminal emulator application that opens when you pr
 
 ## On Ubuntu 25.04 and later
 
-Starting with Ubuntu 25.04, the way to set your default terminal has changed. In addition, the Files application now also respects your default terminal when you select {guilabel}`Open in Terminal` from the folder menu.
+Starting with Ubuntu 25.04, the way to set your default terminal has changed. In addition, the Files application now respects your default terminal when you select {guilabel}`Open in Terminal` from the folder menu.
 
 Your terminal might enable you to set it as default in the terminal settings. For example, look for the following menu items:
 
