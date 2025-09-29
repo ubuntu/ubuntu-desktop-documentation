@@ -6,6 +6,7 @@ These guides accompany you through the complete Ubuntu Desktop operations lifecy
 :maxdepth: 1
 
 record-the-screen
+change-the-default-terminal
 log-in-using-a-smart-card
 enable-smart-cards-in-snapped-browsers
 reconfigure-windows-to-use-ahci
