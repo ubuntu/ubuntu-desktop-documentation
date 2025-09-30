@@ -35,28 +35,32 @@ The default terminal is the terminal emulator application that opens when you pr
 
 ## On Ubuntu 25.04 and later
 
-Starting with Ubuntu 25.04, the way to set your default terminal has changed. In addition, the Files application now respects your default terminal when you select {guilabel}`Open in Terminal` from the folder menu.
+Starting with Ubuntu 25.04, the way to set your default terminal has changed. Since Ubuntu 25.10, the Files application now also respects your configuration when you select {guilabel}`Open in Terminal` from the folder menu.
 
-Your terminal might enable you to set it as default in the terminal settings. For example, look for the following menu items:
+* Your terminal might enable you to set it as default in the terminal settings. Look for a button similar to {guilabel}`Set as default terminal` in the application preferences. The button might be located in the Behavior or General section.
 
-* {menuselection}`Main menu --> Preferences --> Behavior --> Set as Default Terminal`
-* {menuselection}`Main menu --> Preferences --> General --> Set as default terminal`
+* If your terminal doesn't have such settings, enter its XDG Desktop identifier in the `~/.config/ubuntu-xdg-terminals.list` file. For example:
 
-If your terminal doesn't have such settings, enter its XDG Desktop identifier in the `~/.config/xdg-terminals.list` file. For example:
+    :::{list-table}
+    :header-rows: 1
 
-:::{list-table}
-:header-rows: 1
+    * - Terminal
+      - Identifier
+    * - Ptyxis
+      - `org.gnome.Ptyxis.desktop:new-window`
+    * - GNOME Terminal
+      - `org.gnome.Terminal.desktop`
+    * - GNOME Console
+      - `org.gnome.Console.desktop`
+    * - Alacritty
+      - `Alacritty.desktop`
+    * - Kitty
+      - `kitty.desktop`
+    :::
 
-* - Terminal
-  - Identifier
-* - GNOME Terminal
-  - `org.gnome.Terminal.desktop`
-* - Ptyxis
-  - `org.gnome.Ptyxis.desktop:new-window`
-* - GNOME Console
-  - `org.gnome.Console.desktop`
-:::
+    If the file lists multiple terminals, the first line takes precedence.
 
-For details, see the `xdg-terminal-exec` man page.
-
+    :::{note}
+    If you're not using the standard Ubuntu GNOME desktop, the name of the configuration file is different. For details, see the `xdg-terminal-exec` man page.
+    :::
 
