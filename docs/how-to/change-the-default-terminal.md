@@ -1,7 +1,7 @@
 (change-the-default-terminal)=
 # Change the default terminal
 
-The default terminal is the terminal emulator application that opens when you press {kbd}`Ctrl+Alt+T`. If multiple terminal emulators are installed, you can configure which one is the default.
+The default terminal, or terminal emulator, is the application that opens when you press {kbd}`Ctrl+Alt+T`. If multiple terminal emulators are installed, you can configure which one is the default.
 
 
 ## On Ubuntu 24.04 LTS
