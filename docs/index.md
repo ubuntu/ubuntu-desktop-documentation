@@ -76,8 +76,12 @@ Ubuntu Desktop is an open source project that warmly welcomes community projects
 * [Join our Discourse forum](https://discourse.ubuntu.com/c/project/desktop/)
 * Join our online chat on [Mattermost](https://chat.canonical.com/canonical/channels/desktop) or [Matrix](https://matrix.to/#/#desktop-dev:ubuntu.com)
 * [Contribute to this documentation](https://github.com/ubuntu/ubuntu-desktop-documentation/blob/main/CONTRIBUTING.md)
-* Release notes for Ubuntu [24.04 LTS](https://discourse.ubuntu.com/t/noble-numbat-release-notes/39890) or [25.04](https://discourse.ubuntu.com/t/ubuntu-25-04-plucky-puffin-released/59303)
+
+* Release notes for Ubuntu [24.04 LTS](https://discourse.ubuntu.com/t/noble-numbat-release-notes/39890) or [25.10](https://discourse.ubuntu.com/t/questing-quokka-release-notes/59220)
+
+<!--
 * [Ubuntu 25.10 Roadmap](https://discourse.ubuntu.com/t/ubuntu-desktop-25-10-the-questing-quokka-roadmap/)
+-->
 
 
 ### Credits
