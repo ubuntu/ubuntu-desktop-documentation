@@ -1,3 +1,4 @@
+(how-to)=
 # How-to guides
 
 These guides accompany you through the complete Ubuntu Desktop operations lifecycle.

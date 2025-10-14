@@ -28,6 +28,11 @@ Explanation </explanation/index>
 
 ## In this documentation
 
+* **First steps**: {ref}`try-ubuntu-desktop` • {ref}`install-ubuntu-desktop`
+* **Accessibility**: {ref}`Screen reader tutorial <get-started-with-the-screen-reader>` • {ref}`Enable accessibility features <how-to-accessibility>` • {ref}`accessibility-stack` • {ref}`Reference <reference-accessibility>`
+* **Security**: {ref}`hardware-backed-disk-encryption` • {ref}`Smart card login <log-in-using-a-smart-card>` • {ref}`Smart card in your web browser <enable-smart-cards-in-snapped-browsers>`
+
+<!--
 ::::{grid} 1 1 2 2
 
 :::{grid-item-card} Tutorial
@@ -62,26 +67,42 @@ Explanation </explanation/index>
 **Concepts**: discussion and clarification of key topics
 :::
 ::::
+-->
 
-Accessibility
-: {ref}`Screen reader tutorial <get-started-with-the-screen-reader>` | {ref}`Enable accessibility features <how-to-accessibility>` | {ref}`accessibility-stack` | {ref}`Reference <reference-accessibility>`
+
+## How this documentation is organized
+
+This documentation uses the [Diátaxis documentation structure](https://diataxis.fr/).
+
+* {ref}`tutorials` take you step-by-step through installing Ubuntu Desktop and exploring the user interface.
+* {ref}`how-to` assume you have basic familiarity with Ubuntu Desktop. They cover various common tasks and specialized use cases.
+* {ref}`reference` provides cheat sheets, specifications and details on the Ubuntu Desktop architecture.
+* {ref}`explanation` includes topic overviews, background and context and detailed discussion.
 
 
 ## Project and community
 
 Ubuntu Desktop is an open source project that warmly welcomes community projects, contributions, suggestions, fixes and constructive feedback.
 
-* [Code of conduct](https://ubuntu.com/community/code-of-conduct)
+### Get involved
+
 * [Get support](https://ubuntu.com/support/community-support)
 * [Join our Discourse forum](https://discourse.ubuntu.com/c/project/desktop/)
 * Join our online chat on [Mattermost](https://chat.canonical.com/canonical/channels/desktop) or [Matrix](https://matrix.to/#/#desktop-dev:ubuntu.com)
 * [Contribute to this documentation](https://github.com/ubuntu/ubuntu-desktop-documentation/blob/main/CONTRIBUTING.md)
 
-* Release notes for Ubuntu [24.04 LTS](https://discourse.ubuntu.com/t/noble-numbat-release-notes/39890) or [25.10](https://discourse.ubuntu.com/t/questing-quokka-release-notes/59220)
+### Releases
 
+* [Release notes for Ubuntu 24.04 LTS](https://discourse.ubuntu.com/t/noble-numbat-release-notes/39890)
+* [Release notes for Ubuntu 25.10](https://discourse.ubuntu.com/t/questing-quokka-release-notes/59220)
 <!--
 * [Ubuntu 25.10 Roadmap](https://discourse.ubuntu.com/t/ubuntu-desktop-25-10-the-questing-quokka-roadmap/)
 -->
+
+### Governance and policies
+
+* [Code of conduct](https://ubuntu.com/community/code-of-conduct)
+
 
 
 ### Credits

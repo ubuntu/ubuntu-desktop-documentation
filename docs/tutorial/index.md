@@ -1,3 +1,4 @@
+(tutorials)=
 # Tutorials
 
 A hands-on introduction to Ubuntu Desktop for new users.
