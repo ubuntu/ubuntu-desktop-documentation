@@ -25,6 +25,8 @@ What you'll need:
 
 While Ubuntu works on a wide range of devices, it's best to use a device listed on the [Ubuntu certified hardware](https://ubuntu.com/certified?q=&category=Laptop&category=Desktop&limit=20) page. These devices have been tested and confirmed to work well with Ubuntu.
 
+If you can't see your device there, you can always just {ref}`try-ubuntu-desktop` and check if everything works as expected.
+
 
 (installation-back-up-your-data)=
 ## Back up your data
