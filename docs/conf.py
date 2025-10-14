@@ -69,7 +69,7 @@ copyright = "%s CC-BY-SA, %s" % (datetime.date.today().year, author)
 # NOTE: The Open Graph Protocol (OGP) enhances page display in a social graph
 #       and is used by social media platforms; see https://ogp.me/
 
-ogp_site_url = "https://ubuntu-desktop-documentation.readthedocs-hosted.com/en/latest/"
+ogp_site_url = "https://documentation.ubuntu.com/desktop/en/latest/"
 
 
 # Preview name of the documentation website
@@ -183,7 +183,7 @@ html_theme_options = {
 
 # Base URL of RTD hosted project
 
-html_baseurl = 'https://canonical-ubuntu-desktop-documentation.readthedocs-hosted.com/'
+html_baseurl = 'https://documentation.ubuntu.com/desktop/en/latest/'
 
 # URL scheme. Add language and version scheme elements.
 # When configured with RTD variables, check for RTD environment so manual runs succeed:
