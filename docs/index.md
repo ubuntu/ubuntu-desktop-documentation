@@ -8,7 +8,7 @@ The Ubuntu Desktop guide is under construction. The current state is a preview. 
 This introduction of Ubuntu Desktop is mainly reused from <https://ubuntu.com/desktop>.
 -->
 
-**What's Ubuntu Desktop?** It's the most popular open-source operating system powering millions of PCs and laptops around the world.
+**Ubuntu Desktop** is the most popular open-source operating system powering millions of PCs and laptops around the world.
 
 **What can it do?** Ubuntu Desktop supports all your daily computing needs. It offers applications for web browsing, messaging, gaming and content creation, including Firefox, Chrome, Discord, Steam and OBS Studio. It's a primary platform for all major IDEs, game development tools and AI/ML software. 
 
