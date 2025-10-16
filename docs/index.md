@@ -6,7 +6,7 @@
 
 **How is it different?** Compared to other mainstream operating systems, Ubuntu Desktop prioritizes your privacy and security. It's free to download, use, modify and share. Compared to other Linux-based systems, Ubuntu Desktop aims to make open-source software easy and pleasant to use. Thanks to regular releases and commercial support, Ubuntu Desktop is a reliable and predictable platform.
 
-**Is it for me?** Ubuntu Desktop is used by millions of users at home, for development and in enterprise. Anyone with a laptop or a PC is welcome to use Ubuntu Desktop. If you aren't sure, you can try Ubuntu Desktop without making any permanent changes on your computer: just {ref}`run it from a USB stick <try-ubuntu-desktop>`.
+**Is it for me?** Ubuntu Desktop is used by millions of users at home, for development and in enterprise. Anyone with a laptop or a PC is welcome to use Ubuntu Desktop. If you aren't sure, you can try Ubuntu Desktop without making any permanent changes on your computer: {ref}`run it from a USB stick <try-ubuntu-desktop>`.
 
 :::{caution}
 The Ubuntu Desktop guide is under construction. The current state is a preview. URLs might change at any time and some content is unfinished.
