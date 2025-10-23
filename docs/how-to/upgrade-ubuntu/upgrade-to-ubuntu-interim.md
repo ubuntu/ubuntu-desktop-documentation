@@ -3,7 +3,7 @@
 
 Ubuntu 25.10 is the version of the Ubuntu operating system being released in April 2025. The development codename given to this release is "Questing Quokka".
 
-## Before You Start
+## Before you start
 
 - You can directly upgrade to Ubuntu 25.10 ("Questing Quokka") from Ubuntu 25.04 ("Plucky Puffin").
 
@@ -13,9 +13,8 @@ Ubuntu 25.10 is the version of the Ubuntu operating system being released in Apr
 
 If you have a version of Ubuntu other than 25.04, please see [UpgradeNotes](https://help.ubuntu.com/community/UpgradeNotes) for information on how to upgrade.
 
-## Upgrade from 25.04 to 25.10
-
-### Upgrading Ubuntu Desktops to 25.10
+(upgrade-ubuntu-desktop)=
+## Upgrade Ubuntu Desktop
 
 You can easily upgrade over the network with the following procedure.
 
@@ -42,7 +41,7 @@ You can easily upgrade over the network with the following procedure.
 
 11. Follow the on-screen instructions.
 
-### Ubuntu Servers
+## Upgrade Ubuntu Server
 
 1. Install `ubuntu-release-upgrader-core` if it is not already installed:
 
@@ -60,29 +59,18 @@ You can easily upgrade over the network with the following procedure.
 
 4. Follow the on-screen instructions.
 
-### Edubuntu
 
-Please refer to the section "Upgrading Ubuntu Desktops to 25.10" above for instructions on upgrading.
+## Upgrade Ubuntu flavors
 
-### Lubuntu
-
-Please refer to [https://manual.lubuntu.me/stable/D/upgrading.html](https://manual.lubuntu.me/stable/D/upgrading.html) for our instructions on upgrading. You may note it contains no new detail, but maybe helpful if upgrade isn't found or other issues.
+Certain [Ubuntu flavors](https://ubuntu.com/desktop/flavors) have their own upgrade instructions.
 
 ### Kubuntu
 
-Specific instructions for upgrading Kubuntu to 25.10 can be founds at: [https://help.ubuntu.com/community/QuestingUpgrades/Kubuntu](https://help.ubuntu.com/community/QuestingUpgrades/Kubuntu).
+Specific instructions for upgrading Kubuntu to 25.10 can be founds at [QuestingUpgrades/Kubuntu](https://help.ubuntu.com/community/QuestingUpgrades/Kubuntu).
 
-### Ubuntu Budgie
+### Lubuntu
 
-Please refer to the section "Upgrading Ubuntu Desktops to 25.10" above for instructions on upgrading.
-
-### Ubuntu Cinnamon
-
-Please refer to the section "Upgrading Ubuntu Desktops to 25.10" above for instructions on upgrading.
-
-### Ubuntu Kylin
-
-Same steps as ubuntu and please refer to the section "Upgrading Ubuntu Desktops to 25.10" above.
+Refer to [Appendix D Upgrading from Previous Releases](https://manual.lubuntu.me/stable/D/upgrading.html) for instructions on upgrading. You may note it contains no new detail, but maybe helpful if upgrade isn't found or other issues.
 
 ### Ubuntu Studio
 
@@ -90,9 +78,11 @@ Specific instructions for upgrading Ubuntu Studio to 25.10 can be found at [Upgr
 
 ### Xubuntu
 
-Direct upgrades to Xubuntu 25.10 are supported from Xubuntu 25.04.
+Refer to [Upgrading to Xubuntu 25.10](https://wiki.xubuntu.org/releases/25.10/upgrading).
 
-- [Upgrading to Xubuntu 25.10](https://wiki.xubuntu.org/releases/25.10/upgrading)
+### Other flavors
+
+Follow {ref}`upgrade-ubuntu-desktop`.
 
 ## See Also
 
