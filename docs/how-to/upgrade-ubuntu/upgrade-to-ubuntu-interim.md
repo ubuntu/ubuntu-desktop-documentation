@@ -18,11 +18,9 @@ If you have a version of Ubuntu other than 25.04, please see [UpgradeNotes](http
 
 You can easily upgrade over the network with the following procedure.
 
-1. Run the **update-manager** application.
+1. Open the Software & Updates application.
 
-2. In Update Manager, click the **Settings...** button, and enter your password to start the Software Sources application.
-
-3. Select the sub menu **Updates** from the Software Sources application.
+3. Go to the {guilabel}`Updates` tab.
 
 4. Confirm the "Notify me of a new Ubuntu version:" option is set to "For any new version", and change it if otherwise.
 
@@ -33,7 +31,7 @@ You can easily upgrade over the network with the following procedure.
 7. If there are any updates to install, use the **Install Updates** button to install them.
 <!-- and press **Check** again after that is complete.-->
 
-8. Run **update-manager**.
+8. Open Software Updater.
 
 9. A message will appear informing you of the availability of the new release.
 
