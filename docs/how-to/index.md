@@ -5,8 +5,7 @@ These guides accompany you through the complete Ubuntu Desktop operations lifecy
 :::{toctree}
 :maxdepth: 1
 
-upgrade-to-ubuntu-26-04-lts
-upgrade-to-ubuntu-interim
+upgrade-ubuntu/index
 record-the-screen
 change-the-default-terminal
 log-in-using-a-smart-card
