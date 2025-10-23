@@ -6,6 +6,7 @@ These guides accompany you through the complete Ubuntu Desktop operations lifecy
 :::{toctree}
 :maxdepth: 1
 
+upgrade-ubuntu/index
 record-the-screen
 change-the-default-terminal
 log-in-using-a-smart-card
