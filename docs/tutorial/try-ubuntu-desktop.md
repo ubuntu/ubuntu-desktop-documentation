@@ -12,7 +12,7 @@ What you’ll need:
 
 * A laptop or PC.
 
-* A flash drive (12GB or above recommended).
+* A flash drive, 8GB or above recommended).
 
 
 ## Will Ubuntu work on my computer?
