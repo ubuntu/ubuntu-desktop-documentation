@@ -20,8 +20,6 @@ This tutorial will show you how to create a bootable USB stick on Microsoft Wind
 
 Alternatively, we also have tutorials to help you create a bootable USB stick from both [Ubuntu](https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-ubuntu) and [Apple macOS](https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-macos).
 
-![image](upload://23LTbqL4OqxptcHcnBQTbZXLWI8.jpeg)
-
 ### Requirements
 
 You will need:
@@ -31,9 +29,11 @@ You will need:
 -   [Rufus](https://rufus.ie/), a free and open source USB stick writing tool
 -   An Ubuntu ISO file. See [Get Ubuntu](https://www.ubuntu.com/download) for download links
 
-![ubuntu-download-18_04_1|690x467](upload://sfpe0p9WfvuNEfaEvSeHPucDFaW.png)
+![Ubuntu download page](/images/rufus/ubuntu-download-18_04_1.png)
 
-> ⓘ  Take note of where your browser saves downloads: this is normally a directory called 'Downloads' on your Windows PC. Don't download the ISO image directly to the USB stick! If using Windows XP or Vista, download version 2.18 of Rufus.
+:::{note}
+Take note of where your browser saves downloads: this is normally a directory called 'Downloads' on your Windows PC. Don't download the ISO image directly to the USB stick! If using Windows XP or Vista, download version 2.18 of Rufus.
+:::
 
 ### USB selection
 
@@ -41,66 +41,70 @@ Perform the following to configure your USB device in Rufus:
 
 1.  Launch Rufus
 2.  Insert your USB stick
-3.  Rufus will update to set the device within the **Device** field
-4.  If the **Device** selected is incorrect (perhaps you have multiple USB storage devices), select the correct one from the device field's drop-down menu
+3.  Rufus will update to set the device within the {guilabel}`Device` field
+4.  If the {guilabel}`Device` selected is incorrect (perhaps you have multiple USB storage devices), select the correct one from the device field's drop-down menu
 
-![ubuntu-rufus-00|690x774, 75%](upload://A6jo79NUolk8AGkE95MoVzIk73Z.png)
+![Selecting a USB drive in Rufus](/images/rufus/ubuntu-rufus-00.png)
 
-> ⓘ  You can avoid the hassle of selecting from a list of USB devices by ensuring no other devices are connected.
+:::{note}
+You can avoid the hassle of selecting from a list of USB devices by ensuring no other devices are connected.
+:::
 
 ### Select the Ubuntu ISO file
 
-To select the Ubuntu ISO file you downloaded previously, click the **SELECT** to the right of "Boot selection". If this is the only ISO file present in the Downloads folder you will only see one file listed.
+To select the Ubuntu ISO file you downloaded previously, click the {guilabel}`SELECT` to the right of "Boot selection". If this is the only ISO file present in the Downloads folder you will only see one file listed.
 
-Select the appropriate ISO file and click on **Open**.
+Select the appropriate ISO file and click on {guilabel}`Open`.
 
-![ubuntu-rufus-01|690x615](upload://5R3GkC8jEnY4GPwnoB6B1Xm1qdw.png)
+![Selecting the ISO file in the file browser](/images/rufus/ubuntu-rufus-01.png)
 
 ### Write the ISO
 
 The *Volume label* will be updated to reflect the ISO selected.
 
-Leave all other parameters with their default values and click **START** to initiate the write process.
+Leave all other parameters with their default values and click {guilabel}`START` to initiate the write process.
 
-![ubuntu-rufus-02|690x840, 75%](upload://j5WXWjEMSFYmiZRhpYokkTUkc6d.png)
+![Rufus ready to start writing the ISO](/images/rufus/ubuntu-rufus-02.png)
 
 ### Additional downloads
 
-You may be alerted that Rufus requires additional files to complete writing the ISO. If this dialog box appears, select **Yes** to continue.
+You may be alerted that Rufus requires additional files to complete writing the ISO. If this dialog box appears, select {guilabel}`Yes` to continue.
 
-![windows-rufus3-additional-downloads|431x317](upload://1Ox7sTVYswXpFrhjr13zNKAzsLJ.png)
+![The "Download required" dialog](/images/rufus/windows-rufus3-additional-downloads.png)
 
 ### Write warnings
 
 You will then be alerted that Rufus has detected that the Ubuntu ISO is an *ISOHybrid image*. This means the same image file can be used as the source for both a DVD and a USB stick without requiring conversion.
 
-Keep *Write in ISO Image mode* selected and click on **OK** to continue.
+Keep *Write in ISO Image mode* selected and click on {guilabel}`OK` to continue.
 
-![ubuntu-rufus-03|690x781, 75%](upload://eFmBBlIG00Ya0NAq5g3i6k4rtcp.png)
+!["ISOHybrid image detected" dialog](/images/rufus/ubuntu-rufus-03.png)
 
-Rufus will also warn you that all data on your selected USB device is about to be destroyed. This is a good moment to double check you've selected the correct device before clicking **OK** when you're confident you have.
+Rufus will also warn you that all data on your selected USB device is about to be destroyed. This is a good moment to double check you've selected the correct device before clicking {guilabel}`OK` when you're confident you have.
 
-![ubuntu-rufus-04|690x291, 75%](upload://xuLUsADTPpYEJvmUK3l0VfV3ys9.png)
+![Rufus warning you about data loss](/images/rufus/ubuntu-rufus-04.png)
 
-> ⓘ  If your USB stick contains multiple partitions Rufus will warn you in a separate pane that these will also be destroyed.
+:::{note}
+If your USB stick contains multiple partitions Rufus will warn you in a separate pane that these will also be destroyed.
+:::
 
 ### Writing the ISO
 
 The ISO will now be written to your USB stick, and the progress bar in Rufus will give you some indication of where you are in the process. With a reasonably modern machine, this should take around 10 minutes. Total elapsed time is shown in the lower right corner of the Rufus window.
 
-![ubuntu-rufus-05|690x840, 75%](upload://c68j4YKTZgTa4z7ZPKEEuxfvQ1x.png)
+![Rufus copying ISO files](/images/rufus/ubuntu-rufus-05.png)
 
 ### Installation complete
 
-When Rufus has finished writing the USB device, the Status bar will be filled green and the word **READY** will appear in the center. Select **CLOSE** to complete the write process.
+When Rufus has finished writing the USB device, the Status bar will be filled green and the word {guilabel}`READY` will appear in the center. Select {guilabel}`CLOSE` to complete the write process.
 
-![ubuntu-rufus-06|690x840, 75%](upload://knXatxQrupES6JFo9CDed96qf8p.png)
+![Rufus finished writing the ISO](/images/rufus/ubuntu-rufus-06.png)
 
 Congratulations! You now have Ubuntu on a USB stick, bootable and ready to go.
 
-To use it you need to insert the stick into your target PC or laptop and reboot the device. It should recognise the installation media automatically during startup but you may need to hold down a specific key (usually F12) to bring up the boot menu and choose to boot from USB.
+To use it you need to insert the stick into your target PC or laptop and reboot the device. It should recognise the installation media automatically during startup but you may need to hold down a specific key (usually {kbd}`F12`) to bring up the boot menu and choose to boot from USB.
 
-For a full walkthrough of installing Ubuntu, take a look at our [install Ubuntu desktop tutorial](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview).
+For a full walkthrough of installing Ubuntu, take a look at our {ref}`install-ubuntu-desktop` tutorial.
 
 
 ## Using balenaEtcher
