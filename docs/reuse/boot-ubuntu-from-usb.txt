@@ -3,37 +3,48 @@
 Get the Ubuntu installation image from the [Download Ubuntu Desktop](https://ubuntu.com/download/desktop) page. Save it to a memorable location on your PC. The downloaded file is called `ubuntu-24.04.3-desktop-amd64.iso` or similar.
 
 ![The Download Ubuntu Desktop page](/images/download-an-ubuntu-image.png)
- 
+
 
 ## Create a bootable USB stick
 
 Write the downloaded Ubuntu image to a USB stick to create the installation media. This is not the same as copying the downloaded image file: you have to use special software.
 
-We'll use the balenaEtcher application because it runs on Linux, Windows and macOS.
-
 :::{warning}
 This will erase your USB stick. Back up your files first.
 :::
 
-:::{note}
-balenaEtcher is an open-source application but it isn't developed by the Ubuntu community. Recently, we've [learned](https://tails.net/news/rufus/) that it shares some information about your usage with the Balena company. If this a concern, consider using an alternative application: Startup Disk Creator or GNOME Disks on Linux, Rufus on Windows or Raspberry Pi Imager on any platform.
-:::
+The application that we'll use depends on the system that you're currently using. If you need more options, see the {ref}`create-a-bootable-usb-stick` guide.
 
-1. At the [balenaEtcher website](https://etcher.balena.io/), choose the version that corresponds to your current operating system.
-
-1. Download and install the tool.
-
-    ![The Download Etcher page](/images/download-etcher.png)
+::::{tab-set}
+:::{tab-item} On Ubuntu
+:sync: on-ubuntu
 
 1. Insert your USB flash drive.
 
-1. Open balenaEtcher.
+1. Open the Disks application.
 
-1. Select the downloaded Ubuntu image and your USB flash drive.
+1. In the side bar, select your USB stick.
 
-    ![The Select target step in Etcher](/images/select-iso.png)
+1. In the window header, click {guilabel}`Drive Options` ({guilabel}`⋮`).
 
-1. Click {guilabel}`Flash!` to write the image.
+1. Select {guilabel}`Restore Disk Image…`.
+
+1. Select the downloaded Ubuntu image file.
+
+1. Click {guilabel}`Start Restoring…`.
+:::
+
+:::{tab-item} On Windows
+:sync: on-windows
+ Rufus
+:::
+
+:::{tab-item} On macOS
+:sync: on-macos
+
+Disk Utility
+:::
+::::
 
 Now you have a USB stick that works as Ubuntu installation media.
 
@@ -49,4 +60,3 @@ Now you have a USB stick that works as Ubuntu installation media.
     If not, restart it again. This time, hold {kbd}`F12` during startup. In the boot menu that appears, select your USB device.
 
     {kbd}`F12` is the most common key for bringing up the system boot menu but {kbd}`Escape`, {kbd}`F2` and {kbd}`F10` are common alternatives. If unsure, look for a brief message when your system starts: this often informs you which key to press to access the boot menu. You can also find the right key in the documentation for your laptop or PC.
-
