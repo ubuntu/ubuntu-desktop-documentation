@@ -19,8 +19,6 @@ Originally a Tutorial: https://discourse.ubuntu.com/t/create-a-bootable-usb-stic
 
 Creating a bootable Ubuntu USB stick is very simple, especially from Ubuntu itself, and we're going to cover the process in the next few steps.
 
-Alternatively, we also have tutorials to help you create a bootable USB stick from both [Microsoft Windows](https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-windows) and [Apple macOS](https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-macos).
-
 ### Requirements
 
 You will need:
@@ -83,8 +81,6 @@ Originally a Tutorial: https://discourse.ubuntu.com/t/create-a-bootable-usb-stic
 -->
 
 This tutorial will show you how to create a bootable USB stick on Microsoft Windows using [Rufus](https://rufus.ie/).
-
-Alternatively, we also have tutorials to help you create a bootable USB stick from both [Ubuntu](https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-ubuntu) and [Apple macOS](https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-macos).
 
 ### Requirements
 
@@ -274,11 +270,9 @@ This launches Apple's 'Startup Manager' which shows bootable devices connected t
 
 ![Boot device selection](/images/macos-usb-efi-boot.png)
 
-### Finding help
+### Alternative resources
 
-If your Mac still refuses to boot off your USB stick, you might find it easier to boot and install off an Ubuntu DVD instead. See our [How to burn a DVD on macOS](https://tutorials.ubuntu.com/tutorial/tutorial-burn-a-dvd-on-macos#0) for further details.
-
-Alternatively, if you feel confident using the macOS command line, see the community documentation on [How to install Ubuntu on MacBook using USB Stick](https://help.ubuntu.com/community/How%20to%20install%20Ubuntu%20on%20MacBook%20using%20USB%20Stick) for a more manual approach.
+If you feel confident using the macOS command line, see the community documentation on [How to install Ubuntu on MacBook using USB Stick](https://help.ubuntu.com/community/How%20to%20install%20Ubuntu%20on%20MacBook%20using%20USB%20Stick) for a more manual approach.
 
 
 ## Next steps
