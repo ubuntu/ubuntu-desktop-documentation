@@ -27,11 +27,11 @@ The application that we'll use depends on the system that you're currently using
 
 1. In the window header, click {guilabel}`Drive Options` ({guilabel}`⋮`).
 
-1. Select {guilabel}`Restore Disk Image…`.
+1. Select {guilabel}`Restore Disk Image…`
 
 1. Select the downloaded Ubuntu image file.
 
-1. Click {guilabel}`Start Restoring…`.
+1. Click {guilabel}`Start Restoring…`
 :::
 
 :::{tab-item} On Windows

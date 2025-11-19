@@ -34,11 +34,11 @@ Take note of where your browser saves downloads: this is normally a directory ca
 
 1. In the window header, click {guilabel}`Drive Options` ({guilabel}`⋮`).
 
-1. Select {guilabel}`Restore Disk Image…`.
+1. Select {guilabel}`Restore Disk Image…`
 
 1. Select the downloaded Ubuntu image file.
 
-1. Click {guilabel}`Start Restoring…`.
+1. Click {guilabel}`Start Restoring…`
 
 ### Using Startup Disk Creator
 
