@@ -8,8 +8,37 @@ With a bootable Ubuntu USB stick, you can:
 -   Boot into Ubuntu on a borrowed machine or from an internet cafe
 -   Use tools installed by default on the USB stick to repair or fix a broken configuration
 
+You will need:
+
+-   A 8GB or larger USB stick (flash drive)
+-   An Ubuntu ISO file. See [Get Ubuntu](https://www.ubuntu.com/download) for download links
+
+![Download an Ubuntu ISO](https://assets.ubuntu.com/v1/647dd5d0-bionic-download.png)
+
+![Ubuntu download page](/images/rufus/ubuntu-download-18_04_1.png)
+
+:::{note}
+Take note of where your browser saves downloads: this is normally a directory called 'Downloads' on your Windows PC. Don't download the ISO image directly to the USB stick!
+:::
+
 
 ## On Ubuntu and other Linux
+
+### Using Disks
+
+1. Insert your USB flash drive.
+
+1. Open the Disks application.
+
+1. In the side bar, select your USB stick.
+
+1. In the window header, click {guilabel}`Drive Options` ({guilabel}`⋮`).
+
+1. Select {guilabel}`Restore Disk Image…`.
+
+1. Select the downloaded Ubuntu image file.
+
+1. Click {guilabel}`Start Restoring…`.
 
 ### Using Startup Disk Creator
 
@@ -20,16 +49,6 @@ Originally a Tutorial: https://discourse.ubuntu.com/t/create-a-bootable-usb-stic
 -->
 
 Creating a bootable Ubuntu USB stick is very simple, especially from Ubuntu itself, and we're going to cover the process in the next few steps.
-
-#### Requirements
-
-You will need:
-
--   A 6GB or larger USB stick/flash drive
--   Ubuntu Desktop 18.04 or later installed
--   An Ubuntu ISO file. See [Get Ubuntu](https://www.ubuntu.com/download) for download links
-
-![Download an Ubuntu ISO](https://assets.ubuntu.com/v1/647dd5d0-bionic-download.png)
 
 #### Launch Startup Disk Creator
 
@@ -86,20 +105,10 @@ Originally a Tutorial: https://discourse.ubuntu.com/t/create-a-bootable-usb-stic
 
 This tutorial will show you how to create a bootable USB stick on Microsoft Windows using [Rufus](https://rufus.ie/).
 
-#### Requirements
-
 You will need:
 
--   A 4GB or larger USB stick/flash drive
--   Microsoft Windows XP or later
--   [Rufus](https://rufus.ie/), a free and open source USB stick writing tool
--   An Ubuntu ISO file. See [Get Ubuntu](https://www.ubuntu.com/download) for download links
-
-![Ubuntu download page](/images/rufus/ubuntu-download-18_04_1.png)
-
-:::{note}
-Take note of where your browser saves downloads: this is normally a directory called 'Downloads' on your Windows PC. Don't download the ISO image directly to the USB stick! If using Windows XP or Vista, download version 2.18 of Rufus.
-:::
+-   Microsoft Windows XP or later.
+-   [Rufus](https://rufus.ie/), a free and open source USB stick writing tool. If using Windows XP or Vista, download version 2.18 of Rufus.
 
 #### USB selection
 
@@ -180,14 +189,6 @@ Creating a bootable USB stick is very simple, especially if you're going to use 
 ### Apple hardware considerations
 
 There are a few additional considerations when booting the USB stick on Apple hardware. This is because Apple's 'Startup Manager', summoned by holding the {kbd}`Option` or {kbd}`Alt` ({kbd}`⌥`) key when booting, won't detect the USB stick without a specific partition table and layout. We'll cover this in a later step.
-
-### Requirements
-
-You will need:
-
--   A 2GB or larger USB stick/flash drive
--   An Apple computer or laptop running macOS
--   An Ubuntu ISO file. See [Get Ubuntu](https://www.ubuntu.com/download) for download links
 
 ### Prepare the USB stick
 
