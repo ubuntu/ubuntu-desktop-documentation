@@ -100,12 +100,6 @@ When Rufus has finished writing the USB device, the Status bar will be filled gr
 
 ![Rufus finished writing the ISO](/images/rufus/ubuntu-rufus-06.png)
 
-Congratulations! You now have Ubuntu on a USB stick, bootable and ready to go.
-
-To use it you need to insert the stick into your target PC or laptop and reboot the device. It should recognise the installation media automatically during startup but you may need to hold down a specific key (usually {kbd}`F12`) to bring up the boot menu and choose to boot from USB.
-
-For a full walkthrough of installing Ubuntu, take a look at our {ref}`install-ubuntu-desktop` tutorial.
-
 
 ## Using balenaEtcher
 
@@ -128,3 +122,12 @@ balenaEtcher is an open-source application but it isn't developed by the Ubuntu 
     ![The Select target step in Etcher](/images/select-iso.png)
 
 1. Click {guilabel}`Flash!` to write the image.
+
+
+## Next steps
+
+Congratulations! You now have Ubuntu on a USB stick, bootable and ready to go.
+
+To use it you need to insert the stick into your target PC or laptop and reboot the device. It should recognize the installation media automatically during startup but you may need to hold down a specific key (usually {kbd}`F12`) to bring up the boot menu and choose to boot from USB.
+
+For a full walkthrough of installing Ubuntu, take a look at our {ref}`install-ubuntu-desktop` tutorial.
