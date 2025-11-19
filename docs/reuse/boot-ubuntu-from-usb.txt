@@ -36,7 +36,8 @@ The application that we'll use depends on the system that you're currently using
 
 :::{tab-item} On Windows
 :sync: on-windows
- Rufus
+
+Rufus
 :::
 
 :::{tab-item} On macOS
