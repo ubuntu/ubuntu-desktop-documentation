@@ -190,6 +190,97 @@ balenaEtcher is an open-source application but it isn't developed by the Ubuntu 
 1. Click {guilabel}`Flash!` to write the image.
 
 
+## On macOS
+
+<!--
+Originally a Tutorial: https://discourse.ubuntu.com/t/create-a-bootable-usb-stick-on-macos/14016
+| Summary | How to write a USB stick with macOS. |
+| Author | Canonical Web Team <webteam@canonical.com> |
+-->
+
+Creating a bootable USB stick is very simple, especially if you're going to use the USB stick with a generic Windows or Linux PC. We're going to cover the process in the next few steps.
+
+### Apple hardware considerations
+
+There are a few additional considerations when booting the USB stick on Apple hardware. This is because Apple's 'Startup Manager', summoned by holding the {kbd}`Option` or {kbd}`Alt` ({kbd}`⌥`) key when booting, won't detect the USB stick without a specific partition table and layout. We'll cover this in a later step.
+
+### Requirements
+
+You will need:
+
+-   A 2GB or larger USB stick/flash drive
+-   An Apple computer or laptop running macOS
+-   An Ubuntu ISO file. See [Get Ubuntu](https://www.ubuntu.com/download) for download links
+
+### Prepare the USB stick
+
+To ensure maximum compatibility with Apple hardware, we're going to first blank and reformat the USB stick using Apple's 'Disk Utility'. But this step can be skipped if you intend to use the USB stick with only generic PC hardware.
+
+1. Launch *Disk Utility* from {menuselection}`Applications --> Utilities` or from the Spotlight search.
+1. Insert your USB stick and observe the new device added to Disk Utility.
+1. Select the USB stick device. You might need to enable the option {menuselection}`View --> Show All Devices`.
+1. Select {guilabel}`Erase` from the tool bar or right-click menu.
+1. Set the format to {guilabel}`MS-DOS (FAT)` and the scheme to {guilabel}`GUID Partition Map`.
+1. Check that you've chosen the correct device.
+1. Click {guilabel}`Erase`.
+
+![The fialog in Disk Utility to erase the USB drive](https://assets.ubuntu.com/v1/22cad904-prepare-usb-stick.png)
+
+:::{warning}
+Disk Utility needs to be used with caution as selecting the wrong device or partition can result in data loss.
+:::
+
+### Install and run Etcher
+
+To write the ISO file to the USB stick, we're going to use a free and open source application called [Etcher](https://etcher.balena.io/). After downloading this and clicking to mount the package, Etcher can either be run in-place or dragged into your Applications folder.
+
+By default, recent versions of macOS block the running of applications from unidentified developers. To side-step this issue, enable 'App Store and identified developers' in the 'Security & Privacy' pane of System Preferences. If you are still warned against running the application, click 'Open Anyway' in the same pane.
+
+![screenshot](upload://lUpv9mKzalQWNWwN2itWQzXGQsI.jpeg)
+
+### Etcher configuration
+
+Etcher will configure and write to your USB device in three stages:
+
+1. **Select image** will open a file requester from which should navigate to and select the ISO file downloaded previously. By default, the ISO file will be in your *Downloads* folder.
+
+1. **Select drive**, replaced by the name of your USB device if one is already attached, lets you select your target device. You will be warned if the storage space is too small for your selected ISO.
+
+1. **Flash!** will activate when both the image and the drive have been selected. As with Disk Utility, Etcher needs low-level access to your storage hardware and will ask for your password after selection.
+
+![screenshot](upload://pM1UmUK5i54SyL7MvmyAei0nJqM.jpeg)
+
+### Write to device
+
+After entering your password, Etcher will start writing the ISO file to your USB device.
+
+The *Flash* stage of the process will show progress, writing speed and an estimated duration until completion. This will be followed by a validation stage that will ensure the contents of the USB device are identical to the source image.
+
+When everything has finished, Etcher will declare the process a success.
+
+Congratulations! You now have Ubuntu on a USB stick, bootable and ready to go.
+
+![screenshot](upload://lzHQa67pws8dxNB4iZQO6xGrMqG.jpeg)
+
+:::{warning}
+After the write process has completed, macOS might inform you that "The disk you inserted was not readable by this computer". Select {guilabel}`Eject` and remove the USB device. Don't select {guilabel}`Initialize`.
+:::
+
+### Boot your Mac
+
+If you want to use your USB stick with an Apple Mac, restart or power-on the Mac with the USB stick inserted **while** the {kbd}`Option` or {kbd}`Alt` ({kbd}`⌥`) key is pressed.
+
+This launches Apple's 'Startup Manager' which shows bootable devices connected to the machine. Your USB stick should appear as gold or yellow and be labeled 'EFI Boot'. Selecting this will lead you to the standard Ubuntu boot menu.
+
+![Boot device selection](/images/macos-usb-efi-boot.png)
+
+### Finding help
+
+If your Mac still refuses to boot off your USB stick, you might find it easier to boot and install off an Ubuntu DVD instead. See our [How to burn a DVD on macOS](https://tutorials.ubuntu.com/tutorial/tutorial-burn-a-dvd-on-macos#0) for further details.
+
+Alternatively, if you feel confident using the macOS command line, see the community documentation on [How to install Ubuntu on MacBook using USB Stick](https://help.ubuntu.com/community/How%20to%20install%20Ubuntu%20on%20MacBook%20using%20USB%20Stick) for a more manual approach.
+
+
 ## Next steps
 
 Congratulations! You now have Ubuntu on a USB stick, bootable and ready to go.
