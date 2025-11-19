@@ -1,26 +1,14 @@
 (read-screen-in-braille)=
 # Read the screen in Braille
 
-The Orca screen reader can display the user interface on a refreshable Braille display. It uses the BRLTTY service, which provides access to the Linux console for a blind person using a refreshable Braille display. 
+The Orca screen reader can display the user interface on a refreshable Braille display. It uses the BRLTTY service, which provides access to the Linux console for a blind person using a refreshable Braille display.
 
 To learn the basic control of the screen reader, go to {ref}`get-started-with-the-screen-reader`.
 
 {{a11y_limitations}}
 
 
-1. Add your user to the `brlapi` group to allow access to the Braille device:
-
-    ```bash
-    sudo usermod --append -G brlapi <user-name>
-    ```
-
-2. Enable the BRLTTY service:
-
-    ```bash
-    sudo systemctl enable --now brltty
-    ```
-
-3. Start the Orca screen reader. If it's already enabled, restart it:
+1. Start the Orca screen reader. If it's already enabled, restart it:
 
     ::::{tab-set}
     :::{tab-item} Keyboard shortcut
@@ -36,7 +24,7 @@ To learn the basic control of the screen reader, go to {ref}`get-started-with-th
     :::
     ::::
 
-4. Open Orca preferences:
+1. Open Orca preferences:
 
     ::::{tab-set}
     :::{tab-item} Laptop layout
@@ -60,13 +48,13 @@ To learn the basic control of the screen reader, go to {ref}`get-started-with-th
     :::
     ::::
 
-5. Under the {guilabel}`Braille` tab, make sure that {guilabel}`Enable Braille support` is on.
+1. Under the {guilabel}`Braille` tab, make sure that {guilabel}`Enable Braille support` is on.
 
-6. Click {guilabel}`OK` to confirm.
+1. Click {guilabel}`OK` to confirm.
 
-7. Connect your Braille device to the system over USB, serial port or Bluetooth.
+1. Connect your Braille device to the system over USB, serial port or Bluetooth.
 
-8. If you use Firefox, close it and reopen it. Orca can then read the browser content.
+1. If you use Firefox, close it and reopen it. Orca can then read the browser content.
 
 
 ## Disable speech
@@ -193,9 +181,9 @@ For an explanation of the Orca Braille settings, see [Braille Preferences](https
 Fix common issues with the Braille screen reader.
 
 ### The screen reader isn't installed
-    
+
 Orca and Braille support are installed by default on Ubuntu Desktop. If you're using a custom desktop or package set, they might not be installed.
-    
+
 * Make sure that Orca is installed:
 
     ```bash
@@ -210,21 +198,36 @@ Orca and Braille support are installed by default on Ubuntu Desktop. If you're u
 
 ### My Braille device isn't detected
 
-If your Braille devices isn't detected, try the following options.
+If your Braille devices isn't detected, make sure that the BRLTTY service is properly configured:
 
-* Manually set the driver for your Braille device:
+1. Add your user to the `brlapi` group to allow access to the Braille device:
 
-    1. In the `/etc/brltty.conf` file, find the `braille-driver` directive.
-    2. Uncomment the line that lists your Braille device driver.
+    ```bash
+    sudo usermod --append -G brlapi <user-name>
+    ```
 
-* Manually set the connection method:
+1. Enable the BRLTTY service:
 
-    1. In the `/etc/brltty.conf` file, find the `braille-device` directive.
-    2. Uncomment the line that matches your connection method.
+    ```bash
+    sudo systemctl enable --now brltty
+    ```
 
-        For example, to connect to the first paired Bluetooth device that matches your Braille driver, use the following line:
+If that didn't help, configure the connection to your Braille device:
 
-        ```text
-        braille-device bluetooth:
-        ```
+1. Manually set the driver for your Braille device:
 
+    In the `/etc/brltty.conf` file, find the `braille-driver` directive.
+
+    Uncomment the line that lists your Braille device driver.
+
+1. Manually set the connection method:
+
+    In the `/etc/brltty.conf` file, find the `braille-device` directive.
+
+    Uncomment the line that matches your connection method.
+
+    For example, to connect to the first paired Bluetooth device that matches your Braille driver, use the following line:
+
+    ```text
+    braille-device bluetooth:
+    ```
