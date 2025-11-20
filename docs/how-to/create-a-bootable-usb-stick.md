@@ -45,7 +45,7 @@ Disks can also write images of any other operating system, including Linux distr
 
     ![Restore Disk Image in the menu](/images/restore-disk-image-menu.png)
 
-1. Select the downloaded Ubuntu image file.
+1. Next to {guilabel}`Image to Restore`, select the downloaded Ubuntu image file.
 
 1. Click {guilabel}`Start Restoring…` and confirm. The application asks for your password.
 
@@ -215,11 +215,21 @@ The Disk Utility is preinstalled on macOS and you can use it to write any image 
 
 1. Insert your USB stick. It appears in the sidebar. Select it there.
 
+    You might need to enable the {menuselection}`View --> Show All Devices` option.
+
     :::{warning}
     Make sure to select the USB stick and **not** your internal macOS disk. Both are listed.
     :::
 
-1. Click {guilabel}`Restore` ({guilabel}`↺`).
+1. To ensure compatibility with Apple hardware, reformat the USB stick.
+
+    Select {guilabel}`Erase` from the toolbar.
+
+    Set the format to *MS-DOS (FAT)* and the scheme to *GUID Partition Map*.
+
+    Check that you've chosen the correct device and click {guilabel}`Erase`.
+
+1. Click {guilabel}`Restore` ({guilabel}`↺`) in the toolbar.
 
 1. Click {guilabel}`Image…` and select the Ubuntu image file.
 
@@ -231,19 +241,13 @@ The Disk Utility is preinstalled on macOS and you can use it to write any image 
 
     Select {guilabel}`Eject` and remove the USB device. Don't select {guilabel}`Initialize`.
 
-### Start Ubuntu on your Mac
-
-There are a few additional considerations when booting the USB stick on Apple hardware. This is because Apple's 'Startup Manager', summoned by holding the {kbd}`Option` or {kbd}`Alt` ({kbd}`⌥`) key when booting, won't detect the USB stick without a specific partition table and layout.
-
-If you want to use your USB stick with an Apple Mac, restart or power-on the Mac with the USB stick inserted **while** the {kbd}`Option` or {kbd}`Alt` ({kbd}`⌥`) key is pressed.
-
-This launches Apple's 'Startup Manager' which shows bootable devices connected to the machine. Your USB stick should appear as gold or yellow and be labeled 'EFI Boot'. Selecting this will lead you to the standard Ubuntu boot menu.
-
-![Boot device selection](/images/macos-usb-efi-boot.png)
-
-### Alternative resources
+### Using the command line
 
 If you feel confident using the macOS command line, see the community documentation on [How to install Ubuntu on MacBook using USB Stick](https://help.ubuntu.com/community/How%20to%20install%20Ubuntu%20on%20MacBook%20using%20USB%20Stick) for a more manual approach.
+
+<!--
+TODO: Convert this wiki page into product documentation.
+-->
 
 
 ## On any platform

@@ -92,6 +92,14 @@ Now you have a USB stick that works as Ubuntu installation media.
 
 1. Your device should recognize the installation media and launch the Ubuntu installer.
 
-    If not, restart it again. This time, hold {kbd}`F12` during startup. In the boot menu that appears, select your USB device.
+1. If Ubuntu doesn't launch, restart your computer again. This time, hold a key during startup:
 
-    {kbd}`F12` is the most common key for bringing up the system boot menu but {kbd}`Escape`, {kbd}`F2` and {kbd}`F10` are common alternatives. If unsure, look for a brief message when your system starts: this often informs you which key to press to access the boot menu. You can also find the right key in the documentation for your laptop or PC.
+    * On a **PC or Windows** computer, {kbd}`F12` is the most common key for bringing up the system boot menu but {kbd}`Escape`, {kbd}`F2` and {kbd}`F10` are common alternatives. If unsure, look for a brief message when your system starts: this often informs you which key to press to access the boot menu. You can also find the right key in the documentation for your laptop or PC.
+
+        In the boot menu that appears, select your USB device.
+
+    * To start Ubuntu on **Apple hardware**, restart or power-on the Mac with the USB stick inserted while you hold the {kbd}`Option` or {kbd}`Alt` ({kbd}`⌥`) key.
+
+        This launches the Startup Manager, which shows bootable devices connected to the machine. Your USB stick should appear as gold or yellow and be labeled **EFI Boot**. Select it to proceed to the standard Ubuntu boot menu.
+
+        ![Boot device selection](/images/macos-usb-efi-boot.png)
