@@ -27,19 +27,35 @@ Select an application depending on the system that you're currently using.
 
 ### Using Disks
 
-1. Insert your USB flash drive.
+1. Insert your USB stick.
 
 1. Open the Disks application.
 
 1. In the side bar, select your USB stick.
 
-1. In the window header, click {guilabel}`Drive Options` ({guilabel}`⋮`).
+    :::{warning}
+    Make sure to select the USB stick and **not** the disk with your running system. Both are listed.
+    :::
 
-1. Select {guilabel}`Restore Disk Image…`
+    ![A USB stick selected in Disks](/images/usb-in-gnome-disks.png)
+
+1. In the window header, click {guilabel}`Drive Options` ({guilabel}`⋮`) and select {guilabel}`Restore Disk Image…`
+
+    ![Restore Disk Image in the menu](/images/restore-disk-image-menu.png)
 
 1. Select the downloaded Ubuntu image file.
 
-1. Click {guilabel}`Start Restoring…`
+1. Click {guilabel}`Start Restoring…` and confirm. The application asks for your password.
+
+    ![The Restore Disk Image dialog](/images/restore-disk-image-dialog.png)
+
+1. A progress bar appears while Disks is writing the image.
+
+    ![Disks writing the image to USB](/images/gnome-disks-restoring-image.png)
+
+1. When the progress bar finishes, click {guilabel}`Eject this disk` ({guilabel}`⏏`).
+
+    ![Writing finished. Partitions are listed on the USB](/images/gnome-disks-finished-writing.png)
 
 ### Using Startup Disk Creator
 
@@ -55,7 +71,11 @@ The Startup Disk Creator application is part of the extended Ubuntu Desktop inst
 Startup Disk Creator also works with images of other distributions based on Ubuntu, such as flavors like Kubuntu or Xubuntu, or derived distributions. It might not work correctly with other Linux distributions and different operating systems.
 :::
 
-1. Insert your USB stick. Select {guilabel}`Do nothing` if prompted by Ubuntu.
+1. Insert your USB stick.
+
+    <!--
+    If Ubuntu asks you what to do with it, select {guilabel}`Do nothing`.
+    -->
 
 1. Search your applications for *Startup Disk Creator*.
 
