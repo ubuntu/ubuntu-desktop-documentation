@@ -59,7 +59,25 @@ Rufus
 :::{tab-item} On macOS
 :sync: on-macos
 
-Disk Utility
+1. Launch the *Disk Utility* app from {menuselection}`Applications --> Utilities` or from the Spotlight search.
+
+1. Insert your USB stick. It appears in the sidebar. Select it there.
+
+    :::{warning}
+    Make sure to select the USB stick and **not** your internal macOS disk. Both are listed.
+    :::
+
+1. Click {guilabel}`Restore` ({guilabel}`↺`).
+
+1. Click {guilabel}`Image…` and select the Ubuntu image file.
+
+1. Click {guilabel}`Restore`.
+
+1. Wait for the writing to finish.
+
+1. After the write process has completed, macOS might inform you that "The disk you inserted was not readable by this computer".
+
+    Select {guilabel}`Eject` and remove the USB device. Don't select {guilabel}`Initialize`.
 :::
 ::::
 
