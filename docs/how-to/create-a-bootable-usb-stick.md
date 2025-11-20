@@ -205,7 +205,9 @@ Originally a Tutorial: https://discourse.ubuntu.com/t/create-a-bootable-usb-stic
 | Author | Canonical Web Team <webteam@canonical.com> |
 -->
 
-Creating a bootable USB stick is very simple, especially if you're going to use the USB stick with a generic Windows or Linux PC.
+You can use built-in tools on macOS to create an Ubuntu USB stick. The USB stick will work on **PC (Windows) hardware** and older Apple hardware based on **Intel CPUs**.
+
+If you want to install Ubuntu on **Apple Silicon** hardware, such as recent Macs using M1 CPUs or later, refer instead to the [Ubuntu Asahi](https://ubuntuasahi.org/) community project. The hardware support might be limited and depends on your specific machine.
 
 ### Using the Disk Utility
 
