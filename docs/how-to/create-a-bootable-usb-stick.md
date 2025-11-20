@@ -223,7 +223,7 @@ The Disk Utility is preinstalled on macOS and you can use it to write any image 
     Make sure to select the USB stick and **not** your internal macOS disk. Both are listed.
     :::
 
-1. To ensure compatibility with Apple hardware, reformat the USB stick.
+1. To ensure compatibility with Apple hardware, reformat the USB stick with the GUID partition table:
 
     Select {guilabel}`Erase` from the toolbar.
 
