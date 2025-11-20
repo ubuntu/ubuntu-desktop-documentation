@@ -1,7 +1,7 @@
 (create-a-bootable-usb-stick)=
 # Create a bootable USB stick
 
-You can convert your USB stick (USB flash drive) into Ubuntu installation media. This is different from copying a file to the USB stick. Instead, use a specialized application to rewrite your USB stick with Ubuntu.
+You can convert your USB stick (USB flash drive) into Ubuntu installation media. This is different from copying a file to the USB stick. Instead, use a specialized application to rewrite your USB stick with Ubuntu. Select an application depending on the system that you're currently using.
 
 With a bootable Ubuntu USB stick, you can:
 
@@ -21,15 +21,19 @@ Take note of where your browser saves the downloaded file. This is normally a di
 Don't download the ISO image directly to the USB stick.
 :::
 
-Select an application depending on the system that you're currently using.
-
 ## On Ubuntu and other Linux distributions
+
+Ubuntu Desktop comes with the Disks application by default, which you can use to write the image. Other Linux distributions provide a wide range of different image writer applications. Choose the first one that's available on your system.
 
 ### Using Disks
 
+The Disks application is installed by default on Ubuntu Desktop and on most Linux distributions that use the GNOME desktop environment. We recommend choosing it if it's available on your system.
+
+Disks can also write images of any other operating system, including Linux distributions or Microsoft Windows.
+
 1. Insert your USB stick.
 
-1. Open the Disks application.
+1. Open the Disks application. You can find it in the applications menu or by searching for "Disks".
 
 1. In the side bar, select your USB stick.
 
