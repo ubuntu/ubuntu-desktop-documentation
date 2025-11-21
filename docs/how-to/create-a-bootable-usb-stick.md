@@ -174,6 +174,10 @@ The `dd` image writer is available on all Linux systems. You can use it even on 
 
 On Microsoft Windows, you have to install a third-party application for writing images to USB sticks.
 
+<!--
+Note: The built-in Disc Image Burner tool can only burn images to optical discs. It can't write to USB sticks.
+-->
+
 ### Using Rufus
 
 You can create a bootable USB stick using [Rufus](https://rufus.ie/), a free and open source USB stick writing tool. You need Microsoft Windows XP or later.
@@ -297,29 +301,13 @@ https://help.ubuntu.com/community/How%20to%20install%20Ubuntu%20on%20MacBook%20u
 1. Remove the USB stick when the previous command completes.
 
 
-## On any platform
+## Other options
 
-### Using balenaEtcher
+[Ventoy](https://www.ventoy.net/) is an open-source tool that you install on your USB. You can then copy image files to the USB storage using your normal file browser. When you boot the system with the USB stick inserted, Ventoy lets you choose among all the image files stored on the USB.
 
-:::{note}
-balenaEtcher is an open-source application but it isn't developed by the Ubuntu community. Recently, we've [learned](https://tails.net/news/rufus/) that it shares some information about your usage with the Balena company. If this a concern, consider using an alternative application: Startup Disk Creator or GNOME Disks on Linux, Rufus on Windows or Raspberry Pi Imager on any platform.
-:::
+For instructions, see the Ventoy documentation: [Start to use Ventoy](https://www.ventoy.net/en/doc_start.html).
 
-1. At the [balenaEtcher website](https://etcher.balena.io/), choose the version that corresponds to your current operating system.
-
-1. Download and install the tool.
-
-    ![The Download Etcher page](/images/download-etcher.png)
-
-1. Insert your USB flash drive.
-
-1. Open balenaEtcher.
-
-1. Select the downloaded Ubuntu image and your USB flash drive.
-
-    ![The Select target step in Etcher](/images/select-iso.png)
-
-1. Click {guilabel}`Flash!` to write the image.
+Ventoy is available for Linux and Microsoft Windows.
 
 
 ## Next steps
