@@ -250,6 +250,13 @@ https://help.ubuntu.com/community/How%20to%20install%20Ubuntu%20on%20MacBook%20u
     :host:
     :dir:
     :input: diskutil list
+
+      /dev/disk0 (internal, physical):
+       […]
+      /dev/disk2
+       #: TYPE NAME SIZE IDENTIFY
+       0: FDisk_partition_scheme *4.0 GB disk2
+       1: DOS_FAT_32 USB CLE 4.0 GB disk2s1
     ```
 
 1. Unmount the USB stick:
