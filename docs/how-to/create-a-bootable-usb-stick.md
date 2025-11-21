@@ -48,7 +48,7 @@ Originally a Tutorial: https://discourse.ubuntu.com/t/create-a-bootable-usb-stic
 The Startup Disk Creator application is part of the extended Ubuntu Desktop installation. You can use it to write an Ubuntu image to a USB stick.
 
 :::{warning}
-Startup Disk Creator also works with images of other distributions based on Ubuntu, such as flavors like Kubuntu or Xubuntu, or derived distributions. It might not work correctly with other Linux distributions and different operating systems.
+Startup Disk Creator is intended for Ubuntu images and images of other distributions based on Ubuntu, such as flavors like Kubuntu or Xubuntu, or derived distributions. It might not work correctly with other Linux distributions and different operating systems.
 :::
 
 1. Insert your USB stick.
@@ -89,7 +89,85 @@ Startup Disk Creator also works with images of other distributions based on Ubun
 
     When finished, the application announces "Installation Complete".
 
-That's it! You now have Ubuntu on a USB stick.
+### Using the Linux command line
+
+The `dd` image writer is available on all Linux systems. You can use it even on minimal systems without any graphical environment.
+
+1. Insert your USB stick.
+
+1. Make sure that the USB stick is large enough for the Ubuntu image. If it's too small, the image writer might silently fail.
+
+1. List storage devices on your system:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    :input: lsblk --scsi
+
+    NAME
+        HCTL       TYPE VENDOR   MODEL          REV SERIAL               TRAN
+    sda 0:0:0:0    disk SanDisk  Ultra USB 3.0 1.00 4C530000010118116183 usb
+    ```
+
+    In this example, one USB stick is connected. Note down its device name at the start of the line, such as `sda` here.
+
+1. Unmount all file systems on the USB stick:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    :input: sudo umount /dev/sda*
+    ```
+
+    Replace `sda` with the USB device name.
+
+1. Write the Ubuntu image to the USB stick:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    :input: sudo dd if=Downloads/ubuntu-24.04.3-desktop-amd64.iso of=/dev/sda bs=4M conv=fsync status=progress
+    ```
+
+    Double-check the file paths in this command:
+
+    * The `if` argument specifies the "input file", or the path to the **Ubuntu image**.
+
+    * The `of` argument specifies the "output file", or the path to the **USB device**. Make sure that this is the correct device.
+
+    The remaining arguments are optional: `bs=4M` increases the write performance, `conv=fsync` ensures that all data is written when the command finishes, and `status=progress` shows progress information.
+
+1. The `dd` tool reports when the writing is finished:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    :input: sudo dd if=Downloads/ubuntu-24.04.3-desktop-amd64.iso of=/dev/sda bs=4M conv=fsync status=progress
+
+    6337593344 bytes (6.3 GB, 5.9 GiB) copied, 143 s, 44.3 MB/s6345887744 bytes (6.3 GB, 5.9 GiB) copied, 143.302 s, 44.3 MB/s
+
+    1512+1 records in
+    1512+1 records out
+    6345887744 bytes (6.3 GB, 5.9 GiB) copied, 286.923 s, 22.1 MB/s
+    ```
+
+1. Inform your running system of the changes on the USB stick if you want to examine the Ubuntu media:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    :input: sudo partprobe /dev/sda
+    ```
 
 
 ## On Windows
@@ -141,7 +219,7 @@ https://help.ubuntu.com/community/How%20to%20install%20Ubuntu%20on%20MacBook%20u
     :user:
     :host:
     :dir:
-    :input: hdiutil convert <path-to-ubuntu.iso> -format UDRW -o ubuntu.img
+    :input: hdiutil convert Downloads/ubuntu-24.04.3-desktop-amd64.iso -format UDRW -o ubuntu.img
     ```
 
     :::{tip}
@@ -191,7 +269,7 @@ https://help.ubuntu.com/community/How%20to%20install%20Ubuntu%20on%20MacBook%20u
     :user:
     :host:
     :dir:
-    :input: sudo dd if=ubuntu.img of=/dev/rdisk<N> bs=1m
+    :input: sudo dd if=ubuntu.img of=/dev/rdisk<N> bs=4m
     ```
 
     :::{note}
@@ -200,8 +278,8 @@ https://help.ubuntu.com/community/How%20to%20install%20Ubuntu%20on%20MacBook%20u
 
     You might encounter these errors:
 
-    `dd: Invalid number '1m'`
-    : You're using GNU `dd`. Use the same command but replace `bs=1m` with `bs=1M`.
+    `dd: Invalid number '4m'`
+    : You're using GNU `dd`. Use the same command but replace `bs=4m` with `bs=4M`.
 
     `dd: /dev/disk<N>: Resource busy`
     : Make sure that the disk is not in use. Open the Disk Utility and unmount the volume (don't eject).
