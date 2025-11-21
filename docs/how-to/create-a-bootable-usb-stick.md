@@ -31,33 +31,11 @@ The Disks application is installed by default on Ubuntu Desktop and on most Linu
 
 Disks can also write images of any other operating system, including Linux distributions or Microsoft Windows.
 
-1. Open the Disks application. You can find it in the applications menu or by searching for "Disks".
-
-1. Insert your USB stick. It appears in the sidebar. Select it there.
-
-    :::{warning}
-    Make sure to select the USB stick and **not** the disk with your running system. Both are listed.
-    :::
-
-    ![A USB stick selected in Disks](/images/usb-in-gnome-disks.png)
-
-1. In the window header, click {guilabel}`Drive Options` ({guilabel}`⋮`) and select {guilabel}`Restore Disk Image…`
-
-    ![Restore Disk Image in the menu](/images/restore-disk-image-menu.png)
-
-1. Next to {guilabel}`Image to Restore`, select the downloaded Ubuntu image file.
-
-1. Click {guilabel}`Start Restoring…` and confirm. The application asks for your password.
-
-    ![The Restore Disk Image dialog](/images/restore-disk-image-dialog.png)
-
-1. A progress bar appears while Disks is writing the image.
-
-    ![Disks writing the image to USB](/images/gnome-disks-restoring-image.png)
-
-1. When the progress bar finishes, click {guilabel}`Eject this disk` ({guilabel}`⏏`).
-
-    ![Writing finished. Partitions are listed on the USB](/images/gnome-disks-finished-writing.png)
+<!--
+The docs/reuse/usb-using-gnome-disks.txt file is reused between the live system tutorial, the installation tutorial and the bootable USB how-to guide.
+-->
+```{include} ../reuse/usb-using-gnome-disks.txt
+```
 
 ### Using Startup Disk Creator
 
@@ -120,66 +98,16 @@ On Microsoft Windows, you have to install a third-party application for writing 
 
 ### Using Rufus
 
-<!--
-Originally a Tutorial: https://discourse.ubuntu.com/t/create-a-bootable-usb-stick-with-rufus-on-windows/14020
-| Summary | How to write a USB stick with Windows. |
-| Author |  <oliversmith@canonical.com> |
--->
-
 You can create a bootable USB stick using [Rufus](https://rufus.ie/), a free and open source USB stick writing tool. You need Microsoft Windows XP or later.
 
-Rufus presents many options in its interface. It's safe to leave most of them with their default values.
-
-1. Download and install the latest version of Rufus from the [rufus.ie](https://rufus.ie/) website.
-
-    If you're using Windows XP or Vista, install [version 2.18](https://github.com/pbatard/rufus/releases/download/v2.18/rufus-2.18.exe) of Rufus.
-
-1. Launch Rufus.
-
-    If prompted, allow online updates.
-
-1. Insert your USB stick. It appears in the {guilabel}`Device` field.
-
-    If {guilabel}`Device` shows the wrong USB device, select the correct one from the drop-down menu.
-
-    ![Selected a USB drive in Rufus](/images/rufus/rufus-detects-usb.png)
-
-1. Click {guilabel}`SELECT` next to {guilabel}`Boot selection`. Choose the Ubuntu image file that you've downloaded and confirm by clicking {guilabel}`Open`.
-
-    ![Selected the ISO file in Rufus](/images/rufus/rufus-iso-selected.png)
-
-1. Click {guilabel}`START` to write the image to USB.
-
-1. If Rufus asks to download additional files to complete writing the image, select {guilabel}`Yes` to continue.
-
-1. Rufus tells you that the Ubuntu image is an *ISOHybrid image*. This means that the same image file can be used as the source for both a USB stick and a DVD.
-
-    Confirm the *Write in ISO Image mode* option.
-
-    !["ISOHybrid image detected" dialog](/images/rufus/rufus-isohybrid-image.png)
-
-1. Rufus warns you that all data on the USB device is about to be destroyed. Double-check that you've selected the correct device and confirm by clicking {guilabel}`OK`.
-
-    ![Rufus warning you about data loss](/images/rufus/rufus-data-warning.png)
-
-1. Rufus is now writing the image to USB. This usually takes around 10 minutes.
-
-    ![Rufus copying ISO files](/images/rufus/rufus-copying-iso-files.png)
-
-1. When Rufus has finished writing to the USB device, the Status bar says {guilabel}`READY`.
-
-    Click {guilabel}`CLOSE` to complete the write process.
-
-    ![Rufus finished writing the ISO](/images/rufus/rufus-finished-writing.png)
+<!--
+The docs/reuse/usb-using-rufus.txt file is reused between the live system tutorial, the installation tutorial and the bootable USB how-to guide.
+-->
+```{include} ../reuse/usb-using-rufus.txt
+```
 
 
 ## On macOS
-
-<!--
-Originally a Tutorial: https://discourse.ubuntu.com/t/create-a-bootable-usb-stick-on-macos/14016
-| Summary | How to write a USB stick with macOS. |
-| Author | Canonical Web Team <webteam@canonical.com> |
--->
 
 You can use built-in tools on macOS to create an Ubuntu USB stick. The USB stick will work on **PC (Windows) hardware** and older Apple hardware based on **Intel CPUs**.
 
@@ -189,35 +117,11 @@ If you want to install Ubuntu on **Apple Silicon** hardware, such as recent Macs
 
 The Disk Utility is preinstalled on macOS and you can use it to write any image to your USB stick.
 
-1. Launch the *Disk Utility* app from {menuselection}`Applications --> Utilities` or from the Spotlight search.
-
-1. Insert your USB stick. It appears in the sidebar. Select it there.
-
-    You might need to enable the {menuselection}`View --> Show All Devices` option.
-
-    :::{warning}
-    Make sure to select the USB stick and **not** your internal macOS disk. Both are listed.
-    :::
-
-1. To ensure compatibility with Apple hardware, reformat the USB stick with the GUID partition table:
-
-    Select {guilabel}`Erase` from the toolbar.
-
-    Set the format to *MS-DOS (FAT)* and the scheme to *GUID Partition Map*.
-
-    Check that you've chosen the correct device and click {guilabel}`Erase`.
-
-1. Click {guilabel}`Restore` ({guilabel}`↺`) in the toolbar.
-
-1. Click {guilabel}`Image…` and select the Ubuntu image file.
-
-1. Click {guilabel}`Restore`.
-
-1. Wait for the writing to finish.
-
-1. After the write process has completed, macOS might inform you that "The disk you inserted was not readable by this computer".
-
-    Select {guilabel}`Eject` and remove the USB device. Don't select {guilabel}`Initialize`.
+<!--
+The docs/reuse/usb-using-macos-disk-utility.txt file is reused between the live system tutorial, the installation tutorial and the bootable USB how-to guide.
+-->
+```{include} ../reuse/usb-using-macos-disk-utility.txt
+```
 
 ### Using the command line
 
