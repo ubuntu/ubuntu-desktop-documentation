@@ -223,7 +223,7 @@ https://help.ubuntu.com/community/How%20to%20install%20Ubuntu%20on%20MacBook%20u
     :user:
     :host:
     :dir:
-    :input: hdiutil convert Downloads/ubuntu-24.04.3-desktop-amd64.iso -format UDRW -o ubuntu.img
+    :input: hdiutil convert Downloads/ubuntu-24.04.3-desktop-amd64.iso -format UDRW -o ubuntu.dmg
     ```
 
     :::{tip}
@@ -273,7 +273,7 @@ https://help.ubuntu.com/community/How%20to%20install%20Ubuntu%20on%20MacBook%20u
     :user:
     :host:
     :dir:
-    :input: sudo dd if=ubuntu.img of=/dev/rdisk<N> bs=4m
+    :input: sudo dd if=ubuntu.dmg of=/dev/rdisk<N> bs=4m
     ```
 
     :::{note}
