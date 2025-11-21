@@ -123,13 +123,100 @@ The docs/reuse/usb-using-macos-disk-utility.txt file is reused between the live 
 ```{include} ../reuse/usb-using-macos-disk-utility.txt
 ```
 
-### Using the command line
+### Using the macOS command line
 
-If you feel confident using the macOS command line, see the community documentation on [How to install Ubuntu on MacBook using USB Stick](https://help.ubuntu.com/community/How%20to%20install%20Ubuntu%20on%20MacBook%20using%20USB%20Stick) for a more manual approach.
+If you feel confident using the macOS command line, you can follow a more manual approach.
 
 <!--
-TODO: Convert this wiki page into product documentation.
+Migrated from a page in the Community Help Wiki:
+https://help.ubuntu.com/community/How%20to%20install%20Ubuntu%20on%20MacBook%20using%20USB%20Stick
 -->
+
+1. Open the Terminal app.
+
+1. Convert the downloaded ISO image file to the UDRW format:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    :input: hdiutil convert <path-to-ubuntu.iso> -format UDRW -o ubuntu.img
+    ```
+
+    :::{tip}
+    Drag and drop the image file from Finder to Terminal to paste the full path. This way, you prevent potential errors when typing the path.
+    :::
+
+1. List the current devices:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    :input: diskutil list
+    ```
+
+1. Insert your USB stick.
+
+1. List the current devices again. Determine the device name assigned to your USB stick, such as `/dev/disk2`:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    :input: diskutil list
+    ```
+
+1. Unmount the USB stick:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    :input: diskutil unmountDisk /dev/disk<N>
+    ```
+
+    Replace `<N>` with the disk number from the last command, such as `2`.
+
+    You might see this error: "Unmount of disk<N> failed: at least one volume could not be unmounted". Open the Disk Utility and unmount the volume (don't eject).
+
+1. Write the Ubuntu image to the USB stick:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    :input: sudo dd if=ubuntu.img of=/dev/rdisk<N> bs=1m
+    ```
+
+    :::{note}
+    We're using the `/dev/rdisk<N>` device here rather than `/dev/disk<N>`. This refers to a "raw device" interface to the same disk, which is faster.
+    :::
+
+    You might encounter these errors:
+
+    `dd: Invalid number '1m'`
+    : You're using GNU `dd`. Use the same command but replace `bs=1m` with `bs=1M`.
+
+    `dd: /dev/disk<N>: Resource busy`
+    : Make sure that the disk is not in use. Open the Disk Utility and unmount the volume (don't eject).
+
+1. Unmount the USB stick:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    :input: diskutil eject /dev/disk<N>
+    ```
+
+1. Remove the USB stick when the previous command completes.
 
 
 ## On any platform
