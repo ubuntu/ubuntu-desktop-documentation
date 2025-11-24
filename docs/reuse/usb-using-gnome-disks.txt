@@ -8,7 +8,9 @@
 
     ![A USB stick selected in Disks](/images/usb-in-gnome-disks.png)
 
-1. In the window header, click {guilabel}`Drive Options` ({guilabel}`⋮`) and select {guilabel}`Restore Disk Image…`
+1. Close all applications that access files or folders on the USB stick, including the file browser.
+
+1. In the Disks window header, click {guilabel}`Drive Options` ({guilabel}`⋮`) and select {guilabel}`Restore Disk Image…`
 
     ![Restore Disk Image in the menu](/images/restore-disk-image-menu.png)
 

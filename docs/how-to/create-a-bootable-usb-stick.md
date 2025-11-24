@@ -22,6 +22,9 @@ You need:
 
     Take note of where your browser saves the downloaded file. This is normally a directory called *Downloads*. Don't download the ISO image directly to the USB stick.
 
+    Proceed only when the download has successfully finished.
+
+
 ## On Ubuntu and other Linux distributions
 
 Ubuntu Desktop comes with the Disks application by default, which you can use to write the image. Other Linux distributions provide a wide range of different image writer applications. Choose the first one that's available on your system.
@@ -57,6 +60,8 @@ Startup Disk Creator is intended for Ubuntu images and images of other distribut
     <!--
     If Ubuntu asks you what to do with it, select {guilabel}`Do nothing`.
     -->
+
+1. Close all applications that access files or folders on the USB stick, including the file browser.
 
 1. Search your applications for *Startup Disk Creator*.
 
@@ -99,6 +104,10 @@ KDE ISO Image Writer is part of the KDE Plasma desktop environment. You can use 
 1. Download the `SHA256SUMS` and `SHA256SUMS.gpg` checksum files. In the file selector, make sure not to attach the `.txt` suffix to the `SHA256SUMS` file. Place the files in the same directory as the Ubuntu image.
 
     KDE ISO Image Writer uses these files to verify the Ubuntu image.
+
+1. Insert the USB stick.
+
+1. Close all applications that access files or folders on the USB stick, including the file browser.
 
 1. Install KDE ISO Image Writer in the Discover app store or on the command line:
 
