@@ -351,11 +351,21 @@ https://help.ubuntu.com/community/How%20to%20install%20Ubuntu%20on%20MacBook%20u
 
 ## Other options
 
+If the previous applications didn't work, you have a special use case or you want to try something new, we also suggest the following image writers.
+
+### Ventoy
+
 [Ventoy](https://www.ventoy.net/) is an open-source tool that you install on your USB. You can then copy image files to the USB storage using your normal file browser. When you boot the system with the USB stick inserted, Ventoy lets you choose among all the image files stored on the USB.
 
 For instructions, see the Ventoy documentation: [Start to use Ventoy](https://www.ventoy.net/en/doc_start.html).
 
 Ventoy is available for Linux and Microsoft Windows.
+
+### WonderISO
+
+[WonderISO](https://www.sysgeeker.com/iso-burner.html) is a versatile and easy-to-use tool that can write images to USB. WonderISO is available for Microsoft Windows and macOS as a proprietary (closed-source) application.
+
+For instructions, see the [WonderISO product manual](https://www.sysgeeker.com/online-help/wonderiso.html).
 
 
 ## Next steps
