@@ -89,6 +89,38 @@ Startup Disk Creator is intended for Ubuntu images and images of other distribut
 
     When finished, the application announces "Installation Complete".
 
+### Using KDE ISO Image Writer
+
+KDE ISO Image Writer is part of the KDE Plasma desktop environment. You can use it on distributions like Kubuntu. It's available for Ubuntu and Kubuntu 25.04, 25.10, 26.04 LTS and later.
+
+1. Go to the [releases.ubuntu.com](https://releases.ubuntu.com/) website and find the Ubuntu release that you're writing on your USB stick, such as [Ubuntu 24.04 (Noble Numbat)](https://releases.ubuntu.com/noble/).
+
+1. Download the `SHA256SUMS` and `SHA256SUMS.gpg` checksum files. In the file selector, make sure not to attach the `.txt` suffix to the `SHA256SUMS` file. Place the files in the same directory as the Ubuntu image.
+
+    KDE ISO Image Writer uses these files to verify the Ubuntu image.
+
+1. Install KDE ISO Image Writer in the Discover app store or on the command line:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    :input: sudo apt install isoimagewriter
+    ```
+
+1. Open KDE ISO Image Writer.
+
+1. In the {guilabel}`ISO image` field, select the downloaded Ubuntu image. KDE ISO Image Writer starts verifying the image according to the checksum files.
+
+1. In the {guilabel}`USB drive` field, make sure that the correct USB stick is selected.
+
+    ![KDE ISO Image Writer with a selected USB drive and a verified ISO image. It says "The ISO image is valid"](/images/kde-iso-image-writer.png)
+
+1. Click {guilabel}`Create` to start writing the Ubuntu image to USB. Confirm with your password.
+
+1. When KDE ISO Image Writer finishes writing, click {guilabel}`Close`.
+
 ### Using the Linux command line
 
 The `dd` image writer is available on all Linux systems. You can use it even on minimal systems without any graphical environment.
