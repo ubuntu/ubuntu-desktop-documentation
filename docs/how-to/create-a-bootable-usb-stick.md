@@ -257,6 +257,9 @@ https://help.ubuntu.com/community/How%20to%20install%20Ubuntu%20on%20MacBook%20u
 
 1. Open the Terminal app.
 
+<!--
+This is no longer necessary, and in fact it produces an unusable image:
+
 1. Convert the downloaded ISO image file to the UDRW format:
 
     ```{terminal}
@@ -266,10 +269,7 @@ https://help.ubuntu.com/community/How%20to%20install%20Ubuntu%20on%20MacBook%20u
     :dir:
     :input: hdiutil convert Downloads/ubuntu-24.04.3-desktop-amd64.iso -format UDRW -o ubuntu.dmg
     ```
-
-    :::{tip}
-    Drag and drop the image file from Finder to Terminal to paste the full path. This way, you prevent potential errors when typing the path.
-    :::
+-->
 
 1. List the current devices:
 
@@ -300,6 +300,8 @@ https://help.ubuntu.com/community/How%20to%20install%20Ubuntu%20on%20MacBook%20u
        1: DOS_FAT_32 USB CLE 4.0 GB disk2s1
     ```
 
+1. Make sure that the USB stick is large enough for the Ubuntu image. If it's too small, the image writer might silently fail.
+
 1. Unmount the USB stick:
 
     ```{terminal}
@@ -321,12 +323,22 @@ https://help.ubuntu.com/community/How%20to%20install%20Ubuntu%20on%20MacBook%20u
     :user:
     :host:
     :dir:
-    :input: sudo dd if=ubuntu.dmg of=/dev/rdisk<N> bs=4m
+    :input: sudo dd if=Downloads/ubuntu-24.04.3-desktop-amd64.iso of=/dev/rdisk<N> bs=4m
     ```
 
-    :::{note}
-    We're using the `/dev/rdisk<N>` device here rather than `/dev/disk<N>`. This refers to a "raw device" interface to the same disk, which is faster.
+    :::{tip}
+    Drag and drop the image file from Finder to Terminal to paste the full path. This way, you prevent potential errors when typing the path.
     :::
+
+    Double-check the file paths in this command:
+
+    * The `if` argument specifies the "input file", or the path to the **Ubuntu image**.
+
+    * The `of` argument specifies the "output file", or the path to the **USB device**. Make sure that this is the correct device.
+
+        We're using the `/dev/rdisk<N>` device here rather than `/dev/disk<N>`. This refers to a "raw device" interface to the same disk, which is faster.
+
+    The `bs=4m` option increases the write performance and it's optional.
 
     You might encounter these errors:
 
