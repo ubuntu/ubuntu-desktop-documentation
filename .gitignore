@@ -1,3 +1,4 @@
 .vale/styles/*
 !.vale/styles/custom
+codebook.toml
 
