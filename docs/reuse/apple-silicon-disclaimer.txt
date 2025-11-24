@@ -1,0 +1,1 @@
+If you want to run Ubuntu on **Apple Silicon** hardware, such as recent Macs using M1 CPUs or later, refer instead to the [Ubuntu Asahi](https://ubuntuasahi.org/) community project. The hardware support might be limited and depends on your specific machine.

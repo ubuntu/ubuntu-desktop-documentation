@@ -195,7 +195,8 @@ On Microsoft Windows, you have to install a third-party application for writing 
 
 The USB stick will work on **PC (Windows) hardware** and older Apple hardware based on **Intel CPUs**.
 
-If you want to install Ubuntu on **Apple Silicon** hardware, such as recent Macs using M1 CPUs or later, refer instead to the [Ubuntu Asahi](https://ubuntuasahi.org/) community project. The hardware support might be limited and depends on your specific machine.
+```{include} ../reuse/apple-silicon-disclaimer.txt
+```
 
 <!--
 Unfortunately, Disk Utility doesn't seem to be able to write arbitrary images, only macOS disk images. Saving for future reference and reevaluation.
