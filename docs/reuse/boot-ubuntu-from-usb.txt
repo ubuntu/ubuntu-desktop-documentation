@@ -13,7 +13,7 @@ Write the downloaded Ubuntu image to a USB stick to create the installation medi
 This will erase your USB stick. Back up your files first.
 :::
 
-The application that we'll use depends on the system that you're currently using. If you need more options, see the {ref}`create-a-bootable-usb-stick` guide.
+The application that we'll use depends on the system that you're currently using.
 
 ::::{tab-set}
 :::{tab-item} On Ubuntu
@@ -45,6 +45,13 @@ The docs/reuse/usb-using-balena-etcher-on-macos.txt file is reused between the l
 ```{include} ../reuse/usb-using-balena-etcher-on-macos.txt
 ```
 :::
+
+:::{tab-item} Other
+:sync: on-other-platforms
+
+See the {ref}`exhaustive how-to guide <create-a-bootable-usb-stick>` for other platforms and alternative image writers.
+:::
+
 ::::
 
 Now you have a USB stick that works as Ubuntu installation media.

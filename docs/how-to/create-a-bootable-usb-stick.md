@@ -361,9 +361,9 @@ This is no longer necessary, and in fact it produces an unusable image:
 1. Remove the USB stick when the previous command completes.
 
 
-## Other options
+## On multiple platforms
 
-If the previous applications didn't work, you have a special use case or you want to try something new, we also suggest the following image writers.
+If the previous applications didn't work or you have a special use case, we also suggest the following multi-platform image writers.
 
 ### Ventoy
 
@@ -372,6 +372,12 @@ If the previous applications didn't work, you have a special use case or you wan
 For instructions, see the Ventoy documentation: [Start to use Ventoy](https://www.ventoy.net/en/doc_start.html).
 
 Ventoy is available for Linux and Microsoft Windows.
+
+### balenaEtcher
+
+[balenaEtcher](https://etcher.balena.io/) is a simple open-source USB stick writing tool. It's available for Windows, macOS and Linux.
+
+See the documentation at [etcher-docs.balena.io](https://etcher-docs.balena.io/).
 
 ### WonderISO
 
