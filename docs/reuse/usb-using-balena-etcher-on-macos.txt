@@ -4,13 +4,16 @@ Originally a Tutorial: https://discourse.ubuntu.com/t/create-a-bootable-usb-stic
 | Author | Canonical Web Team <webteam@canonical.com> |
 -->
 
+<!--
+This part no longer applies because the Scheme option no longer exists in recent macOS (since 2020).
+
 To ensure compatibility with Apple hardware, reformat the USB stick with the GUID partition table. You can skip this part if you intend to use the USB stick only with PC hardware:
 
-1. Launch the *Disk Utility* app from {menuselection}`Applications --> Utilities` or from the Spotlight search.
+1. Launch the *Disk Utility* app from {menuselection}`Applications -> Utilities` or from the Spotlight search.
 
 1. Insert your USB stick. It appears in the sidebar. Select it there.
 
-    You might need to enable the {menuselection}`View --> Show All Devices` option.
+    You might need to enable the {menuselection}`View -> Show All Devices` option.
 
     :::{warning}
     Make sure to select the USB stick and **not** your internal macOS disk. Both are listed.
@@ -22,7 +25,10 @@ To ensure compatibility with Apple hardware, reformat the USB stick with the GUI
 
 1. Check that you've chosen the correct device and click {guilabel}`Erase`.
 
+1. Close the Disk Utility.
+
 Write the Ubuntu image to the USB stick:
+-->
 
 1. Insert the USB stick.
 
@@ -31,6 +37,10 @@ Write the Ubuntu image to the USB stick:
     ![The Download Etcher page](/images/download-etcher.png)
 
 1. Install and open balenaEtcher.
+
+    :::{note}
+    If macOS warns you about running an app from an unidentified or untrustworthy developer, we recommend that you stop and choose another image writer. For example, try {ref}`macos-dd`, {ref}`image-writers-wonderiso` or {ref}`image-writers-usbimager`.
+    :::
 
 1. Click {guilabel}`Flash from file` and select the downloaded Ubuntu image.
 

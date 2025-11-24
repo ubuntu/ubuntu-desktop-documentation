@@ -13,13 +13,14 @@ With a bootable Ubuntu USB stick, you can:
 You need:
 
 -   An 8GB USB stick or larger.
+
+    :::{warning}
+    Back up your files on the USB stick. This process will overwrite and destroy all data stored there.
+    :::
+
 -   An Ubuntu image file. See [Download Ubuntu Desktop](https://ubuntu.com/download/desktop).
 
-:::{note}
-Take note of where your browser saves the downloaded file. This is normally a directory called *Downloads*.
-
-Don't download the ISO image directly to the USB stick.
-:::
+    Take note of where your browser saves the downloaded file. This is normally a directory called *Downloads*. Don't download the ISO image directly to the USB stick.
 
 ## On Ubuntu and other Linux distributions
 
@@ -278,6 +279,7 @@ The docs/reuse/usb-using-balena-etcher-on-macos.txt file is reused between the l
 ```{include} ../reuse/usb-using-balena-etcher-on-macos.txt
 ```
 
+(macos-dd)=
 ### Using the macOS command line
 
 If you feel confident using the macOS command line, you can follow a more manual approach.
@@ -397,6 +399,7 @@ This is no longer necessary, and in fact it produces an unusable image:
 
 If the previous applications didn't work or you have a special use case, we also suggest the following multi-platform image writers.
 
+(image-writers-ventoy)=
 ### Ventoy
 
 [Ventoy](https://www.ventoy.net/) is an open-source tool that you install on your USB. You can then copy image files to the USB storage using your normal file browser. When you boot the system with the USB stick inserted, Ventoy lets you choose among all the image files stored on the USB.
@@ -405,17 +408,24 @@ For instructions, see the Ventoy documentation: [Start to use Ventoy](https://ww
 
 Ventoy is available for Linux and Microsoft Windows.
 
+(image-writers-etcher)=
 ### balenaEtcher
 
 [balenaEtcher](https://etcher.balena.io/) is a simple open-source USB stick writing tool. It's available for Windows, macOS and Linux.
 
 See the documentation at [etcher-docs.balena.io](https://etcher-docs.balena.io/).
 
+(image-writers-wonderiso)=
 ### WonderISO
 
 [WonderISO](https://www.sysgeeker.com/iso-burner.html) is a versatile and easy-to-use tool that can write images to USB. WonderISO is available for Microsoft Windows and macOS as a proprietary (closed-source) application.
 
 For instructions, see the [WonderISO product manual](https://www.sysgeeker.com/online-help/wonderiso.html).
+
+(image-writers-usbimager)=
+### usbimager
+
+[usbimager](https://gitlab.com/bztsrc/usbimager) is a small and simple, open-source USB stick writing tool. It's available for Windows, macOS and Linux with native interfaces.
 
 
 ## Next steps
