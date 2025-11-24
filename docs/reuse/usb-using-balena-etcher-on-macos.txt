@@ -38,10 +38,6 @@ Write the Ubuntu image to the USB stick:
 
 1. Install and open balenaEtcher.
 
-    :::{note}
-    If macOS warns you about running an app from an unidentified or untrustworthy developer, we recommend that you stop and choose another image writer. For example, try {ref}`macos-dd`, {ref}`image-writers-wonderiso` or {ref}`image-writers-usbimager`.
-    :::
-
 1. Click {guilabel}`Flash from file` and select the downloaded Ubuntu image.
 
     By default, the image file will be in your Downloads folder.

@@ -431,11 +431,6 @@ See the documentation at [etcher-docs.balena.io](https://etcher-docs.balena.io/)
 
 For instructions, see the [WonderISO product manual](https://www.sysgeeker.com/online-help/wonderiso.html).
 
-(image-writers-usbimager)=
-### usbimager
-
-[usbimager](https://gitlab.com/bztsrc/usbimager) is a small and simple, open-source USB stick writing tool. It's available for Windows, macOS and Linux with native interfaces.
-
 
 ## Next steps
 
