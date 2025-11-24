@@ -401,4 +401,4 @@ If you get stuck, help is always at hand:
 
 * [Get support](https://ubuntu.com/support/community-support)
 * [Join our Discourse forum](https://discourse.ubuntu.com/c/project/desktop/)
-* Join our online chat on [Matrix](https://matrix.to/#/#desktop-dev:ubuntu.com)
+* [Join our online chat on Matrix](https://matrix.to/#/#desktop-dev:ubuntu.com)

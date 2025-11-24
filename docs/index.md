@@ -86,7 +86,7 @@ Ubuntu Desktop is an open source project that warmly welcomes community projects
 
 * [Get support](https://ubuntu.com/support/community-support)
 * [Join our Discourse forum](https://discourse.ubuntu.com/c/project/desktop/)
-* Join our online chat on [Matrix](https://matrix.to/#/#desktop-dev:ubuntu.com)
+* [Join our online chat on Matrix](https://matrix.to/#/#desktop-dev:ubuntu.com)
 * [Contribute to this documentation](https://github.com/ubuntu/ubuntu-desktop-documentation/blob/main/CONTRIBUTING.md)
 
 ### Releases
