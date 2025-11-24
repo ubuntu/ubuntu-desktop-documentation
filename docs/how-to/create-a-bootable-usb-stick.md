@@ -191,18 +191,58 @@ The docs/reuse/usb-using-rufus.txt file is reused between the live system tutori
 
 ## On macOS
 
-You can use built-in tools on macOS to create an Ubuntu USB stick. The USB stick will work on **PC (Windows) hardware** and older Apple hardware based on **Intel CPUs**.
+On Microsoft Windows, you have to install a third-party application for writing images to USB sticks. Alternatively, you can use the built-in `dd` tool on the command line.
+
+The USB stick will work on **PC (Windows) hardware** and older Apple hardware based on **Intel CPUs**.
 
 If you want to install Ubuntu on **Apple Silicon** hardware, such as recent Macs using M1 CPUs or later, refer instead to the [Ubuntu Asahi](https://ubuntuasahi.org/) community project. The hardware support might be limited and depends on your specific machine.
+
+<!--
+Unfortunately, Disk Utility doesn't seem to be able to write arbitrary images, only macOS disk images. Saving for future reference and reevaluation.
 
 ### Using the Disk Utility
 
 The Disk Utility is preinstalled on macOS and you can use it to write any image to your USB stick.
 
-<!--
-The docs/reuse/usb-using-macos-disk-utility.txt file is reused between the live system tutorial, the installation tutorial and the bootable USB how-to guide.
+1. Launch the *Disk Utility* app from {menuselection}`Applications -> Utilities` or from the Spotlight search.
+
+1. Insert your USB stick. It appears in the sidebar. Select it there.
+
+    You might need to enable the {menuselection}`View -> Show All Devices` option.
+
+    :::{warning}
+    Make sure to select the USB stick and **not** your internal macOS disk. Both are listed.
+    :::
+
+1. To ensure compatibility with Apple hardware, reformat the USB stick with the GUID partition table:
+
+    Select {guilabel}`Erase` from the toolbar.
+
+    Set the format to *MS-DOS (FAT)* and the scheme to *GUID Partition Map*.
+
+    Check that you've chosen the correct device and click {guilabel}`Erase`.
+
+1. Click {guilabel}`Restore` ({guilabel}`↺`) in the toolbar.
+
+1. Click {guilabel}`Image…` and select the Ubuntu image file.
+
+1. Click {guilabel}`Restore`.
+
+1. Wait for the writing to finish.
+
+1. After the write process has completed, macOS might inform you that "The disk you inserted was not readable by this computer".
+
+    Select {guilabel}`Eject` and remove the USB device. Don't select {guilabel}`Initialize`.
 -->
-```{include} ../reuse/usb-using-macos-disk-utility.txt
+
+### Using balenaEtcher
+
+You can create a bootable USB stick using [balenaEtcher](https://etcher.balena.io/), a free and open source USB stick writing tool.
+
+<!--
+The docs/reuse/usb-using-balena-etcher-on-macos.txt file is reused between the live system tutorial, the installation tutorial and the bootable USB how-to guide.
+-->
+```{include} ../reuse/usb-using-balena-etcher-on-macos.txt
 ```
 
 ### Using the macOS command line

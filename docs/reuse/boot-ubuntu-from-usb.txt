@@ -40,9 +40,9 @@ The docs/reuse/usb-using-rufus.txt file is reused between the live system tutori
 :sync: on-macos
 
 <!--
-The docs/reuse/usb-using-macos-disk-utility.txt file is reused between the live system tutorial, the installation tutorial and the bootable USB how-to guide.
+The docs/reuse/usb-using-balena-etcher-on-macos.txt file is reused between the live system tutorial, the installation tutorial and the bootable USB how-to guide.
 -->
-```{include} ../reuse/usb-using-macos-disk-utility.txt
+```{include} ../reuse/usb-using-balena-etcher-on-macos.txt
 ```
 :::
 ::::
