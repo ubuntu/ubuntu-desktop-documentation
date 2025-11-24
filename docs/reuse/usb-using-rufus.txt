@@ -8,7 +8,7 @@ Rufus presents many options in its interface. It's safe to leave most of them wi
 
 1. Download and install the latest version of Rufus from the [rufus.ie](https://rufus.ie/) website.
 
-    If you're using Windows XP or Vista, install [version 2.18](https://github.com/pbatard/rufus/releases/download/v2.18/rufus-2.18.exe) of Rufus.
+    If you're using Windows 7, install [version 3.22](https://github.com/pbatard/rufus/releases/download/v3.22/rufus-3.22.exe) of Rufus. On Windows XP or Vista, install [version 2.18](https://github.com/pbatard/rufus/releases/download/v2.18/rufus-2.18.exe).
 
 1. Launch Rufus.
 

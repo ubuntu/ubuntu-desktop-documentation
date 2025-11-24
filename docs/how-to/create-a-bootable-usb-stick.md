@@ -180,7 +180,7 @@ Note: The built-in Disc Image Burner tool can only burn images to optical discs.
 
 ### Using Rufus
 
-You can create a bootable USB stick using [Rufus](https://rufus.ie/), a free and open source USB stick writing tool. You need Microsoft Windows XP or later.
+You can create a bootable USB stick using [Rufus](https://rufus.ie/), a free and open source USB stick writing tool.
 
 <!--
 The docs/reuse/usb-using-rufus.txt file is reused between the live system tutorial, the installation tutorial and the bootable USB how-to guide.
