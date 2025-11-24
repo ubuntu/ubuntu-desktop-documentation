@@ -22,17 +22,21 @@ Originally a Tutorial: https://discourse.ubuntu.com/t/create-a-bootable-usb-stic
 
 1. Click {guilabel}`SELECT` next to {guilabel}`Boot selection`. Choose the Ubuntu image file that you've downloaded and confirm by clicking {guilabel}`Open`.
 
+    If the button reads {guilabel}`DOWNLOAD` instead, click the dropdown and change it to {guilabel}`SELECT` first.
+
     ![Selected the ISO file in Rufus](/images/rufus/rufus-iso-selected.png)
 
-1. Click {guilabel}`START` to write the image to USB.
+1. If you've already tried Rufus and the USB stick failed to boot on your system, change {guilabel}`Partitioning scheme` to {guilabel}`GPT` and check that {guilabel}`Target system` is set to {guilabel}`UEFI (non CSM)`. This works on modern systems that disable legacy compatibility.
 
-1. If Rufus asks to download additional files to complete writing the image, select {guilabel}`Yes` to continue.
+1. Click {guilabel}`START` to write the image to USB.
 
 1. Rufus tells you that the Ubuntu image is an *ISOHybrid image*. This means that the same image file can be used as the source for both a USB stick and a DVD.
 
     Confirm the *Write in ISO Image mode* option.
 
     !["ISOHybrid image detected" dialog](/images/rufus/rufus-isohybrid-image.png)
+
+1. If Rufus asks to download additional files to complete writing the image, select {guilabel}`Yes` to continue.
 
 1. Rufus warns you that all data on the USB device is about to be destroyed. Double-check that you've selected the correct device and confirm by clicking {guilabel}`OK`.
 
