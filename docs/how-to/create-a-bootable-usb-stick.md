@@ -223,7 +223,7 @@ The docs/reuse/usb-using-rufus.txt file is reused between the live system tutori
 
 ## On macOS
 
-On Microsoft Windows, you have to install a third-party application for writing images to USB sticks. Alternatively, you can use the built-in `dd` tool on the command line.
+On macOS, you have to install a third-party application for writing images to USB sticks. Alternatively, you can use the built-in `dd` tool on the command line.
 
 The USB stick will work on **PC (Windows) hardware** and older Apple hardware based on **Intel CPUs**.
 
