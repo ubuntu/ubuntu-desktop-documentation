@@ -393,6 +393,6 @@ For a full walkthrough of installing Ubuntu, take a look at our {ref}`install-ub
 
 If you get stuck, help is always at hand:
 
--  [Ubuntu Discourse](https://discourse.ubuntu.com/)
--  [Ask Ubuntu](https://askubuntu.com/)
--  [IRC-based support](https://wiki.ubuntu.com/IRC/ChannelList)
+* [Get support](https://ubuntu.com/support/community-support)
+* [Join our Discourse forum](https://discourse.ubuntu.com/c/project/desktop/)
+* Join our online chat on [Matrix](https://matrix.to/#/#desktop-dev:ubuntu.com)

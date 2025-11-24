@@ -2,7 +2,7 @@
 
 **Ubuntu Desktop** is the most popular open-source operating system powering millions of PCs and laptops around the world.
 
-**What can it do?** Ubuntu Desktop supports all your daily computing needs. It offers applications for web browsing, messaging, gaming and content creation, including Firefox, Chrome, Discord, Steam and OBS Studio. It's a primary platform for all major IDEs, game development tools and AI/ML software. 
+**What can it do?** Ubuntu Desktop supports all your daily computing needs. It offers applications for web browsing, messaging, gaming and content creation, including Firefox, Chrome, Discord, Steam and OBS Studio. It's a primary platform for all major IDEs, game development tools and AI/ML software.
 
 **How is it different?** Compared to other mainstream operating systems, Ubuntu Desktop prioritizes your privacy and security. It's free to download, use, modify and share. Compared to other Linux-based systems, Ubuntu Desktop aims to make open-source software easy and pleasant to use. Thanks to regular releases and commercial support, Ubuntu Desktop is a reliable and predictable platform.
 
@@ -24,7 +24,7 @@ Explanation </explanation/index>
 
 ## In this documentation
 
-* **Introduction**: {ref}`try-ubuntu-desktop` 
+* **Introduction**: {ref}`try-ubuntu-desktop`
 * **Installation**: {ref}`install-ubuntu-desktop` • {ref}`bitlocker-during-ubuntu-installation` • {ref}`turn-off-bitlocker-in-windows` • {ref}`intel-rst-during-ubuntu-installation` • {ref}`reconfigure-windows-to-use-ahci`
 * **Accessibility**: {ref}`Screen reader tutorial <get-started-with-the-screen-reader>` • {ref}`Enable accessibility features <how-to-accessibility>` • {ref}`accessibility-stack` • {ref}`Reference <reference-accessibility>`
 * **Security**: {ref}`hardware-backed-disk-encryption` • {ref}`Smart card login <log-in-using-a-smart-card>` • {ref}`Smart card in your web browser <enable-smart-cards-in-snapped-browsers>`
@@ -86,7 +86,7 @@ Ubuntu Desktop is an open source project that warmly welcomes community projects
 
 * [Get support](https://ubuntu.com/support/community-support)
 * [Join our Discourse forum](https://discourse.ubuntu.com/c/project/desktop/)
-* Join our online chat on [Mattermost](https://chat.canonical.com/canonical/channels/desktop) or [Matrix](https://matrix.to/#/#desktop-dev:ubuntu.com)
+* Join our online chat on [Matrix](https://matrix.to/#/#desktop-dev:ubuntu.com)
 * [Contribute to this documentation](https://github.com/ubuntu/ubuntu-desktop-documentation/blob/main/CONTRIBUTING.md)
 
 ### Releases
@@ -110,4 +110,3 @@ Large parts of this guide are based on documentation written by open-source comm
 * The [GNOME User Documentation](https://gitlab.gnome.org/GNOME/gnome-user-docs) project
 * The [Orca screen reader](https://gitlab.gnome.org/GNOME/orca) documentation
 * The [Ubuntu Desktop Guide](https://launchpad.net/ubuntu/+source/ubuntu-docs) project
-
