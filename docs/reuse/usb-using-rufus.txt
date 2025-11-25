@@ -1,0 +1,53 @@
+<!--
+Originally a Tutorial: https://discourse.ubuntu.com/t/create-a-bootable-usb-stick-with-rufus-on-windows/14020
+| Summary | How to write a USB stick with Windows. |
+| Author |  <oliversmith@canonical.com> |
+-->
+
+1. Download and install the latest version of Rufus from the [rufus.ie](https://rufus.ie/) website.
+
+    If you're using Windows 7, install [version 3.22](https://github.com/pbatard/rufus/releases/download/v3.22/rufus-3.22.exe) of Rufus. On Windows XP or Vista, install [version 2.18](https://github.com/pbatard/rufus/releases/download/v2.18/rufus-2.18.exe).
+
+1. Launch Rufus. If prompted, allow online updates.
+
+    :::{note}
+    Rufus presents many options in its interface. It's safe to leave most of them with their default values.
+    :::
+
+1. Insert your USB stick. It appears in the {guilabel}`Device` field.
+
+    If {guilabel}`Device` shows the wrong USB device, select the correct one from the drop-down menu.
+
+    ![Selected a USB drive in Rufus](/images/rufus/rufus-detects-usb.png)
+
+1. Click {guilabel}`SELECT` next to {guilabel}`Boot selection`. Choose the Ubuntu image file that you've downloaded and confirm by clicking {guilabel}`Open`.
+
+    If the button reads {guilabel}`DOWNLOAD` instead, click the dropdown and change it to {guilabel}`SELECT` first.
+
+    ![Selected the ISO file in Rufus](/images/rufus/rufus-iso-selected.png)
+
+1. If you've already tried Rufus and the USB stick failed to boot on your system, change {guilabel}`Partitioning scheme` to {guilabel}`GPT` and check that {guilabel}`Target system` is set to {guilabel}`UEFI (non CSM)`. This works on modern systems that disable legacy compatibility.
+
+1. Click {guilabel}`START` to write the image to USB.
+
+1. Rufus tells you that the Ubuntu image is an *ISOHybrid image*. This means that the same image file can be used as the source for both a USB stick and a DVD.
+
+    Confirm the *Write in ISO Image mode* option.
+
+    !["ISOHybrid image detected" dialog](/images/rufus/rufus-isohybrid-image.png)
+
+1. If Rufus asks to download additional files to complete writing the image, select {guilabel}`Yes` to continue.
+
+1. Rufus warns you that all data on the USB device is about to be destroyed. Double-check that you've selected the correct device and confirm by clicking {guilabel}`OK`.
+
+    ![Rufus warning you about data loss](/images/rufus/rufus-data-warning.png)
+
+1. Rufus is now writing the image to USB. This usually takes around 10 minutes.
+
+    ![Rufus copying ISO files](/images/rufus/rufus-copying-iso-files.png)
+
+1. When Rufus has finished writing to the USB device, the Status bar says {guilabel}`READY`.
+
+    Click {guilabel}`CLOSE` to complete the write process.
+
+    ![Rufus finished writing the ISO](/images/rufus/rufus-finished-writing.png)

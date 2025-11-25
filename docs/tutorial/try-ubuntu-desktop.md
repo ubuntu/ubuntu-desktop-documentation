@@ -21,6 +21,9 @@ You can test Ubuntu from a USB drive on any computer to see if it works.
 
 You can also try to find your computer on the [Ubuntu certified hardware](https://ubuntu.com/certified?q=&category=Laptop&category=Desktop&limit=20) page. These devices have been tested and confirmed to work well with Ubuntu.
 
+```{include} ../reuse/apple-silicon-disclaimer.txt
+```
+
 
 <!--
 The docs/reuse/boot-ubuntu-from-usb.txt file is reused between the live system tutorial and the installation tutorial.
@@ -88,4 +91,3 @@ When you're done testing Ubuntu and you don't want to install it, you can reboot
     ![The Remove the installation medium prompt](/images/installer/remove-the-installation-medium.png)
 
 1. Your computer restarts and loads your regular system.
-

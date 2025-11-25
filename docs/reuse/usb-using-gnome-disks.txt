@@ -1,0 +1,29 @@
+1. Open the Disks application. You can find it in the applications menu or by searching for "Disks".
+
+1. Insert your USB stick. It appears in the sidebar. Select it there.
+
+    :::{warning}
+    Make sure to select the USB stick and **not** the disk with your running system. Both are listed.
+    :::
+
+    ![A USB stick selected in Disks](/images/usb-in-gnome-disks.png)
+
+1. Close all applications that access files or folders on the USB stick, including the file browser.
+
+1. In the Disks window header, click {guilabel}`Drive Options` ({guilabel}`⋮`) and select {guilabel}`Restore Disk Image…`
+
+    ![Restore Disk Image in the menu](/images/restore-disk-image-menu.png)
+
+1. Next to {guilabel}`Image to Restore`, select the downloaded Ubuntu image file.
+
+1. Click {guilabel}`Start Restoring…` and confirm. The application asks for your password.
+
+    ![The Restore Disk Image dialog](/images/restore-disk-image-dialog.png)
+
+1. A progress bar appears while Disks is writing the image.
+
+    ![Disks writing the image to USB](/images/gnome-disks-restoring-image.png)
+
+1. When the progress bar finishes, click {guilabel}`Eject this disk` ({guilabel}`⏏`).
+
+    ![Writing finished. Partitions are listed on the USB](/images/gnome-disks-finished-writing.png)

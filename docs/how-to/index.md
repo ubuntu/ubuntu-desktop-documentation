@@ -6,6 +6,7 @@ These guides accompany you through the complete Ubuntu Desktop operations lifecy
 :::{toctree}
 :maxdepth: 1
 
+create-a-bootable-usb-stick
 record-the-screen
 change-the-default-terminal
 log-in-using-a-smart-card

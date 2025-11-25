@@ -1,0 +1,3 @@
+If you want to run Ubuntu on **Apple Silicon** hardware, such as recent Macs using M1 CPUs or later, refer instead to the [Ubuntu Asahi](https://ubuntuasahi.org/) community project, which isn't supported by Canonical. The hardware support might be limited and depends on your specific machine. For example, Ubuntu Asahi 25.10 only runs on systems with M1 and M2 CPUs.
+
+You can also install Ubuntu in a virtual machine on top of your current system using [Multipass](https://documentation.ubuntu.com/multipass/).

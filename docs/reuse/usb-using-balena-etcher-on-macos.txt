@@ -1,0 +1,49 @@
+<!--
+Originally a Tutorial: https://discourse.ubuntu.com/t/create-a-bootable-usb-stick-on-macos/14016
+| Summary | How to write a USB stick with macOS. |
+| Author | Canonical Web Team <webteam@canonical.com> |
+-->
+
+<!--
+This part no longer applies because the Scheme option no longer exists in recent macOS (since 2020).
+
+To ensure compatibility with Apple hardware, reformat the USB stick with the GUID partition table. You can skip this part if you intend to use the USB stick only with PC hardware:
+
+1. Launch the *Disk Utility* app from {menuselection}`Applications -> Utilities` or from the Spotlight search.
+
+1. Insert your USB stick. It appears in the sidebar. Select it there.
+
+    You might need to enable the {menuselection}`View -> Show All Devices` option.
+
+    :::{warning}
+    Make sure to select the USB stick and **not** your internal macOS disk. Both are listed.
+    :::
+
+1. Select {guilabel}`Erase` from the toolbar.
+
+1. Set the format to *MS-DOS (FAT)* and the scheme to *GUID Partition Map*.
+
+1. Check that you've chosen the correct device and click {guilabel}`Erase`.
+
+1. Close the Disk Utility.
+
+Write the Ubuntu image to the USB stick:
+-->
+
+1. Insert the USB stick.
+
+1. At the [balenaEtcher website](https://etcher.balena.io/), download **Etcher for macOS (arm64)** if you're using an Apple Silicon machine, or download **Etcher for macOS** if you're using an Intel Mac.
+
+    ![The Download Etcher page](/images/download-etcher.png)
+
+1. Install and open balenaEtcher.
+
+1. Click {guilabel}`Flash from file` and select the downloaded Ubuntu image.
+
+    By default, the image file will be in your Downloads folder.
+
+1. Click {guilabel}`Select target` and choose your USB stick.
+
+    ![The Select target step in Etcher](/images/macos-usb-etcher-config.jpg)
+
+1. Click {guilabel}`Flash!` to write the image to USB.

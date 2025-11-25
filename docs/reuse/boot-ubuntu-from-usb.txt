@@ -3,37 +3,56 @@
 Get the Ubuntu installation image from the [Download Ubuntu Desktop](https://ubuntu.com/download/desktop) page. Save it to a memorable location on your PC. The downloaded file is called `ubuntu-24.04.3-desktop-amd64.iso` or similar.
 
 ![The Download Ubuntu Desktop page](/images/download-an-ubuntu-image.png)
- 
+
 
 ## Create a bootable USB stick
 
 Write the downloaded Ubuntu image to a USB stick to create the installation media. This is not the same as copying the downloaded image file: you have to use special software.
 
-We'll use the balenaEtcher application because it runs on Linux, Windows and macOS.
-
 :::{warning}
 This will erase your USB stick. Back up your files first.
 :::
 
-:::{note}
-balenaEtcher is an open-source application but it isn't developed by the Ubuntu community. Recently, we've [learned](https://tails.net/news/rufus/) that it shares some information about your usage with the Balena company. If this a concern, consider using an alternative application: Startup Disk Creator or GNOME Disks on Linux, Rufus on Windows or Raspberry Pi Imager on any platform.
+The application that we'll use depends on the system that you're currently using.
+
+::::{tab-set}
+:::{tab-item} On Ubuntu
+:sync: on-ubuntu
+
+<!--
+The docs/reuse/usb-using-gnome-disks.txt file is reused between the live system tutorial, the installation tutorial and the bootable USB how-to guide.
+-->
+```{include} ../reuse/usb-using-gnome-disks.txt
+```
 :::
 
-1. At the [balenaEtcher website](https://etcher.balena.io/), choose the version that corresponds to your current operating system.
+:::{tab-item} On Windows
+:sync: on-windows
 
-1. Download and install the tool.
+<!--
+The docs/reuse/usb-using-rufus.txt file is reused between the live system tutorial, the installation tutorial and the bootable USB how-to guide.
+-->
+```{include} ../reuse/usb-using-rufus.txt
+```
+:::
 
-    ![The Download Etcher page](/images/download-etcher.png)
+:::{tab-item} On macOS
+:sync: on-macos
 
-1. Insert your USB flash drive.
+<!--
+The docs/reuse/usb-using-balena-etcher-on-macos.txt file is reused between the live system tutorial, the installation tutorial and the bootable USB how-to guide.
+-->
+```{include} ../reuse/usb-using-balena-etcher-on-macos.txt
+```
+:::
 
-1. Open balenaEtcher.
+:::{tab-item} Other
+:sync: on-other-platforms
 
-1. Select the downloaded Ubuntu image and your USB flash drive.
+See the {ref}`exhaustive how-to guide <create-a-bootable-usb-stick>` for other platforms and alternative image writers.
+:::
 
-    ![The Select target step in Etcher](/images/select-iso.png)
-
-1. Click {guilabel}`Flash!` to write the image.
+::::
 
 Now you have a USB stick that works as Ubuntu installation media.
 
@@ -46,7 +65,14 @@ Now you have a USB stick that works as Ubuntu installation media.
 
 1. Your device should recognize the installation media and launch the Ubuntu installer.
 
-    If not, restart it again. This time, hold {kbd}`F12` during startup. In the boot menu that appears, select your USB device.
+1. If Ubuntu doesn't launch, restart your computer again. This time, hold a key during startup:
 
-    {kbd}`F12` is the most common key for bringing up the system boot menu but {kbd}`Escape`, {kbd}`F2` and {kbd}`F10` are common alternatives. If unsure, look for a brief message when your system starts: this often informs you which key to press to access the boot menu. You can also find the right key in the documentation for your laptop or PC.
+    * On a **PC or Windows** computer, {kbd}`F12` is the most common key for bringing up the system boot menu but {kbd}`Escape`, {kbd}`F2` and {kbd}`F10` are common alternatives. If unsure, look for a brief message when your system starts: this often informs you which key to press to access the boot menu. You can also find the right key in the documentation for your laptop or PC.
 
+        In the boot menu that appears, select your USB device.
+
+    * To start Ubuntu on **Apple hardware**, restart or power-on the Mac with the USB stick inserted while you hold the {kbd}`Option` or {kbd}`Alt` ({kbd}`⌥`) key.
+
+        This launches the Startup Manager, which shows bootable devices connected to the machine. Your USB stick should appear as gold or yellow and be labeled **EFI Boot**. Select it to proceed to the standard Ubuntu boot menu.
+
+        ![Boot device selection](/images/macos-usb-efi-boot.png)

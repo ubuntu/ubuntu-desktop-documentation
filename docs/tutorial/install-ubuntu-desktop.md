@@ -27,6 +27,9 @@ While Ubuntu works on a wide range of devices, it's best to use a device listed 
 
 If you can't see your device there, you can always just {ref}`try-ubuntu-desktop` and check if everything works as expected.
 
+```{include} ../reuse/apple-silicon-disclaimer.txt
+```
+
 
 (installation-back-up-your-data)=
 ## Back up your data
@@ -133,7 +136,7 @@ Let’s take a moment to review all of the above options in detail.
 
 If you select this option, Ubuntu takes up the entire disk space on the selected drive.
 
-![The Erase disk and install Ubuntu page](/images/installer/erase-disk-and-install-ubuntu.png) 
+![The Erase disk and install Ubuntu page](/images/installer/erase-disk-and-install-ubuntu.png)
 
 If your PC has multiple hard drives, you can select where Ubuntu is installed. This option allows you to install Ubuntu alongside an existing OS as long as they each have their own drive.
 
@@ -173,7 +176,7 @@ Manual partitioning is designed for **advanced users** who want to create a spec
 
 Here, you can see all existing drives and partitions. You can create and manage new partition tables and configurations.
 
-![The Manual partitioning page](/images/installer/manual-partitioning.png) 
+![The Manual partitioning page](/images/installer/manual-partitioning.png)
 
 If the interface doesn't make sense, we recommend that you pick one of the automated disk setup options instead.
 
@@ -183,7 +186,7 @@ If you select this option, you'll be able to select the drive where you want to 
 
 This view automatically selects the largest partition on the drive. For more control, you can switch to the {guilabel}`Manual partitioning` option.
 
-![The Install Ubuntu alongside other partitions page](/images/installer/install-ubuntu-alongside-other-partitions.png) 
+![The Install Ubuntu alongside other partitions page](/images/installer/install-ubuntu-alongside-other-partitions.png)
 
 ### Alert: Windows BitLocker is enabled
 
@@ -198,7 +201,7 @@ The redirect is configured in the .htaccess file in the Help repository:
 https://code.launchpad.net/~ubuntu-core-doc/help.ubuntu.com/help.ubuntu.com
 -->
 
-![The BitLocker is enabled page](/images/installer/bitlocker-is-enabled.png) 
+![The BitLocker is enabled page](/images/installer/bitlocker-is-enabled.png)
 
 You can either erase Windows and replace it with Ubuntu, or you can disable BitLocker and install Ubuntu alongside Windows. To disable BitLocker, see {ref}`turn-off-bitlocker-in-windows`. To learn more, see {ref}`bitlocker-during-ubuntu-installation`.
 
@@ -326,4 +329,3 @@ If you have any issues, please contact us via the [Ubuntu Discourse](https://dis
 You can also read the latest news about Ubuntu Desktop on the [Ubuntu Blog](https://ubuntu.com/blog/desktop).
 
 If you need to run both Ubuntu and Windows, you can [install Ubuntu on Windows Subsystem for Linux (WSL)](https://documentation.ubuntu.com/wsl/stable/).
-
