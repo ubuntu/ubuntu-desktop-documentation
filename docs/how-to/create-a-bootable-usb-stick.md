@@ -135,6 +135,10 @@ KDE ISO Image Writer is part of the KDE Plasma desktop environment. You can use 
 
 The `dd` image writer is available on all Linux systems. You can use it even on minimal systems without any graphical environment.
 
+:::{warning}
+The `dd` tool is designed for advanced users. If you specify the wrong options, disk or file names, you might destroy your running system.
+:::
+
 1. Insert your USB stick.
 
 1. Make sure that the USB stick is large enough for the Ubuntu image. If it's too small, the image writer might silently fail.
@@ -291,7 +295,11 @@ The docs/reuse/usb-using-balena-etcher-on-macos.txt file is reused between the l
 (macos-dd)=
 ### Using the macOS command line
 
-If you feel confident using the macOS command line, you can follow a more manual approach.
+If you feel confident using the macOS command line, you can follow a more manual approach using the `dd` tool.
+
+:::{warning}
+The `dd` tool is designed for advanced users. If you specify the wrong options, disk or file names, you might destroy your running system.
+:::
 
 <!--
 Migrated from a page in the Community Help Wiki:
