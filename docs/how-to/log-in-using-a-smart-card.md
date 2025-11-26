@@ -16,7 +16,7 @@ You'll learn how to configure smart card authentication in the SSSD authenticati
 
 If you want to use your smart card in a different way:
 
-- To enable smart cards on a **server**, see [Smart card authentication](https://documentation.ubuntu.com/server/security-smart-cards/) in the Ubuntu Server documentation.
+- To enable smart cards on a **server**, see {external}{ref}`smart-card-authentication` in the Ubuntu Server documentation.
 - To sign content in the **web browser** with your smart card, see {ref}`enable-smart-cards-in-snapped-browsers`.
 
 ### What you'll learn
@@ -129,7 +129,7 @@ You can check this:
 		Path           : 3f00140090012002
 		ID             : 02
 		Encoded serial : 02 10 0357B1EC0EB725BA67BD2D838DDF93D5
-	    
+
 	```
 
 	```bash
@@ -138,7 +138,7 @@ You can check this:
 
 2. See the certificate contents:
 
-    ```bash	
+    ```bash
     openssl x509 -text -noout -in card-cert.pem
     ```
 
@@ -367,7 +367,7 @@ Using this PAM configuration smart card access will be the sole method to login.
 This is the default configuration, but we document it for completeness:
 
 ```bash
-update-alternatives --set gdm-smartcard /etc/pam.d/gdm-smartcard-sssd-exclusive 
+update-alternatives --set gdm-smartcard /etc/pam.d/gdm-smartcard-sssd-exclusive
 ```
 
 ### Enable smart card access with password fallback

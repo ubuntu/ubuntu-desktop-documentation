@@ -110,4 +110,3 @@ You can enable the encryption passphrase during installation. After installation
 ## Enable hardware-backed disk encryption
 
 To protect your Ubuntu installation with hardware-backed disk encryption, see {ref}`encrypt-your-disk-with-tpm`.
-

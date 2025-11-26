@@ -1,6 +1,7 @@
-import datetime
 import ast
+import datetime
 import os
+
 import yaml
 
 # Configuration for the Sphinx documentation builder.
@@ -135,11 +136,9 @@ html_context = {
     # Docs branch in the repo; used in links for viewing the source files
     #
     # TODO: To customise the branch, uncomment and update as needed.
-    'repo_default_branch': 'main',
+    "repo_default_branch": "main",
     # Docs location in the repo; used in links for viewing the source files
     #
-
-
     # TODO: To customise the directory, uncomment and update as needed.
     "repo_folder": "/docs/",
     # TODO: To enable or disable the Previous / Next buttons at the bottom of pages
@@ -147,9 +146,8 @@ html_context = {
     # "sequential_nav": "both",
     # TODO: To enable listing contributors on individual pages, set to True
     "display_contributors": False,
-
-    # Required for feedback button    
-    'github_issues': 'enabled',
+    # Required for feedback button
+    "github_issues": "enabled",
 }
 
 # TODO: To enable the edit button on pages, uncomment and change the link to a
@@ -160,7 +158,7 @@ html_context = {
 # - https://git.launchpad.net/example
 #
 html_theme_options = {
-'source_edit_link': 'https://github.com/ubuntu/ubuntu-desktop-documentation',
+    "source_edit_link": "https://github.com/ubuntu/ubuntu-desktop-documentation",
 }
 
 # Project slug; see https://meta.discourse.org/t/what-is-category-slug/87897
@@ -168,13 +166,13 @@ html_theme_options = {
 # TODO: If your documentation is hosted on https://docs.ubuntu.com/,
 #       uncomment and update as needed.
 
-slug = 'desktop'
+slug = "desktop"
 
 
 # Template and asset locations
 
-#html_static_path = ["_static"]
-#templates_path = ["_templates"]
+# html_static_path = ["_static"]
+# templates_path = ["_templates"]
 
 
 #######################
@@ -183,16 +181,16 @@ slug = 'desktop'
 
 # Base URL of RTD hosted project
 
-html_baseurl = 'https://documentation.ubuntu.com/desktop/'
+html_baseurl = "https://documentation.ubuntu.com/desktop/"
 
 # URL scheme. Add language and version scheme elements.
 # When configured with RTD variables, check for RTD environment so manual runs succeed:
 
-if 'READTHEDOCS_VERSION' in os.environ:
+if "READTHEDOCS_VERSION" in os.environ:
     version = os.environ["READTHEDOCS_VERSION"]
-    sitemap_url_scheme = '{lang}{version}{link}'
+    sitemap_url_scheme = "{lang}{version}{link}"
 else:
-    sitemap_url_scheme = 'MANUAL/{link}'
+    sitemap_url_scheme = "MANUAL/{link}"
 
 
 #############
@@ -209,8 +207,8 @@ else:
 #       the sphinx_reredirects extension will be disabled.
 
 redirects = {
-        "tutorial/getting-started-with-the-screen-reader": "../../tutorial/get-started-with-the-screen-reader"
-        }
+    "tutorial/getting-started-with-the-screen-reader": "../../tutorial/get-started-with-the-screen-reader"
+}
 
 
 ###########################
@@ -226,7 +224,7 @@ linkcheck_ignore = [
     "https://github.com/canonical/ACME/*",
     # The link checker tries to treat the part after # as an anchor and fails.
     "https://matrix.to/#/#desktop-dev:ubuntu.com",
-    ]
+]
 
 
 # A regex list of URLs where anchors are ignored by 'make linkcheck'
@@ -275,7 +273,7 @@ extensions = [
     "sphinxcontrib.cairosvgconverter",
     "sphinx_last_updated_by_git",
     "sphinx.ext.intersphinx",
-    'sphinx_sitemap',
+    "sphinx_sitemap",
 ]
 
 # Excludes files or directories from processing
@@ -343,12 +341,17 @@ if "discourse_prefix" not in html_context and "discourse" in html_context:
 
 # Workaround for substitutions.yaml
 
-if os.path.exists('./reuse/substitutions.yaml'):
-    with open('./reuse/substitutions.yaml', 'r') as fd:
+if os.path.exists("./reuse/substitutions.yaml"):
+    with open("./reuse/substitutions.yaml", "r") as fd:
         myst_substitutions = yaml.safe_load(fd.read())
 
 # Add configuration for intersphinx mapping
 
 intersphinx_mapping = {
-    'starter-pack': ('https://canonical-example-product-documentation.readthedocs-hosted.com/en/latest', None)
+    "starter-pack": (
+        "https://canonical-example-product-documentation.readthedocs-hosted.com/en/latest",
+        None,
+    ),
+    "server": ("https://documentation.ubuntu.com/server/", None),
+    "security": ("https://documentation.ubuntu.com/security/", None),
 }
