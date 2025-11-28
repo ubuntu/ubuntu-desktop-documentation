@@ -1,3 +1,6 @@
+```{tags} Installation, Security
+```
+
 (turn-off-bitlocker-in-windows)=
 # Turn off BitLocker in Windows
 
@@ -44,4 +47,3 @@ If you wish to re-encrypt your Windows partition after installing Ubuntu alongsi
 1. The Windows data is now accessible to Ubuntu.
 
     If you're installing Ubuntu, you can now reboot your computer and launch the Ubuntu installer. The hard disk configuration step can proceed.
-

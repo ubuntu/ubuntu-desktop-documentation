@@ -2,6 +2,9 @@
 relatedlinks: "[TPM-backed &#32; Full &#32; Disk &#32; Encryption &#32; is &#32; coming &#32; to &#32; Ubuntu](https://ubuntu.com/blog/tpm-backed-full-disk-encryption-is-coming-to-ubuntu), [Full &#32; disk &#32; encryption: &#32; LUKS &#32; and &#32; TPM](https://documentation.ubuntu.com/security/docs/security-features/storage/encryption-full-disk/), [Full &#32; disk &#32; encryption &#32; in &#32; Ubuntu &#32; Core](https://documentation.ubuntu.com/core/explanation/full-disk-encryption/), [BitLocker &#32; overview &#32; by &#32; Microsoft](https://learn.microsoft.com/en-us/windows/security/operating-system-security/ data-protection/bitlocker/)"
 ---
 
+```{tags} Installation, Security
+```
+
 (hardware-backed-disk-encryption)=
 # Hardware-backed disk encryption
 

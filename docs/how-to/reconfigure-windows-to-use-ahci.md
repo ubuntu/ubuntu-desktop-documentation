@@ -2,6 +2,9 @@
 relatedlinks: "[BCDBoot &#32 Command-Line &#32 Options](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/bcdboot-command-line-options-techref-di)"
 ---
 
+```{tags} Installation
+```
+
 (reconfigure-windows-to-use-ahci)=
 # Reconfigure Windows to use AHCI
 
@@ -226,4 +229,3 @@ Assuming letter `F:` for the boot partition, use the following commands:
 1. Once the previous command completes, reboot. Windows should start normally.
 
 1. You can now re-launch the Ubuntu installer and finish the side-by-side setup of the two operating systems.
-

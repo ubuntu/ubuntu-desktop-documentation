@@ -1,3 +1,6 @@
+```{tags} Accessibility
+```
+
 (read-screen-aloud)=
 # Read the screen aloud
 
@@ -76,4 +79,3 @@ The Orca screen reader recognizes many keyboard commands to navigate the user in
 
 * {ref}`navigate-the-screen-using-the-screen-reader`
 * {ref}`read-documents-and-web-pages-using-the-screen-reader`
-

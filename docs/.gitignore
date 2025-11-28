@@ -15,6 +15,7 @@
 
 # Build outputs
 _build
+_tags
 
 # Node.js
 package*.json
