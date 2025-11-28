@@ -1,3 +1,6 @@
+```{tags} Accessibility
+```
+
 (at-spi-dbus-xml-interfaces)=
 # AT-SPI DBus XML interfaces
 
@@ -37,6 +40,3 @@ org.a11y.atspi.TableCell
 org.a11y.atspi.Text
 org.a11y.atspi.Value
 :::
-
-
-

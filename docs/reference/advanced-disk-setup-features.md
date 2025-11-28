@@ -1,3 +1,6 @@
+```{tags} Installation
+```
+
 (advanced-disk-setup-features)=
 # Advanced disk setup features
 
@@ -20,4 +23,3 @@ Erase disk and use ZFS with encryption
 
 Enable hardware-backed full disk encryption
 : TPM-backed full disk encryption (FDE) is a new, **experimental** disk encryption feature of Ubuntu Desktop. For details, see {ref}`hardware-backed-disk-encryption`.
-

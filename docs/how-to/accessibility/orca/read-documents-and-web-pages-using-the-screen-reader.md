@@ -1,3 +1,6 @@
+```{tags} Accessibility
+```
+
 (read-documents-and-web-pages-using-the-screen-reader)=
 # Read documents and web pages using the screen reader
 
@@ -347,4 +350,3 @@ You might not agree with the politeness level that the page author specified. In
 * Cycle between politeness levels: {kbd}`\`
 
 * Set the default politeness level to _off_: {kbd}`Shift+\`
-

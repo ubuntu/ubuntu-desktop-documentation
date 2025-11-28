@@ -1,3 +1,6 @@
+```{tags} Security
+```
+
 (log-in-using-a-smart-card)=
 # Log in using a smart card
 

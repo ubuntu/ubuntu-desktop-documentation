@@ -1,3 +1,6 @@
+```{tags} Accessibility
+```
+
 (orca-structural-navigation-commands)=
 # Orca Structural Navigation commands
 
@@ -294,4 +297,3 @@ Enable or disable Structural Navigation keys:
 * - Start and end of current container
   - {kbd}`Shift+,` and {kbd}`,`
 :::
-

@@ -1,3 +1,6 @@
+```{tags} Security
+```
+
 (enable-smart-cards-in-snapped-browsers)=
 # Enable smart cards in snapped browsers
 
@@ -162,4 +165,3 @@ Did it work? If not:
 ### Additional resources
 
 This tutorial connects the `pcscd` smart card plug to the web browser snap. For details about `pcscd`, see [The `pcscd` interface](https://snapcraft.io/docs/pcscd-interface).
-
