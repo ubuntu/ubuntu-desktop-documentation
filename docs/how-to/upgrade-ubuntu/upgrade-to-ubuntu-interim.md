@@ -1,7 +1,9 @@
 (upgrade-to-ubuntu-interim)=
 # Upgrade to Ubuntu 25.10
 
-Ubuntu 25.10 is the version of the Ubuntu operating system being released in April 2025. The development codename given to this release is "Questing Quokka".
+Ubuntu 25.10 ("Questing Quokka") is the latest *interim* release of Ubuntu. This means that it's a release with short-term support of nine months but with the latest software. You can upgrade to Ubuntu 25.10 from the previous Ubuntu 25.04 interim release, or from the Ubuntu 24.04 Long Term Support (LTS) release.
+
+To learn more about Ubuntu releases and life cycles, see [The Ubuntu lifecycle and release cadence](https://ubuntu.com/about/release-cycle).
 
 ## Before you start
 
@@ -88,4 +90,12 @@ Follow {ref}`upgrade-ubuntu-desktop`.
 
 ## Troubleshooting
 
-See the [release notes](http://wiki.ubuntu.com/QuestingQuokka/ReleaseNotes)
+You might encounter these problems when trying to upgrade Ubuntu.
+
+### Upgrade isn't available
+
+The upgrade to the latest interim release only becomes available several days after the official release date. This is to allow time for any critical bugs to be fixed before prompting all users to upgrade. Check again in a few days.
+
+Look for known issues in the release notes. Some of them might be blocking the upgrade until they're resolved.
+
+Make sure that the Software & Updates application is set to notify you of new interim releases. Select the {guilabel}`For any new version` option.
