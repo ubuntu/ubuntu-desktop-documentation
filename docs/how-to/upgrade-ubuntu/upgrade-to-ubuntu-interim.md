@@ -96,6 +96,26 @@ You might encounter these problems when trying to upgrade Ubuntu.
 
 The upgrade to the latest interim release only becomes available several days after the official release date. This is to allow time for any critical bugs to be fixed before prompting all users to upgrade. Check again in a few days.
 
-Look for known issues in the release notes. Some of them might be blocking the upgrade until they're resolved.
+If it's been more than a couple of days, look for known issues in the release notes. Some of them might be blocking the upgrade until they're resolved.
 
 Make sure that the Software & Updates application is set to notify you of new interim releases. Select the {guilabel}`For any new version` option.
+
+If all else fails, you can force the upgrade manually on the command line:
+
+```{terminal}
+:copy:
+:user:
+:host:
+:dir:
+:input: sudo do-release-upgrade
+```
+
+You can add the `--devel-release` option to upgrade to the latest development release if the normal upgrade path is not yet available:
+
+```{terminal}
+:copy:
+:user:
+:host:
+:dir:
+:input: sudo do-release-upgrade --devel-release
+```
