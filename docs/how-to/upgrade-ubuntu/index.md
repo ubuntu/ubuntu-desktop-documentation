@@ -6,6 +6,6 @@ You can upgrade to different Ubuntu releases with varying life cycles and suppor
 :::{toctree}
 :maxdepth: 1
 
-upgrade-to-ubuntu-26-04-lts
+upgrade-to-ubuntu-24-04-lts
 upgrade-to-ubuntu-interim
 :::
