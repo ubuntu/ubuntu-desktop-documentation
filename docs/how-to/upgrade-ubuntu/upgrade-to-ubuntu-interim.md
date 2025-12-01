@@ -17,7 +17,7 @@ To learn more about the life cycle of Ubuntu releases, see [The Ubuntu lifecycle
 We recommended that you read the [release notes for Ubuntu 25.10](https://discourse.ubuntu.com/t/questing-quokka-release-notes/59220), which document new features, caveats and workarounds for known issues in this version.
 
 
-## Determine which Ubuntu release you're running
+## Determine your current release
 
 Before you start upgrading, you need to know which version of Ubuntu you're currently using and whether it's an LTS or interim release.
 
@@ -50,8 +50,8 @@ You can upgrade to Ubuntu 25.10 from the previous Ubuntu 25.04 interim release, 
 If you're running an older Ubuntu release, you must gradually upgrade to Ubuntu 24.04 LTS or 25.04 first before proceeding to Ubuntu 25.10. See [UpgradeNotes](https://help.ubuntu.com/community/UpgradeNotes) for more information.
 
 
-(switch-to-the-interim-release-path)=
-## Switch to the interim release path
+(switch-to-interim)=
+## Switch to interim
 
 If you're currently using an LTS release such as Ubuntu 24.04 LTS, configure your system to follow interim releases instead.
 
@@ -170,7 +170,7 @@ The upgrade to the latest interim release only becomes available several days af
 
 If it's been more than a couple of days, look for known issues in the release notes. Some of them might be blocking the upgrade until they're resolved. You can find updates in the attached bug trackers.
 
-Make sure that the Software & Updates application is set to notify you of new interim releases. See {ref}`switch-to-the-interim-release-path`.
+Make sure that the Software & Updates application is set to notify you of new interim releases. See {ref}`switch-to-interim`.
 
 You can force the upgrade manually on the command line:
 
