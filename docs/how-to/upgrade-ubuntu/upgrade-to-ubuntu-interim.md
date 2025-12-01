@@ -1,92 +1,164 @@
+---
+relatedlinks: "[QuestingUpgrades/Kubuntu](https://help.ubuntu.com/community/QuestingUpgrades/Kubuntu), [Upgrading &#32 Lubuntu](https://manual.lubuntu.me/stable/D/upgrading.html), [Upgrading &#32 to &#32 Ubuntu &#32 Studio &#32; 25.10](https://discourse.ubuntu.com/t/ubuntu-studio-25-10-release-notes/53099#p-132280-upgrading-to-ubuntu-studio-2504-5), [Upgrading &#32; to &#32; Xubuntu &#32; 25.10](https://wiki.xubuntu.org/releases/25.10/upgrading)"
+---
+
 (upgrade-to-ubuntu-interim)=
 # Upgrade to Ubuntu 25.10
 
-Ubuntu 25.10 ("Questing Quokka") is the latest *interim* release of Ubuntu. This means that it's a release with short-term support of nine months but with the latest software. You can upgrade to Ubuntu 25.10 from the previous Ubuntu 25.04 interim release, or from the Ubuntu 24.04 Long Term Support (LTS) release.
+Ubuntu 25.10 ("Questing Quokka") is the latest *interim* release of Ubuntu. Interim releases give you a chance to preview new features and updates ahead of the next Long Term Support (LTS) release. Interim releases are supported for nine months.
 
-To learn more about Ubuntu releases and life cycles, see [The Ubuntu lifecycle and release cadence](https://ubuntu.com/about/release-cycle).
+Long Term Supported releases such as Ubuntu 24.04 LTS are recommended for users looking for a stable environment.
 
-## Before you start
+To learn more about the life cycle of Ubuntu releases, see [The Ubuntu lifecycle and release cadence](https://ubuntu.com/about/release-cycle).
 
-- You can directly upgrade to Ubuntu 25.10 ("Questing Quokka") from Ubuntu 25.04 ("Plucky Puffin").
 
-- Be sure that you have all updates applied to your current version of Ubuntu before you upgrade.
+## Release notes
 
-- Before upgrading it is recommended that you read the [release notes for Ubuntu 25.10](http://wiki.ubuntu.com/QuestingQuokka/ReleaseNotes), which document caveats and workarounds for known issues in this version.
+We recommended that you read the [release notes for Ubuntu 25.10](https://discourse.ubuntu.com/t/questing-quokka-release-notes/59220), which document new features, caveats and workarounds for known issues in this version.
 
-If you have a version of Ubuntu other than 25.04, please see [UpgradeNotes](https://help.ubuntu.com/community/UpgradeNotes) for information on how to upgrade.
 
-(upgrade-ubuntu-desktop)=
-## Upgrade Ubuntu Desktop
+## Determine which Ubuntu release you're running
 
-You can easily upgrade over the network with the following procedure.
+Before you start upgrading, you need to know which version of Ubuntu you're currently using and whether it's an LTS or interim release.
 
+::::{tab-set}
+:::{tab-item} Graphical interface
+:sync: gui
+On Ubuntu Desktop, open the Settings application. Navigate to {menuselection}`System --> About`. Your Ubuntu version is listed in the {guilabel}`Operating System` field. For example, it might say "Ubuntu 24.04.3 LTS".
+
+On earlier Ubuntu versions, the information was located on the Details tab.
+:::
+
+:::{tab-item} Command line
+:sync: terminal
+
+```{terminal}
+:copy:
+:user:
+:host:
+:dir:
+:input: lsb_release --description
+    
+No LSB modules are available.
+Description:	Ubuntu 24.04.3 LTS
+```
+:::
+::::
+
+You can upgrade to Ubuntu 25.10 from the previous Ubuntu 25.04 interim release, or from the Ubuntu 24.04 LTS release.
+
+If you're running an older Ubuntu release, you must gradually upgrade to Ubuntu 24.04 LTS or 25.04 first before proceeding to Ubuntu 25.10. See [UpgradeNotes](https://help.ubuntu.com/community/UpgradeNotes) for more information.
+
+
+(switch-to-the-interim-release-path)=
+## Switch to the interim release path
+
+If you're currently using an LTS release such as Ubuntu 24.04 LTS, configure your system to follow interim releases instead.
+
+::::{tab-set}
+:::{tab-item} Graphical interface
+:sync: gui
 1. Open the Software & Updates application.
 
-3. Go to the {guilabel}`Updates` tab.
+    ![|187x184](https://assets.ubuntu.com/v1/89f374af-tutorial11.png)
 
-4. Confirm the "Notify me of a new Ubuntu version:" option is set to "For any new version", and change it if otherwise.
+1. Go to the {guilabel}`Updates` tab.
 
-5. Close the Software Sources application and return to Update Manager.
+1. In the menu labeled {guilabel}`Notify me of a new Ubuntu version`, select {guilabel}`For any new version`, which includes interim releases.
 
-6. In Update Manager, click the **Check** button to check for new updates.
+    ![|624x309](https://assets.ubuntu.com/v1/69830192-tutorial12.png)
 
-7. If there are any updates to install, use the **Install Updates** button to install them.
-<!-- and press **Check** again after that is complete.-->
+1. Close the application.
+:::
 
-8. Open Software Updater.
+:::{tab-item} Command line
+:sync: terminal
 
-9. A message will appear informing you of the availability of the new release.
+1. Edit the `/etc/update-manager/release-upgrades` configuration file.
+1. Set the `Prompt=normal` option.
+:::
+::::
 
-10. Click **Upgrade**.
+## Apply all updates
 
-11. Follow the on-screen instructions.
+Before you start the upgrade, make sure that your current Ubuntu installation is fully updated:
 
-## Upgrade Ubuntu Server
+::::{tab-set}
+:::{tab-item} Graphical interface
+:sync: gui
 
-1. Install `ubuntu-release-upgrader-core` if it is not already installed:
+1. Open the Software Updater application.
+1. If any updates are available, install them.
+1. Restart your computer if prompted.
+:::
 
-    ```bash
-    sudo apt-get install ubuntu-release-upgrader-core
+:::{tab-item} Command line
+:sync: terminal
+
+1. Refresh package information:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    :input: sudo apt update
     ```
 
-2. Edit `/etc/update-manager/release-upgrades` and set `Prompt=normal`.
+1. Install updates:
 
-3. Launch the upgrade tool:
-
-    ```bash
-    do-release-upgrade
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    :input: sudo apt upgrade
     ```
 
-4. Follow the on-screen instructions.
+1. Restart your computer if prompted:
 
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    :input: systemctl reboot
+    ```
+:::
+::::
 
-## Upgrade Ubuntu flavors
+## Start the upgrade
 
-Certain [Ubuntu flavors](https://ubuntu.com/desktop/flavors) have their own upgrade instructions.
+::::{tab-set}
+:::{tab-item} Graphical interface
+:sync: gui
 
-### Kubuntu
+1. Open the Software Updater application.
 
-Specific instructions for upgrading Kubuntu to 25.10 can be founds at [QuestingUpgrades/Kubuntu](https://help.ubuntu.com/community/QuestingUpgrades/Kubuntu).
+    It will inform you that a new release is available.
 
-### Lubuntu
+1. Click {guilabel}`Upgrade`.
 
-Refer to [Appendix D Upgrading from Previous Releases](https://manual.lubuntu.me/stable/D/upgrading.html) for instructions on upgrading. You may note it contains no new detail, but maybe helpful if upgrade isn't found or other issues.
+1. Follow the on-screen instructions.
+:::
 
-### Ubuntu Studio
+:::{tab-item} Command line
+:sync: terminal
 
-Specific instructions for upgrading Ubuntu Studio to 25.10 can be found at [Upgrading to Ubuntu Studio 25.04](https://discourse.ubuntu.com/t/ubuntu-studio-25-10-release-notes/53099#p-132280-upgrading-to-ubuntu-studio-2504-5).
+1. Launch the upgrade tool:
 
-### Xubuntu
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    :input: sudo do-release-upgrade
+    ```
 
-Refer to [Upgrading to Xubuntu 25.10](https://wiki.xubuntu.org/releases/25.10/upgrading).
+1. Follow the on-screen instructions.
+:::
+::::
 
-### Other flavors
-
-Follow {ref}`upgrade-ubuntu-desktop`.
-
-## See Also
-
-- [UpgradeNotes](https://help.ubuntu.com/community/UpgradeNotes) for all supported versions of Ubuntu
 
 ## Troubleshooting
 
@@ -96,11 +168,11 @@ You might encounter these problems when trying to upgrade Ubuntu.
 
 The upgrade to the latest interim release only becomes available several days after the official release date. This is to allow time for any critical bugs to be fixed before prompting all users to upgrade. Check again in a few days.
 
-If it's been more than a couple of days, look for known issues in the release notes. Some of them might be blocking the upgrade until they're resolved.
+If it's been more than a couple of days, look for known issues in the release notes. Some of them might be blocking the upgrade until they're resolved. You can find updates in the attached bug trackers.
 
-Make sure that the Software & Updates application is set to notify you of new interim releases. Select the {guilabel}`For any new version` option.
+Make sure that the Software & Updates application is set to notify you of new interim releases. See {ref}`switch-to-the-interim-release-path`.
 
-If all else fails, you can force the upgrade manually on the command line:
+You can force the upgrade manually on the command line:
 
 ```{terminal}
 :copy:
@@ -110,7 +182,7 @@ If all else fails, you can force the upgrade manually on the command line:
 :input: sudo do-release-upgrade
 ```
 
-You can add the `--devel-release` option to upgrade to the latest development release if the normal upgrade path is not yet available:
+If the normal upgrade path isn't available yet and you know what you're doing, you can also add the `--devel-release` option to upgrade to the latest development release:
 
 ```{terminal}
 :copy:
@@ -119,3 +191,12 @@ You can add the `--devel-release` option to upgrade to the latest development re
 :dir:
 :input: sudo do-release-upgrade --devel-release
 ```
+
+:::{warning}
+Upgrading to a development release isn't supported and might break your system.
+:::
+
+
+## See also
+
+- [UpgradeNotes](https://help.ubuntu.com/community/UpgradeNotes) for all supported versions of Ubuntu

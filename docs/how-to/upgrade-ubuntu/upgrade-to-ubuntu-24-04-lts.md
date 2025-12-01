@@ -102,18 +102,3 @@ If you have any issues with your upgrade process, or get stuck along the way, yo
 
 - [Ubuntu Discourse](https://discourse.ubuntu.com) 
 - [Ask Ubuntu](https://askubuntu.com/)
-
-
-## (Optional) Upgrading to interim releases
-
-Ubuntu 22.04 LTS is a Long Term Supported release and recommended for users looking for a stable development environment. Interim releases give users a chance to preview new features and updates ahead of the next LTS release. Interim releases are supported for 9 months and designed for users who want access to the lasted and greatest in Ubuntu.  
-
-To be prompted to upgrade to the next interim release, enable it in the ‘Software & Updates’ app.
-
-![|187x184](https://assets.ubuntu.com/v1/89f374af-tutorial11.png)
-
-Navigate to the ‘Updates’ tab and change the menu option titled ‘Notify me of a new Ubuntu version’ to **For any new version**.
-
-![|624x309](https://assets.ubuntu.com/v1/69830192-tutorial12.png)
-
-With this setting applied you will receive the same upgrade prompt for Ubuntu 22.10 as we saw at the beginning of this tutorial, once it has been officially released.
