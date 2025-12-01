@@ -22,7 +22,7 @@ At every startup, the TPM verifies that your computer's hardware and critical bo
 
 In other words, anyone who wants to access your data must know your user password. This provides more security than an unencrypted Ubuntu installation, where the bad actor can just remove your disk and read your data, or start another system on your computer. This feature is also more convenient than traditional disk encryption, such as LUKS: you only have to remember your user password and there's no additional disk password.
 
-For technical details, see [Full disk encryption (FDE)](https://documentation.ubuntu.com/security/docs/security-features/storage/encryption-full-disk/) in the Ubuntu security documentation.
+For technical details, see {external:doc}`security-features/storage/encryption-full-disk` in the Ubuntu security documentation.
 
 
 ## Recovery key
