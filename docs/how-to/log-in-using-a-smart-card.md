@@ -16,7 +16,7 @@ You'll learn how to configure smart card authentication in the SSSD authenticati
 
 If you want to use your smart card in a different way:
 
-- To enable smart cards on a **server**, see {external}{ref}`smart-card-authentication` in the Ubuntu Server documentation.
+- To enable smart cards on a **server**, see {external:ref}`smart-card-authentication` in the Ubuntu Server documentation.
 - To sign content in the **web browser** with your smart card, see {ref}`enable-smart-cards-in-snapped-browsers`.
 
 ### What you'll learn
