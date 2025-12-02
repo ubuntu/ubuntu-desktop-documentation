@@ -183,7 +183,7 @@ Follow the application's instructions and confirm the prompts:
 
 You might encounter these problems when trying to upgrade Ubuntu.
 
-### Upgrade isn't available
+### The upgrade isn't available
 
 The upgrade to the latest interim release only becomes available several days after the official release date. This is to allow time for any critical bugs to be fixed before prompting all users to upgrade. Check again in a few days.
 
@@ -214,3 +214,15 @@ If the normal upgrade path isn't available yet and you know what you're doing, y
 :::{warning}
 Upgrading to a development release isn't supported and might break your system.
 :::
+
+### The system is slow
+
+Your machine might be slow to reboot right after the upgrade because it still needs to complete the initial configuration. After that, it should be back to normal speed.
+
+If it seems that the new Ubuntu release is much slower than the previous one, check the system requirements in the release notes to make sure that your hardware is still supported.
+
+You can also {ref}`reinstall Ubuntu <install-ubuntu-desktop>` from scratch to get a clean system.
+
+We don't recommend returning to the previous Ubuntu release because it might no longer receive security updates. Downgrading the system isn't supported.
+
+Instead, browse our [Ubuntu flavors](https://ubuntu.com/desktop/flavors). These are community projects that provide alternative desktop environments and default applications. They might run better on older hardware while still being based on the latest Ubuntu release. However, flavors aren't supported by Canonical.
