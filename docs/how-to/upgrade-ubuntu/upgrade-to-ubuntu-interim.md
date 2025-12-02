@@ -142,51 +142,31 @@ Before you start the upgrade, make sure that your current Ubuntu installation is
 
 1. Open the Software Updater application.
 
-    ![|504x284](https://assets.ubuntu.com/v1/4161a27c-tutorial2.png)
-    
 1. The application informs you that a new release is available.
 
-    ![|624x205](https://assets.ubuntu.com/v1/a597d39c-tutorial3.png)
+    Click {guilabel}`Upgrade`.
+
+    If no upgrade prompt appears, you are either on the latest version of Ubuntu or upgrades to the newest release haven't been enabled yet.
+
+1. The application presents an overview of the upgrade.
+
+    Click {guilabel}`Upgrade` to continue.
+
+1. When all upgrade requirements have been gathered, the application shows an overview of the packages to be installed and removed.
+
+    Click {guilabel}`Start Upgrade` to continue.
+
+1. A pop-up informs you that the screen lock is disabled to prevent your system from locking during the process. Close the dialog.
+
+1. While the upgrade is in progress, you might see visual glitches on your screen, such as changing icons. This is normal. Wait until the process is complete.
+
+1. When new packages have been installed, the application prompts you to remove the obsolete packages from the previous Ubuntu release.
+
+    Unless you have a reason to keep the packages, it's best to choose {guilabel}`Remove`.
     
-    If no upgrade prompt appears, you are either on the latest version of Ubuntu or upgrades to the newest release have not yet been enabled.
+    Removing the packages usually takes a minute or two.
 
-1. Click {guilabel}`Upgrade`.
-
-1. Follow the on-screen instructions.
-
-From this point on, the upgrade UI will guide you through the process. First you will see a link to the release notes for the target release, detailing the newest features, improvements and known issues.
-
-![|624x489](https://assets.ubuntu.com/v1/6e924165-tutorial4.png)
-
-Click **Upgrade** to continue.
-
-This will take you to an overview window showing you the progress of the upgrade.
-
-![|535x432](https://assets.ubuntu.com/v1/ecbe7f12-tutorial5.png)
-
-As this progresses through the stages you will receive some additional prompts to progress once the upgrade requirements have been gathered.
-
-![|624x413](https://assets.ubuntu.com/v1/b2fb0f68-tutorial6.png)
-
-Click **Start Upgrade** to continue.
-
-To prevent the OS locking during the process, the lock screen will be disabled.
-
-![|624x316](https://assets.ubuntu.com/v1/c94cc6ac-tutorial7.png)
-
-Click **Close** to continue.
-
-Once the newest packages have been installed you’ll be prompted to remove the obsolete packages from the previous Ubuntu release.
-
-![|624x413](https://assets.ubuntu.com/v1/132bf202-tutorial8.png)
-
-You can choose to keep them, but by default it’s okay to click **Remove** to progress.
-
-Despite the warning that removing packages can take several hours, this is extremely unlikely and after a minute or two you will be prompted to restart your system to complete the upgrade.
-
-![|624x367](https://assets.ubuntu.com/v1/745da112-tutorial9.png)
-
-Click **Restart Now** to complete the upgrade
+1. Click {guilabel}`Restart Now` to complete the upgrade.
 :::
 
 :::{tab-item} Command line
