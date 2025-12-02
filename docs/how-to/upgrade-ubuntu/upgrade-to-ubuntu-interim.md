@@ -1,5 +1,5 @@
 ---
-relatedlinks: "[QuestingUpgrades/Kubuntu](https://help.ubuntu.com/community/QuestingUpgrades/Kubuntu), [Upgrading &#32 Lubuntu](https://manual.lubuntu.me/stable/D/upgrading.html), [Upgrading &#32 to &#32 Ubuntu &#32 Studio &#32; 25.10](https://discourse.ubuntu.com/t/ubuntu-studio-25-10-release-notes/53099#p-132280-upgrading-to-ubuntu-studio-2504-5), [Upgrading &#32; to &#32; Xubuntu &#32; 25.10](https://wiki.xubuntu.org/releases/25.10/upgrading)"
+relatedlinks: "[QuestingUpgrades/Kubuntu](https://help.ubuntu.com/community/QuestingUpgrades/Kubuntu), [Upgrading &#32 Lubuntu](https://manual.lubuntu.me/stable/D/upgrading.html), [Upgrading &#32 to &#32 Ubuntu &#32 Studio &#32; 25.10](https://discourse.ubuntu.com/t/ubuntu-studio-25-10-release-notes/53099#p-132280-upgrading-to-ubuntu-studio-2504-5), [Upgrading &#32; to &#32; Xubuntu &#32; 25.10](https://wiki.xubuntu.org/releases/25.10/upgrading), [UpgradeNotes](https://help.ubuntu.com/community/UpgradeNotes)"
 ---
 
 (upgrade-to-ubuntu-interim)=
@@ -195,8 +195,3 @@ If the normal upgrade path isn't available yet and you know what you're doing, y
 :::{warning}
 Upgrading to a development release isn't supported and might break your system.
 :::
-
-
-## See also
-
-- [UpgradeNotes](https://help.ubuntu.com/community/UpgradeNotes) for all supported versions of Ubuntu
