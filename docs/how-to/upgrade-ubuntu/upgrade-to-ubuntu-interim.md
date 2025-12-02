@@ -5,23 +5,23 @@ relatedlinks: "[QuestingUpgrades/Kubuntu](https://help.ubuntu.com/community/Ques
 (upgrade-to-ubuntu-interim)=
 # Upgrade to Ubuntu 25.10
 
-Ubuntu 25.10 ("Questing Quokka") is the latest *interim* release of Ubuntu. Interim releases give you a chance to preview new features and updates ahead of the next Long Term Support (LTS) release. Interim releases are supported for nine months.
+Ubuntu 25.10 ("Questing Quokka") is the latest *interim* release of Ubuntu. Interim releases are supported for nine months. They give you a chance to preview new features and updates ahead of the next Long Term Support (LTS) release.
 
 Long Term Supported releases such as Ubuntu 24.04 LTS are recommended for users looking for a stable environment.
 
-Users on interim releases such as **Ubuntu 21.10** are prompted to upgrade within a few days of the next Ubuntu release becoming available. This prompt may happen automatically, or when checking for new updates.
-
 To learn more about the life cycle of Ubuntu releases, see [The Ubuntu lifecycle and release cadence](https://ubuntu.com/about/release-cycle).
 
+Users on interim releases are prompted to upgrade a few days after the next release becomes available. This prompt might happen automatically, or when checking for new updates.
 
-## Release notes
 
-We recommended that you read the [release notes for Ubuntu 25.10](https://discourse.ubuntu.com/t/questing-quokka-release-notes/59220), which document new features, caveats and workarounds for known issues in this version.
+## Check the release notes
+
+We recommended that you read the [release notes for Ubuntu 25.10](https://discourse.ubuntu.com/t/questing-quokka-release-notes/59220), which describe new features, caveats and workarounds for known issues in this version.
 
 
 ## Back up your data
 
-Ensure that all of your user data has been backed up. Although it's unlikely that data will be lost during the upgrade process, it’s better to be safe than sorry.
+Back up all of your user data to an external storage device. Although it's unlikely that data will be lost during the upgrade process, it's better to be safe than sorry.
 
 
 ## Determine your current release
@@ -54,7 +54,7 @@ Description:	Ubuntu 24.04.3 LTS
 
 You can upgrade to Ubuntu 25.10 from the previous Ubuntu 25.04 interim release, or from the Ubuntu 24.04 LTS release.
 
-If you're running an older Ubuntu release, you must gradually upgrade to Ubuntu 24.04 LTS or 25.04 first before proceeding to Ubuntu 25.10. See [UpgradeNotes](https://help.ubuntu.com/community/UpgradeNotes) for more information.
+If you're running an older Ubuntu release, you must gradually upgrade to Ubuntu 24.04 LTS or 25.04 first before proceeding to Ubuntu 25.10.
 
 
 (switch-to-interim)=
