@@ -136,6 +136,8 @@ Before you start the upgrade, make sure that your current Ubuntu installation is
 
 ## Start the upgrade
 
+Launch the application that upgrades your system:
+
 ::::{tab-set}
 :::{tab-item} Graphical interface
 :sync: gui
@@ -145,46 +147,36 @@ Before you start the upgrade, make sure that your current Ubuntu installation is
 1. The application informs you that a new release is available.
 
     Click {guilabel}`Upgrade`.
-
-    If no upgrade prompt appears, you are either on the latest version of Ubuntu or upgrades to the newest release haven't been enabled yet.
-
-1. The application presents an overview of the upgrade.
-
-    Click {guilabel}`Upgrade` to continue.
-
-1. When all upgrade requirements have been gathered, the application shows an overview of the packages to be installed and removed.
-
-    Click {guilabel}`Start Upgrade` to continue.
-
-1. A pop-up informs you that the screen lock is disabled to prevent your system from locking during the process. Close the dialog.
-
-1. While the upgrade is in progress, you might see visual glitches on your screen, such as changing icons. This is normal. Wait until the process is complete.
-
-1. When new packages have been installed, the application prompts you to remove the obsolete packages from the previous Ubuntu release.
-
-    Unless you have a reason to keep the packages, it's best to choose {guilabel}`Remove`.
-    
-    Removing the packages usually takes a minute or two.
-
-1. Click {guilabel}`Restart Now` to complete the upgrade.
 :::
 
 :::{tab-item} Command line
 :sync: terminal
 
-1. Launch the upgrade tool:
-
-    ```{terminal}
-    :copy:
-    :user:
-    :host:
-    :dir:
-    :input: sudo do-release-upgrade
-    ```
-
-1. Follow the on-screen instructions.
+```{terminal}
+:copy:
+:user:
+:host:
+:dir:
+:input: sudo do-release-upgrade
+```
 :::
 ::::
+
+If no upgrade is available, you're either on the latest version of Ubuntu or upgrades to the newest release haven't been enabled yet.
+
+Follow the application's instructions and confirm the prompts:
+
+1. The application presents an overview of the upgrade.
+
+1. When all upgrade requirements have been gathered, the application shows an overview of the packages to be installed and removed.
+
+1. While the upgrade is in progress, you might see visual glitches on your screen, such as changing icons. This is normal. Wait until the process is complete.
+
+1. When new packages have been installed, the application prompts you to remove the obsolete packages from the previous Ubuntu release.
+
+    Unless you have a reason to keep the packages, it's best to remove them. This usually takes a minute or two.
+
+1. When the upgrade is complete, restart your computer.
 
 
 ## Troubleshooting
