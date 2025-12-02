@@ -9,12 +9,19 @@ Ubuntu 25.10 ("Questing Quokka") is the latest *interim* release of Ubuntu. Inte
 
 Long Term Supported releases such as Ubuntu 24.04 LTS are recommended for users looking for a stable environment.
 
+Users on interim releases such as **Ubuntu 21.10** are prompted to upgrade within a few days of the next Ubuntu release becoming available. This prompt may happen automatically, or when checking for new updates.
+
 To learn more about the life cycle of Ubuntu releases, see [The Ubuntu lifecycle and release cadence](https://ubuntu.com/about/release-cycle).
 
 
 ## Release notes
 
 We recommended that you read the [release notes for Ubuntu 25.10](https://discourse.ubuntu.com/t/questing-quokka-release-notes/59220), which document new features, caveats and workarounds for known issues in this version.
+
+
+## Back up your data
+
+Ensure that all of your user data has been backed up. Although it's unlikely that data will be lost during the upgrade process, it’s better to be safe than sorry.
 
 
 ## Determine your current release
@@ -135,11 +142,51 @@ Before you start the upgrade, make sure that your current Ubuntu installation is
 
 1. Open the Software Updater application.
 
-    It will inform you that a new release is available.
+    ![|504x284](https://assets.ubuntu.com/v1/4161a27c-tutorial2.png)
+    
+1. The application informs you that a new release is available.
+
+    ![|624x205](https://assets.ubuntu.com/v1/a597d39c-tutorial3.png)
+    
+    If no upgrade prompt appears, you are either on the latest version of Ubuntu or upgrades to the newest release have not yet been enabled.
 
 1. Click {guilabel}`Upgrade`.
 
 1. Follow the on-screen instructions.
+
+From this point on, the upgrade UI will guide you through the process. First you will see a link to the release notes for the target release, detailing the newest features, improvements and known issues.
+
+![|624x489](https://assets.ubuntu.com/v1/6e924165-tutorial4.png)
+
+Click **Upgrade** to continue.
+
+This will take you to an overview window showing you the progress of the upgrade.
+
+![|535x432](https://assets.ubuntu.com/v1/ecbe7f12-tutorial5.png)
+
+As this progresses through the stages you will receive some additional prompts to progress once the upgrade requirements have been gathered.
+
+![|624x413](https://assets.ubuntu.com/v1/b2fb0f68-tutorial6.png)
+
+Click **Start Upgrade** to continue.
+
+To prevent the OS locking during the process, the lock screen will be disabled.
+
+![|624x316](https://assets.ubuntu.com/v1/c94cc6ac-tutorial7.png)
+
+Click **Close** to continue.
+
+Once the newest packages have been installed you’ll be prompted to remove the obsolete packages from the previous Ubuntu release.
+
+![|624x413](https://assets.ubuntu.com/v1/132bf202-tutorial8.png)
+
+You can choose to keep them, but by default it’s okay to click **Remove** to progress.
+
+Despite the warning that removing packages can take several hours, this is extremely unlikely and after a minute or two you will be prompted to restart your system to complete the upgrade.
+
+![|624x367](https://assets.ubuntu.com/v1/745da112-tutorial9.png)
+
+Click **Restart Now** to complete the upgrade
 :::
 
 :::{tab-item} Command line

@@ -9,21 +9,15 @@ https://discourse.ubuntu.com/t/upgrade-ubuntu-desktop/14012
 Original author: Oliver Smith <oliversmith@canonical.com>|
 -->
 
-## Before you start
-
-Being able to upgrade Ubuntu from one version to the next is one of Ubuntu's best features. You benefit from getting the latest software, including new security patches, and all the upgraded technology that comes with a new release without having to reinstall and reconfigure your system.
-
-### When can I upgrade?
-
-You can upgrade your Ubuntu installation at different times depending on the current release.
-
-Users on interim releases such as **Ubuntu 21.10** are prompted to upgrade within a few days of the next Ubuntu release becoming available. This prompt may happen automatically, or when checking for new updates.
-
-![|624x264](https://assets.ubuntu.com/v1/92f22162-tutorial1.png)
+You benefit from getting the latest software, including new security patches, and all the upgraded technology that comes with a new release without having to reinstall and reconfigure your system.
 
 Users on a Long Term Supported release such as **Ubuntu 20.04 LTS** will be prompted to upgrade once the first point release of the following LTS is available. For **Ubuntu 22.04 LTS** this prompt will appear once Ubuntu 22.04.1 LTS is available.
 
-### Getting ready to upgrade
+![|624x264](https://assets.ubuntu.com/v1/92f22162-tutorial1.png)
+
+If you are trying to upgrade to an interim release in future (such as the upcoming Ubuntu 22.10). You may need to change your Update settings for the prompt to appear. See ‘Upgrading to interim releases’ at the end of this tutorial.
+
+## Getting ready to upgrade
 
 Before proceeding ensure that your software is up to date by running:
 
@@ -34,25 +28,6 @@ sudo apt upgrade
 
 From your terminal, entering your password and pressing **Y** when prompted.
 
-Also ensure that **all of your user data has been backed up**. Whilst it is unlikely that data will be lost during the upgrade process, it’s better to be safe than sorry.
-
-Ready? Let’s get started!
-
-## Launch the software updater
-
-![|504x284](https://assets.ubuntu.com/v1/4161a27c-tutorial2.png)
-
-You can find the Software Updater in your application menu. This will check for updates and prompt you to upgrade if it finds a more recent Ubuntu release. If no upgrade prompt appears, you are either on the latest version of Ubuntu or upgrades to the newest release have not yet been enabled.
-
-:::{note}
-If you are trying to upgrade to an interim release in future (such as the upcoming Ubuntu 22.10). You may need to change your Update settings for the prompt to appear. See ‘Upgrading to interim releases’ at the end of this tutorial.
-:::
-
-If the Software Updater finds additional updates, install them prior to upgrading and restart your machine if needed.
-
-![|624x205](https://assets.ubuntu.com/v1/a597d39c-tutorial3.png)
-
-Once you have no additional updates to apply. Click **Upgrade…** to proceed.
 
 ## Follow the upgrade flow
 
