@@ -7,6 +7,8 @@ These guides accompany you through the complete Ubuntu Desktop operations lifecy
 :maxdepth: 1
 
 create-a-bootable-usb-stick
+upgrade-ubuntu-desktop
+switch-between-an-lts-and-interim-release
 record-the-screen
 change-the-default-terminal
 log-in-using-a-smart-card
