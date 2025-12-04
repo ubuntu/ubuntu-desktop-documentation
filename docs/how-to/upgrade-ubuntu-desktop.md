@@ -38,7 +38,7 @@ Your Ubuntu installation follows one of these upgrade paths:
 If you want to upgrade from an LTS release to an interim release, see {ref}`switch-between-an-lts-and-interim-release`.
 
 
-## Before you start
+## Prepare for the upgrade
 
 * If you're using a laptop or a mobile device, make sure that it's **plugged into a power source**.
 
@@ -92,7 +92,7 @@ If you want to upgrade from an LTS release to an interim release, see {ref}`swit
     :::
     ::::
 
-## Launch the upgrade
+## Start the upgrade
 
 Start the application that upgrades your system:
 
@@ -136,9 +136,12 @@ Follow the application's instructions and confirm the prompts. The process is in
 
 1. When the upgrade is complete, restart your computer.
 
-The upgrade is complete. Your new, upgraded Ubuntu starts up.
 
-Third-party software repositories and Personal Package Archives (PPAs) were disabled during the release upgrade. Check if you need to re-enable them or find updated versions.
+## Finalize the upgrade
+
+Your new, upgraded Ubuntu starts up. Log in and check that everything works as expected.
+
+Third-party software repositories and Personal Package Archives (PPAs) might have been disabled during the release upgrade. Check if you need to re-enable them or find updated versions. You can do this in the Software & Updates application, on the {guilabel}`Other Software` tab.
 
 
 ## Troubleshooting
