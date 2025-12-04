@@ -78,6 +78,7 @@ This documentation uses the [Diátaxis documentation structure](https://diataxis
 * {ref}`explanation` includes topic overviews, background and context and detailed discussion.
 
 
+(project-and-community)=
 ## Project and community
 
 Ubuntu Desktop is an open source project that warmly welcomes community projects, contributions, suggestions, fixes and constructive feedback.

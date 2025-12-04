@@ -12,7 +12,7 @@ relatedlinks: "[NobleUpgrades/Kubuntu](https://help.ubuntu.com/community/NobleUp
 (upgrade-ubuntu-desktop)=
 # Upgrade Ubuntu Desktop
 
-You can upgrade your Ubuntu installation when a new version comes out.
+You can upgrade your Ubuntu installation when a new version comes out. The upgrade process is interactive and takes up to an hour, depending on your internet connection speed and computer performance.
 
 You benefit from getting the latest software, including new security patches, and all the upgraded technology that comes with a new release without having to reinstall and reconfigure your system.
 
@@ -122,26 +122,30 @@ Start the application that upgrades your system:
 
 If no upgrade is available, you're either on the latest version of Ubuntu or upgrades to the latest release haven't been enabled yet.
 
-Follow the application's instructions and confirm the prompts. The process is interactive:
+The process is interactive. Follow the application's instructions and confirm the prompts:
 
-1. The application presents an overview of the upgrade.
+1. The application presents an **overview** of the upgrade, including a link to the release notes.
 
-1. When all upgrade requirements have been gathered, the application shows an overview of the packages to be installed and removed.
+1. When all upgrade requirements have been gathered, the application shows an overview of the **packages** to be installed and removed.
 
-1. While the upgrade is in progress, you might see visual glitches on your screen, such as changing icons. This is normal. Wait until the process is complete.
+1. If you installed packages from Personal Package Archives (PPAs) or third-party repositories, the **Foreign Packages Installed** prompt opens.
 
-1. When new packages have been installed, the application prompts you to remove the obsolete packages from the previous Ubuntu release.
+    You can try to proceed with the upgrade. If the upgrade fails, remove the packages manually and try the upgrade again. When you log into the upgraded system later, reinstall the third-party packages.
+
+1. While the upgrade is in progress, you might see visual **glitches** on your screen, such as changing icons. This is normal. Wait until the process is complete.
+
+1. When new packages have been installed, the application prompts you to remove the **obsolete packages** from the previous Ubuntu release.
 
     Unless you have a reason to keep the packages, it's best to remove them. This usually takes a minute or two.
 
-1. When the upgrade is complete, restart your computer.
+1. When the upgrade is complete, **restart** your computer.
 
 
 ## Finalize the upgrade
 
 Your new, upgraded Ubuntu starts up. Log in and check that everything works as expected.
 
-Third-party software repositories and Personal Package Archives (PPAs) might have been disabled during the release upgrade. Check if you need to re-enable them or find updated versions. You can do this in the Software & Updates application, on the {guilabel}`Other Software` tab.
+Third-party software repositories and PPAs might have been disabled during the release upgrade. Check if you need to re-enable them or find updated versions. You can do this in the Software & Updates application, on the {guilabel}`Other Software` tab.
 
 
 ## Troubleshooting
@@ -192,8 +196,28 @@ We don't recommend returning to the previous Ubuntu release because it might no 
 
 Instead, browse our [Ubuntu flavors](https://ubuntu.com/desktop/flavors). These are community projects that provide alternative desktop environments and default applications. They might run better on older hardware while still being based on the latest Ubuntu release. However, flavors aren't supported by Canonical.
 
-<!--
 ### The system powered off during the upgrade
 
-TODO
--->
+If  your computer lost power during the upgrade, try to start it again. It might be able to resume the upgrade process. Log in and try to fix any broken packages.
+
+1. Configure unpacked updates:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    :input: sudo dpkg --configure -a
+    ```
+
+1. Fix broken dependencies:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    :input: sudo apt --fix-broken install
+    ```
+
+If you can't log in or the these steps didn't work, it's best to ask for help on the Ubuntu support channels. See {ref}`project-and-community`.
