@@ -192,9 +192,9 @@ If it seems that the new Ubuntu release is much slower than the previous one, ch
 
 You can also {ref}`reinstall Ubuntu <install-ubuntu-desktop>` from scratch to get a clean system.
 
-We don't recommend returning to the previous Ubuntu release because it might no longer receive security updates. Downgrading the system isn't supported.
+You can return to an earlier LTS release by reinstalling Ubuntu. Downgrading the existing system isn't supported. Make sure that the release that you choose still receives security updates.
 
-Instead, browse our [Ubuntu flavors](https://ubuntu.com/desktop/flavors). These are community projects that provide alternative desktop environments and default applications. They might run better on older hardware while still being based on the latest Ubuntu release. However, flavors aren't supported by Canonical.
+Consider [Ubuntu flavors](https://ubuntu.com/desktop/flavors). These are community projects that provide alternative desktop environments and default applications. They might run better on older hardware while still being based on the latest Ubuntu release. However, flavors aren't supported by Canonical.
 
 ### The system powered off during the upgrade
 
