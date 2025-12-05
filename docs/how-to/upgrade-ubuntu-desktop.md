@@ -12,6 +12,16 @@ relatedlinks: "[NobleUpgrades/Kubuntu](https://help.ubuntu.com/community/NobleUp
 (upgrade-ubuntu-desktop)=
 # Upgrade Ubuntu Desktop
 
+<!--
+Originally, this comes from a Tutorial and a Community Help Wiki pages:
+
+https://discourse.ubuntu.com/t/upgrade-ubuntu-desktop/14012
+Author 	Oliver Smith oliversmith@canonical.com
+
+https://help.ubuntu.com/community/QuestingUpgrades/
+https://help.ubuntu.com/community/UpgradeNotes
+-->
+
 You can upgrade your Ubuntu installation when a new version comes out. The upgrade process is interactive and takes up to an hour, depending on your internet connection speed and computer performance.
 
 You benefit from getting the latest software, including new security patches, and all the upgraded technology that comes with a new release without having to reinstall and reconfigure your system.
