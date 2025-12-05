@@ -1,3 +1,6 @@
+```{tags} Accessibility
+```
+
 (accessibility-stack)=
 # Accessibility stack
 
@@ -128,4 +131,3 @@ To be able to work on Desktop, a device must:
 ## See also
 
 * {ref}`troubleshoot-bluetooth`
-

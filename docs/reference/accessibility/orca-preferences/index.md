@@ -1,3 +1,6 @@
+```{tags} Accessibility
+```
+
 (orca-preferences)=
 # Screen reader preferences
 
@@ -95,4 +98,3 @@ Configure how Orca behaves when providing access to instant messaging and intern
 
 orca-preferences-chat
 :::
-

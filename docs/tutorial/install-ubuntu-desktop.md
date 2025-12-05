@@ -2,6 +2,9 @@
 sequential_nav: both
 ---
 
+```{tags} Installation
+```
+
 (install-ubuntu-desktop)=
 # Install Ubuntu Desktop
 

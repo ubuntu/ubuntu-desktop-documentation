@@ -2,6 +2,9 @@
 relatedlinks: "[BitLocker &#32; overview &#32; by &#32; Microsoft](https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/)"
 ---
 
+```{tags} Installation, Security
+```
+
 (bitlocker-during-ubuntu-installation)=
 # BitLocker during Ubuntu installation
 
@@ -47,4 +50,3 @@ If you plan to install Ubuntu side by side with Windows, you need to take into c
 
     If you wish to re-encrypt your Windows partition after installing Ubuntu alongside it, check that your version of Windows supports this.
     :::
-
