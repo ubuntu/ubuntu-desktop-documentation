@@ -395,19 +395,19 @@ You might be tempted to just hit the **Caps Lock** key and use upper case for al
 
 Now that we've got a few files, let's look at the sort of day-to-day tasks you might need to perform on them. In practice you'll still most likely use a graphical program when you want to move, rename or delete one or two files, but knowing how to do this using the command line can be useful for bulk changes, or when the files are spread amongst different folders. Plus, you'll learn a few more things about the command line along the way.
 
-Let's begin by putting our ***combined.txt*** file into our ***dir1*** directory, using the `mv` (**m**o**v**e) command:
+Let's begin by putting our `combined.txt` file into our `dir1` directory, using the `mv` (**m**o**v**e) command:
 
 ```Bash
 mv combined.txt dir1
 ```
 
-You can confirm that the job has been done by using `ls` to see that it's missing from the working directory, then `cd dir1` to change into ***dir1***, `ls` to see that it's in there, then `cd ..` to move the working directory back again. Or you could save a lot of typing by passing a path directly to the `ls` command to get straight to the confirmation you're looking for:
+You can confirm that the job has been done by using `ls` to see that it's missing from the working directory, then `cd dir1` to change into `dir1`, `ls` to see that it's in there, then `cd ..` to move the working directory back again. Or you could save a lot of typing by passing a path directly to the `ls` command to get straight to the confirmation you're looking for:
 
 ```Bash
 ls dir1
 ```
 
-Now suppose it turns out that file shouldn't be in ***dir1*** after all. Let's move it back to the working directory. We could `cd` into ***dir1*** then use `mv combined.txt ..` to say "move ***combined.txt*** into the parent directory". But we can use another path shortcut to avoid changing directory at all. In the same way that two dots (`..`)  represents the parent directory, so a single dot (`.`) can be used to represent the current working directory. Because we know there's only one file in ***dir1*** we can also just use "*" to match any filename in that directory, saving ourselves a few more keystrokes. Our command to move the file back into the working directory therefore becomes this (note the space before the dot, there are ***two*** parameters being passed to `mv`):
+Now suppose it turns out that file shouldn't be in `dir1` after all. Let's move it back to the working directory. We could `cd` into `dir1` then use `mv combined.txt ..` to say "move `combined.txt` into the parent directory". But we can use another path shortcut to avoid changing directory at all. In the same way that two dots (`..`) represents the parent directory, so a single dot (`.`) can be used to represent the current working directory. Because we know there's only one file in `dir1` we can also just use `*` to match any filename in that directory, saving ourselves a few more keystrokes. Our command to move the file back into the working directory therefore becomes this (note the space before the dot, there are ***two*** parameters being passed to `mv`):
 
 ```Bash
 mv dir1/* .
@@ -493,7 +493,7 @@ rmdir folder_*
 
 ![Error when running rmdir on a non-empty directory](upload://thM7IacuM7BrsNe2GGqIPil5nul.png)
 
-Well that's a little better, but there's still an error. If you run `ls` you'll see that most of the folders have gone, but ***folder_6*** is still hanging around. As you may recall, ***folder_6*** still has a ***folder 7*** inside it, and `rmdir` will only delete empty folders. Again, it's a small safety net to prevent you from accidentally deleting a folder full of files when you didn't mean to.
+Well that's a little better, but there's still an error. If you run `ls` you'll see that most of the folders have gone, but `folder_6` is still hanging around. As you may recall, `folder_6` still has a `folder 7` inside it, and `rmdir` will only delete empty folders. Again, it's a small safety net to prevent you from accidentally deleting a folder full of files when you didn't mean to.
 
 In this case, however, we ***do*** mean to. The addition of options to our `rm` or `rmdir` commands will let us perform dangerous actions without the aid of a safety net! In the case of `rmdir` we can add a `-p` switch to tell it to also remove the parent directories. Think of it as the counterpoint to `mkdir -p`. So if you were to run `rmdir -p dir1/dir2/dir3` it would first delete ***dir3***, then ***dir2***, then finally delete ***dir1***. It still follows the normal `rmdir` rules of only deleting empty directories though, so if there was also a file in ***dir1***, for example, only ***dir3*** and ***dir2*** would get removed.
 
@@ -535,7 +535,7 @@ That method works, but creating a temporary file to hold the output from `ls` on
 ls ~ | wc -l
 ```
 
-Notice that there's no temporary file created, and no file name needed. Pipes operate entirely in memory, and most Unix command line tools will expect to receive input from a pipe if you don't specify a file for them to work on. Looking at the line above, you can see that it's two commands, `ls ~` (list the contents of the home directory) and `wc -l` (count the lines), separated by a vertical bar character ("|"). This process of piping one command into another is so commonly used that the character itself is often referred to as the ***pipe*** character, so if you see that term you now know it just means the vertical bar.
+Notice that there's no temporary file created, and no file name needed. Pipes operate entirely in memory, and most Unix command line tools will expect to receive input from a pipe if you don't specify a file for them to work on. Looking at the line above, you can see that it's two commands, `ls ~` (list the contents of the home directory) and `wc -l` (count the lines), separated by a vertical bar character (`|`). This process of piping one command into another is so commonly used that the character itself is often referred to as the ***pipe*** character, so if you see that term you now know it just means the vertical bar.
 
 Note that the spaces around the pipe character aren't important, we've used them for clarity, but the following command works just as well, this time for telling us how many items are in the ***/etc*** directory:
 
