@@ -224,6 +224,9 @@ linkcheck_ignore = [
     "https://github.com/canonical/ACME/*",
     # The link checker tries to treat the part after # as an anchor and fails.
     "https://matrix.to/#/#desktop-dev:ubuntu.com",
+    # Rate-limited domains that cause delays
+    r"http://www\.gnu\.org/software/.*",
+    r"https://github\.com/.*/blob/.*",
 ]
 
 
@@ -232,8 +235,12 @@ linkcheck_ignore = [
 linkcheck_anchors_ignore_for_url = [r"https://github\.com/.*"]
 
 # give linkcheck multiple tries on failure
-# linkcheck_timeout = 30
-linkcheck_retries = 3
+linkcheck_timeout = 15
+linkcheck_retries = 2
+
+# Number of parallel workers for linkcheck (default is 5)
+# Higher values work well for network I/O-bound tasks
+linkcheck_workers = 20
 
 ########################
 # Configuration extras #
