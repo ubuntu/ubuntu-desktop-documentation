@@ -2,6 +2,9 @@
 sequential_nav: both
 ---
 
+```{tags} Accessibility
+```
+
 (get-started-with-the-screen-reader)=
 # Get started with the screen reader
 
@@ -217,4 +220,3 @@ For more guidance, go to the following pages:
 * {ref}`navigate-the-interface-using-the-keyboard`
 * {ref}`keyboard-navigation-shortcuts`
 * {ref}`improve-screen-reader-usability`
-

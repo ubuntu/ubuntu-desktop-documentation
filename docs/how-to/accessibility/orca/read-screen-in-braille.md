@@ -1,3 +1,6 @@
+```{tags} Accessibility
+```
+
 (read-screen-in-braille)=
 # Read the screen in Braille
 

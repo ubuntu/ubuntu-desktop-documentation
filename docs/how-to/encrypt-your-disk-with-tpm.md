@@ -1,3 +1,6 @@
+```{tags} Installation, Security
+```
+
 (encrypt-your-disk-with-tpm)=
 # Encrypt your disk with TPM
 
@@ -119,4 +122,3 @@ If your computer is asking for your recovery key during startup, try undoing any
 1. Try to log in again.
 
 You can also check if the recovery key was automatically stored in the cloud. Recovery keys for the Windows BitLocker encryption may be stored on your Microsoft Account or your organization account. See [Find your BitLocker recovery key](https://support.microsoft.com/en-us/windows/find-your-bitlocker-recovery-key-6b71ad27-0b89-ea08-f143-056f5ab347d6) in the Microsoft Windows documentation.
-
