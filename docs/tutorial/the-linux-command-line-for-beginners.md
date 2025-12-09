@@ -537,7 +537,7 @@ ls ~ | wc -l
 
 Notice that there's no temporary file created, and no file name needed. Pipes operate entirely in memory, and most Unix command line tools will expect to receive input from a pipe if you don't specify a file for them to work on. Looking at the line above, you can see that it's two commands, `ls ~` (list the contents of the home directory) and `wc -l` (count the lines), separated by a vertical bar character (`|`). This process of piping one command into another is so commonly used that the character itself is often referred to as the ***pipe*** character, so if you see that term you now know it just means the vertical bar.
 
-Note that the spaces around the pipe character aren't important, we've used them for clarity, but the following command works just as well, this time for telling us how many items are in the ***/etc*** directory:
+Note that the spaces around the pipe character aren't important, we've used them for clarity, but the following command works just as well, this time for telling us how many items are in the `/etc` directory:
 
 ```Bash
 ls /etc|wc -l
