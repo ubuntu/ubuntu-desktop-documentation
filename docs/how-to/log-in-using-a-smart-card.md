@@ -319,6 +319,7 @@ Certificates can be associated to users using the card certificate subject, so i
 :host:
 :dir:
 openssl x509 -noout -subject -in card-cert.pem | sed "s/, /,/g;s/ = /=/g"
+
 subject=C=IT,O=Some Organization,OU=REGIONE TOSCANA,SN=TREVISAN,GN=MARCO,CN=TRVMRC[...data-removed...]/6090033068507002.UyMnHxfF3gkAeBYHhxa6V1Edazs=
 ```
 
