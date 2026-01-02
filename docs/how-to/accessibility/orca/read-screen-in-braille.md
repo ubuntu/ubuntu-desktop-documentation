@@ -42,7 +42,11 @@ To learn the basic control of the screen reader, go to {ref}`get-started-with-th
     :::{tab-item} Command
     :sync: orca-command
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     orca --setup
     ```
     :::
@@ -129,7 +133,11 @@ If you're reading a document in a language different than your system language, 
 
 1. Browse the available text tables. They're stored in the `/etc/brltty/Text/` directory:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     ls /etc/brltty/Text/
     ```
 
@@ -165,7 +173,11 @@ You can configure how Orca presents information on the Braille display.
     :::{tab-item} Command
     :sync: orca-command
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     orca -s
     ```
     :::
@@ -186,13 +198,21 @@ Orca and Braille support are installed by default on Ubuntu Desktop. If you're u
 
 * Make sure that Orca is installed:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo apt install orca
     ```
 
 * Make sure that the BRLTTY service is installed:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo apt install brltty brltty-espeak
     ```
 
@@ -202,13 +222,21 @@ If your Braille devices isn't detected, make sure that the BRLTTY service is pro
 
 1. Add your user to the `brlapi` group to allow access to the Braille device:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo usermod --append -G brlapi <user-name>
     ```
 
 1. Enable the BRLTTY service:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo systemctl enable --now brltty
     ```
 

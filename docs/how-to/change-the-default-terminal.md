@@ -8,7 +8,11 @@ The default terminal, or terminal emulator, is the application that opens when y
 
 1. Enter the following command in a terminal:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo update-alternatives --config x-terminal-emulator
     ```
 
@@ -63,4 +67,3 @@ Starting with Ubuntu 25.04, the way to set your default terminal has changed. Si
     :::{note}
     If you're not using the standard Ubuntu GNOME desktop, the name of the configuration file is different. For details, see the `xdg-terminal-exec` man page.
     :::
-

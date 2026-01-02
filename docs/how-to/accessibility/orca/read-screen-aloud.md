@@ -65,7 +65,11 @@ The screen reader stays active the next time that you log in.
 
 Orca is installed by default on Ubuntu Desktop. If you're using a custom desktop or package set, Orca might not be installed. Install it using the following command:
 
-```bash
+```{terminal}
+:copy:
+:user:
+:host:
+:dir:
 sudo apt install orca
 ```
 
@@ -76,4 +80,3 @@ The Orca screen reader recognizes many keyboard commands to navigate the user in
 
 * {ref}`navigate-the-screen-using-the-screen-reader`
 * {ref}`read-documents-and-web-pages-using-the-screen-reader`
-

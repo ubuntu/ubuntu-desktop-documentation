@@ -39,13 +39,21 @@ If instead you want to use your smart card to **log in and authenticate the user
 
     * For Firefox:
 
-        ```bash
+        ```{terminal}
+        :copy:
+        :user:
+        :host:
+        :dir:
         cp /usr/lib/libbit4xpki.so ~/snap/firefox/common/
         ```
 
     * For Chromium:
 
-        ```bash
+        ```{terminal}
+        :copy:
+        :user:
+        :host:
+        :dir:
         cp /usr/lib/libbit4xpki.so ~/snap/chromium/common/
         ```
 
@@ -61,7 +69,11 @@ Enable smart card access in the Firefox snap. You can choose the graphical or te
 
 * In the terminal, enter the following command:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo snap connect firefox:pcscd
     ```
 
@@ -75,7 +87,7 @@ Load the smart card module in Firefox:
 
     * If your card is supported by OpenSC:
 
-        ```bash
+        ```text
         /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so
         ```
 
@@ -107,7 +119,11 @@ Enable smart card access in the Chromium snap. You can choose the graphical or t
 
 * In the terminal, enter the following command:
 
-    ```
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo snap connect chromium:pcscd
     ```
 
@@ -115,7 +131,11 @@ Load the smart card module in Chromium:
 
 1. Install the `modutil` tool:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo apt install libnss3-tools
     ```
 
@@ -123,7 +143,11 @@ Load the smart card module in Chromium:
 
     * If your card is supported by OpenSC:
 
-        ```bash
+        ```{terminal}
+        :copy:
+        :user:
+        :host:
+        :dir:
         modutil -dbdir sql:.pki/nssdb/ -add "OpenSC" -libfile /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so
         ```
 
@@ -131,7 +155,11 @@ Load the smart card module in Chromium:
 
     * If you provided a proprietary smart card driver:
 
-        ```bash
+        ```{terminal}
+        :copy:
+        :user:
+        :host:
+        :dir:
         modutil -dbdir sql:.pki/nssdb/ -add "Bit4id" -libfile /home/MY_USER_NAME/snap/chromium/common/libbit4xpki.so
         ```
 
@@ -151,7 +179,11 @@ Did it work? If not:
 
     Your driver might depend on missing libraries. See the full list of dependencies and attach them to your bug report:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     snap run --shell firefox -c ldd ~/snap/firefox/common/libbit4xpki.so
     ```
 
@@ -162,4 +194,3 @@ Did it work? If not:
 ### Additional resources
 
 This tutorial connects the `pcscd` smart card plug to the web browser snap. For details about `pcscd`, see [The `pcscd` interface](https://snapcraft.io/docs/pcscd-interface).
-
