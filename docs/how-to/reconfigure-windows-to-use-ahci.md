@@ -172,9 +172,9 @@ The Windows command prompt opens. Here, you can run commands to diagnose and rep
 
 1. If the previous command completes successfully, exit the command prompt, the Windows recovery console will restart, and Windows should load normally, with the controller mode set to AHCI.
 
-    If Windows does not start correctly, you can then manually recreate the bootloader file.
+    If Windows does not start correctly, you can then manually recreate the boot loader file.
 
-### Recreating the bootloader file
+### Recreating the boot loader file
 
 To this end, you need to access either the System partition or the EFI partition on your computer. The Windows disk layout typically includes one of these two configurations:
 

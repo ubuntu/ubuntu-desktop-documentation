@@ -65,7 +65,7 @@ path
 
 for the application\'s\' root object.
 
-Unregisters an application from the accesibility registry. It is not
+Unregisters an application from the accessibility registry. It is not
 necessary to call this method; the accessibility registry detects when
 an application disconnects from the bus.
 
@@ -85,7 +85,7 @@ plug
     )
 
 The accessibility registry emits this signal early during startup, when
-it has registered with the DBus daemon and is available for calls from
+it has registered with the D-Bus daemon and is available for calls from
 applications.
 
 socket

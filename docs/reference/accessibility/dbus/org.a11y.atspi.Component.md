@@ -69,7 +69,7 @@ The `coord_type` values are as follows, and correspond to AtkCoordType:
 to the component\'s toplevel window. 2 - Coordinates are relative to the
 component\'s immediate parent.
 
-Returns: A DBus name and object reference (so) for the sought object, or
+Returns: A D-Bus name and object reference (so) for the sought object, or
 a null object reference \"/org/a11y/atspi/null\" if there is no object
 at the specified coordinates.
 

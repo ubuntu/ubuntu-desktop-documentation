@@ -3,7 +3,7 @@
 ## Description
 
 
-Interface to access objects in bulk. It provides local acccess to previously fetched objects and helps improve performance by reducing round-trip calls.
+Interface to access objects in bulk. It provides local access to previously fetched objects and helps improve performance by reducing round-trip calls.
 
 Assistive technology should do a bulk query of all the objects in a new window with the `GetItems` method, and then update them dynamically with the `AddAccessible` and `RemoveAccessible` signals.
 
@@ -14,7 +14,7 @@ Original description:
 The application should expose this interface at the
 /org/a11y/atspi/cache object path.
 
-The `org.a11y.atspi.Accessible` interface has method to transfer an object\'s DBus id. The
+The `org.a11y.atspi.Accessible` interface has method to transfer an object\'s D-Bus id. The
 caller has to then query the object\'s properties individually.
 Transferring objects one by one and then their properties produces a lot
 of traffic in the accessibility bus.
@@ -43,15 +43,15 @@ Returns a list of cached accessible objects as an array with one element for eac
 
 Each element in the array contains the following fields:
 
--   (so): accessible object reference - DBus name and object path. The
+-   (so): accessible object reference - D-Bus name and object path. The
     rest of the fields refer to this main object.
 
--   (so): application reference - DBus name and object path. This is the
+-   (so): application reference - D-Bus name and object path. This is the
     owner of the main object; the root path of the application that
     registered via the Embed method of the org.a11y.atspi.Socket
     interface.
 
--   (so): parent object reference - DBus name and object path.
+-   (so): parent object reference - D-Bus name and object path.
 
     :   If the main object has no parent:
 

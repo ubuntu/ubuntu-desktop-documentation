@@ -25,7 +25,7 @@ Enable support via `liblouis`.  Choose the desired translation table.
 
 ## Abbreviated role names
 
-For example, "slider" equals to "sldr".  
+For example, "slider" equals to `sldr`.  
 
 **Default value:** Not checked
 

@@ -111,11 +111,11 @@ To be able to work on Ubuntu properly, a USB device must:
 * provide a proper USB descriptor so that Ubuntu can identify it
 * not require proprietary drivers
 
-If the device uses a custom class, it must provide a `udev` `.rules` file instead so that Ubuntu can identify it correctly. See [udev documentation](https://www.man7.org/linux/man-pages/man7/udev.7.html) 
+If the device uses a custom class, it must provide a `udev` `.rules` file instead so that Ubuntu can identify it correctly. See [`udev` documentation](https://www.man7.org/linux/man-pages/man7/udev.7.html) 
 
 ### Bluetooth 
 
-While the Ubuntu Desktop team works continuously to enhance the Bluetooth experience, the Bluetooth stack involves a complex interplay of multiple components such as firmware, kernel modules, drivers, and userspace applications. This complex set of dependencies makes it difficult to guarantee consistent compatibility with all Bluetooth devices. For an in-depth explanation of Ubuntu's hardware architecture, see {ref}`hardware-stack`.
+While the Ubuntu Desktop team works continuously to enhance the Bluetooth experience, the Bluetooth stack involves a complex interplay of multiple components such as firmware, kernel modules, drivers, and user-space applications. This complex set of dependencies makes it difficult to guarantee consistent compatibility with all Bluetooth devices. For an in-depth explanation of Ubuntu's hardware architecture, see {ref}`hardware-stack`.
 
 Ubuntu uses BlueZ as its core Bluetooth stack. 
 
