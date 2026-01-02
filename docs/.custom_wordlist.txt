@@ -28,6 +28,7 @@ freefont
 FreeIPA
 github
 GDM
+GitHub
 GPG
 GSettings
 gyre
@@ -51,6 +52,7 @@ Orca
 otf
 PageDown
 PageUp
+PDF
 PEM
 photophobia
 plantuml
@@ -77,6 +79,7 @@ touchpad
 txt
 uncomment
 uncommenting
+URL
 utils
 VMs
 WCAG
@@ -91,4 +94,5 @@ XDG
 xetex
 xindy
 YubiKey
+YouTube
 
