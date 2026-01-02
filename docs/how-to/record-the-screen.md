@@ -31,11 +31,14 @@ By default, your screen recording relies on your CPU. This might cause skipped f
 
 * On any Ubuntu release that's already installed and running, install packages that provide hardware acceleration:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo apt install gstreamer1.0-plugins-bad
     ```
 
 :::{note}
 Certain GPU models and drivers don't support VA-API. With these, screen recording will still rely on the CPU even after installing the extra packages.
 :::
-
