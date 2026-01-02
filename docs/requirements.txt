@@ -3,3 +3,34 @@ sphinxcontrib-svg2pdfconverter[CairoSVG]
 sphinx-last-updated-by-git
 sphinx-sitemap
 packaging
+
+sphinxext-opengraph
+sphinx-config-options>=0.1.0
+sphinx-tabs
+sphinx-related-links>=0.1.1
+myst-parser
+vale
+sphinx-reredirects
+sphinx-design
+sphinx-terminal>=1.0.2
+sphinx-roles>=0.1.0
+
+# Extensions previously auto-loaded by canonical-sphinx
+sphinx-autobuild
+sphinx-ubuntu-images>=0.1.0
+
+# Canonical theme (still needed for Furo theme and custom templates)
+
+# Extra extensions, previously bundled as canonical-sphinx-extensions
+sphinx-filtered-toctree>=0.1.0
+sphinx-youtube-links>=0.1.0
+canonical-sphinx>=0.5.1
+
+# Other dependencies
+sphinx-contributor-listing>=0.1.0
+sphinxcontrib-jquery
+rst2html
+sphinx-notfound-page
+
+# Vale dependencies
+
