@@ -1,3 +1,6 @@
+```{tags} Customization
+```
+
 (change-the-default-terminal)=
 # Change the default terminal
 

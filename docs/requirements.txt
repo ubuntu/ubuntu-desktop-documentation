@@ -30,3 +30,6 @@ sphinx-sitemap
 # Vale dependencies
 rst2html
 vale
+
+# Enable Sphinx Tags
+sphinx-tags

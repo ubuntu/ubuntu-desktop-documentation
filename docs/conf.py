@@ -301,6 +301,7 @@ extensions = [
     "sphinx_last_updated_by_git",
     "sphinx.ext.intersphinx",
     "sphinx_sitemap",
+    "sphinx_tags",
 ]
 
 # Excludes files or directories from processing
@@ -382,3 +383,17 @@ intersphinx_mapping = {
     'server': ('https://documentation.ubuntu.com/server/', None),
     'security': ('https://documentation.ubuntu.com/security/', None),
 }
+
+# Turn on and configure tags.
+# Documentation: https://sphinx-tags.readthedocs.io/
+tags_create_tags = True
+tags_extension = ["md", "rst"]
+tags_intro_text = "Topics:"
+tags_page_title = "Topic"
+tags_page_header = "With this topic"
+tags_index_head = "Topics"
+tags_overview_title = "Topics"
+tags_create_badges = True
+# tags_badge_colors = {
+#    "*": "light",  # Used as a default value
+# }

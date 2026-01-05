@@ -1,3 +1,6 @@
+```{tags} Accessibility
+```
+
 (read-screen-aloud)=
 # Read the screen aloud
 

@@ -1,3 +1,6 @@
+```{tags} Installation
+```
+
 (create-a-bootable-usb-stick)=
 # Create a bootable USB stick
 

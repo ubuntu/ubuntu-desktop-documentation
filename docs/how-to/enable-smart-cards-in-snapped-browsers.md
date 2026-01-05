@@ -1,3 +1,6 @@
+```{tags} Security
+```
+
 (enable-smart-cards-in-snapped-browsers)=
 # Enable smart cards in snapped browsers
 

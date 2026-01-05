@@ -1,3 +1,6 @@
+```{tags} Accessibility
+```
+
 (add-dictionary-entries)=
 # Add, edit, or remove dictionary entries
 

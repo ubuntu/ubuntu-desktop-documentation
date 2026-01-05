@@ -2,6 +2,9 @@
 sequential_nav: both
 ---
 
+```{tags} Introduction
+```
+
 (try-ubuntu-desktop)=
 # Try Ubuntu Desktop
 

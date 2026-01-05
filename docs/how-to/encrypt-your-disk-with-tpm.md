@@ -1,3 +1,6 @@
+```{tags} Installation, Security
+```
+
 (encrypt-your-disk-with-tpm)=
 # Encrypt your disk with TPM
 
