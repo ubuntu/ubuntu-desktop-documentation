@@ -366,7 +366,7 @@ tags_page_title = "Topic"
 tags_page_header = "With this topic"
 tags_index_head = "Topics"
 tags_overview_title = "Topics"
-# tags_create_badges = False
+tags_create_badges = True
 # tags_badge_colors = {
 #    "*": "light",  # Used as a default value
 # }

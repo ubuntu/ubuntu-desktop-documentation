@@ -13,7 +13,6 @@ The Ubuntu Desktop guide is under construction. The current state is a preview. 
 :::
 
 :::{toctree}
-:caption: Content by Diátaxis
 :hidden:
 :maxdepth: 2
 
@@ -23,6 +22,7 @@ Reference </reference/index>
 Explanation </explanation/index>
 :::
 
+<!--
 :::{toctree}
 :caption: Content by topics
 :hidden:
@@ -30,6 +30,7 @@ Explanation </explanation/index>
 :titlesonly:
 _tags/tagsindex
 :::
+-->
 
 
 ## In this documentation
