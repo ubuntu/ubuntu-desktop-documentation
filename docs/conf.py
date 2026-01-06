@@ -1,5 +1,6 @@
 import datetime
 import os
+
 import yaml
 
 # Configuration for the Sphinx documentation builder.
@@ -134,11 +135,9 @@ html_context = {
     # Docs branch in the repo; used in links for viewing the source files
     #
     # TODO: To customise the branch, uncomment and update as needed.
-    'repo_default_branch': 'main',
+    "repo_default_branch": "main",
     # Docs location in the repo; used in links for viewing the source files
     #
-
-
     # TODO: To customise the directory, uncomment and update as needed.
     "repo_folder": "/docs/",
     # TODO: To enable or disable the Previous / Next buttons at the bottom of pages
@@ -146,9 +145,8 @@ html_context = {
     # "sequential_nav": "both",
     # TODO: To enable listing contributors on individual pages, set to True
     "display_contributors": False,
-
-    # Required for feedback button    
-    'github_issues': 'enabled',
+    # Required for feedback button
+    "github_issues": "enabled",
 }
 
 html_extra_path = []
@@ -166,7 +164,7 @@ if os.getenv("OPENAPI", ""):
 # - https://git.launchpad.net/example
 #
 html_theme_options = {
-    'source_edit_link': 'https://github.com/ubuntu/ubuntu-desktop-documentation',
+    "source_edit_link": "https://github.com/ubuntu/ubuntu-desktop-documentation",
 }
 
 # Project slug; see https://meta.discourse.org/t/what-is-category-slug/87897
@@ -187,7 +185,7 @@ html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "/")
 # sphinx-sitemap uses html_baseurl to generate the full URL for each page:
 
 # sitemap_url_scheme = '{link}'
-sitemap_url_scheme = '{lang}{version}{link}'
+sitemap_url_scheme = "{lang}{version}{link}"
 
 # Include `lastmod` dates in the sitemap:
 
@@ -196,9 +194,9 @@ sitemap_show_lastmod = True
 # Exclude generated pages from the sitemap:
 
 sitemap_excludes = [
-    '404/',
-    'genindex/',
-    'search/',
+    "404/",
+    "genindex/",
+    "search/",
 ]
 
 # TODO: Add more pages to sitemap_excludes if needed. Wildcards are supported.
@@ -208,8 +206,8 @@ sitemap_excludes = [
 # Template and asset locations
 #######################
 
-#html_static_path = ["_static"]
-#templates_path = ["_templates"]
+# html_static_path = ["_static"]
+# templates_path = ["_templates"]
 
 
 #############
@@ -369,19 +367,19 @@ if "discourse_prefix" not in html_context and "discourse" in html_context:
 
 # Workaround for substitutions.yaml
 
-if os.path.exists('./reuse/substitutions.yaml'):
-    with open('./reuse/substitutions.yaml', 'r') as fd:
+if os.path.exists("./reuse/substitutions.yaml"):
+    with open("./reuse/substitutions.yaml", "r") as fd:
         myst_substitutions = yaml.safe_load(fd.read())
 
 # Add configuration for intersphinx mapping
 
 intersphinx_mapping = {
-    'starter-pack': (
-        'https://canonical-example-product-documentation.readthedocs-hosted.com/en/latest',
+    "starter-pack": (
+        "https://canonical-example-product-documentation.readthedocs-hosted.com/en/latest",
         None,
     ),
-    'server': ('https://documentation.ubuntu.com/server/', None),
-    'security': ('https://documentation.ubuntu.com/security/', None),
+    "server": ("https://documentation.ubuntu.com/server/", None),
+    "security": ("https://documentation.ubuntu.com/security/", None),
 }
 
 # Turn on and configure tags.
