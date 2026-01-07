@@ -1,3 +1,6 @@
+```{tags} Accessibility
+```
+
 (click-and-move-the-mouse-pointer-using-the-keypad)=
 # Click and move the mouse pointer using the keypad
 
@@ -57,4 +60,3 @@ If you want to use the keypad to type numbers while mouse keys is enabled, turn 
 :::{note}
 The normal number keys, in a line at the top of the keyboard, will not control the mouse pointer. Only the keypad number keys can be used.
 :::
-

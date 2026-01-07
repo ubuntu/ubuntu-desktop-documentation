@@ -1,3 +1,6 @@
+```{tags} Accessibility, Customization
+```
+
 (adjust-the-double-click-speed)=
 # Adjust the double-click speed
 
@@ -13,4 +16,3 @@ If your mouse double-clicks when you want it to single-click even though you hav
 :::{note}
 This setting will affect both your mouse and touchpad, as well as any other pointing device.
 :::
-

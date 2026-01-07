@@ -1,3 +1,6 @@
+```{tags} Accessibility
+```
+
 (change-text-size-on-the-screen)=
 # Change text size on the screen
 
@@ -15,4 +18,3 @@ Large Text scales the text by 1.2 times. You can use Tweaks to make text size bi
 :::{tip}
 In many applications, you can increase the text size at any time by pressing {kbd}`Ctrl++`. To reduce the text size, press {kbd}`Ctrl+-`.
 :::
-

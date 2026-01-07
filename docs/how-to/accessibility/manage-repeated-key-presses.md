@@ -1,3 +1,6 @@
+```{tags} Accessibility
+```
+
 (manage-repeated-key-presses)=
 # Manage repeated key presses
 
@@ -8,4 +11,3 @@ By default, when you hold down a key on your keyboard, the letter or symbol will
 3. Open the {guilabel}`Typing` section.
 4. In the {guilabel}`Typing Assist` section, enable the {guilabel}`Repeat Keys` option.
 5. Alternatively, adjust the {guilabel}`Delay` slider to control how long you have to hold a key down to begin repeating it, and adjust the {guilabel}`Speed` slider to control how quickly key presses repeat.
-

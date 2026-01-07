@@ -2,7 +2,7 @@
 relatedlinks: "[BCDBoot &#32 Command-Line &#32 Options](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/bcdboot-command-line-options-techref-di)"
 ---
 
-```{tags} Installation
+```{tags} Installation, Windows
 ```
 
 (reconfigure-windows-to-use-ahci)=

@@ -1,3 +1,6 @@
+```{tags} Keyboard
+```
+
 (keyboard-navigation-shortcuts)=
 # Keyboard navigation shortcuts
 
@@ -146,4 +149,3 @@ If you cannot use a pointing device like a mouse, you can control the mouse poin
 * - {kbd}`Alt+Space`
   - Pop up the window menu, as if you had right-clicked on the title bar.
 :::
-

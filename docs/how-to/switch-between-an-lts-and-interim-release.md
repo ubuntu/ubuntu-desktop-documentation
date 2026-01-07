@@ -1,3 +1,6 @@
+```{tags} Updates, Support
+```
+
 (switch-between-an-lts-and-interim-release)=
 # Switch between an LTS and interim release
 

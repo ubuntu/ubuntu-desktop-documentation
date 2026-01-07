@@ -9,6 +9,9 @@ relatedlinks: "[NobleUpgrades/Kubuntu](https://help.ubuntu.com/community/NobleUp
   [UpgradeNotes](https://help.ubuntu.com/community/UpgradeNotes)"
 ---
 
+```{tags} Updates
+```
+
 (upgrade-ubuntu-desktop)=
 # Upgrade Ubuntu Desktop
 
