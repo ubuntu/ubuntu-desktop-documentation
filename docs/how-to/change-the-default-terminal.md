@@ -17,13 +17,7 @@ The default terminal, or terminal emulator, is the application that opens when y
     :host:
     :dir:
     sudo update-alternatives --config x-terminal-emulator
-    ```
-
-    It lists the terminal emulators that are available on your system. The current default is marked with an asterisk (`*`).
-
-    For example:
-
-    ```text
+  
     There are 2 choices for the alternative x-terminal-emulator (providing /usr/bin/x-terminal-emulator).
 
       Selection    Path                             Priority   Status
@@ -34,6 +28,8 @@ The default terminal, or terminal emulator, is the application that opens when y
 
     Press <enter> to keep the current choice[*], or type selection number:
     ```
+
+    It lists the terminal emulators that are available on your system. The current default is marked with an asterisk (`*`).
 
 2. Type the number of your selected terminal and confirm with {kbd}`Enter`.
 
