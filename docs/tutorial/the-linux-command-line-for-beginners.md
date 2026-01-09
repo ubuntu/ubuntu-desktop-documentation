@@ -31,7 +31,7 @@ This tutorial will teach you a little of the history of the command line, then w
 
 * A computer running Ubuntu or some other version of Linux
 
-Every Linux system includes a command line of one sort or another. This tutorial includes some specific steps for Ubuntu 18.04 but most of the content should work regardless of your Linux distribution.
+    Every Linux system includes a command line of one sort or another. This tutorial includes some specific steps for Ubuntu 18.04 but most of the content should work regardless of your Linux distribution.
 
 
 ## A brief history lesson
@@ -49,9 +49,9 @@ Linux is a sort-of-descendant of Unix. The core part of Linux is designed to beh
 
 ## Opening a terminal
 
-On a Ubuntu 18.04 system you can find a launcher for the terminal by clicking on the *Activities* item at the top left of the screen, then typing the first few letters of "terminal", "command", "prompt" or "shell". Yes, the developers have set up the launcher with all the most common synonyms, so you should have no problems finding it.
+On an Ubuntu 24.04 system, you can find a launcher for the terminal by clicking on the activities button in the upper left corner of the screen, then typing the first few letters of "terminal", "command", "prompt" or "shell". Yes, the developers have set up the launcher with all the most common synonyms, so you should have no problems finding it.
 
-![Terminal launcher in Ubuntu 18.04](upload://j6vlVAZAHi6Gtj1j6uthJqBTyss.png)
+![Terminal launcher in Ubuntu 24.04](/images/gnome-terminal-24-04-launch.png)
 
 Other versions of Linux, or other flavors of Ubuntu, will usually have a terminal launcher located in the same place as your other application launchers. It might be hidden away in a submenu or you might have to search for it from within your launcher, but it's likely to be there somewhere.
 
@@ -59,17 +59,22 @@ If you can't find a launcher, or if you just want a faster way to bring up the t
 
 However you launch your terminal, you should end up with a rather dull looking window with an odd bit of text at the top, much like the image below. Depending on your Linux system the colors may not be the same, and the text will likely say something different, but the general layout of a window with a large (mostly empty) text area should be similar.
 
-![A new terminal window in Ubuntu 18.04](upload://qBxktqQUDUkpjDRc1T1JUNrAjbs.png)
+![A new terminal window in Ubuntu 24.04](/images/gnome-terminal-24-04.png)
 
-Let's run our first command. Click the mouse into the window to make sure that's where your keystrokes will go, then type the following command, *all in lower case*, before pressing the {kbd}`Enter` or {kbd}`Return` key to run it.
+Let's run our first command. Click the mouse into the window to make sure that's where your keystrokes will go, then type the `pwd` command, *all in lower case*, after the existing text. Press the {kbd}`Enter` or {kbd}`Return` key to run it.
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: ~
+
 pwd
 ```
 
 You should see a directory path printed out (probably something like `/home/YOUR_USERNAME`), then another copy of that odd bit of text.
 
-![Result of running the pwd command](upload://bWmIptOo8RRIwQ90x1GlNouwF7s.png)
+![Result of running the pwd command](/images/gnome-terminal-24-04-pwd.png)
 
 There are a couple of basics to understand here, before we get into the detail of what the command actually did. First is that when you type a command it appears on the same line as the odd text. That text is there to tell you the computer is ready to accept a command, it's the computer's way of prompting you. In fact it's usually referred to as the **prompt**, and you might sometimes see instructions that say "bring up a prompt", "open a command prompt", "at the bash prompt" or similar. They're all just different ways of asking you to open a terminal to get to a shell.
 
@@ -91,9 +96,21 @@ One important concept to understand is that the shell has a notion of a default 
 
 You can change the working directory using the `cd` command, an abbreviation for '**c**hange **d**irectory'. Try typing the following:
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: ~
 cd /
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /
 pwd
+
+/
 ```
 
 :::{note}
@@ -105,45 +122,122 @@ Now your working directory is `/`. If you're coming from a Windows background yo
 :::{admonition} Too many roots
 :class: warning
 
-Although the `/` directory is sometimes referred to as the *root* directory, the word "root" has another meaning. *root* is also the name that has been used for the superuser since the early days of Unix. The superuser, as the name suggests, has more powers than a normal user, so can easily wreak havoc with a badly typed command. We'll look at the superuser account more in {ref}`the-command-line-and-the-superuser`. For now you only have to know that the word "root" has multiple meanings in the Linux world, so context is important.
+Although the `/` directory is sometimes referred to as the *root* directory, the word "root" has another meaning. *root* is also the name that has been used for the superuser since the early days of Unix.
+
+The superuser, as the name suggests, has more powers than a normal user, so can easily wreak havoc with a badly typed command. We'll look at the superuser account more in {ref}`the-command-line-and-the-superuser`.
+
+For now you only have to know that the word "root" has multiple meanings in the Linux world, so context is important.
 :::
 
 From the root directory, the following command will move you into the "home" directory (which is an immediate subdirectory of `/`):
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /
 cd home
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /home
 pwd
+
+/home
 ```
 
-To go up to the parent directory, in this case back to `/`, use the special syntax of two dots (`..`) when changing directory (note the space between `cd` and `..`, unlike in DOS you can't just type `cd..` as one command):
+To go up to the parent directory, in this case back to `/`, use the special syntax of two dots (`..`) when changing directory. Note the space between `cd` and `..`: unlike in DOS, you can't just type `cd..` as one command.
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /home
 cd ..
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /
 pwd
+
+/
 ```
 
 Typing `cd` on its own is a quick shortcut to get back to your home directory:
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /
 cd
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: ~
 pwd
+
+/home/user
 ```
 
 You can also use `..` more than once if you have to move up through multiple levels of parent directories:
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: ~
 cd ../..
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /
 pwd
+
+/
 ```
 
 Notice that in the previous example we described a route to take through the directories. The path we used means "starting from the working directory, move to the parent, and from that new location, move to the parent again". So if we wanted to go straight from our home directory to the `etc` directory (which is directly inside the root of the file system), we could use this approach:
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /
 cd
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: ~
 pwd
 
+/home/user
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: ~
 cd ../../etc
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /etc
 pwd
+
+/etc
 ```
 
 ### Relative and absolute paths
