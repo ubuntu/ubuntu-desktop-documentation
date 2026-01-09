@@ -36,7 +36,7 @@ Every Linux system includes a command line of one sort or another. This tutorial
 
 ## A brief history lesson
 
-During the formative years of the computer industry, one of the early operating systems was called Unix. It was designed to run as a multi-user system on mainframe computers, with users connecting to it remotely via individual ***terminals***. These terminals were pretty basic by modern standards: just a keyboard and screen, with no power to run programs locally. Instead they would just send keystrokes to the server and display any data they received on the screen. There was no mouse, no fancy graphics, not even any choice of color. Everything was sent as text, and received as text. Obviously, therefore, any programs that ran on the mainframe had to produce text as an output and accept text as an input.
+During the formative years of the computer industry, one of the early operating systems was called Unix. It was designed to run as a multi-user system on mainframe computers, with users connecting to it remotely via individual **terminals**. These terminals were pretty basic by modern standards: just a keyboard and screen, with no power to run programs locally. Instead they would just send keystrokes to the server and display any data they received on the screen. There was no mouse, no fancy graphics, not even any choice of color. Everything was sent as text, and received as text. Obviously, therefore, any programs that ran on the mainframe had to produce text as an output and accept text as an input.
 
 Compared with graphics, text is very light on resources. Even on machines from the 1970s, running hundreds of terminals across glacially slow network connections (by today's standards), users were still able to interact with programs quickly and efficiently. The commands were also kept very terse to reduce the number of keystrokes needed, speeding up people's use of the terminal even more. This speed and efficiency is one reason why this text interface is still widely used today.
 
@@ -44,12 +44,12 @@ When logged into a Unix mainframe via a terminal users still had to manage the s
 
 Each of these tasks required its own program or command: one to change directories (`cd`), another to list their contents (`ls`), a third to rename or move files (`mv`), and so on. In order to coordinate the execution of each of these programs, the user would connect to one single master program that could then be used to launch any of the others. By wrapping the user's commands this "shell" program, as it was known, could provide common capabilities to any of them, such as the ability to pass data from one command straight into another, or to use special wildcard characters to work with lots of similarly named files at once. Users could even write simple code (called "shell scripts") which could be used to automate long series of shell commands in order to make complex tasks easier. The original Unix shell program was just called `sh`, but it has been extended and superseded over the years, so on a modern Linux system you're most likely to be using a shell called `bash`. Don't worry too much about which shell you have, all the content in this tutorial will work on just about all of them.
 
-Linux is a sort-of-descendent of Unix. The core part of Linux is designed to behave similarly to a Unix system, such that most of the old shells and other text-based programs run on it quite happily. In theory you could even hook up one of those old 1970s terminals to a modern Linux box, and access the shell through that. But these days it's far more common to use a software terminal: that same old Unix-style text interface, but running in a window alongside your graphical programs. Let's see how you can do that yourself!
+Linux is a sort-of-descendant of Unix. The core part of Linux is designed to behave similarly to a Unix system, such that most of the old shells and other text-based programs run on it quite happily. In theory you could even hook up one of those old 1970s terminals to a modern Linux box, and access the shell through that. But these days it's far more common to use a software terminal: that same old Unix-style text interface, but running in a window alongside your graphical programs. Let's see how you can do that yourself!
 
 
 ## Opening a terminal
 
-On a Ubuntu 18.04 system you can find a launcher for the terminal by clicking on the **Activities** item at the top left of the screen, then typing the first few letters of "terminal", "command", "prompt" or "shell". Yes, the developers have set up the launcher with all the most common synonyms, so you should have no problems finding it.
+On a Ubuntu 18.04 system you can find a launcher for the terminal by clicking on the *Activities* item at the top left of the screen, then typing the first few letters of "terminal", "command", "prompt" or "shell". Yes, the developers have set up the launcher with all the most common synonyms, so you should have no problems finding it.
 
 ![Terminal launcher in Ubuntu 18.04](upload://j6vlVAZAHi6Gtj1j6uthJqBTyss.png)
 
@@ -61,7 +61,7 @@ However you launch your terminal, you should end up with a rather dull looking w
 
 ![A new terminal window in Ubuntu 18.04](upload://qBxktqQUDUkpjDRc1T1JUNrAjbs.png)
 
-Let's run our first command. Click the mouse into the window to make sure that's where your keystrokes will go, then type the following command, ***all in lower case***, before pressing the {kbd}`Enter` or {kbd}`Return` key to run it.
+Let's run our first command. Click the mouse into the window to make sure that's where your keystrokes will go, then type the following command, *all in lower case*, before pressing the {kbd}`Enter` or {kbd}`Return` key to run it.
 
 ```Bash
 pwd
@@ -71,7 +71,7 @@ You should see a directory path printed out (probably something like `/home/YOUR
 
 ![Result of running the pwd command](upload://bWmIptOo8RRIwQ90x1GlNouwF7s.png)
 
-There are a couple of basics to understand here, before we get into the detail of what the command actually did. First is that when you type a command it appears on the same line as the odd text. That text is there to tell you the computer is ready to accept a command, it's the computer's way of prompting you. In fact it's usually referred to as the ***prompt***, and you might sometimes see instructions that say "bring up a prompt", "open a command prompt", "at the bash prompt" or similar. They're all just different ways of asking you to open a terminal to get to a shell.
+There are a couple of basics to understand here, before we get into the detail of what the command actually did. First is that when you type a command it appears on the same line as the odd text. That text is there to tell you the computer is ready to accept a command, it's the computer's way of prompting you. In fact it's usually referred to as the **prompt**, and you might sometimes see instructions that say "bring up a prompt", "open a command prompt", "at the bash prompt" or similar. They're all just different ways of asking you to open a terminal to get to a shell.
 
 On the subject of synonyms, another way of looking at the prompt is to say that there's a line in the terminal into which you type commands. A command line, if you will. Again, if you see mention of "command line", including in the title of this very tutorial, it's just another way of talking about a shell running in a terminal.
 
@@ -85,7 +85,7 @@ Be extra careful with case when typing in the command line. Typing `PWD` instead
 
 ### A sense of location ###
 
-Now to the command itself. `pwd` is an abbreviation of '**p**rint **w**orking **d**irectory'. All it does is print out the shell's current working directory. But what's a ***working directory***?
+Now to the command itself. `pwd` is an abbreviation of '**p**rint **w**orking **d**irectory'. All it does is print out the shell's current working directory. But what's a **working directory**?
 
 One important concept to understand is that the shell has a notion of a default location in which any file operations will take place. This is its working directory. If you try to create new files or directories, view existing files, or even delete them, the shell will assume you're looking for them in the current working directory unless you take steps to specify otherwise. So it's quite important to keep an idea of what directory the shell is "in" at any given time, after all, deleting files from the wrong directory could be disastrous. If you're ever in any doubt, the `pwd` command will tell you exactly what the current working directory is.
 
@@ -100,12 +100,12 @@ pwd
 The directory separator is a forward slash (`/`), not the backslash that you may be used to from Windows or DOS systems (`\`).
 :::
 
-Now your working directory is `/`. If you're coming from a Windows background you're probably used to each drive having its own letter, with your main hard drive typically being `C:`. Unix-like systems don't split up the drives like that. Instead they have a single unified file system, and individual drives can be attached ("mounted") to whatever location in the file system makes most sense. The `/` directory, often referred to as the ***root*** directory, is the base of that unified file system. From there everything else branches out to form a tree of directories and subdirectories.
+Now your working directory is `/`. If you're coming from a Windows background you're probably used to each drive having its own letter, with your main hard drive typically being `C:`. Unix-like systems don't split up the drives like that. Instead they have a single unified file system, and individual drives can be attached ("mounted") to whatever location in the file system makes most sense. The `/` directory, often referred to as the **root** directory, is the base of that unified file system. From there everything else branches out to form a tree of directories and subdirectories.
 
 :::{admonition} Too many roots
 :class: warning
 
-Although the `/` directory is sometimes referred to as the ***root*** directory, the word "root" has another meaning. ***root*** is also the name that has been used for the superuser since the early days of Unix. The superuser, as the name suggests, has more powers than a normal user, so can easily wreak havoc with a badly typed command. We'll look at the superuser account more in {ref}`the-command-line-and-the-superuser`. For now you only have to know that the word "root" has multiple meanings in the Linux world, so context is important.
+Although the `/` directory is sometimes referred to as the *root* directory, the word "root" has another meaning. *root* is also the name that has been used for the superuser since the early days of Unix. The superuser, as the name suggests, has more powers than a normal user, so can easily wreak havoc with a badly typed command. We'll look at the superuser account more in {ref}`the-command-line-and-the-superuser`. For now you only have to know that the word "root" has multiple meanings in the Linux world, so context is important.
 :::
 
 From the root directory, the following command will move you into the "home" directory (which is an immediate subdirectory of `/`):
@@ -148,7 +148,7 @@ pwd
 
 ### Relative and absolute paths
 
-Most of the examples we've looked at so far use ***relative*** paths. That is, the place you end up at depends on your current working directory. Consider trying to `cd` into the `etc` folder. If you're already in the root directory that will work fine:
+Most of the examples we've looked at so far use **relative** paths. That is, the place you end up at depends on your current working directory. Consider trying to `cd` into the `etc` folder. If you're already in the root directory that will work fine:
 
 ```Bash
 cd /
@@ -166,9 +166,9 @@ cd etc
 pwd
 ```
 
-You'll see an error saying "No such file or directory" before you even get to run the last `pwd`. Changing directory by specifying the directory name, or using `..` will have different effects depending on where you start from. The path only makes sense ***relative*** to your working directory.
+You'll see an error saying "No such file or directory" before you even get to run the last `pwd`. Changing directory by specifying the directory name, or using `..` will have different effects depending on where you start from. The path only makes sense *relative* to your working directory.
 
-But we have seen two commands that are ***absolute***. No matter what your current working directory is, they'll have the same effect. The first is when you run `cd` on its own to go straight to your home directory. The second is when you used `cd /` to switch to the root directory. In fact any path that starts with a forward slash is an ***absolute*** path. You can think of it as saying "switch to the root directory, then follow the route from there". That gives us a much easier way to switch to the `etc` directory, no matter where we currently are in the file system:
+But we have seen two commands that are **absolute**. No matter what your current working directory is, they'll have the same effect. The first is when you run `cd` on its own to go straight to your home directory. The second is when you used `cd /` to switch to the root directory. In fact any path that starts with a forward slash is an *absolute* path. You can think of it as saying "switch to the root directory, then follow the route from there". That gives us a much easier way to switch to the `etc` directory, no matter where we currently are in the file system:
 
 ```Bash
 cd
@@ -227,7 +227,7 @@ In case you hadn't guessed, `mkdir` is short for '**m**a**k**e **dir**ectory'. N
 mkdir dir1 dir2 dir3
 ```
 
-There's something a little different about that command. So far we've only seen commands that work on their own (`cd`, `pwd`) or that have a single item afterwards (`cd /`, `cd ~/Desktop`). But this time we've added three things after the `mkdir` command. Those things are referred to as ***parameters*** or ***arguments***, and different commands can accept different numbers of arguments. The `mkdir` command expects at least one argument, whereas the `cd` command can work with zero or one, but no more. See what happens when you try to pass the wrong number of parameters to a command:
+There's something a little different about that command. So far we've only seen commands that work on their own (`cd`, `pwd`) or that have a single item afterwards (`cd /`, `cd ~/Desktop`). But this time we've added three things after the `mkdir` command. Those things are referred to as **parameters** or **arguments**, and different commands can accept different numbers of arguments. The `mkdir` command expects at least one argument, whereas the `cd` command can work with zero or one, but no more. See what happens when you try to pass the wrong number of parameters to a command:
 
 ```Bash
 mkdir
@@ -262,7 +262,7 @@ ls
 cd ../..
 ```
 
-The `-p` that we used is called an ***option*** or a ***switch*** (in this case it means "create the **p**arent directories, too"). Options are used to modify the way in which a command operates, allowing a single command to behave in a variety of different ways. Unfortunately, due to quirks of history and human nature, options can take different forms in different commands. You'll often see them as single characters preceded by a hyphen (as in this case), or as longer words preceded by two hyphens. The single character form allows for multiple options to be combined, though not all commands will accept that. And to confuse matters further, some commands don't clearly identify their options at all, whether or not something is an option is dictated purely by the order of the arguments! You don't need to worry about all the possibilities, just know that options exist and they can take several different forms. For example the following all mean exactly the same thing. Don't type these in, they're just here for demonstrative purposes:
+The `-p` that we used is called an **option** or a **switch** (in this case it means "create the **p**arent directories, too"). Options are used to modify the way in which a command operates, allowing a single command to behave in a variety of different ways. Unfortunately, due to quirks of history and human nature, options can take different forms in different commands. You'll often see them as single characters preceded by a hyphen (as in this case), or as longer words preceded by two hyphens. The single character form allows for multiple options to be combined, though not all commands will accept that. And to confuse matters further, some commands don't clearly identify their options at all, whether or not something is an option is dictated purely by the order of the arguments! You don't need to worry about all the possibilities, just know that options exist and they can take several different forms. For example the following all mean exactly the same thing. Don't type these in, they're just here for demonstrative purposes:
 
 ```Bash
 mkdir --parents --verbose dir4/dir5
@@ -278,7 +278,7 @@ mkdir another folder
 ls
 ```
 
-You probably didn't even need to type that one in to guess what would happen: two new folders, one called `another` and the other called `folder`. If you want to work with spaces in directory or file names, you need to ***escape*** them. Don't worry, nobody's breaking out of prison; ***escaping*** is a computing term that refers to using special codes to tell the computer to treat particular characters differently to normal. Enter the following commands to try out different ways to create folders with spaces in the name:
+You probably didn't even need to type that one in to guess what would happen: two new folders, one called `another` and the other called `folder`. If you want to work with spaces in directory or file names, you need to **escape** them. Don't worry, nobody's breaking out of prison; *escaping* is a computing term that refers to using special codes to tell the computer to treat particular characters differently to normal. Enter the following commands to try out different ways to create folders with spaces in the name:
 
 ```Bash
 mkdir "folder 1"
@@ -289,7 +289,7 @@ mkdir -p "folder 6"/"folder 7"
 ls
 ```
 
-Although the command line ***can*** be used to work with files and folders with spaces in their names, the need to escape them with quote marks or backslashes makes things a little more difficult. You can often tell a person who uses the command line a lot just from their file names: they'll tend to stick to letters and numbers, and use underscores (`_`) or hyphens (`-`) instead of spaces.
+Although the command line *can* be used to work with files and folders with spaces in their names, the need to escape them with quote marks or backslashes makes things a little more difficult. You can often tell a person who uses the command line a lot just from their file names: they'll tend to stick to letters and numbers, and use underscores (`_`) or hyphens (`-`) instead of spaces.
 
 
 ### Creating files using redirection
@@ -312,7 +312,7 @@ This time there's nothing printed to the screen, because the output is being red
 cat output.txt
 ```
 
-Okay, so it's not ***exactly*** what was displayed on the screen previously, but it contains all the same data, and it's in a more useful format for further processing. Let's look at another command, `echo`:
+Okay, so it's not *exactly* what was displayed on the screen previously, but it contains all the same data, and it's in a more useful format for further processing. Let's look at another command, `echo`:
 
 ```Bash
 echo "This is a test"
@@ -364,7 +364,7 @@ echo "I've appended a line!" >> combined.txt
 cat combined.txt
 ```
 
-Repeat the first `cat` a few more times, using the {kbd}`Up` for convenience, and perhaps add a few more arbitrary `echo` commands, until your text document is so large that it won't all fit in the terminal at once when you use `cat` to display it. In order to see the whole file we now need to use a different program, called a ***pager*** (because it displays your file one "page" at a time). The standard pager of old was called `more`, because it puts a line of text at the bottom of each page that says `--More--` to indicate that you haven't read everything yet. These days there's a far better pager that you should use instead: because it replaces `more`, the programmers decided to call it `less`.
+Repeat the first `cat` a few more times, using the {kbd}`Up` for convenience, and perhaps add a few more arbitrary `echo` commands, until your text document is so large that it won't all fit in the terminal at once when you use `cat` to display it. In order to see the whole file we now need to use a different program, called a **pager** (because it displays your file one "page" at a time). The standard pager of old was called `more`, because it puts a line of text at the bottom of each page that says `--More--` to indicate that you haven't read everything yet. These days there's a far better pager that you should use instead: because it replaces `more`, the programmers decided to call it `less`.
 
 ```Batch
 less combined.txt
@@ -383,7 +383,7 @@ echo "Upper case" > A.TXT
 echo "Mixed case" > A.txt
 ```
 
-Generally you should try to avoid creating files and folders whose name only varies by case. Not only will it help to avoid confusion, but it will also prevent problems when working with different operating systems. Windows, for example, is case-***insensitive***, so it would treat all three of the file names above as being a single file, potentially causing data loss or other problems.
+Generally you should try to avoid creating files and folders whose name only varies by case. Not only will it help to avoid confusion, but it will also prevent problems when working with different operating systems. Windows, for example, is case-*insensitive*, so it would treat all three of the file names above as being a single file, potentially causing data loss or other problems.
 
 You might be tempted to just hit the {kbd}`CapsLock` key and use upper case for all your file names. But the vast majority of shell commands are lower case, so you would end up frequently having to turn it on and off as you type. Most seasoned command line users tend to stick primarily to lower case names for their files and directories so that they rarely have to worry about file name clashes, or which case to use for each letter in the name.
 
@@ -781,4 +781,4 @@ There are many online tutorials and commercially published books about the comma
 
 * [The Linux Command Line](http://linuxcommand.org/tlcl.php) by William Shotts
 
-The reason for recommending this book in particular is that it has been released under a Creative Commons licence, and is available to download free of charge as a PDF file, making it ideal for the beginner who isn't sure just how much they want to commit to the command line. It's also available as a printed volume, should you find yourself caught by the command line bug and wanting a paper reference.
+The reason for recommending this book in particular is that it has been released under a Creative Commons license, and is available to download free of charge as a PDF file, making it ideal for the beginner who isn't sure just how much they want to commit to the command line. It's also available as a printed volume, should you find yourself caught by the command line bug and wanting a paper reference.
