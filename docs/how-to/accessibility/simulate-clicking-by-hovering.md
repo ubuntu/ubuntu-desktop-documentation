@@ -1,3 +1,6 @@
+```{tags} Accessibility
+```
+
 (simulate-clicking-by-hovering)=
 # Simulate clicking by hovering
 
@@ -19,4 +22,3 @@ Adjust the {guilabel}`Delay` setting to change how long you have to hold the mou
 You do not need to hold the mouse perfectly still when hovering to click. The pointer is allowed to move a little bit and will still click after a while. If it moves too much, however, the click will not happen.
 
 Adjust the {guilabel}`Motion Threshold` setting to change how much the pointer can move and still be considered to be hovering.
-

@@ -1,3 +1,6 @@
+```{tags} Installation, Windows, macOS
+```
+
 (create-a-bootable-usb-stick)=
 # Create a bootable USB stick
 
@@ -76,7 +79,7 @@ Startup Disk Creator is intended for Ubuntu images and images of other distribut
     :user:
     :host:
     :dir:
-    :input: sudo apt install usb-creator-gtk
+    sudo apt install usb-creator-gtk
     ```
 
 1. Open Startup Disk Creator.
@@ -116,7 +119,7 @@ KDE ISO Image Writer is part of the KDE Plasma desktop environment. You can use 
     :user:
     :host:
     :dir:
-    :input: sudo apt install isoimagewriter
+    sudo apt install isoimagewriter
     ```
 
 1. Open KDE ISO Image Writer.
@@ -150,7 +153,7 @@ The `dd` tool is designed for advanced users. If you specify the wrong options, 
     :user:
     :host:
     :dir:
-    :input: lsblk --scsi
+    lsblk --scsi
 
     NAME
         HCTL       TYPE VENDOR   MODEL          REV SERIAL               TRAN
@@ -166,7 +169,7 @@ The `dd` tool is designed for advanced users. If you specify the wrong options, 
     :user:
     :host:
     :dir:
-    :input: sudo umount /dev/sda*
+    sudo umount /dev/sda*
     ```
 
     Replace `sda` with the USB device name.
@@ -178,7 +181,7 @@ The `dd` tool is designed for advanced users. If you specify the wrong options, 
     :user:
     :host:
     :dir:
-    :input: sudo dd if=Downloads/ubuntu-24.04.3-desktop-amd64.iso of=/dev/sda bs=4M conv=fsync status=progress
+    sudo dd if=Downloads/ubuntu-24.04.3-desktop-amd64.iso of=/dev/sda bs=4M conv=fsync status=progress
     ```
 
     Double-check the file paths in this command:
@@ -196,7 +199,7 @@ The `dd` tool is designed for advanced users. If you specify the wrong options, 
     :user:
     :host:
     :dir:
-    :input: sudo dd if=Downloads/ubuntu-24.04.3-desktop-amd64.iso of=/dev/sda bs=4M conv=fsync status=progress
+    sudo dd if=Downloads/ubuntu-24.04.3-desktop-amd64.iso of=/dev/sda bs=4M conv=fsync status=progress
 
     6337593344 bytes (6.3 GB, 5.9 GiB) copied, 143 s, 44.3 MB/s6345887744 bytes (6.3 GB, 5.9 GiB) copied, 143.302 s, 44.3 MB/s
 
@@ -212,7 +215,7 @@ The `dd` tool is designed for advanced users. If you specify the wrong options, 
     :user:
     :host:
     :dir:
-    :input: sudo partprobe /dev/sda
+    sudo partprobe /dev/sda
     ```
 
 
@@ -318,7 +321,7 @@ This is no longer necessary, and in fact it produces an unusable image:
     :user:
     :host:
     :dir:
-    :input: hdiutil convert Downloads/ubuntu-24.04.3-desktop-amd64.iso -format UDRW -o ubuntu.dmg
+    hdiutil convert Downloads/ubuntu-24.04.3-desktop-amd64.iso -format UDRW -o ubuntu.dmg
     ```
 -->
 
@@ -329,7 +332,7 @@ This is no longer necessary, and in fact it produces an unusable image:
     :user:
     :host:
     :dir:
-    :input: diskutil list
+    diskutil list
     ```
 
 1. Insert your USB stick.
@@ -341,7 +344,7 @@ This is no longer necessary, and in fact it produces an unusable image:
     :user:
     :host:
     :dir:
-    :input: diskutil list
+    diskutil list
 
       /dev/disk0 (internal, physical):
        […]
@@ -360,7 +363,7 @@ This is no longer necessary, and in fact it produces an unusable image:
     :user:
     :host:
     :dir:
-    :input: diskutil unmountDisk /dev/disk<N>
+    diskutil unmountDisk /dev/disk<N>
     ```
 
     Replace `<N>` with the disk number from the last command, such as `2`.
@@ -374,7 +377,7 @@ This is no longer necessary, and in fact it produces an unusable image:
     :user:
     :host:
     :dir:
-    :input: sudo dd if=Downloads/ubuntu-24.04.3-desktop-amd64.iso of=/dev/rdisk<N> bs=4m
+    sudo dd if=Downloads/ubuntu-24.04.3-desktop-amd64.iso of=/dev/rdisk<N> bs=4m
     ```
 
     :::{tip}
@@ -406,7 +409,7 @@ This is no longer necessary, and in fact it produces an unusable image:
     :user:
     :host:
     :dir:
-    :input: diskutil eject /dev/disk<N>
+    diskutil eject /dev/disk<N>
     ```
 
 1. Remove the USB stick when the previous command completes.

@@ -1,3 +1,6 @@
+```{tags} Accessibility
+```
+
 (adjust-the-contrast)=
 # Adjust the contrast
 
@@ -11,4 +14,3 @@ You can adjust the contrast of windows and buttons so that they’re easier to s
 :::{tip}
 You can turn high contrast on and off by clicking the {ref}`accessibility icon <find-the-accessibility-menu>` on the top bar and selecting {guilabel}`High Contrast`.
 :::
-

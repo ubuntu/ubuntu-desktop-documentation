@@ -1,3 +1,6 @@
+```{tags} Accessibility
+```
+
 (find-the-accessibility-menu)=
 # Find the accessibility menu
 
@@ -14,4 +17,3 @@ If you do not see the accessibility menu, you can enable it from the Accessibili
 3. Enable the {guilabel}`Accessibility Menu` option.
 
 To access this menu using the keyboard rather than the mouse, press {kbd}`Ctrl+Alt+Tab` to move the keyboard focus to the top bar. The Activities button in the top-left corner will get highlighted — this tells you which item on the top bar is selected. Use the arrow keys on the keyboard to move the selected item to the accessibility menu icon and then press {kbd}`Enter` to open it. You can use the up and down arrow keys to select items in the menu. Press {kbd}`Enter` to toggle the selected item.
-

@@ -1,3 +1,6 @@
+```{tags} Accessibility, Keyboard
+```
+
 (navigate-the-interface-using-the-keyboard)=
 # Navigate the interface using the keyboard
 
@@ -109,4 +112,3 @@ The top panel contains the clock, app indicators, system settings and network co
 ## Additional resources
 
 For a complete list of keyboard shortcuts used to navigate the desktop, see {ref}`keyboard-navigation-shortcuts`.
-

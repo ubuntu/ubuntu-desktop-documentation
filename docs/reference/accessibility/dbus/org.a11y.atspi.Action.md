@@ -149,7 +149,7 @@ for a description of that field\'s syntax.
 
 This is equivalent to using the methods GetLocalizedName,
 GetDescription, GetKeyBinding for each action, but with a single call
-and thus less DBus traffic.
+and thus less D-Bus traffic.
 
 By convention, if there is more than one action available, the first one
 is considered the \"default\" action of the object.

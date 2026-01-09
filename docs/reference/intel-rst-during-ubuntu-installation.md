@@ -2,6 +2,9 @@
 relatedlinks: "[Intel &#32; RST &#32; documentation](https://www.intel.com/content/dam/support/us/en/documents/chipsets/imsm/sb/irst_user_guide.pdf), [Support &#32; for &#32; Intel® &#32; Rapid &#32; Storage &#32; Technology &#32; (Intel® &#32; RST)](http://www.intel.com/p/en_US/support/highlights/chpsts/imsm/)"
 ---
 
+```{tags} Installation, Windows
+```
+
 (intel-rst-during-ubuntu-installation)=
 # Intel RST during Ubuntu installation
 
@@ -83,4 +86,3 @@ It is designed to use advanced features of disks connected via the Serial ATA (S
 The change from RST to AHCI might result in the loss of some of the advanced functionality that the RST module offers: for instance TRIM for SSD.
 
 The terminology and steps to access and manage controller type in the firmware depend on the specific implementation by the platform vendor.
-

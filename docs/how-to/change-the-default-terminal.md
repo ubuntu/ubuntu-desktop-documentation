@@ -1,3 +1,6 @@
+```{tags} Customization
+```
+
 (change-the-default-terminal)=
 # Change the default terminal
 
@@ -8,15 +11,13 @@ The default terminal, or terminal emulator, is the application that opens when y
 
 1. Enter the following command in a terminal:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo update-alternatives --config x-terminal-emulator
-    ```
-
-    It lists the terminal emulators that are available on your system. The current default is marked with an asterisk (`*`).
-
-    For example:
-
-    ```text
+  
     There are 2 choices for the alternative x-terminal-emulator (providing /usr/bin/x-terminal-emulator).
 
       Selection    Path                             Priority   Status
@@ -27,6 +28,8 @@ The default terminal, or terminal emulator, is the application that opens when y
 
     Press <enter> to keep the current choice[*], or type selection number:
     ```
+
+    It lists the terminal emulators that are available on your system. The current default is marked with an asterisk (`*`).
 
 2. Type the number of your selected terminal and confirm with {kbd}`Enter`.
 
@@ -63,4 +66,3 @@ Starting with Ubuntu 25.04, the way to set your default terminal has changed. Si
     :::{note}
     If you're not using the standard Ubuntu GNOME desktop, the name of the configuration file is different. For details, see the `xdg-terminal-exec` man page.
     :::
-

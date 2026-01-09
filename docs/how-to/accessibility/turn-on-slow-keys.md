@@ -1,3 +1,6 @@
+```{tags} Accessibility
+```
+
 (turn-on-slow-keys)=
 # Turn on slow keys
 
@@ -17,4 +20,3 @@ You can also turn slow keys on and off by clicking the {ref}`accessibility icon 
 Use the {guilabel}`Acceptance` delay slider to control how long you have to hold a key down for it to register. See {ref}`turn-on-bounce-keys` for more information.
 
 You can have your computer make a sound when you press a key, when a key press is accepted, or when a key press is rejected because you didn’t hold the key down long enough.
-

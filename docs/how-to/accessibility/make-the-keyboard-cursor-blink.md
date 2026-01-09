@@ -1,3 +1,6 @@
+```{tags} Accessibility
+```
+
 (make-the-keyboard-cursor-blink)=
 # Make the keyboard cursor blink
 
@@ -8,4 +11,3 @@ If you find it difficult to see the keyboard cursor in a text field, you can mak
 3. Open the {guilabel}`Typing` section.
 4. In the {guilabel}`Typing Assist` section, enable the {guilabel}`Cursor Blinking` option.
 5. Use the {guilabel}`Blink Speed` slider to adjust how quickly the cursor blinks.
-

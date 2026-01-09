@@ -1,3 +1,6 @@
+```{tags} Accessibility
+```
+
 # Screen reader 
 
 :::{toctree}

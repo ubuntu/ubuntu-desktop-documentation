@@ -1,3 +1,6 @@
+```{tags} Accessibility
+```
+
 (simulate-a-right-mouse-click)=
 # Simulate a right mouse click
 
@@ -19,4 +22,3 @@ If you use {ref}`Mouse Keys <click-and-move-the-mouse-pointer-using-the-keypad>`
 :::{note}
 In the Activities overview, you are always able to long-press to right-click, even with this feature disabled. Long-press works slightly differently in the overview: you do not have to release the button to right-click.
 :::
-

@@ -1,3 +1,6 @@
+```{tags} Updates, Support
+```
+
 (switch-between-an-lts-and-interim-release)=
 # Switch between an LTS and interim release
 
@@ -31,7 +34,7 @@ On earlier Ubuntu versions, the information was located on the Details tab.
 :user:
 :host:
 :dir:
-:input: lsb_release --description
+lsb_release --description
     
 No LSB modules are available.
 Description:	Ubuntu 24.04.3 LTS

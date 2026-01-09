@@ -1,3 +1,6 @@
+```{tags} Security
+```
+
 (log-in-using-a-smart-card)=
 # Log in using a smart card
 
@@ -43,19 +46,31 @@ This guide assumes having a smart card reader supported by [OpenSC](https://gith
 
 1. The SSSD PAM module, needed for authentication, already installed after 20.04:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo apt install libpam-sss
     ```
 
 2. The smart card module: replace this with the PKCS#11 driver supporting your device:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo apt install opensc-pkcs11
     ```
 
 3. This is needed to expose the smart card reader, already installed after 20.04:
 
-    ```
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo apt install pcscd
     ```
 
@@ -69,11 +84,13 @@ In case that custom PKCS#11 modules are used, you need to ensure that `p11-kit` 
 
 In any case, `p11-kit` command will provide information regarding all the configured modules (with relative tokens if they're inserted and readable) that can be used for authentication:
 
-```bash
+```{terminal}
+:copy:
+:user:
+:host:
+:dir:
 p11-kit list-modules
-```
 
-```text
 p11-kit-trust: p11-kit-trust.so
     library-description: PKCS#11 Kit Trust Module
     library-manufacturer: PKCS#11 Kit
@@ -117,34 +134,47 @@ You can check this:
 
 1. List certificates:
 
-	```bash
-	pkcs15-tool --list-certificates
-	```
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+  	pkcs15-tool --list-certificates
 
-    ```text
-	Using reader with a card: Alcor Micro AU9560 00 00
-	X.509 Certificate [CNS1]
-		Object Flags   : [0x00]
-		Authority      : no
-		Path           : 3f00140090012002
-		ID             : 02
-		Encoded serial : 02 10 0357B1EC0EB725BA67BD2D838DDF93D5
+  	Using reader with a card: Alcor Micro AU9560 00 00
+  	X.509 Certificate [CNS1]
+  		Object Flags   : [0x00]
+  		Authority      : no
+  		Path           : 3f00140090012002
+  		ID             : 02
+  		Encoded serial : 02 10 0357B1EC0EB725BA67BD2D838DDF93D5
+    ```
 
-	```
-
-	```bash
-	pkcs15-tool --read-certificate 2 > card-cert.pem
-	```
+  	```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+  	pkcs15-tool --read-certificate 2 > card-cert.pem
+  	```
 
 2. See the certificate contents:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     openssl x509 -text -noout -in card-cert.pem
     ```
 
 3. Verify it is valid for the given CA:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     openssl verify -verbose -CAfile CA-Auth-cert.pem card-cert.pem
     ```
 
@@ -158,7 +188,11 @@ For the purpose of this guide, we're going to show how SSSD should be configured
 
 In the next steps we'll mention to change `sssd.conf` file by that we intend that the file in `/etc/sssd/sssd.conf` must be changed, note that these are just examples and this can be done using:
 
-```bash
+```{terminal}
+:copy:
+:user:
+:host:
+:dir:
 sudoedit /etc/sssd/sssd.conf
 ```
 
@@ -180,8 +214,19 @@ It's possible to check if configuration is correct, temporary launching the daem
 
 Since SSSD using OpenSSL under the hood, we need to add the certificate to the SSSD well known certificate path (if not changed via `sssd.certificate_verification` option) as PEM format, so copying the CA certificates (can be a chain of certificates) to `/etc/sssd/pki/sssd_auth_ca_db.pem` should be enough:
 
-```bash
+```{terminal}
+:copy:
+:user:
+:host:
+:dir:
 sudo mkdir -p /etc/sssd/pki -m 600
+```
+
+```{terminal}
+:copy:
+:user:
+:host:
+:dir:
 sudo cat Ca-Auth-root-CERT.pem Ca-Auth-leaf-CERT.pem >> /etc/sssd/pki/sssd_auth_ca_db.pem
 ```
 
@@ -207,19 +252,28 @@ Card certificate verification can be simulated using SSSD tools directly, by usi
 
 * In Ubuntu 20.04:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo /usr/libexec/sssd/p11_child --pre -d 10 --debug-fd=2 --nssdb=/etc/sssd/pki/sssd_auth_ca_db.pem
     ```
 
 * In Ubuntu 22.04 and later versions:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo /usr/libexec/sssd/p11_child --pre -d 10 --debug-fd=2 --ca_db=/etc/sssd/pki/sssd_auth_ca_db.pem
     ```
 
 If the certificate verification succeeds, the tool should output the card certificate name, its ID and the certificate itself in base64 format (other than debug data):
 
-```text
+```{terminal}
+:output-only:
 (Mon Sep 11 16:33:32:129558 2023) [p11_child[1965]] [do_card] (0x4000): Found certificate has key id [02].
 MARCO TREVISAN (PIN CNS1)
 /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so
@@ -262,8 +316,13 @@ When using only local users, SSSD can be configured to define an `implicit_domai
 
 Certificates can be associated to users using the card certificate subject, so in our example:
 
-```bash
+```{terminal}
+:copy:
+:user:
+:host:
+:dir:
 openssl x509 -noout -subject -in card-cert.pem | sed "s/, /,/g;s/ = /=/g"
+
 subject=C=IT,O=Some Organization,OU=REGIONE TOSCANA,SN=TREVISAN,GN=MARCO,CN=TRVMRC[...data-removed...]/6090033068507002.UyMnHxfF3gkAeBYHhxa6V1Edazs=
 ```
 
@@ -287,7 +346,11 @@ Note that the section where the `matchrule` regex is, should be in the form `[ce
 
 User mapping can be tested working in versions newer than Ubuntu 20.04 with:
 
-```bash
+```{terminal}
+:copy:
+:user:
+:host:
+:dir:
 sudo dbus-send --system --print-reply \
     --dest=org.freedesktop.sssd.infopipe \
     /org/freedesktop/sssd/infopipe/Users \
@@ -297,7 +360,8 @@ sudo dbus-send --system --print-reply \
 
 That should return the object path containing the expected user ID:
 
-```text
+```{terminal}
+:output-only:
 method return time=1605127192.698667 sender=:1.1628 -> destination=:1.1629 serial=6 reply_serial=2
    array [
       object path "/org/freedesktop/sssd/infopipe/Users/implicit_5ffiles/1000"
@@ -366,7 +430,11 @@ Using this PAM configuration smart card access will be the sole method to login.
 
 This is the default configuration, but we document it for completeness:
 
-```bash
+```{terminal}
+:copy:
+:user:
+:host:
+:dir:
 update-alternatives --set gdm-smartcard /etc/pam.d/gdm-smartcard-sssd-exclusive
 ```
 
@@ -374,7 +442,11 @@ update-alternatives --set gdm-smartcard /etc/pam.d/gdm-smartcard-sssd-exclusive
 
 Using this PAM configuration smart card access will tried first, if no smart card is available or the smart card verification fails, the password authentication will be used instead
 
-```bash
+```{terminal}
+:copy:
+:user:
+:host:
+:dir:
 update-alternatives --set gdm-smartcard /etc/pam.d/gdm-smartcard-sssd-or-password
 ```
 
@@ -382,7 +454,11 @@ update-alternatives --set gdm-smartcard /etc/pam.d/gdm-smartcard-sssd-or-passwor
 
 This can be done to prevent the `gdm-password` PAM configuration to be loaded, it's not normally required as we already have profiles to avoid this, but it could be useful in some scenarios
 
-```
+```{terminal}
+:copy:
+:user:
+:host:
+:dir:
 sudo -u gdm env DCONF_PROFILE=gdm gsettings set org.gnome.login-screen enable-password-authentication false
 ```
 
@@ -390,7 +466,11 @@ sudo -u gdm env DCONF_PROFILE=gdm gsettings set org.gnome.login-screen enable-pa
 
 Smart card authentication is always used when a token is inserted in the reader. There are cases in which this is not the wanted behavior, so it can be disabled at all.
 
-```
+```{terminal}
+:copy:
+:user:
+:host:
+:dir:
 sudo -u gdm env DCONF_PROFILE=gdm gsettings set org.gnome.login-screen enable-smartcard-authentication false
 ```
 
@@ -406,7 +486,11 @@ An example to configure it could be:
 
 1. Create the `dconf` profile. This may not be required if a such file is already present:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     cat << EOF | sudo tee -a /etc/dconf/profile/user
     user-db:user
     system-db:local
@@ -415,13 +499,21 @@ An example to configure it could be:
 
 2. Create the `locks` directory:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo mkdir -p /etc/dconf/db/local.d/locks
     ```
 
 3. Disable password authentication:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     cat << EOF | sudo tee -a /etc/dconf/db/local.d/00_gdm-password-disable
     [org/gnome/login-screen]
     enable-password-authentication=false
@@ -430,7 +522,11 @@ An example to configure it could be:
 
 4. Enable smart card authentication:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     cat << EOF | sudo tee -a /etc/dconf/db/local.d/00_gdm-smartcard-enable
     [org/gnome/login-screen]
     enable-smartcard-authentication=true
@@ -439,7 +535,11 @@ An example to configure it could be:
 
 5. Make these options non-user configurable:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     cat << EOF | sudo tee -a /etc/dconf/db/local.d/locks/00_gdm-smartcard-locks
     /org/gnome/login-screen/enable-password-authentication
     /org/gnome/login-screen/enable-smartcard-authentication
@@ -448,7 +548,11 @@ An example to configure it could be:
 
 6. Update system database:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo dconf update
     ```
 
@@ -474,32 +578,76 @@ You can use it to check your configuration without having to login/logout for re
 
 1. Install it:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo apt install pamtester
     ```
 
 2. Run the authentication service as standalone:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     pamtester -v gdm-smartcard $USER authenticate
     ```
 
 3. Run the authentication service to get user from cert:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     pamtester -v gdm-smartcard "" authenticate
     ```
 
 4. You can check what happened in the logs, reading:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo less /var/log/auth.log
+    ```
+    
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo less /var/log/sssd/sssd_pam.log
+    ```
+    
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo less /var/log/sssd/p11_child.log
-
+    ```
+    
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo journalctl | grep gdm
+    ```
+    
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo journalctl --unit='*gdm*'
     ```
+    
 
 ## Configure GNOME Settings Daemon
 
@@ -513,7 +661,11 @@ When a smart card token that has been used for logging-in is removed from the sy
 
 This can be configured at user level for each user by just changing this GSettings key:
 
-```bash
+```{terminal}
+:copy:
+:user:
+:host:
+:dir:
 gsettings set org.gnome.settings-daemon.peripherals.smartcard removal-action 'lock-screen'
 ```
 
@@ -531,7 +683,11 @@ In particular an example could be:
 
 1. Create the `dconf` profile. This may not be required if a such file is already present:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     cat << EOF | sudo tee -a /etc/dconf/profile/user
     user-db:user
     system-db:local
@@ -540,13 +696,21 @@ In particular an example could be:
 
 2. Create the `locks` directory:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo mkdir -p /etc/dconf/db/local.d/locks
     ```
 
 3. Lock the screen on smart card removal:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     cat << EOF | sudo tee -a /etc/dconf/db/local.d/00_gsd-smartcard-action
     [org/gnome/settings-daemon/peripherals/smartcard]
     removal-action='lock-screen'
@@ -557,7 +721,11 @@ In particular an example could be:
 
 4. Make action non-user configurable:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     cat << EOF | sudo tee -a /etc/dconf/db/local.d/locks/00_gsd-smartcard-action
     /org/gnome/settings-daemon/peripherals/smartcard/removal-action
     EOF
@@ -565,7 +733,11 @@ In particular an example could be:
 
 5. Update system database:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo dconf update
     ```
 

@@ -1,3 +1,6 @@
+```{tags} Accessibility
+```
+
 (turn-on-sticky-keys)=
 # Turn on sticky keys
 
@@ -23,4 +26,3 @@ For example, if you have sticky keys turned on but press {kbd}`Super` and {kbd}`
 Select {guilabel}`Disable if two keys are pressed together` to enable this behavior.
 
 You can have the computer make a “beep” sound when you start typing a keyboard shortcut with sticky keys turned on. This is useful if you want to know that sticky keys is expecting a keyboard shortcut to be typed, so the next key press will be interpreted as part of a shortcut. Select {guilabel}`Beep when a modifier key is pressed` to enable this.
-

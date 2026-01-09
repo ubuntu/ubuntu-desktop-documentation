@@ -1,3 +1,6 @@
+```{tags} Accessibility
+```
+
 (navigate-the-screen-using-the-screen-reader)=
 # Navigate the screen using the screen reader
 
@@ -724,4 +727,3 @@ In IRC (Internet Relay Chat) clients and other supported chat applications, you 
 ## Keyboard navigation shortcuts
 
 For keyboard shortcuts that launch applications, switch between desktop elements and navigate desktop menus, refer to {ref}`navigate-the-interface-using-the-keyboard`.
-

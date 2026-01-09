@@ -1,3 +1,6 @@
+```{tags} Accessibility, Keyboard
+```
+
 (use-an-on-screen-keyboard)=
 # Use an on-screen keyboard
 
@@ -19,4 +22,3 @@ Press the {guilabel}`?123` button to enter numbers and symbols. More symbols are
 You can press the {guilabel}`⏷⌨` button to hide the keyboard temporarily. The keyboard will show again automatically when you next press on something where you can use it. On a touchscreen, you can also pull up the keyboard by dragging up from the bottom edge.
 
 Press the {guilabel}`⛭` button to change your settings for Language or Input Sources.
-

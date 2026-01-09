@@ -9,6 +9,9 @@ relatedlinks: "[NobleUpgrades/Kubuntu](https://help.ubuntu.com/community/NobleUp
   [UpgradeNotes](https://help.ubuntu.com/community/UpgradeNotes)"
 ---
 
+```{tags} Updates
+```
+
 (upgrade-ubuntu-desktop)=
 # Upgrade Ubuntu Desktop
 
@@ -77,7 +80,7 @@ If you want to upgrade from an LTS release to an interim release, see {ref}`swit
         :user:
         :host:
         :dir:
-        :input: sudo apt update
+        sudo apt update
         ```
     
     1. Install updates:
@@ -87,7 +90,7 @@ If you want to upgrade from an LTS release to an interim release, see {ref}`swit
         :user:
         :host:
         :dir:
-        :input: sudo apt upgrade
+        sudo apt upgrade
         ```
     
     1. Restart your computer if prompted:
@@ -97,7 +100,7 @@ If you want to upgrade from an LTS release to an interim release, see {ref}`swit
         :user:
         :host:
         :dir:
-        :input: systemctl reboot
+        systemctl reboot
         ```
     :::
     ::::
@@ -125,7 +128,7 @@ Start the application that upgrades your system:
 :user:
 :host:
 :dir:
-:input: sudo do-release-upgrade
+sudo do-release-upgrade
 ```
 :::
 ::::
@@ -177,7 +180,7 @@ You can force the upgrade manually on the command line:
 :user:
 :host:
 :dir:
-:input: sudo do-release-upgrade
+sudo do-release-upgrade
 ```
 
 If the normal upgrade path isn't available yet and you know what you're doing, you can also add the `--devel-release` option to upgrade to the latest development release:
@@ -187,7 +190,7 @@ If the normal upgrade path isn't available yet and you know what you're doing, y
 :user:
 :host:
 :dir:
-:input: sudo do-release-upgrade --devel-release
+sudo do-release-upgrade --devel-release
 ```
 
 :::{warning}
@@ -217,7 +220,7 @@ If  your computer lost power during the upgrade, try to start it again. It might
     :user:
     :host:
     :dir:
-    :input: sudo dpkg --configure -a
+    sudo dpkg --configure -a
     ```
 
 1. Fix broken dependencies:
@@ -227,7 +230,7 @@ If  your computer lost power during the upgrade, try to start it again. It might
     :user:
     :host:
     :dir:
-    :input: sudo apt --fix-broken install
+    sudo apt --fix-broken install
     ```
 
 If you can't log in or the these steps didn't work, it's best to ask for help on the Ubuntu support channels. See {ref}`project-and-community`.

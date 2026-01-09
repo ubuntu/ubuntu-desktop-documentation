@@ -1,3 +1,6 @@
+```{tags} Accessibility
+```
+
 (magnify-a-screen-area)=
 # Magnify a screen area
 
@@ -19,4 +22,3 @@ You can change the magnification factor, the mouse tracking, and the position of
 You can activate crosshairs to help you find the mouse or touchpad pointer. Switch them on and adjust their length, color, and thickness in the {guilabel}`Crosshairs` section.
 
 You can switch to inverted colors video, and adjust brightness, contrast and color options for the magnifier in the {guilabel}`Color Filters` section. The combination of these options is useful for people with low-vision, any degree of photophobia, or just for using the computer under adverse lighting conditions.
-

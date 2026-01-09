@@ -1,3 +1,6 @@
+```{tags} Accessibility
+```
+
 (how-to-accessibility)=
 # Accessibility
 
@@ -81,5 +84,3 @@ use-an-on-screen-keyboard
 
 * {ref}`what-is-the-menu-key`
 * {ref}`accessibility-stack`
-
-

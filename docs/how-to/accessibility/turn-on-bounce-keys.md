@@ -1,3 +1,6 @@
+```{tags} Accessibility
+```
+
 (turn-on-bounce-keys)=
 # Turn on bounce keys
 
@@ -13,4 +16,3 @@ You can turn bounce keys on and off by clicking the {ref}`accessibility icon <fi
 :::
 
 Use the {guilabel}`Acceptance` delay slider to change how long bounce keys waits before it registers another key press after you pressed the key for the first time. Select {guilabel}`Beep when a key is rejected` if you want the computer to make a sound each time it ignores a key press because it happened too soon after the previous key press.
-

@@ -1,3 +1,6 @@
+```{tags} Accessibility
+```
+
 (flash-the-screen-for-alert-sounds)=
 # Flash the screen for alert sounds
 
@@ -14,4 +17,3 @@ This can also be useful if you’re in an environment where you need your comput
 :::{tip}
 You can quickly turn visual alerts on and off by clicking the {ref}`accessibility icon <find-the-accessibility-menu>` on the top bar and selecting {guilabel}`Visual Alerts`.
 :::
-

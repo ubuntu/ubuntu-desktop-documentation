@@ -1,3 +1,6 @@
+```{tags} Installation, Security
+```
+
 (encrypt-your-disk-with-tpm)=
 # Encrypt your disk with TPM
 
@@ -39,7 +42,11 @@ To install Ubuntu with hardware-backed encryption:
 
     After installation, start your new system and enter the following command in a terminal:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo snap recovery --show-keys
     ```
 
@@ -82,7 +89,11 @@ In Ubuntu 24.04 LTS, you can retrieve the existing recovery key and you can't ch
 
 To display the recovery key for your encrypted disk, open a terminal and run this command:
 
-```bash
+```{terminal}
+:copy:
+:user:
+:host:
+:dir:
 sudo snap recovery --show-keys
 ```
 :::
@@ -119,4 +130,3 @@ If your computer is asking for your recovery key during startup, try undoing any
 1. Try to log in again.
 
 You can also check if the recovery key was automatically stored in the cloud. Recovery keys for the Windows BitLocker encryption may be stored on your Microsoft Account or your organization account. See [Find your BitLocker recovery key](https://support.microsoft.com/en-us/windows/find-your-bitlocker-recovery-key-6b71ad27-0b89-ea08-f143-056f5ab347d6) in the Microsoft Windows documentation.
-

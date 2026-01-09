@@ -2,6 +2,9 @@
 sequential_nav: both
 ---
 
+```{tags} Installation
+```
+
 (install-ubuntu-desktop)=
 # Install Ubuntu Desktop
 
@@ -298,7 +301,11 @@ You can also update Ubuntu using the terminal:
 
 1. Type in:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo apt update
     ```
 
@@ -308,7 +315,11 @@ You can also update Ubuntu using the terminal:
 
 1. To apply any updates, type:
 
-    ```bash
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
     sudo apt upgrade
     ```
 

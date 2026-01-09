@@ -1,3 +1,6 @@
+```{tags} Accessibility
+```
+
 (improve-screen-reader-usability)=
 # Improve screen reader usability
 
