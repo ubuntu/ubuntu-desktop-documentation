@@ -1,15 +1,11 @@
 (the-linux-command-line-for-beginners)=
 # The Linux command line for beginners
 
-Learn about the Linux command line and some useful basic commands.
-
 <!--
 Originally a Tutorial: https://discourse.ubuntu.com/t/the-linux-command-line-for-beginners/14304
 Editor: Thomas Bille
 Original author: [peppertop](https://github.com/peppertop)
 -->
-
-## Overview
 
 The Linux command line is a text interface to your computer. Often referred to as the shell, terminal, console, prompt or various other names, it can give the appearance of being complex and confusing to use. Yet the ability to copy and paste commands from a website, combined with the power and flexibility the command line offers, means that using it may be essential when trying to follow instructions online, including many on this very website!
 
@@ -31,7 +27,7 @@ This tutorial will teach you a little of the history of the command line, then w
 
 * A computer running Ubuntu or some other version of Linux
 
-    Every Linux system includes a command line of one sort or another. This tutorial includes some specific steps for Ubuntu 18.04 but most of the content should work regardless of your Linux distribution.
+    Every Linux system includes a command line of one sort or another. This tutorial includes some specific steps for Ubuntu 24.04 but most of the content should work regardless of your Linux distribution.
 
 
 ## A brief history lesson
@@ -435,7 +431,7 @@ cat test_?.txt
 cat test_*
 ```
 
-:::{admonition} More escaping required**
+:::{admonition} More escaping required
 :class: warning
 
 As you might have guessed, this capability also means that you need to escape file names with `?` or `*` characters in them, too. It's usually better to avoid any punctuation in file names if you want to manipulate them from the command line.
