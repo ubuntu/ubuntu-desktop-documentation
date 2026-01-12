@@ -398,11 +398,11 @@ tags_create_badges = True
 
 # For Google Analytics:
 # Add CSS files (located in .sphinx/_static/)
-custom_html_css_files = [
+html_css_files = [
 	'cookie-banner.css'
 ]
 # Add JavaScript files (located in .sphinx/_static/)
-custom_html_js_files = [
+html_js_files = [
 	'js/bundle.js',
 ]
 
