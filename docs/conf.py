@@ -395,3 +395,14 @@ tags_create_badges = True
 # tags_badge_colors = {
 #    "*": "light",  # Used as a default value
 # }
+
+# For Google Analytics:
+# Add CSS files (located in .sphinx/_static/)
+custom_html_css_files = [
+	'cookie-banner.css'
+]
+# Add JavaScript files (located in .sphinx/_static/)
+custom_html_js_files = [
+	'js/bundle.js',
+]
+
