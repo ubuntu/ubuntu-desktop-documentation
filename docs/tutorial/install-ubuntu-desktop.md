@@ -15,10 +15,6 @@ Original author: Oliver Smith <oliversmith@canonical.com>
 
 In this tutorial, we'll download and install Ubuntu Desktop 24.04 LTS on your laptop or PC.
 
-```{admonition} Installing Ubuntu on non-x86 platforms
-For guidance on installing Ubuntu on platforms based on architectures other than x86 (including ARM or RISC-V boards, such as Raspberry Pi), see {external+hw:doc}`index`.
-```
-
 If you've never installed an operating system, don't worry: Ubuntu makes the process very easy. You'll encounter a guided installer that will ask you a couple of questions. Whenever you're not sure what to pick, you can just select the default option, which ensures that you end up with a fully usable Ubuntu installation. No deep technical knowledge is required.
 
 What you'll need:
@@ -36,6 +32,8 @@ If you can't see your device there, you can always just {ref}`try-ubuntu-desktop
 
 ```{include} ../reuse/apple-silicon-disclaimer.txt
 ```
+
+For guidance on installing Ubuntu on platforms based on architectures other than x86 (including **ARM** or **RISC-V** boards, such as **Raspberry Pi**), see {external+hw:doc}`index`.
 
 
 (installation-back-up-your-data)=
