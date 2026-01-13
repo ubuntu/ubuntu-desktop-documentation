@@ -27,6 +27,8 @@ You can also try to find your computer on the [Ubuntu certified hardware](https:
 ```{include} ../reuse/apple-silicon-disclaimer.txt
 ```
 
+For guidance on installing Ubuntu on platforms based on architectures other than x86 (including **ARM** or **RISC-V** boards, such as **Raspberry Pi**), see {external+hw:doc}`index`.
+
 
 <!--
 The docs/reuse/boot-ubuntu-from-usb.txt file is reused between the live system tutorial and the installation tutorial.

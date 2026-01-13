@@ -33,6 +33,8 @@ If you can't see your device there, you can always just {ref}`try-ubuntu-desktop
 ```{include} ../reuse/apple-silicon-disclaimer.txt
 ```
 
+For guidance on installing Ubuntu on platforms based on architectures other than x86 (including **ARM** or **RISC-V** boards, such as **Raspberry Pi**), see {external+hw:doc}`index`.
+
 
 (installation-back-up-your-data)=
 ## Back up your data
