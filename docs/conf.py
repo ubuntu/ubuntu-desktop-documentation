@@ -380,6 +380,7 @@ intersphinx_mapping = {
     ),
     "server": ("https://documentation.ubuntu.com/server/", None),
     "security": ("https://documentation.ubuntu.com/security/", None),
+    "hw": ("https://canonical-ubuntu-hardware-support.readthedocs-hosted.com/", None),
 }
 
 # Turn on and configure tags.
