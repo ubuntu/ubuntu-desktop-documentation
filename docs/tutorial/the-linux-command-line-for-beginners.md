@@ -241,6 +241,8 @@ pwd
 /etc
 ```
 
+While you move between directories, your prompt changes. Notice that when you're in your home directory, the prompt says `user@computer:~$`. Then, when you move to the `/etc` directory, the prompt changes to `user@computer:/etc$`. The part between `:` and `$` always shows your current working directory.
+
 ### Relative and absolute paths
 
 Most of the examples we've looked at so far use **relative** paths. That is, the place you end up at depends on your current working directory. Consider trying to `cd` into the `etc` folder. If you're already in the root directory that will work fine:
