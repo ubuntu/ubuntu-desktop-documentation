@@ -77,7 +77,7 @@ pwd
 
 There are a couple of basics to understand here, before we get into the detail of what the command actually did. First is that when you type a command it appears on the same line as the odd text. That text is there to tell you the computer is ready to accept a command, it's the computer's way of prompting you. In fact it's usually referred to as the **prompt**, and you might sometimes see instructions that say "bring up a prompt", "open a command prompt", "at the bash prompt" or similar. They're all just different ways of asking you to open a terminal.
 
-The terminal is sometimes called the **shell**. In fact, when you look at the terminal window, you can see two different programs running at the same time. One is the graphical window with menus and keyboard shortcuts. The other one is what produces the text inside the window. This is called the *shell*. It understands your commands, performs all the actions and replies back to you with the result.
+The terminal is sometimes called the **shell**. In fact, when you look at the terminal window, you can see two different programs running at the same time. One is the graphical window with buttons and menus. The other one is what produces the text inside the window. This is called the *shell*. It understands your commands, performs all the actions and replies back to you with the result.
 
 On the subject of synonyms, another way of looking at the prompt is to say that there's a line in the terminal into which you type commands. A command line, if you will. Again, if you see mention of "command line", including in the title of this very tutorial, it's just another way of talking about a shell running in a terminal.
 
