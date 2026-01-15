@@ -13,8 +13,8 @@ Let's walk through some practical exercises to become familiar with a few basic 
 
 *Originally authored by [peppertop](https://github.com/peppertop).*
 
-### What you'll learn
-
+:::{rubric} What you'll learn
+:::
 * How to access the command line from your own computer
 * How to perform some basic file manipulation
 * A few other useful commands
@@ -23,9 +23,8 @@ Let's walk through some practical exercises to become familiar with a few basic 
 
 For a brief history lesson, go to {ref}`why-we-use-the-terminal-on-linux`.
 
-
-### What you'll need
-
+:::{rubric} What you'll need
+:::
 * A computer running Ubuntu or some other version of Linux
 
     Every Linux system includes a command line of one sort or another. This tutorial includes some specific steps for Ubuntu 24.04 but most of the content should work regardless of your Linux distribution.
