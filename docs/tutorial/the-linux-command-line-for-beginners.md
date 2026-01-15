@@ -56,9 +56,25 @@ Let's run our first command. Click the mouse into the window to make sure that's
 pwd
 ```
 
-You should see a directory path printed out (probably something like `/home/YOUR_USERNAME`), then another copy of that odd bit of text.
+You should see a directory path printed out (probably something like `/home/YOUR_USERNAME`), then another copy of that odd bit of text:
 
-![Result of running the pwd command](/images/gnome-terminal-24-04-pwd.png)
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: ~
+
+pwd
+
+/home/user
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: ~
+
+```
 
 There are a couple of basics to understand here, before we get into the detail of what the command actually did. First is that when you type a command it appears on the same line as the odd text. That text is there to tell you the computer is ready to accept a command, it's the computer's way of prompting you. In fact it's usually referred to as the **prompt**, and you might sometimes see instructions that say "bring up a prompt", "open a command prompt", "at the bash prompt" or similar. They're all just different ways of asking you to open a terminal to get to a shell.
 
