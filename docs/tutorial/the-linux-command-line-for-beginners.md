@@ -11,8 +11,6 @@ The Linux command line is a text interface to your computer. Often referred to a
 
 Let's walk through some practical exercises to become familiar with a few basic commands and concepts. We'll assume no prior knowledge, but by the end we hope you'll feel a bit more comfortable the next time you're faced with some instructions that begin "Open a terminal".
 
-*Originally authored by [peppertop](https://github.com/peppertop).*
-
 :::{rubric} What we'll explore
 :::
 * How to access the command line from your own computer
