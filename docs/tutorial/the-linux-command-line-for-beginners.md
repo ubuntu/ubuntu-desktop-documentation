@@ -337,6 +337,11 @@ Now go to your `Desktop` directory using the absolute path:
 :dir: /etc
 cd /home/user/Desktop
 ```
+
+:::{note}
+If your system language isn't English, this directory also gets **translated**. For example, on a French system, you may want to go to `/home/user/Bureau` instead.
+:::
+
 ```{terminal}
 :copy:
 :user: user
@@ -774,7 +779,7 @@ This is a second test
 This is a third test
 ```
 
-Where you want to pass multiple file names to a single command, there are some useful shortcuts that can save you a lot of typing if the files have similar names. A question mark (`?`) can be used to indicate "any single character" within the file name. An asterisk (`*`) can be used to indicate "zero or more characters". These are sometimes referred to as "wildcard" characters. A couple of examples might help, the following commands all do the same thing:
+When you want to pass multiple file names to a single command, there are some useful shortcuts that can save you a lot of typing if the files have similar names. A question mark (`?`) can be used to indicate "any single character" within the file name. An asterisk (`*`) can be used to indicate "zero or more characters". These are sometimes referred to as "wildcard" characters. A couple of examples might help, the following commands all do the same thing:
 
 ```{terminal}
 :copy:
@@ -1410,7 +1415,7 @@ If anyone asks you to enable the *root* account, or log in as *root*, be very su
 
 ### A security improvement
 
-In an effort to reduce these problems, many Linux distributions started to encourage the use of the `su` command. This is variously described as being short for '**s**uper**u**ser' or '**s**witch **u**ser', and allows you to change to another user on the machine without having to log out and in again. When used with no arguments, it assumes you want to change to the *root* user (hence the first interpretation of the name), but you can pass a username to it in order to switch to a specific user account (the second interpretation). By encouraging use of `su`, the aim was to persuade administrators to spend most of their time using a normal account, only switch to the superuser account when they needed to, and then use the `logout` command (or {kbd}`Ctrl-D` shortcut) as soon as possible to return to their user-level account.
+In an effort to reduce these problems, many Linux distributions started to encourage the use of the `su` command. This is variously described as being short for '**s**uper**u**ser' or '**s**witch **u**ser', and allows you to change to another user on the machine without having to log out and in again. When used with no arguments, it assumes you want to change to the *root* user (hence the first interpretation of the name), but you can pass a username to it in order to switch to a specific user account (the second interpretation). By encouraging use of `su`, the aim was to persuade administrators to spend most of their time using a normal account, only switch to the superuser account when they needed to, and then use the `exit` command (or {kbd}`Ctrl-D` shortcut) as soon as possible to return to their user-level account.
 
 By minimizing the amount of time spent logged in as *root*, the use of `su` reduces the window of opportunity in which to make a catastrophic mistake. Despite that, human nature being what it is, many administrators have been guilty of leaving long-running terminals open in which they've used `su` to switch to the *root* account. In that respect, `su` was only a small step forward for security.
 
@@ -1715,7 +1720,7 @@ tree -a
 10 directories, 5 files
 ```
 
-Switch back to your home directory (`cd`) and try running `ls` without and then with the `-a` switch. Pipe the output through `wc -l` to give you a clearer idea of how many hidden files and folders have been right under your nose all this time. These files typically store your personal configuration, and is how Unix systems have always offered the capability to have system-level settings (usually in `/etc`) that can be overridden by individual users (courtesy of hidden files in their home directory).
+Switch back to your home directory (`cd`) and try running `ls` without and then with the `-a` switch. Pipe the output through `wc -l` to give you a clearer idea of how many hidden files and folders have been right under your nose all this time. These files typically store your personal configuration, and this is how Unix systems have always offered the capability to have system-level settings (usually in `/etc`) that can be overridden by individual users (courtesy of hidden files in their home directory).
 
 You shouldn't usually need to deal with hidden files, but occasionally instructions might require you to `cd` into `.config`, or edit some  file whose name starts with a dot. At least now you'll understand what's happening, even when you can't easily see the file in your graphical tools.
 
@@ -1739,7 +1744,7 @@ rm -r /tmp/tutorial
 ls /tmp
 ```
 
-As a last step, let's close the terminal. You can just close the window, but it's better practice to log out of the shell. You can either use the `logout` command, or the {kbd}`Ctrl-D` keyboard shortcut.
+As a last step, let's close the terminal. You can just close the window, but it's better practice to log out of the shell. You can either use the `exit` command, or the {kbd}`Ctrl-D` keyboard shortcut.
 
 If you plan to use the terminal a lot, memorizing {kbd}`Ctrl-Alt-T` to launch the terminal and {kbd}`Ctrl-D` to close it will soon make it feel like a handy assistant that you can call on instantly, and dismiss just as easily.
 
