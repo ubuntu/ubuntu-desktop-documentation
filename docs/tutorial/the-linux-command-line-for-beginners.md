@@ -44,7 +44,7 @@ However you launch your terminal, you should end up with a rather dull looking w
 
 ![A new terminal window in Ubuntu 24.04](/images/gnome-terminal-24-04.png)
 
-Let's run our first command. Click the mouse into the window to make sure that's where your keystrokes will go, then type the `pwd` command, *all in lower case*, after the existing text. Press the {kbd}`Enter` or {kbd}`Return` key to run it.
+Let's run our first command. Click the mouse into the window to make sure that's where your keystrokes will go, then type the `pwd` command, *all in lower case*. Press the {kbd}`Enter` or {kbd}`Return` key to run it.
 
 ```{terminal}
 :copy:
@@ -68,7 +68,6 @@ pwd
 /home/user
 ```
 ```{terminal}
-:copy:
 :user: user
 :host: computer
 :dir: ~
@@ -76,11 +75,13 @@ pwd
 ▮
 ```
 
-There are a couple of basics to understand here, before we get into the detail of what the command actually did. First is that when you type a command it appears on the same line as the odd text. That text is there to tell you the computer is ready to accept a command, it's the computer's way of prompting you. In fact it's usually referred to as the **prompt**, and you might sometimes see instructions that say "bring up a prompt", "open a command prompt", "at the bash prompt" or similar. They're all just different ways of asking you to open a terminal to get to a shell.
+There are a couple of basics to understand here, before we get into the detail of what the command actually did. First is that when you type a command it appears on the same line as the odd text. That text is there to tell you the computer is ready to accept a command, it's the computer's way of prompting you. In fact it's usually referred to as the **prompt**, and you might sometimes see instructions that say "bring up a prompt", "open a command prompt", "at the bash prompt" or similar. They're all just different ways of asking you to open a terminal.
+
+The terminal is sometimes called the **shell**. In fact, when you look at the terminal window, you can see two different programs running at the same time. One is the graphical window with menus and keyboard shortcuts. The other one is what produces the text inside the window. This is called the *shell*. It understands your commands, performs all the actions and replies back to you with the result.
 
 On the subject of synonyms, another way of looking at the prompt is to say that there's a line in the terminal into which you type commands. A command line, if you will. Again, if you see mention of "command line", including in the title of this very tutorial, it's just another way of talking about a shell running in a terminal.
 
-The second thing to understand is that when you run a command any output it produces will usually be printed directly in the terminal, then you'll be shown another prompt once it's finished. Some commands can output a lot of text, others will operate silently and won't output anything at all. Don't be alarmed if you run a command and another prompt immediately appears, as that usually means the command succeeded. If you think back to the slow network connections of our 1970s terminals, those early programmers decided that if everything went okay they may as well save a few precious bytes of data transfer by not saying anything at all.
+The second thing to understand is that when you run a command, any output it produces will usually be printed directly in the terminal, then you'll be shown another prompt once it's finished. Some commands can output a lot of text, others will operate silently and won't output anything at all. Don't be alarmed if you run a command and another prompt immediately appears, as that usually means the command succeeded. In the 1970s, early programmers decided that if everything went okay, they may as well save a few precious bytes of data transfer on their slow networks by not saying anything at all.
 
 :::{admonition} The importance of case
 :class: warning
@@ -88,7 +89,7 @@ The second thing to understand is that when you run a command any output it prod
 Be extra careful with case when typing in the command line. Typing `PWD` instead of `pwd` will produce an error, but sometimes the wrong case can result in a command appearing to run, but not doing what you expected. We'll look at case a little more on the next page but, for now, just make sure to type all the following lines in exactly the case that's shown.
 :::
 
-### A sense of location ###
+### A sense of location
 
 Now to the command itself. `pwd` is an abbreviation of '**p**rint **w**orking **d**irectory'. All it does is print out the shell's current working directory. But what's a **working directory**?
 
