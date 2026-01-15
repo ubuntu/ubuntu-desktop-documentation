@@ -7,6 +7,7 @@ Our explanatory and conceptual guides are written to provide a better understand
 :maxdepth: 2
 hardware-stack
 accessibility-stack
+why-we-use-the-terminal-on-linux
 what-is-the-menu-key
 hardware-backed-disk-encryption
 :::
