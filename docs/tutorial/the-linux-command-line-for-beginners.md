@@ -13,7 +13,7 @@ Let's walk through some practical exercises to become familiar with a few basic 
 
 *Originally authored by [peppertop](https://github.com/peppertop).*
 
-:::{rubric} What you'll learn
+:::{rubric} What we'll explore
 :::
 * How to access the command line from your own computer
 * How to perform some basic file manipulation
@@ -913,76 +913,225 @@ When you consider both case sensitivity and escaping, a good rule of thumb is to
 
 ## Moving and manipulating files
 
-Now that we've got a few files, let's look at the sort of day-to-day tasks you might need to perform on them. In practice you'll still most likely use a graphical program when you want to move, rename or delete one or two files, but knowing how to do this using the command line can be useful for bulk changes, or when the files are spread amongst different folders. Plus, you'll learn a few more things about the command line along the way.
+Now that we've got a few files, let's look at the sort of day-to-day tasks you might need to perform on them. In practice you'll still most likely use a graphical program when you want to move, rename or delete one or two files, but knowing how to do this using the command line can be useful for bulk changes, or when the files are spread among different folders. Plus, you'll learn a few more things about the command line along the way.
 
 Let's begin by putting our `combined.txt` file into our `dir1` directory, using the `mv` (**m**o**v**e) command:
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 mv combined.txt dir1
 ```
 
-You can confirm that the job has been done by using `ls` to see that it's missing from the working directory, then `cd dir1` to change into `dir1`, `ls` to see that it's in there, then `cd ..` to move the working directory back again. Or you could save a lot of typing by passing a path directly to the `ls` command to get straight to the confirmation you're looking for:
+You can confirm that the job has been done by using `ls` to see that the file is missing from the working directory, then `cd dir1` to change into `dir1`, `ls` to see that it's in there, then `cd ..` to move the working directory back again. Or you could save a lot of typing by passing a path directly to the `ls` command to get straight to the confirmation you're looking for:
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 ls dir1
+
+combined.txt
 ```
 
-Now suppose it turns out that file shouldn't be in `dir1` after all. Let's move it back to the working directory. We could `cd` into `dir1` then use `mv combined.txt ..` to say "move `combined.txt` into the parent directory". But we can use another path shortcut to avoid changing directory at all. In the same way that two dots (`..`) represents the parent directory, so a single dot (`.`) can be used to represent the current working directory. Because we know there's only one file in `dir1` we can also just use `*` to match any filename in that directory, saving ourselves a few more keystrokes. Our command to move the file back into the working directory therefore becomes this (note the space before the dot, there are *two* parameters being passed to `mv`):
+Now suppose it turns out that file shouldn't be in `dir1` after all. Let's move it back to the working directory. We could `cd` into `dir1` then use `mv combined.txt ..` to say "move `combined.txt` into the parent directory". But we can use another path shortcut to avoid changing directory at all. In the same way that two dots (`..`) represents the parent directory, so a single dot (`.`) can be used to represent the current working directory. Because we know there's only one file in `dir1`, we can also just use `*` to match any filename in that directory, saving ourselves a few more keystrokes. Our command to move the file back into the working directory therefore becomes this (note the space before the dot, there are *two* parameters being passed to `mv`):
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 mv dir1/* .
 ```
 
-The `mv` command also lets us move more than one file at a time. If you pass more than two arguments, the last one is taken to be the destination directory and the others are considered to be files (or directories) to move. Let's use a single command to move `combined.txt`, all our `test_n.txt` files and `dir3` into `dir2`. There's a bit more going on here, but if you look at each argument at a time you should be able to work out what's happening:
+The `mv` command also lets us move more than one file at a time. If you pass more than two arguments, the last one is taken to be the destination directory and the others are considered to be files (or directories) to move. Let's use a single command to move `combined.txt`, all our `test_n.txt` files and `dir3` into `dir2`. There's a bit more going on here, but if you look at each argument at a time, you should be able to work out what's happening:
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 mv combined.txt test_* dir3 dir2
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 ls
+
+another   dir2   folder     'folder 2'  'folder 4'  'folder 6'
+dir1      dir4  'folder 1'  'folder 3'  'folder 5'   output.txt
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 ls dir2
+
+combined.txt  dir3  test_1.txt  test_2.txt  test_3.txt
 ```
 
-With `combined.txt` now moved into `dir2`, what happens if we decide it's in the wrong place again? Instead of `dir2` it should have been put in `dir6`, which is the one that's inside `dir5`, which is in `dir4`. With what we now know about paths, that's no problem either:
+With `combined.txt` now moved into `dir2`, what happens if we decide that it's in the wrong place again? Instead of `dir2` it should have been put in `dir6`, which is the one that's inside `dir5`, which is in `dir4`. With what we now know about paths, that's no problem either:
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 mv dir2/combined.txt dir4/dir5/dir6
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 ls dir2
+
+dir3  test_1.txt  test_2.txt  test_3.txt
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 ls dir4/dir5/dir6
+
+combined.txt
 ```
 
 Notice how our `mv` command let us move the file from one directory into another, even though our working directory is something completely different. This is a powerful property of the command line: no matter where in the file system you are, it's still possible to operate on files and folders in totally different locations.
 
-Since we seem to be using (and moving) that file a lot, perhaps we should keep a copy of it in our working directory. Much as the `mv` command moves files, so the `cp` command **c**o**p**ies them (again, note the space before the dot):
+Since we seem to be using (and moving) that file a lot, perhaps we should keep a **copy** of it in our working directory. Much as the `mv` command moves files, so the `cp` command **c**o**p**ies them (again, note the space before the dot):
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 cp dir4/dir5/dir6/combined.txt .
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 ls dir4/dir5/dir6
+
+combined.txt
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 ls
+
+another        dir2    'folder 1'  'folder 4'   output.txt
+combined.txt   dir4    'folder 2'  'folder 5'
+dir1           folder  'folder 3'  'folder 6'
 ```
 
 Great! Now let's create another copy of the file, in our working directory but with a different name. We can use the `cp` command again, but instead of giving it a directory path as the last argument, we'll give it a new file name instead:
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 cp combined.txt backup_combined.txt
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 ls
+
+another               dir1   folder     'folder 3'  'folder 6'
+backup_combined.txt   dir2  'folder 1'  'folder 4'   output.txt
+combined.txt          dir4  'folder 2'  'folder 5'
 ```
 
-That's good, but perhaps the choice of backup name could be better. Why not rename it so that it will always appear next to the original file in a sorted list. The traditional Unix command line handles a rename as though you're *moving* the file from one name to another, so our old friend `mv` is the command to use. In this case you just specify two arguments: the file you want to rename, and the new name you wish to use.
+That's good, but perhaps the choice of backup name could be better. Why not **rename** it so that it will always appear next to the original file in a sorted list. The traditional Unix command line handles a rename as though you're *moving* the file from one name to another, so our old friend `mv` is the command to use. In this case you just specify two arguments: the file you want to rename, and the new name you wish to use.
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 mv backup_combined.txt combined_backup.txt
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 ls
+
+another               dir1   folder     'folder 3'  'folder 6'
+combined_backup.txt   dir2  'folder 1'  'folder 4'   output.txt
+combined.txt          dir4  'folder 2'  'folder 5'
 ```
 
 This also works on directories, giving us a way to sort out those difficult ones with spaces in the name that we created earlier. To avoid re-typing each command after the first, use the {kbd}`UpArrow` key to pull up the previous command in the history. You can then edit the command before you run it by moving the cursor left and right with the arrow keys, and removing the character to the left with {kbd}`Backspace` or the one the cursor is on with {kbd}`Delete`. Finally, type the new character in place, and press {kbd}`Enter` or {kbd}`Return` to run the command once you're finished. Make sure you change both appearances of the number in each of these lines.
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 mv "folder 1" folder_1
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 mv "folder 2" folder_2
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 mv "folder 3" folder_3
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 mv "folder 4" folder_4
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 mv "folder 5" folder_5
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 mv "folder 6" folder_6
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 ls
+
+another              dir1  folder    folder_3  folder_6
+combined_backup.txt  dir2  folder_1  folder_4  output.txt
+combined.txt         dir4  folder_2  folder_5
 ```
 
 
@@ -994,44 +1143,75 @@ In this next section, we're going to start deleting files and folders. To make a
 
 Now we know how to move, copy and rename files and directories. Given that these are just test files, however, perhaps we don't really need three different copies of `combined.txt` after all. Let's tidy up a bit, using the `rm` (**r**e**m**ove) command:
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 rm dir4/dir5/dir6/combined.txt combined_backup.txt
 ```
 
 Perhaps we should remove some of those excess directories as well:
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 rm folder_*
-```
 
-![Error when running rm on directories](upload://helyMTnbLyCKCH0j1p2nxWjr0rH.png)
+rm: cannot remove 'folder_1': Is a directory
+rm: cannot remove 'folder_2': Is a directory
+rm: cannot remove 'folder_3': Is a directory
+rm: cannot remove 'folder_4': Is a directory
+rm: cannot remove 'folder_5': Is a directory
+rm: cannot remove 'folder_6': Is a directory
+```
 
 What happened there? Well, it turns out that `rm` does have one little safety net. Sure, you can use it to delete every single file in a directory with a single command, accidentally wiping out thousands of files in an instant, with no means to recover them. But it won't let you delete a directory. I *suppose* that does help prevent you accidentally deleting thousands *more* files, but it does seem a little petty for such a destructive command to balk at removing an empty directory. Luckily there's an `rmdir` (**r**e**m**ove **dir**ectory) command that will do the job for us instead:
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 rmdir folder_*
+
+rmdir: failed to remove 'folder_6': Directory not empty
 ```
 
-![Error when running rmdir on a non-empty directory](upload://thM7IacuM7BrsNe2GGqIPil5nul.png)
+Well that's a little better, but there's still an error. If you run `ls`, you'll see that most of the folders have gone, but `folder_6` is still hanging around. As you may recall, `folder_6` still has a `folder 7` inside it, and `rmdir` will only delete empty folders. Again, it's a small safety net to prevent you from accidentally deleting a folder full of files when you didn't mean to.
 
-Well that's a little better, but there's still an error. If you run `ls` you'll see that most of the folders have gone, but `folder_6` is still hanging around. As you may recall, `folder_6` still has a `folder 7` inside it, and `rmdir` will only delete empty folders. Again, it's a small safety net to prevent you from accidentally deleting a folder full of files when you didn't mean to.
+In this case, however, we *do* mean to. The addition of options to our `rm` or `rmdir` commands will let us perform dangerous actions without the aid of a safety net! In the case of `rmdir`, we can add a `-p` switch to tell it to also remove the parent directories. Think of it as the counterpoint to `mkdir -p`. So if you were to run `rmdir -p dir1/dir2/dir3`, it would first delete `dir3`, then `dir2`, then finally delete `dir1`. It still follows the normal `rmdir` rules of only deleting empty directories though, so if there was also a file in `dir1`, for example, only `dir3` and `dir2` would get removed.
 
-In this case, however, we *do* mean to. The addition of options to our `rm` or `rmdir` commands will let us perform dangerous actions without the aid of a safety net! In the case of `rmdir` we can add a `-p` switch to tell it to also remove the parent directories. Think of it as the counterpoint to `mkdir -p`. So if you were to run `rmdir -p dir1/dir2/dir3` it would first delete `dir3`, then `dir2`, then finally delete `dir1`. It still follows the normal `rmdir` rules of only deleting empty directories though, so if there was also a file in `dir1`, for example, only `dir3` and `dir2` would get removed.
+A more common approach, when you're really, *really* sure you want to delete a whole directory and anything within it, is to tell `rm` to work **recursively** by using the `-r` switch, in which case it will happily delete folders as well as files. With that in mind, here's the command to get rid of that pesky `folder_6` and the subdirectory within it:
 
-A more common approach, when you're really, *really* sure you want to delete a whole directory and anything within it, is to tell `rm` to work recursively by using the `-r` switch, in which case it will happily delete folders as well as files. With that in mind, here's the command to get rid of that pesky `folder_6` and the subdirectory within it:
-
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 rm -r folder_6
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 ls
+
+another  combined.txt  dir1  dir2  dir4  folder  output.txt
 ```
 
 Remember: although `rm -r` is quick and convenient, it's also dangerous. It's safest to explicitly delete files to clear out a directory, then `cd ..` to the parent before using `rmdir` to remove it.
 
 
-:::{admonition} Important warning
-:class: warning
+:::{warning}
+Unlike graphical interfaces, `rm` doesn't move files to a folder called "**trash**" or similar. Instead it deletes them totally, utterly and irrevocably. You need to be ultra careful with the parameters you use with `rm` to make sure you're only deleting the file(s) you intend to.
 
-Unlike graphical interfaces, `rm` doesn't move files to a folder called "trash" or similar. Instead it deletes them totally, utterly and irrevocably. You need to be ultra careful with the parameters you use with `rm` to make sure you're only deleting the file(s) you intend to. You should take particular care when using wildcards, as it's easy to accidentally delete more files than you intended. An errant space character in your command can change it completely: `rm t*` means "delete all the files starting with `t`", whereas `rm t *` means "delete the file `t` as well as any file whose name consists of zero or more characters, which would be everything in the directory! If you're at all uncertain use the `-i` (**i**nteractive) option to `rm`, which will prompt you to confirm the deletion of each file; enter `Y` to delete it, `N` to keep it, and press {kbd}`Ctrl-C` to stop the operation entirely.
+You should take particular care when using wildcards, as it's easy to accidentally delete more files than you intended. An errant space character in your command can change it completely: `rm t*` means "delete all the files starting with `t`", whereas `rm t *` means "delete the file `t` as well as any file whose name consists of zero or more characters, which would be everything in the directory!
+
+If you're at all uncertain use the `-i` (**i**nteractive) option to `rm`, which will prompt you to confirm the deletion of each file; enter `Y` to delete it, `N` to keep it, and press {kbd}`Ctrl-C` to stop the operation entirely.
 :::
 
 
@@ -1041,73 +1221,166 @@ Today's computers and phones have the sort of graphical and audio capabilities t
 
 Let's start with a simple question. How many lines are there in your `combined.txt` file? The `wc` (**w**ord **c**ount) command can tell us that, using the `-l` switch to tell it we only want the line count (it can also do character counts and, as the name suggests, word counts):
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 wc -l combined.txt
+
+7 combined.txt
 ```
 
 Similarly, if you wanted to know how many files and folders are in your home directory, and then tidy up after yourself, you could do this:
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 ls ~ > file_list.txt
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 wc -l file_list.txt
+
+9 file_list.txt
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 rm file_list.txt
 ```
 
-That method works, but creating a temporary file to hold the output from `ls` only to delete it two lines later seems a little excessive. Fortunately the Unix command line provides a shortcut that avoids you having to create a temporary file, by taking the output from one command (referred to as **standard output** or STDOUT) and feeding it directly in as the input to another command (**standard input** or STDIN). It's as though you've connected a pipe between one command's output and the next command's input, so much so that this process is actually referred to as *piping* the data from one command to another. Here's how to pipe the output of our `ls` command into `wc`:
+That method works, but creating a temporary file to hold the output from `ls` only to delete it two lines later seems a little excessive. Fortunately the Unix command line provides a shortcut that avoids you having to create a temporary file, by taking the output from one command (referred to as **standard output** or STDOUT) and feeding it directly in as the input to another command (**standard input** or STDIN). It's as though you've connected a pipe between one command's output and the next command's input, so much so that this process is actually referred to as **piping** the data from one command to another. Here's how to pipe the output of our `ls` command into `wc`:
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 ls ~ | wc -l
+
+9
 ```
 
 Notice that there's no temporary file created, and no file name needed. Pipes operate entirely in memory, and most Unix command line tools will expect to receive input from a pipe if you don't specify a file for them to work on. Looking at the line above, you can see that it's two commands, `ls ~` (list the contents of the home directory) and `wc -l` (count the lines), separated by a vertical bar character (`|`). This process of piping one command into another is so commonly used that the character itself is often referred to as the *pipe* character, so if you see that term you now know it just means the vertical bar.
 
 Note that the spaces around the pipe character aren't important, we've used them for clarity, but the following command works just as well, this time for telling us how many items are in the `/etc` directory:
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 ls /etc|wc -l
+
+268
 ```
 
 Phew! That's quite a few files. If we wanted to list them all it would clearly fill up more than a single screen. As we discovered earlier, when a command produces a lot of output, it's better to use `less` to view it, and that advice still applies when using a pipe (remember, press `q` to quit):
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 ls /etc | less
 ```
 
 Going back to our own files, we know how to get the number of lines in `combined.txt`, but given that it was created by concatenating the same files multiple times, I wonder how many unique lines there are? Unix has a command, `uniq`, that will only output unique lines in the file. So we need to `cat` the file out and pipe it through `uniq`. But all we want is a line count, so we need to use `wc` as well. Fortunately the command line doesn't limit you to a single pipe at a time, so we can continue to chain as many commands as we need:
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 cat combined.txt | uniq | wc -l
+
+7
 ```
 
 That line probably resulted in a count that's pretty close to the total number of lines in the file, if not exactly the same. Surely that can't be right? Lop off the last pipe to see the output of the command for a better idea of what's happening. If your file is very long, you might want to pipe it through `less` to make it easier to inspect:
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 cat combined.txt | uniq | less
+
+This is a test
+This is a second test
+This is a third test
+This is a test
+This is a second test
+This is a third test
+I've appended a line!
 ```
 
-It appears that very few, if any, of our duplicate lines are being removed. To understand why, we need to look at the documentation for the `uniq` command. Most command line tools come with a brief (and sometimes not-so-brief) instruction manual, accessed through the `man` (**man**ual) command. The output is automatically piped through your pager, which will typically be `less`, so you can move back and forth through the output, then press `q` when you're finished:
+It appears that very few, if any, of our duplicate lines are being removed. To understand why, we need to look at the **documentation** for the `uniq` command. Most command line tools come with a brief (and sometimes not-so-brief) instruction manual, accessed through the `man` (**man**ual) command. The output is automatically piped through your pager, which will typically be `less`, so you can move back and forth through the output, then press `q` when you're finished:
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 man uniq
+
+UNIQ(1)                  User Commands                  UNIQ(1)
+
+NAME
+       uniq - report or omit repeated lines
+
+SYNOPSIS
+       uniq [OPTION]... [INPUT [OUTPUT]]
+
+DESCRIPTION
+       Filter  adjacent  matching lines from INPUT (or standard
+       input), writing to OUTPUT (or standard output).
+
+       With no options, matching lines are merged to the  first
+       occurrence.
+...
 ```
-
-![The man page for uniq](upload://dOv9iLNDkhujJ9TLWGrNmJjiZxB.png)
-
 
 Because this type of documentation is accessed via the `man` command, you'll hear it referred to as a "man page", as in "check the man page for more details". The format of man pages is often terse, think of them more as a quick overview of a command than a full tutorial. They're often highly technical, but you can usually skip most of the content and just look for the details of the option or argument you're using.
 
 The `uniq` man page is a typical example in that it starts with a brief one-line description of the command, moves on to a synopsis of how to use it, then has a detailed description of each option or parameter. But whilst man pages are invaluable, they can also be impenetrable. They're best used when you need a reminder of a particular switch or parameter, rather than as a general resource for learning how to use the command line. Nevertheless, the first line of the *DESCRIPTION* section for `man uniq` does answer the question as to why duplicate lines haven't been removed: it only works on *adjacent* matching lines.
 
-The question, then, is how to rearrange the lines in our file so that duplicate entries are on adjacent lines. If we were to sort the contents of the file alphabetically, that would do the trick. Unix offers a `sort` command to do exactly that. A quick check of `man sort` shows that we can pass a file name directly to the command, so let's see what it does to our file:
+The question, then, is how to rearrange the lines in our file so that duplicate entries are on adjacent lines. If we were to **sort** the contents of the file alphabetically, that would do the trick. Unix offers a `sort` command to do exactly that. A quick check of `man sort` shows that we can pass a file name directly to the command, so let's see what it does to our file:
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 sort combined.txt | less
+
+I've appended a line!
+This is a second test
+This is a second test
+This is a test
+This is a test
+This is a third test
+This is a third test
 ```
 
-You should be able to see that the lines have been reordered, and it's now suitable for piping straight into `uniq`. We can finally complete our task of counting the unique lines in the file:
+The lines have been reordered, and it's now suitable for piping straight into `uniq`. We can finally complete our task of counting the unique lines in the file:
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 sort combined.txt | uniq | wc -l
+
+4
 ```
 
 As you can see, the ability to pipe data from one command to another, building up long chains to manipulate your data, is a powerful tool, as well as reducing the need for temporary files, and saving you a *lot* of typing. For this reason you'll see it used quite often in command lines. A long chain of commands might look intimidating at first, but remember that you can break even the longest chain down into individual commands (and look at their man pages) to get a better understanding of what it's doing.
@@ -1122,9 +1395,9 @@ Most Linux command line tools include a man page. Try taking a brief look at the
 (the-command-line-and-the-superuser)=
 ## The command line and the superuser
 
-One good reason for learning some command line basics is that instructions online will often favor the use of shell commands over a graphical interface. Where those instructions require changes to your machine that go beyond modifying a few files in your home directory, you'll inevitably be faced with commands that need to be run as the machine's administrator (or **superuser** in Unix parlance). Before you start running arbitrary commands you find in some dark corner of the internet, it's worth understanding the implications of running as an administrator, and how to spot those instructions that require it, so you can better gauge whether they're safe to run or not.
+One good reason for learning some command line basics is that instructions online will often favor the use of shell commands over a graphical interface. Where those instructions require changes to your machine that go beyond modifying a few files in your home directory, you'll inevitably be faced with commands that need to be run as the machine's administrator (or **superuser** in Unix parlance). Before you start running arbitrary commands that you find in some dark corner of the internet, it's worth understanding the implications of running as an administrator, and how to spot those instructions that require it, so you can better gauge whether they're safe to run or not.
 
-The superuser is, as the name suggests, a user with super powers. In older systems it was a real user, with a real username (almost always **root**) that you could log in as if you had the password. As for those super powers: *root* can modify or delete any file in any directory on the system, regardless of who owns them; *root* can rewrite firewall rules or start network services that could potentially open the machine up to an attack; *root* can shutdown the machine even if other people are still using it. In short, *root* can do just about *anything*, skipping easily round the safeguards that are usually put in place to stop users from overstepping their bounds.
+The superuser is, as the name suggests, a user with super powers. In older systems, it was a real user, with a real username (almost always **root**) that you could log in as if you had the password. As for those super powers: *root* can modify or delete any file in any directory on the system, regardless of who owns them; *root* can rewrite firewall rules or start network services that could potentially open the machine up to an attack; *root* can shut down the machine even if other people are still using it. In short, *root* can do just about *anything*, skipping easily round the safeguards that are usually put in place to stop users from overstepping their bounds.
 
 Of course a person logged in as *root* is just as capable of making mistakes as anyone else. The annals of computing history are filled with tales of a mistyped command deleting the entire file system or killing a vital server. Then there's the possibility of a malicious attack: if a user is logged in as *root* and leaves their desk then it's not too tricky for a disgruntled colleague to hop on their machine and wreak havoc. Despite that, human nature being what it is, many administrators over the years have been guilty of using *root* as their main, or only, account.
 
@@ -1135,9 +1408,9 @@ If anyone asks you to enable the *root* account, or log in as *root*, be very su
 :::
 
 
-In an effort to reduce these problems, many Linux distributions started to encourage the use of the `su` command. This is variously described as being short for '**s**uper**u**ser' or '**s**witch **u**ser', and allows you to change to another user on the machine without having to log out and in again. When used with no arguments it assumes you want to change to the *root* user (hence the first interpretation of the name), but you can pass a username to it in order to switch to a specific user account (the second interpretation). By encouraging use of `su`, the aim was to persuade administrators to spend most of their time using a normal account, only switch to the superuser account when they needed to, and then use the `logout` command (or {kbd}`Ctrl-D` shortcut) as soon as possible to return to their user-level account.
+In an effort to reduce these problems, many Linux distributions started to encourage the use of the `su` command. This is variously described as being short for '**s**uper**u**ser' or '**s**witch **u**ser', and allows you to change to another user on the machine without having to log out and in again. When used with no arguments, it assumes you want to change to the *root* user (hence the first interpretation of the name), but you can pass a username to it in order to switch to a specific user account (the second interpretation). By encouraging use of `su`, the aim was to persuade administrators to spend most of their time using a normal account, only switch to the superuser account when they needed to, and then use the `logout` command (or {kbd}`Ctrl-D` shortcut) as soon as possible to return to their user-level account.
 
-By minimizing the amount of time spent logged in as *root*, the use of `su` reduces the window of opportunity in which to make a catastrophic mistake. Despite that, human nature being what it is, many administrators have been guilty of leaving long-running terminals open in which they've used `su` to switch to the *root* account. In that respect `su` was only a small step forward for security.
+By minimizing the amount of time spent logged in as *root*, the use of `su` reduces the window of opportunity in which to make a catastrophic mistake. Despite that, human nature being what it is, many administrators have been guilty of leaving long-running terminals open in which they've used `su` to switch to the *root* account. In that respect, `su` was only a small step forward for security.
 
 :::{admonition} Don't use `su`
 :class: warning
@@ -1152,30 +1425,47 @@ Better to disable the *root* account entirely and then, instead of allowing long
 
 `sudo` is used to prefix a command that has to be run with superuser privileges. A configuration file is used to define which users can use `sudo`, and which commands they can run. When running a command like this, the user is prompted for *their own* password, which is then cached for a period of time (defaulting to 15 minutes), so if they need to run multiple superuser-level commands they don't keep getting continually asked to type it in.
 
-On a Ubuntu system, the first user created when the system is installed is considered to be the superuser. When adding a new user, there is an option to create them as an administrator, in which case they will also be able to run superuser commands with `sudo`. In this screenshot of Ubuntu 18.04 you can see the option at the top of the dialog:
-
-![Ubuntu 18.04 add user dialog](upload://2CQrDxHnZ65GjXcDRHUfFbbrXNt.png)
+On a Ubuntu system, the first user created when the system is installed is considered to be the superuser. When adding a new user, there is an option to create them as an administrator, in which case they will also be able to run superuser commands with `sudo`.
 
 Assuming you're on a Linux system that uses `sudo`, and your account is configured as an administrator, try the following to see what happens when you try to access a file that is considered sensitive (it contains encrypted passwords):
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 cat /etc/shadow
+
+cat: /etc/shadow: Permission denied
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 sudo cat /etc/shadow
+
+[sudo] password for user:
+...
 ```
 
-![Using sudo](upload://2QasuBTUBeJy7wipzRbjYPFrcwG.png)
+Enter your password when prompted. Don't worry if you can't see any characters: your password is hidden for security purposes.
 
-If you enter your password when prompted, you should see the content of the `/etc/shadow` file. Now clear the terminal by running the `reset` command, and run `sudo cat /etc/shadow` again. This time, the file will be displayed without prompting you for a password, as it's still in the cache.
+You should see the content of the `/etc/shadow` file. Now clear the terminal by running the `reset` command, and run `sudo cat /etc/shadow` again. This time, the file will be displayed without prompting you for a password, as it's still in the cache.
 
 
 :::{admonition} Be careful with sudo
 :class: warning
 
-If you are instructed to run a command with `sudo`, make sure you understand what the command is doing before you continue. Running with `sudo` gives that command all the same powers as a superuser. For example, a software publisher's site might ask you to download a file and change its permissions, then use `sudo` to run it. Unless you know exactly what the file is doing, you're opening up a hole through which malware could potentially be installed onto your system. `sudo` may only run one command at a time, but that command could itself run many others. Treat any new use of `sudo` as being just as dangerous as logging in as *root*.
+If you are instructed to run a command with `sudo`, make sure you understand what the command is doing before you continue. Running with `sudo` gives that command all the same powers as a superuser.
+
+For example, a software publisher's site might ask you to download a file and change its permissions, then use `sudo` to run it. Unless you know exactly what the file is doing, you're opening up a hole through which malware could potentially be installed onto your system.
+
+`sudo` may only run one command at a time, but that command could itself run many others. Treat any new use of `sudo` as being just as dangerous as logging in as *root*.
 :::
 
 
-For instructions targeting Ubuntu, a common appearance of `sudo` is to install new software onto your system using the `apt` or `apt-get` commands. If the instructions require you to first add a new software repository to your system, using the `apt-add-repository` command, by editing files in `/etc/apt`, or by using a Personal Package Archive (PPA), you should be careful as these sources are not curated by Canonical. But often the instructions just require you to install software from the standard repositories, which should be safe.
+On Ubuntu, you often use `sudo` to install new software onto your system using the `apt` or `apt-get` commands. If the instructions require you to first add a new software repository to your system, using the `apt-add-repository` command, by editing files in `/etc/apt`, or by using a Personal Package Archive (PPA), you should be careful as these sources are not curated by Canonical. But often the instructions just require you to install software from the standard repositories, which should be safe.
 
 
 :::{admonition} Installing new software
@@ -1185,32 +1475,67 @@ There are lots of different ways to install software on Linux systems. Installin
 
 Indications that files are coming from outside the distribution's repositories include (but are not limited to) the use of any of the following commands: `curl`, `wget`, `pip`, `npm`, `make`, or any instructions that tell you to change a file's permissions to make it executable.
 
-Increasingly, Ubuntu is making use of "snaps", a new package format which offers some security improvements by more closely confining programs to stop them accessing parts of the system they don't need to. But some options can reduce the security level so, if you're asked to run `snap install` with any parameters other than the name of the snap, it's worth checking exactly what the command is trying to do.
+Ubuntu also uses "snaps", a new package format which offers some security improvements by more closely confining programs to stop them accessing parts of the system they don't need to. But some options can reduce the security level so, if you're asked to run `snap install` with any parameters other than the name of the snap, it's worth checking exactly what the command is trying to do.
 :::
 
 
 Let's install a new command line program from the standard Ubuntu repositories to illustrate this use of `sudo`:
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 sudo apt install tree
 ```
 
-Once you've provided your password the `apt` program will print out quite a few lines of text to tell you what it's doing. The `tree` program is only small, so it shouldn't take more than a minute or two to download and install for most users. Once you are returned to the normal command line prompt, the program is installed and ready to use. Let's run it to get a better overview of what our collection of files and folders looks like:
+Once you've provided your password, the `apt` program will print out quite a few lines of text to tell you what it's doing. The `tree` program is only small, so it shouldn't take more than a minute or two to download and install for most users. Once you are returned to the normal command line prompt, the program is installed and ready to use. Let's run it to get a better overview of what our collection of files and folders looks like:
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 cd /tmp/tutorial
-tree
 ```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
+tree
 
-![The output of the tree command](upload://bJX7jQTSxwwherQo2fet8vexWFl.png)
+.
+├── another
+├── combined.txt
+├── dir1
+├── dir2
+│   ├── dir3
+│   ├── test_1.txt
+│   ├── test_2.txt
+│   └── test_3.txt
+├── dir4
+│   └── dir5
+│       └── dir6
+├── folder
+└── output.txt
+
+9 directories, 5 files
+```
 
 Going back to the command that actually installed the new program (`sudo apt install tree`), it looks slightly different to those you've see so far. In practice, it works like this:
 
-1. The `sudo` command, when used without any options, will assume that the first parameter is a command for it to run with superuser privileges. Any other parameters will be passed directly to the new command. `sudo`'s switches all start with one or two hyphens and must immediately follow the `sudo` command, so there can be no confusion about whether the second parameter on the line is a command or an option.
+1. The `sudo` command, when used without any options, will assume that the first parameter is a command for it to run with superuser privileges. Any other parameters will be passed directly to the new command.
 
-2. The command in this case is `apt`. Unlike the other commands we've seen, this isn't working directly with files. Instead it expects its first parameter to be an instruction to perform (`install`), with the rest of the parameters varying based on the instruction.
+    `sudo`'s switches all start with one or two hyphens and must immediately follow the `sudo` command, so there can be no confusion about whether the second parameter on the line is a command or an option.
 
-3. In this case, the `install` command tells `apt` that the remainder of the command line consists of one or more package names to install from the system's software repositories. Usually, this adds new software to the machine, but packages could be any collection of files that need to be installed to particular locations, such as fonts or desktop images.
+2. The command in this case is `apt`.
+
+    Unlike the other commands we've seen, this isn't working directly with files. Instead, it expects its first parameter to be an instruction to perform (`install`), with the rest of the parameters varying based on the instruction.
+
+3. In this case, the `install` command tells `apt` that the remainder of the command line consists of one or more package names to install from the system's software repositories.
+
+    Usually, this adds new software to the machine, but packages could be any collection of files that need to be installed to particular locations, such as fonts or desktop images.
 
 
 You can put `sudo` in front of any command to run it as a superuser, but there's rarely any need to. Even system configuration files can often be viewed (with `cat` or `less`) as a normal user, and only require *root* privileges if you need to edit them.
@@ -1225,45 +1550,161 @@ If you follow any instructions that tell you to run `sudo su`, be aware that eve
 :::
 
 
-In this section you've learnt about the dangers of the *root* account, and how modern Linux systems like Ubuntu try to reduce the risk of danger by using `sudo`. But *any* use of superuser powers should be considered carefully. When following instructions you find online, you should now be in a better position to spot those commands that might require greater scrutiny.
+In this section you've learnt about the dangers of the *root* account, and how modern Linux systems like Ubuntu try to reduce the risk of danger by using `sudo`. But *any* use of superuser powers should be considered carefully. When following instructions that you find online, you should now be in a better position to spot those commands that might require greater scrutiny.
 
 
 ## Hidden files
 
-Before we conclude this tutorial, it's worth mentioning **hidden files** (and folders). These are commonly used on Linux systems to store settings and configuration data, and are typically hidden simply so that they don't clutter the view of your own files. There's nothing special about a hidden file or folder, other than it's name: simply starting a name with a dot (`.`) is enough to make it disappear.
+**Hidden files** (and folders) are commonly used on Linux systems to store settings and configuration data, and are typically hidden simply so that they don't clutter the view of your own files. There's nothing special about a hidden file or folder, other than it's name: simply starting a name with a dot (`.`) is enough to make it disappear.
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 cd /tmp/tutorial
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 ls
+
+another  combined.txt  dir1  dir2  dir4  folder  output.txt
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 mv combined.txt .combined.txt
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 ls
+
+another  dir1  dir2  dir4  folder  output.txt
 ```
 
 You can still work with the hidden file by making sure you include the dot when you specify its file name:
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 cat .combined.txt
+
+This is a test
+...
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 mkdir .hidden
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 mv .combined.txt .hidden
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 less .hidden/.combined.txt
+
+This is a test
+...
 ```
 
 If you run `ls`, you'll see that the `.hidden` directory is, as you might expect, hidden. You can still list its contents using `ls .hidden`, but as it only contains a single file which is, itself, hidden you won't get much output. But you can use the `-a` (show **a**ll) switch to `ls` to make it show everything in a directory, including the hidden files and folders:
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 ls
+
+another  dir1  dir2  dir4  folder  output.txt
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 ls -a
+
+.  ..  another  dir1  dir2  dir4  folder  .hidden  output.txt
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 ls .hidden
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 ls -a .hidden
+
+.  ..  .combined.txt
 ```
 
 Notice that the shortcuts we used earlier, `.` and `..`, also appear as though they're real directories.
 
 As for our recently installed `tree` command, that works in a similar way (except without an appearance by `.` and `..`):
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 tree
+
+.
+├── another
+├── dir1
+├── dir2
+│   ├── dir3
+│   ├── test_1.txt
+│   ├── test_2.txt
+│   └── test_3.txt
+├── dir4
+│   └── dir5
+│       └── dir6
+├── folder
+└── output.txt
+
+9 directories, 4 files
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
 tree -a
+
+.
+...
+├── .hidden
+│   └── .combined.txt
+└── output.txt
+
+10 directories, 5 files
 ```
 
 Switch back to your home directory (`cd`) and try running `ls` without and then with the `-a` switch. Pipe the output through `wc -l` to give you a clearer idea of how many hidden files and folders have been right under your nose all this time. These files typically store your personal configuration, and is how Unix systems have always offered the capability to have system-level settings (usually in `/etc`) that can be overridden by individual users (courtesy of hidden files in their home directory).
@@ -1275,27 +1716,30 @@ You shouldn't usually need to deal with hidden files, but occasionally instructi
 
 We've reached the end of this tutorial, and you should be back in your home directory now. Use `pwd` to check, and `cd` to go there if you're not. It's only polite to leave your computer in the same state that we found it in, so as a final step, let's remove the experimental area that we were using earlier, then double-check that it's actually gone:
 
-```Bash
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: ~
 rm -r /tmp/tutorial
+```
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: ~
 ls /tmp
 ```
 
-As a last step, let's close the terminal. You can just close the window, but it's better practice to log out of the shell. You can either use the `logout` command, or the {kbd}`Ctrl-D` keyboard shortcut. If you plan to use the terminal a lot, memorizing {kbd}`Ctrl-Alt-T` to launch the terminal and {kbd}`Ctrl-D` to close it will soon make it feel like a handy assistant that you can call on instantly, and dismiss just as easily.
+As a last step, let's close the terminal. You can just close the window, but it's better practice to log out of the shell. You can either use the `logout` command, or the {kbd}`Ctrl-D` keyboard shortcut.
+
+If you plan to use the terminal a lot, memorizing {kbd}`Ctrl-Alt-T` to launch the terminal and {kbd}`Ctrl-D` to close it will soon make it feel like a handy assistant that you can call on instantly, and dismiss just as easily.
 
 
-## Conclusion
-
-This tutorial has only been a brief introduction to the Linux command line. We've looked at a few common commands for moving around the file system and manipulating files, but no tutorial could hope to provide a comprehensive guide to every available command. What's more important is that you've learnt the key aspects of working with the shell. You've been introduced to some widely used terminology (and synonyms) that you might come across online, and have gained an insight into some of the key parts of a typical shell command. You've learnt about absolute and relative paths, arguments, options, man pages, `sudo` and *root*, hidden files and much more.
-
-With these key concepts, you should be able to make more sense of any command line instructions that you come across. Even if you don't understand every single command, you should at least have an idea of where one command stops and the next begins. You should more easily be able to tell what files they're manipulating, or what other switches and parameters are being used. With reference to the man pages, you might even be able to glean exactly what the command is doing, or at least get a general idea.
-
-There's little we've covered here that is likely to make you abandon your graphical file manager in favor of a prompt, but file manipulation wasn't really the main goal. If, however, you're intrigued by the ability to affect files in disparate parts of your hard drive with just a few key presses, there's still a lot more for you to learn.
-
-
-### Further reading
+## Further reading
 
 There are many online tutorials and commercially published books about the command line, but if you do want to go deeper into the subject, a good starting point might be the following book:
 
 * [The Linux Command Line](http://linuxcommand.org/tlcl.php) by William Shotts
 
-The reason for recommending this book in particular is that it has been released under a Creative Commons license, and is available to download free of charge as a PDF file, making it ideal for the beginner who isn't sure just how much they want to commit to the command line. It's also available as a printed volume, should you find yourself caught by the command line bug and wanting a paper reference.
+This book has been released under a Creative Commons license, and is available to download free of charge as a PDF file, making it ideal for the beginner who isn't sure just how much they want to commit to the command line. It's also available as a printed volume, should you find yourself caught by the command line bug and wanting a paper reference.
