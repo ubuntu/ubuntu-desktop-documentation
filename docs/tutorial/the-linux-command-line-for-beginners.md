@@ -1397,6 +1397,8 @@ Most Linux command line tools include a man page. Try taking a brief look at the
 
 One good reason for learning some command line basics is that instructions online will often favor the use of shell commands over a graphical interface. Where those instructions require changes to your machine that go beyond modifying a few files in your home directory, you'll inevitably be faced with commands that need to be run as the machine's administrator (or **superuser** in Unix parlance). Before you start running arbitrary commands that you find in some dark corner of the internet, it's worth understanding the implications of running as an administrator, and how to spot those instructions that require it, so you can better gauge whether they're safe to run or not.
 
+### The old-school approach
+
 The superuser is, as the name suggests, a user with super powers. In older systems, it was a real user, with a real username (almost always **root**) that you could log in as if you had the password. As for those super powers: *root* can modify or delete any file in any directory on the system, regardless of who owns them; *root* can rewrite firewall rules or start network services that could potentially open the machine up to an attack; *root* can shut down the machine even if other people are still using it. In short, *root* can do just about *anything*, skipping easily round the safeguards that are usually put in place to stop users from overstepping their bounds.
 
 Of course a person logged in as *root* is just as capable of making mistakes as anyone else. The annals of computing history are filled with tales of a mistyped command deleting the entire file system or killing a vital server. Then there's the possibility of a malicious attack: if a user is logged in as *root* and leaves their desk then it's not too tricky for a disgruntled colleague to hop on their machine and wreak havoc. Despite that, human nature being what it is, many administrators over the years have been guilty of using *root* as their main, or only, account.
@@ -1407,6 +1409,8 @@ Of course a person logged in as *root* is just as capable of making mistakes as 
 If anyone asks you to enable the *root* account, or log in as *root*, be very suspicious of their intentions.
 :::
 
+
+### A security improvement
 
 In an effort to reduce these problems, many Linux distributions started to encourage the use of the `su` command. This is variously described as being short for '**s**uper**u**ser' or '**s**witch **u**ser', and allows you to change to another user on the machine without having to log out and in again. When used with no arguments, it assumes you want to change to the *root* user (hence the first interpretation of the name), but you can pass a username to it in order to switch to a specific user account (the second interpretation). By encouraging use of `su`, the aim was to persuade administrators to spend most of their time using a normal account, only switch to the superuser account when they needed to, and then use the `logout` command (or {kbd}`Ctrl-D` shortcut) as soon as possible to return to their user-level account.
 
@@ -1419,6 +1423,8 @@ If anyone asks you to use `su`, be wary. If you're using Ubuntu, the *root* acco
 :::
 
 
+### The modern solution
+
 When using `su`, your entire terminal session is switched to the other user. Commands that don't need *root* access, something as mundane as `pwd` or `ls`, would be run under the auspices of the superuser, increasing the risk of a bug in the program causing major problems. Worse still, if you lose track of which user you're currently operating as, you might issue a command that is fairly benign when run as a user, but which could destroy the entire system if run as *root*.
 
 Better to disable the *root* account entirely and then, instead of allowing long-lived terminal sessions with dangerous powers, require the user to specifically request superuser rights on a per-command basis. The key to this approach is a command called `sudo` (as in "**s**witch **u**ser and **do** this command").
@@ -1426,6 +1432,8 @@ Better to disable the *root* account entirely and then, instead of allowing long
 `sudo` is used to prefix a command that has to be run with superuser privileges. A configuration file is used to define which users can use `sudo`, and which commands they can run. When running a command like this, the user is prompted for *their own* password, which is then cached for a period of time (defaulting to 15 minutes), so if they need to run multiple superuser-level commands they don't keep getting continually asked to type it in.
 
 On a Ubuntu system, the first user created when the system is installed is considered to be the superuser. When adding a new user, there is an option to create them as an administrator, in which case they will also be able to run superuser commands with `sudo`.
+
+### Accessing sensitive files
 
 Assuming you're on a Linux system that uses `sudo`, and your account is configured as an administrator, try the following to see what happens when you try to access a file that is considered sensitive (it contains encrypted passwords):
 
@@ -1464,6 +1472,8 @@ For example, a software publisher's site might ask you to download a file and ch
 `sudo` may only run one command at a time, but that command could itself run many others. Treat any new use of `sudo` as being just as dangerous as logging in as *root*.
 :::
 
+
+### Installing software
 
 On Ubuntu, you often use `sudo` to install new software onto your system using the `apt` or `apt-get` commands. If the instructions require you to first add a new software repository to your system, using the `apt-add-repository` command, by editing files in `/etc/apt`, or by using a Personal Package Archive (PPA), you should be careful as these sources are not curated by Canonical. But often the instructions just require you to install software from the standard repositories, which should be safe.
 
