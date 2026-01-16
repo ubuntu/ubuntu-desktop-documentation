@@ -718,7 +718,54 @@ folder 6
 output.txt
 ```
 
-Okay, so it's not *exactly* what was displayed on the screen previously, but it contains all the same data, and it's in a more useful format for further processing. Let's look at another command, `echo`:
+Okay, so it's not *exactly* what was displayed on the screen previously, but it contains all the same data, and it's in a more useful format for further processing.
+
+### Cancelling a command
+
+If you make a mistake in the command and run `cat` with no arguments, you might catch yourself in a little trap:
+
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
+cat
+
+hello
+hello
+quit
+quit
+Please close this app!
+Please close this app!
+```
+
+What's happening there? The `cat` program keeps running, and whatever you type in gets thrown back at you. It turns out that `cat` has a special interactive mode. Right now, though, we just want to stop it and proceed with our lesson.
+
+Whenever you want to cancel a running command, you can press {kbd}`Ctrl-C`. A strange piece of text appears, representing your keyboard shortcut, and the command is gone:
+
+```{terminal}
+:copy:
+:user: user
+:host: computer
+:dir: /tmp/tutorial
+cat
+
+^C
+```
+
+
+### Copy-pasting
+
+Now you're probably thinking: if {kbd}`Ctrl-C` cancels commands, how do I **copy and paste**? Well, the {kbd}`Ctrl-V` shortcut also has a special meaning in the terminal, and both of these were standardized long before copy-pasting arrived. Because of that, you have to add {kbd}`Shift` in the terminal.
+
+Try highlighting the content of your terminal with your mouse. Then press {kbd}`Ctrl-Shift-C`. That text is now in your clipboard. Go to your favorite text editor application and paste the text with {kbd}`Ctrl-V`. No {kbd}`Shift` there because it's a regular graphical application.
+
+Move your mouse over one of the terminal blocks in this tutorial. You'll notice that a *Copy* button appears in the upper right corner. You can copy that command. To paste it into your terminal, you'll have to press {kbd}`Ctrl-Shift-V`. However, don't overuse it! You'll learn more if you type the commands yourself.
+
+
+### Adding text to a file
+
+Let's look at another command, `echo`:
 
 ```{terminal}
 :copy:
@@ -764,6 +811,9 @@ another   dir3    'folder 1'  'folder 4'   output.txt   test_3.txt
 dir1      dir4    'folder 2'  'folder 5'   test_1.txt
 dir2      folder  'folder 3'  'folder 6'   test_2.txt
 ```
+
+
+### Linking text together
 
 You should `cat` each of these files to check their contents. But `cat` is more than just a file viewer -- its name comes from 'con**cat**enate', meaning "to link together". If you pass more than one filename to `cat` it will output each of them, one after the other, as a single block of text:
 
