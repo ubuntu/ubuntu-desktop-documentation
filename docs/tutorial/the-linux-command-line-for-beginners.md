@@ -1,3 +1,7 @@
+---
+sequential_nav: both
+---
+
 (the-linux-command-line-for-beginners)=
 # The Linux command line for beginners
 
