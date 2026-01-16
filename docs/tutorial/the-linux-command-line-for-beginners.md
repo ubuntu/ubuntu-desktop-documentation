@@ -765,7 +765,7 @@ Move your mouse over one of the terminal blocks in this tutorial. You'll notice 
 
 ### Adding text to a file
 
-Let's look at another command, `echo`:
+Back to creating text files. Let's look at another command, `echo`:
 
 ```{terminal}
 :copy:
@@ -815,7 +815,7 @@ dir2      folder  'folder 3'  'folder 6'   test_2.txt
 
 ### Linking text together
 
-You should `cat` each of these files to check their contents. But `cat` is more than just a file viewer -- its name comes from 'con**cat**enate', meaning "to link together". If you pass more than one filename to `cat` it will output each of them, one after the other, as a single block of text:
+You should `cat` each of these files to check their contents. But `cat` is more than just a file viewer -- its name comes from 'con**cat**enate', meaning "to link together". If you pass more than one filename to `cat`, it will output each of them, one after the other, as a single block of text:
 
 ```{terminal}
 :copy:
@@ -859,7 +859,7 @@ cat test_*
 As you might have guessed, this capability also means that you need to escape file names with `?` or `*` characters in them, too. It's usually better to avoid any punctuation in file names if you want to manipulate them from the command line.
 :::
 
-If you look at the output of `ls` you'll notice that the only files or folders that start with `t` are the three test files we've just created, so you could even simplify that last command even further to `cat t*`, meaning "concatenate all the files whose names start with a `t` and are followed by zero or more other characters". Let's use this capability to join all our files together into a single new file, then view it:
+If you look at the output of `ls`, you'll notice that the only files or folders that start with `t` are the three test files we've just created, so you could even simplify that last command even further to `cat t*`, meaning "concatenate all the files whose names start with a `t` and are followed by zero or more other characters". Let's use this capability to join all our files together into a single new file, then view it:
 
 ```{terminal}
 :copy:
@@ -882,7 +882,7 @@ This is a third test
 
 What do you think will happen if we run those two commands a second time? Will the computer complain, because the file already exists? Will it append the text to the file, so it contains two copies? Or will it replace it entirely? Give it a try to see what happens, but to avoid typing the commands again you can use the {kbd}`Up` and {kbd}`Down` keys to move back and forth through the history of commands you've used. Press the {kbd}`Up` a couple of times to get to the first `cat` and press {kbd}`Enter` to run it, then do the same again to get to the second.
 
-As you can see, the file looks the same. That's not because it's been left untouched, but because the shell clears out all the content of the file before it writes the output of your `cat` command into it. Because of this, you should be extra careful when using redirection to make sure that you don't accidentally overwrite a file you need. If you do want to append to, rather than replace, the content of the files, double up on the greater-than character:
+As you can see, the file looks the same. That's not because it's been left untouched, but because the shell erases all the content of the file before it writes the output of your `cat` command into it. Because of this, you should be extra careful when using redirection to make sure that you don't accidentally overwrite a file you need. If you do want to append to, rather than replace, the content of the files, double up on the greater-than character:
 
 ```{terminal}
 :copy:
