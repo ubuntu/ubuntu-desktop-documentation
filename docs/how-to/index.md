@@ -11,6 +11,7 @@ upgrade-ubuntu-desktop
 switch-between-an-lts-and-interim-release
 record-the-screen
 change-the-default-terminal
+access-a-remote-desktop
 log-in-using-a-smart-card
 enable-smart-cards-in-snapped-browsers
 reconfigure-windows-to-use-ahci
