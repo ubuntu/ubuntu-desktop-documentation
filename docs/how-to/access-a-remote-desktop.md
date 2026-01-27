@@ -14,9 +14,9 @@ By default, Ubuntu comes with the Remmina remote desktop client with support for
 
 ## What you’ll need
 
--   A computer running Ubuntu 16.04 LTS or above
--   A running VNC server
--   Remmina Remote Desktop Client installed
+-   A computer running Ubuntu 24.04 LTS or later.
+-   A server running Ubuntu 24.04 LTS or later where screen sharing is enabled. See {ref}`share-your-desktop-remotely`.
+-   Remmina Remote Desktop Client installed.
 
 ## Installing Remmina
 
