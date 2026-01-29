@@ -64,28 +64,28 @@ Alternatively, you can use the IPv4 address of the server. Display your local IP
 ::::{tab-set}
 :::{tab-item} Graphical interface
 :sync: gui
-    
+
 If you're using wired network, go to {menuselection}`Settings --> Wired --> your connected network --> Network Options (gear icon) --> IPv4 Address`.
-    
+
 If you're on Wi-Fi, go to {menuselection}`Settings --> Wi-Fi --> your connected network --> Network Options (gear icon) --> IPv4 Address`.
 :::
-    
+
 :::{tab-item} Command line
 :sync: terminal
-    
+
 ```{terminal}
 :copy:
 :user:
 :host:
 :dir:
 ip -4 address
-        
+
 [...]
 2: wlp0s20f3: <BROADCAST,MULTICAST,UP,LOWER_UP> [...]
     inet 192.168.0.91/24 [...]
 [...]
 ```
-    
+
 Here, your IPv4 address is 192.168.0.91.
 :::
 ::::
@@ -116,19 +116,34 @@ By default, Desktop Sharing and Remote Login both use the 3389 port on your syst
 
 If the firewall is active, allow RDP connections to your system:
 
+::::{tab-set}
+:::{tab-item} Graphical interface
+:sync: gui
+
+If the Firewall (`gufw`) application is installed, open it and go to the Rules tab.
+
+Click {guilabel}`Add a rule…` ({guilabel}`+`). Switch to the Simple tab. Enter the following configuration:
+
+* **Policy:** Allow
+
+* **Direction:** In
+
+* **Protocol:** TCP
+
+* **Port:** 3389:3390
+
+Click {guilabel}`Add` to confirm.
+:::
+
+:::{tab-item} Command line
+:sync: terminal
+
 ```{terminal}
 :copy:
 :user:
 :host:
 :dir:
-sudo ufw allow 3389/tcp
-```
-```{terminal}
-:copy:
-:user:
-:host:
-:dir:
-sudo ufw allow 3390/tcp
+sudo ufw allow 3389:3390/tcp
 ```
 ```{terminal}
 :copy:
@@ -137,6 +152,8 @@ sudo ufw allow 3390/tcp
 :dir:
 sudo ufw reload
 ```
+:::
+::::
 
 ## Connect from a client
 
