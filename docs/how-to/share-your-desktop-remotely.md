@@ -38,46 +38,67 @@ Enable Desktop Sharing, Remote Login or both:
   - The resolution of the shared screen is determined by the window on the client. Therefore, the screen is always the **right size and looks sharp**.
 :::
 
+<!--
+The reason for this screenshot is that the host name, user name and password might be confusing to the reader or too abstract if not seen in context of the remote desktop configuration.
+-->
+![Desktop Sharing enabled in Settings](/images/gnome-remote-desktop.png)
+
 ## Find the access credentials
 
-When you connect from a remote client, you have to know the remote desktop user name and password, the IP address of the server and the port number that provides RDP access.
+When you connect from a remote client, you have to know the remote desktop user name and password, the host name of the server and the port number that provides RDP access.
 
-* In {menuselection}`Settings --> System --> Remote Desktop`, note down the user name and password. These are different from your regular user credentials, and they only work for the remote desktop sharing.
+### User name and password
 
-* Note down the IP address of your system so that you can connect to it. For example, you might want to share the desktop on your local network, such as your home Wi-Fi. Display your local IPv4 address:
+In {menuselection}`Settings --> System --> Remote Desktop`, note down the user name and password.
 
-    ::::{tab-set}
-    :::{tab-item} Graphical interface
-    :sync: gui
+These are different from your regular user credentials, and they only work for the remote desktop sharing. You can change them here without affecting how you log in.
+
+### Host name or IP address
+
+To point the client to the location of your server, you need either the server host name or its IP address.
+
+If the server and client are both on the **same network**, for example on **your home Wi-Fi**, you can use the host name that you find in {menuselection}`Settings --> System --> Remote Desktop`. You might need to add the `.local` suffix at the end when entering it on the client.
+
+Alternatively, you can use the IPv4 address of the server. Display your local IPv4 address:
+
+::::{tab-set}
+:::{tab-item} Graphical interface
+:sync: gui
     
-    If you're using wired network, go to {menuselection}`Settings --> Wired --> your connected network --> Network Options (gear icon) --> IPv4 Address`.
+If you're using wired network, go to {menuselection}`Settings --> Wired --> your connected network --> Network Options (gear icon) --> IPv4 Address`.
     
-    If you're on Wi-Fi, go to {menuselection}`Settings --> Wi-Fi --> your connected network --> Network Options (gear icon) --> IPv4 Address`.
-    :::
+If you're on Wi-Fi, go to {menuselection}`Settings --> Wi-Fi --> your connected network --> Network Options (gear icon) --> IPv4 Address`.
+:::
     
-    :::{tab-item} Command line
-    :sync: terminal
+:::{tab-item} Command line
+:sync: terminal
     
-    ```{terminal}
-    :copy:
-    :user:
-    :host:
-    :dir:
-    ip -4 address
+```{terminal}
+:copy:
+:user:
+:host:
+:dir:
+ip -4 address
         
-    [...]
-    2: wlp0s20f3: <BROADCAST,MULTICAST,UP,LOWER_UP> [...]
-      inet 192.168.0.91/24 [...]
-    [...]
-    ```
+[...]
+2: wlp0s20f3: <BROADCAST,MULTICAST,UP,LOWER_UP> [...]
+    inet 192.168.0.91/24 [...]
+[...]
+```
     
-    Here, your IPv4 address is 192.168.0.91.
-    :::
-    ::::
+Here, your IPv4 address is 192.168.0.91.
+:::
+::::
 
-    If you're sharing the desktop over a public IP address, you might instead want to use an IPv6 address.
+:::{warning}
+The local IPv4 address might change when you reboot the server or reconnect to the network.
+:::
 
-* By default, Desktop Sharing and Remote Login both use the 3389 port on your system. However, if you enable them both at the same time, Desktop Sharing switches to port 3390, while Remote Login keeps port 3389. You can then choose the connection type to use at the remote client by setting the port number.
+If you're sharing the desktop between **different networks**, for example between **your office and your home Wi-Fi**, you need a public IPv4 or IPv6 address. Your server might also have a public host name configured through a Domain Name System (DNS). Check with your internet provider or your network administrator.
+
+### Port number
+
+By default, Desktop Sharing and Remote Login both use the 3389 port on your system. However, if you enable them both at the same time, Desktop Sharing switches to port 3390, while Remote Login keeps port 3389. You can then choose the connection type to use at the remote client by setting the port number.
 
 ## Open RDP ports in your firewall
 
