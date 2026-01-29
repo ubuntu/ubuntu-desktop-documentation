@@ -53,7 +53,7 @@ In {menuselection}`Settings --> System --> Remote Desktop`, note down the user n
 
 These are different from your regular user credentials, and they only work for the remote desktop sharing. You can change them here without affecting how you log in.
 
-### Host name or IP address
+### Host name on the local network
 
 To point the client to the location of your server, you need either the server host name or its IP address.
 
@@ -94,7 +94,19 @@ Here, your IPv4 address is 192.168.0.91.
 The local IPv4 address might change when you reboot the server or reconnect to the network.
 :::
 
-If you're sharing the desktop between **different networks**, for example between **your office and your home Wi-Fi**, you need a public IPv4 or IPv6 address. Your server might also have a public host name configured through a Domain Name System (DNS). Check with your internet provider or your network administrator.
+### Host name on a public network
+
+If you're sharing the desktop between **different networks**, for example between **your office and your home Wi-Fi**, you need a public IPv4 or IPv6 address for the server.
+
+You have to configure port forwarding in your router's configuration, or set up access to the server through a Virtual Private Network (VPN).
+
+:::{important}
+With port forwarding, you open up your system to the world. This is a security risk because attackers might try to break into your system.
+
+If you only want to share the desktop with a private group of people, use the VPN instead.
+:::
+
+Check with your internet provider or your network administrator.
 
 ### Port number
 
