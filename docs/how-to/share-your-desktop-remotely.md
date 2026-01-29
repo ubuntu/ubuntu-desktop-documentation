@@ -9,7 +9,7 @@ We'll refer to the system that shares its desktop as the *server*. We'll call th
 :::
 
 - Ubuntu Desktop 24.04 LTS or later with GNOME on the server.
-- If you want to share your desktop outside of your local network, make sure that your internet provider allows you to use a public IP address.
+- If you want to share your desktop outside of your local network, you need access to your router's configuration, the ability to configure a Virtual Private Network (VPN) or reach out to your network administrator.
 
 ## Enable remote desktop sharing
 
@@ -98,7 +98,7 @@ The local IPv4 address might change when you reboot the server or reconnect to t
 
 If you're sharing the desktop between **different networks**, for example between **your office and your home Wi-Fi**, you need a public IPv4 or IPv6 address for the server.
 
-You have to configure port forwarding in your router's configuration, or set up access to the server through a Virtual Private Network (VPN).
+You have to configure port forwarding in your router's configuration, or set up access to the server through a VPN.
 
 :::{important}
 With port forwarding, you open up your system to the world. This is a security risk because attackers might try to break into your system.
