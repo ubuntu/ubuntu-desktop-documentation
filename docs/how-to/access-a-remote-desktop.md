@@ -6,23 +6,56 @@ Original tutorial: <https://discourse.ubuntu.com/t/access-a-remote-desktop/13965
 Original author: Nicole Mikołajczyk <me@m4sk.in>
 -->
 
-Use Remmina and the VNC protocol to connect to your desktop from anywhere, or access remotely shared desktops locally. Connect to a VNC server, allowing you to remotely access your machine or potentially provide some technical support to someone sharing theirs.
+You can view or control the desktop environment on another computer where desktop sharing is enabled. The desktop sharing works over the Remote Desktop Protocol (RDP) or the Virtual Network Computing (VNC) protocol.
 
-**Virtual Network Computing** (VNC) is a protocol commonly used to share a graphical desktop over a network. Popular uses for VNC include technical support and screen sharing.
-
-By default, Ubuntu comes with the Remmina remote desktop client with support for VNC and RDP protocols. We will use it to access remote server.
+On Ubuntu, we recommend using the Remmina application to access a remote desktop. It supports both RDP and VNC.
 
 We'll refer to the system that shares its desktop as the *server*. We'll call the system that accesses the shared desktop remotely the *client*.
 
-## What you’ll need
+:::{rubric} What you'll need
+:::
 
--   A computer running Ubuntu 24.04 LTS or later.
--   A server running Ubuntu 24.04 LTS or later where screen sharing is enabled. See {ref}`share-your-desktop-remotely`.
--   Remmina Remote Desktop Client installed.
+* A client computer running Ubuntu 24.04 LTS or later.
+* A server where RDP or VNC desktop sharing is enabled. To configure desktop sharing on Ubuntu 24.04 LTS or later, see {ref}`share-your-desktop-remotely`.
+* Access credentials to the server, including its host name, the port number, the user name and the password.
 
-## Installing Remmina
+## Install Remmina
 
-If you don’t have Remmina on your Ubuntu installation, install it with `sudo apt install remmina remmina-plugin-vnc`. You can also use snap package (`sudo snap install remmina`).
+Remmina is part of the extended Ubuntu installation.
+
+If you don't have Remmina on your system, install it:
+
+::::{tab-set}
+:::{tab-item} Graphical interface
+:sync: gui
+
+Search for Remmina in the App Center and install it there.
+:::
+
+:::{tab-item} Command line
+:sync: terminal
+
+Install Remmina as a Snap:
+
+```{terminal}
+:copy:
+:user:
+:host:
+:dir:
+sudo snap install remmina
+```
+
+Alternatively, install Remmina as Deb packages:
+
+```{terminal}
+:copy:
+:user:
+:host:
+:dir:
+sudo apt install remmina remmina-plugin-rdp remmina-plugin-vnc
+```
+:::
+::::
 
 ## Launch Remmina
 
