@@ -12,6 +12,8 @@ Use Remmina and the VNC protocol to connect to your desktop from anywhere, or ac
 
 By default, Ubuntu comes with the Remmina remote desktop client with support for VNC and RDP protocols. We will use it to access remote server.
 
+We'll refer to the system that shares its desktop as the *server*. We'll call the system that accesses the shared desktop remotely the *client*.
+
 ## What you’ll need
 
 -   A computer running Ubuntu 24.04 LTS or later.
@@ -47,10 +49,14 @@ Colour depth
 Quality
 : Provides more control over bandwidth and rendering quality, with “Poor” trades visual quality for responsiveness, while “Best” does the opposite.
 
+To enable audio...
+
 Click “Save” when you’re happy with the connection. Now, let’s connect to our VNC!
 
 ## Connecting to the server
 
 Connect to the VNC server by selecting your server profile and clicking “connect”.
 
-In toolbar, you have options to switch to fullscreen mode, change view and graphics quality.
+In toolbar on the left, you have options to switch to fullscreen mode, change view and graphics quality.
+
+If you can only see a fraction of the shared screen, the resolution is larger than your display. Click {guilabel}`Toggle scaled mode` in the toolbar to resize the shared screen to fit the window.
