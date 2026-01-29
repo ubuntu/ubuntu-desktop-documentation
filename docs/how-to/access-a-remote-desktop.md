@@ -57,39 +57,68 @@ sudo apt install remmina remmina-plugin-rdp remmina-plugin-vnc
 :::
 ::::
 
-## Launch Remmina
-
-Remmina’s user-interface is easy to use. A quick connection can be made from the entry field beneath the toolbar by switching from the RDP to the VNC protocol, entering the address of your VNC server and clicking “Connect !”. But for convenience, it’s far better to create a re-usable connection, which we’ll cover in the next step.
-
-![screenshot](upload://uwwDltU2hhaGtHqm2d0sBu6c4Jj.png)
-
 ## Add a connection
 
-Click on “New” to open the “Remote Desktop Preference” pane. The following details should be configured:
+Click {guilabel}`Add a new connection profile` ({guilabel}`+`). The Remote Desktop Preference window opens.
+
+### Server credentials
+
+Enter the server configuration:
+
+Protocol
+: If you're connecting to Ubuntu 24.04 LTS or later, or to Microsoft Windows, select RDP. If you're connecting to an earlier Ubuntu release, or to macOS, select VNC.
 
 Server
-: The IP address and port of the VNC server you wish to connect to. For example, 192.168.1.2:5901
+: The host name or IP address of the server, and the port number assigned to RDP or VNC. For example, `ThinkPad-X1.local:3389` or `192.168.1.2:5901`.
 
-User name
-: Not necessary unless your server is using VNC users.
+Username
+: The user name configured for desktop sharing. Note that this might be different from the actual user name on the server system. With VNC, the user name is only necessary if you're connecting to a server that uses VNC users.
 
 Password
-: If your server uses a password, enter it here. If not entered and your server requires a password, you’ll be able to enter it after starting the connection.
+: The password configured for desktop sharing. Note that this might be different from the actual user password on the server system. If not entered and your server requires a password, you'll be able to enter it after starting the connection.
+
+### Set the connection quality
+
+Optionally, you can configure the connection speed and quality in the Remote Desktop Preference dialog:
 
 Colour depth
-: Choose 24-bit for a fast connection, such as across a LAN, or 256 colours when using a low bandwidth connection.
+: Choose 24-bit for a fast connection, such as across a LAN, or 256 colors when using a low bandwidth connection.
 
-Quality
-: Provides more control over bandwidth and rendering quality, with “Poor” trades visual quality for responsiveness, while “Best” does the opposite.
+Quality (on the Advanced tab)
+: Provides more control over bandwidth and rendering quality. {guilabel}`Poor` trades visual quality for responsiveness, while {guilabel}`Best` does the opposite.
 
-To enable audio...
+### Enable audio
 
-Click “Save” when you’re happy with the connection. Now, let’s connect to our VNC!
+To hear the audio from the server on your client, set {guilabel}`Audio output mode` to {guilabel}`Local` on the Advanced tab.
 
-## Connecting to the server
+### Confirm
 
-Connect to the VNC server by selecting your server profile and clicking “connect”.
+Click {guilabel}`Save`. Remmina now lists the newly configured connection in the main window.
 
-In toolbar on the left, you have options to switch to fullscreen mode, change view and graphics quality.
+## Connect to the server
 
-If you can only see a fraction of the shared screen, the resolution is larger than your display. Click {guilabel}`Toggle scaled mode` in the toolbar to resize the shared screen to fit the window.
+Double-click the configured connection. Remmina tries to connect to the server.
+
+You might need to accept a certificate if this is your first time connecting to the server.
+
+A window opens, displaying the screen on the remote server. Depending on the configuration, it might be the live user session or a login screen.
+
+If you can only see a fraction of the shared screen, its resolution is larger than your display. Click {guilabel}`Toggle scaled mode` in the toolbar on the left to resize the shared screen to fit the window.
+
+In toolbar, you also have options to switch to fullscreen mode, change view and graphics quality.
+
+## Troubleshooting
+
+If Remmina fails to connect to the server:
+
+* Make sure that the server credentials are correct. Check the host name or IP address, the port number, the user name and the password. Try an IP address instead of a host name, or the other way around.
+
+* If you have access to the server, make sure that it's running.
+
+* Check the state of the user on the server:
+
+    If you're trying to use the Desktop Sharing configuration, the user must be logged into the graphical session.
+
+    If you're trying to use the Remote Login configuration, the user must be logged out.
+
+* Make sure that the firewall on the server allows the RDP or VNC ports that you're connecting to.
