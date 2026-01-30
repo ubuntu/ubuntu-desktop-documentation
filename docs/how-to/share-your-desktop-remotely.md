@@ -34,7 +34,7 @@ Enable Desktop Sharing, Remote Login or both:
 
 * - User session
   - The remote client can connect to your running user session. You must be **logged in** on the server for the connection to work.
-  - The remote client can access a login screen and they can start your user session remotely. You must be **logged out** on the server for the connection to work.
+  - The remote client can access a login screen and they can start your user session remotely. You must be **logged out** on the server for the connection to work. The client will have the option to terminate your user session on the server.
 
 * - Remote control
   - You can decide whether the client can also **control** your user session, or if they can only **watch** your screen.

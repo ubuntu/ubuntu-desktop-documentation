@@ -126,10 +126,6 @@ If Remmina fails to connect to the server:
 
 * If you have access to the server, make sure that it's running.
 
-* Check the state of the user on the server:
-
-    If you're trying to use the Desktop Sharing configuration, the user must be logged into the graphical session.
-
-    If you're trying to use the Remote Login configuration, the user must be logged out.
+* If you're trying to use the Desktop Sharing configuration, check that the user is logged into the graphical session on the server.
 
 * Make sure that the firewall on the server allows the RDP or VNC ports that you're connecting to.
