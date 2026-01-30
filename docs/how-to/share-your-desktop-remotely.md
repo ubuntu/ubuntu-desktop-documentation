@@ -1,3 +1,6 @@
+```{tags} Remote access
+```
+
 (share-your-desktop-remotely)=
 # Share your desktop remotely
 

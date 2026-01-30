@@ -1,3 +1,6 @@
+```{tags} Remote access, Windows, macOS
+```
+
 (access-a-remote-desktop)=
 # Access a remote desktop
 

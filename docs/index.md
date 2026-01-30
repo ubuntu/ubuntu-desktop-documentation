@@ -39,6 +39,7 @@ _tags/tagsindex
 * **Installation**: {ref}`create-a-bootable-usb-stick` • {ref}`install-ubuntu-desktop` • {ref}`bitlocker-during-ubuntu-installation` • {ref}`turn-off-bitlocker-in-windows` • {ref}`intel-rst-during-ubuntu-installation` • {ref}`reconfigure-windows-to-use-ahci`
 * **Accessibility**: {ref}`Screen reader tutorial <get-started-with-the-screen-reader>` • {ref}`Enable accessibility features <how-to-accessibility>` • {ref}`accessibility-stack` • {ref}`Reference <reference-accessibility>`
 * **Security**: {ref}`hardware-backed-disk-encryption` • {ref}`Smart card login <log-in-using-a-smart-card>` • {ref}`Smart card in your web browser <enable-smart-cards-in-snapped-browsers>`
+* **Remote access**: {ref}`share-your-desktop-remotely` • {ref}`access-a-remote-desktop`
 * **Customization**: {ref}`change-the-default-terminal`
 
 <!--
