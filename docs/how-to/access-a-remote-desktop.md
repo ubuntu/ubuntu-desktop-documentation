@@ -66,16 +66,22 @@ Click {guilabel}`Add a new connection profile` ({guilabel}`+`). The Remote Deskt
 Enter the server configuration:
 
 Protocol
-: If you're connecting to Ubuntu 24.04 LTS or later, or to Microsoft Windows, select RDP. If you're connecting to an earlier Ubuntu release, or to macOS, select VNC.
+: Select RDP if you're connecting to Ubuntu 24.04 LTS or later, or to Microsoft Windows.
+
+  Select VNC if you're connecting to an earlier Ubuntu release such as 22.04 LTS, or to macOS.
 
 Server
 : The host name or IP address of the server, and the port number assigned to RDP or VNC. For example, `ThinkPad-X1.local:3389` or `192.168.1.2:5901`.
 
 Username
-: The user name configured for desktop sharing. Note that this might be different from the actual user name on the server system. With VNC, the user name is only necessary if you're connecting to a server that uses VNC users.
+: The user name configured for desktop sharing. Note that this might be different from the actual user name on the server system.
+
+  With VNC, the user name is only necessary if you're connecting to a server that uses VNC users.
 
 Password
-: The password configured for desktop sharing. Note that this might be different from the actual user password on the server system. If not entered and your server requires a password, you'll be able to enter it after starting the connection.
+: The password configured for desktop sharing. Note that this might be different from the actual user password on the server system.
+
+  If not entered and your server requires a password, you'll be able to enter it after starting the connection.
 
 ### Set the connection quality
 
