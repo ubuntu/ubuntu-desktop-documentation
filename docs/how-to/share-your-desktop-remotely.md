@@ -105,7 +105,7 @@ The local IPv4 address might change when you reboot the server or reconnect to t
 
 If you're sharing the desktop between **different networks**, for example between **your office and your home Wi-Fi**, you need a public IPv4 or IPv6 address for the server.
 
-You have to configure port forwarding in your router's configuration, or set up access to the server through a VPN.
+You might have to configure port forwarding in your router's configuration, or set up access to the server through a VPN.
 
 :::{important}
 With port forwarding, you open up your system to the world. This is a security risk because attackers might try to break into your system.
