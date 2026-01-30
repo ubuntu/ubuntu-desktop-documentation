@@ -1,6 +1,10 @@
 (share-your-desktop-remotely)=
 # Share your desktop remotely
 
+<!--
+Related test plan: <https://wiki.ubuntu.com/DesktopTeam/TestPlans/RemoteDesktop>
+-->
+
 You can enable remote desktop sharing on your system. This way, you or other people will be able to view or control your desktop from another computer in real time. The desktop sharing works over the Remote Desktop Protocol (RDP).
 
 We'll refer to the system that shares its desktop as the *server*. We'll call the system that accesses the shared desktop remotely the *client*.

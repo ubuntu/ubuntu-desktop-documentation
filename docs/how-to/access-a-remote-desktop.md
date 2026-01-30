@@ -4,6 +4,8 @@
 <!--
 Original tutorial: <https://discourse.ubuntu.com/t/access-a-remote-desktop/13965>
 Original author: Nicole Mikołajczyk <me@m4sk.in>
+
+Related test plan: <https://wiki.ubuntu.com/DesktopTeam/TestPlans/RemoteDesktop>
 -->
 
 You can view or control the desktop environment on another computer where desktop sharing is enabled. The desktop sharing works over the Remote Desktop Protocol (RDP) or the Virtual Network Computing (VNC) protocol.
