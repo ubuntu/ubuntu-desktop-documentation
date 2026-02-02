@@ -18,37 +18,26 @@ We'll refer to the system that shares its desktop as the *server*. We'll call th
 - Ubuntu Desktop 24.04 LTS or later with GNOME on the server.
 - If you want to share your desktop outside of your local network, you need access to your router's configuration, the ability to configure a Virtual Private Network (VPN) or reach out to your network administrator.
 
-## Enable remote desktop sharing
+## Allow another person to view your screen
 
-Go to {menuselection}`Settings --> System --> Remote Desktop`.
+With the **Desktop Sharing** feature, another person using a different computer can view your screen while you're using your computer. Optionally, you can allow the other person to control your environment. You must be logged in before the other person can connect.
 
-Enable Desktop Sharing, Remote Login or both:
+The resolution of the shared screen is determined by your user session on the server. Therefore, the screen might look **too small, too large or blurry** due to scaling on the client.
 
-:::{list-table}
-:header-rows: 1
-:widths: 1 2 2
-    
-* -
-  - Desktop Sharing
-  - Remote Login
-
-* - User session
-  - The remote client can connect to your running user session. You must be **logged in** on the server for the connection to work.
-  - The remote client can access a login screen and they can start your user session remotely. You must be **logged out** on the server for the connection to work. The client will have the option to terminate your user session on the server.
-
-* - Remote control
-  - You can decide whether the client can also **control** your user session, or if they can only **watch** your screen.
-  - The client is always able to **control** your user session.
-
-* - Image quality
-  - The resolution of the shared screen is determined by your user session on the server. Therefore, the screen might look **too small, too large or blurry** due to scaling on the client.
-  - The resolution of the shared screen is determined by the window on the client. Therefore, the screen is always the **right size and looks sharp**.
-:::
+To allow this access, go to {menuselection}`Settings --> System --> Remote Desktop --> Desktop Sharing`.
 
 <!--
 The reason for this screenshot is that the host name, user name and password might be confusing to the reader or too abstract if not seen in context of the remote desktop configuration.
 -->
 ![Desktop Sharing enabled in Settings](/images/gnome-remote-desktop.png)
+
+## Allow logging into your account from another computer
+
+With the **Remote Login** feature, you or another person can log into your account from another, remote computer. You must be logged out before the remote user can connect. If you are already logged in at the time, they get the option to terminate your running session and log in remotely instead. The connecting user has full control over your environment.
+
+The resolution of the shared screen is determined by the window on the client. Therefore, the screen is always the **right size and looks sharp**.
+
+To allow this access, go to {menuselection}`Settings --> System --> Remote Desktop --> Remote Login`.
 
 ## Find the access credentials
 
