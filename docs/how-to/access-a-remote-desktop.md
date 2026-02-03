@@ -1,3 +1,7 @@
+---
+relatedlinks: "[Console-based screen sharing](https://documentation.ubuntu.com/server/reference/other-tools/terminal-multiplexers/#console-based-screen-sharing)"
+---
+
 ```{tags} Remote access, Windows, macOS
 ```
 
