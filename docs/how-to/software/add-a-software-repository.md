@@ -1,7 +1,11 @@
+---
+relatedlinks: "[Extra &#32 software &#32 in &#32 the &#32 Ubuntu &#32 Server &#32 documentation](https://ubuntu.com/server/docs/how-to/software/package-management/#extra-repositories), https://help.ubuntu.com/community/Repositories/Ubuntu, https://help.ubuntu.com/community/Repositories/CommandLine"
+---
+
 (add-a-software-repository)=
 # Add a software repository
 
-Software is available from third-party sources, as well as from the default Ubuntu software repositories. If you want to install software from a third-party software repository, you must add it to Ubuntu's list of available repositories.
+In addition to official Ubuntu sources, software is also available from third-party, community-maintained sources. If you want to install software from a third-party software repository, you must add it to Ubuntu's list of available repositories.
 
 :::{warning}
 Only add software repositories from sources that you trust!
@@ -13,18 +17,57 @@ Third-party software repositories are not checked for security or reliability by
 
 Personal Package Archives (PPAs) are software repositories designed for Ubuntu users and are easier to install than other third-party repositories. PPAs are often used to distribute pre-release software so that it can be tested.
 
-1. On the PPA's overview page, look for the {guilabel}`Adding this PPA to your system` heading. Make a note of the PPA's location, which should look similar to: `ppa:mozillateam/firefox-next`.
+::::{tab-set}
+:::{tab-item} Graphical interface
+:sync: gui
+
+1. On the PPA's overview page, look for the {guilabel}`Adding this PPA to your system` heading. Copy the PPA's location, which should look similar to: `ppa:mozillateam/firefox-next`.
 
 1. Open the Software & Updates application.
 
 1. Switch to the Other Software tab.
 
-1. Click {guilabel}`Add` and enter the PPA's location that you noted earlier.
+1. Click {guilabel}`Add` and enter the PPA's location that you copied earlier.
 
 1. Click {guilabel}`Add Source`. Enter your password.
 
-1. Close the Software & Updates window. App Center will then check your software sources for new software.
+1. Close the Software & Updates window. App Center will then check your software sources for new software, including the PPA that you've just added.
+:::
+:::{tab-item} Command line
+:sync: terminal
 
+1. On the PPA's overview page, look for the {guilabel}`Adding this PPA to your system` heading. Copy the PPA's location, which should look similar to: `ppa:mozillateam/firefox-next`.
+
+1. Enable the PPA using the `add-apt-repository` tool:
+
+    <!--
+    Should be installed by default. On older or minimal Ubuntu releases, you may have to install software-properties-common and/or python-software-properties first:
+    sudo apt-get install python-software-properties
+    -->
+    
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo add-apt-repository ppa:<user>/<repo-name>
+    ```
+
+    Replace `ppa:<user>/<repo-name>` with the PPA's location that you copied earlier.
+
+1. Check your software sources for new software, including the PPA that you've just added:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo apt update
+    ```
+:::
+::::
+
+You can now install software from the PPA.
 
 ## Add a third-party repository other than PPA
 
