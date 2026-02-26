@@ -18,17 +18,11 @@ If you wish to re-encrypt your Windows partition after installing Ubuntu alongsi
 
     Any encryption procedure, hard drive structure change or installation of new operating systems on a hard drive that already contains data can potentially lead to a data loss. Make sure that your personal data is safe. Even simply copying the important files to an external drive minimizes the risk of data loss.
 
-1. In Windows, open Settings and enter *Manage BitLocker* in the search box.
+1. In Windows, open the Settings app and go to {menuselection}`Privacy & Security --> Device Encryption`. Toggle it off.
 
-    Alternatively, go to {menuselection}`Control Panel --> System and Security --> BitLocker Drive Encryption`.
+    On older versions of Windows, go to {menuselection}`Control Panel --> System and Security --> BitLocker Drive Encryption` and click {guilabel}`Turn off BitLocker`.
 
     ![The BitLocker Drive Encryption settings in Windows](/images/bitlocker-drive-encryption.png)
-
-1. If the status is "BitLocker waiting for activation", it means that BitLocker is enabled but your data isn't encrypted yet.
-
-    Enable BitLocker first by clicking {guilabel}`Turn on BitLocker`. Then proceed.
-
-1. Click {guilabel}`Turn off BitLocker`.
 
 1. Windows informs you that it is going to decrypt the data.
 
