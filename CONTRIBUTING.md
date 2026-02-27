@@ -28,9 +28,9 @@ There are some prerequisites to contributing to Ubuntu Desktop documentation.
 
 - **Licensing**
 
-    The first time you contribute to a Canonical project, you will need to sign the Canonical License agreement (CLA). If you have already signed it, e.g. when contributing to another Canonical project, you do not need to sign it again.
+    This documentation is available under the [Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) license. The same license will apply to your contributions.
 
-    This license protects your copyright over your contributions, including the right to use them elsewhere, but grants us (Canonical) permission to use them in our project. You can read [more about the CLA](https://ubuntu.com/legal/contributors) before you [sign the CLA](https://ubuntu.com/legal/contributors/agreement).
+    You don't have to sign the Canonical License agreement (CLA) for this project.
 
 ## The Ubuntu Desktop docs overview
 
