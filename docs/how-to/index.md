@@ -9,6 +9,7 @@ These guides accompany you through the complete Ubuntu Desktop operations lifecy
 create-a-bootable-usb-stick
 upgrade-ubuntu-desktop
 switch-between-an-lts-and-interim-release
+software/index
 record-the-screen
 change-the-default-terminal
 share-your-desktop-remotely
