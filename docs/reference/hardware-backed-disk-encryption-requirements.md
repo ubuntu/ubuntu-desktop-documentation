@@ -21,7 +21,7 @@ Some of the TPM/FDE requirements are widely supported by many systems. As a rule
 
 - Secure Boot is enabled.
 
-    Currently, Ubuntu requires Secure Boot to be in Deployed Mode. Support to User Mode is planned.
+    Currently, Ubuntu requires Secure Boot to be in Deployed Mode. Support for User Mode is planned.
 
 ## More restrictive requirements
 
