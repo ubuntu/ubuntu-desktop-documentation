@@ -10,7 +10,7 @@ In some cases, your system configuration doesn't allow TPM/FDE but it's possible
 
 ## Less restrictive requirements
 
-Some of the TPM/FDE requirements are widely supported by many systems. As a rule of thumb, **PCs made since 2018** and **devices certified for Windows 11** are compatible with these:
+Some of the TPM/FDE requirements are widely supported by many systems. As a rule of thumb, **PCs made since 2018** are compatible with these:
 
 - The Unified Extensible Firmware Interface (UEFI) version 2.5 or later with the following features:
 
@@ -25,14 +25,16 @@ Some of the TPM/FDE requirements are widely supported by many systems. As a rule
 
 ## More restrictive requirements
 
-Some requirements are only met by a relatively few systems:
+Some requirements are only met by a relatively few systems. They're stricter than with BitLocker, for example. As a rule of thumb, **most PCs made since around 2021** are compatible:
 
 - The UEFI firmware is verified or at least measured by a hardware root of trust.
 
-    This is to check that all the signatures under the root of trust are working. The root of trust verifies the first signature and so this one can't be tempered with. This is a requirement that BitLocker on Windows typically doesn't have.
+    In this setup, your hardware verifies the UEFI firmware before the firmware runs, based on a read-only piece of code in your CPU. This protects your disk encryption against malware that targets your firmware, against supply-chain attacks while your hardware is handled after manufacture, and similar.
 
-    - For Intel systems, that's the BootGuard Authenticated Code Module (ACM). We require forced verification for now.
-    - For AMD systems, that's currently anything with Platform Secure Boot (PSB) enabled but will be extended to any modern AMD CPU with the secure processor.
+    To verify or measure the firmware, your device must feature a dedicated security chip:
+
+    - The Boot Guard Authenticated Code Module (ACM) on Intel systems. Forced verification is required for now.
+    - Platform Secure Boot (PSB) enabled on AMD systems. This will be extended to any modern AMD CPU with the secure processor.
 
 ## Report bugs
 
