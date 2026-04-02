@@ -4,6 +4,16 @@
 (configure-hardware-backed-disk-encryption)=
 # Configure hardware-backed disk encryption
 
+(tpm-fde-set-passphrase)=
+## Set a disk encryption passphrase
+
+For an additional layer of security, consider adding an **encryption passphrase**.
+
+The encryption passphrase is an alphanumerical password that you enter every time your computer starts up to unlock the disk. After installation, you can change the passphrase but you can't disable it.
+
+To learn when you might want to enable the passphrase, see {ref}`tpm-fde-encryption-passphrase`.
+
+
 (tpm-fde-get-a-new-recovery-key)=
 ## Get a new recovery key
 
@@ -15,37 +25,13 @@ To get the recovery key, you must be logged into your Ubuntu user account.
 If you can't log in, you have no way to get a new recovery key. In that case, follow {ref}`tpm-fde-no-recovery-key`.
 :::
 
-::::{tab-set}
-
-:::{tab-item} Ubuntu 24.04 LTS
-:sync: ubuntu-24-04
-
-In Ubuntu 24.04 LTS, you can retrieve the existing recovery key and you can't change it.
-
-To display the recovery key for your encrypted disk, open a terminal and run this command:
-
-```{terminal}
-:copy:
-:user:
-:host:
-:dir:
-sudo snap recovery --show-keys
-```
-:::
-
-:::{tab-item} Ubuntu 25.10 and newer
-:sync: ubuntu-25-10
-
-In Ubuntu 25.10 and newer, you can't retrieve the existing recovery key but you can get a new one.
+In Ubuntu 25.10, 26.04 LTS and later, you can't retrieve the existing recovery key but you can get a new one.
 
 You need to be an administrator on your system to replace the recovery key.
 
 1. Go to the {menuselection}`Security Center --> Disk Encryption`.
 1. Select {guilabel}`Replace recovery key…`.
 1. The Security Center displays your new recovery key. The previous recovery key stops working as soon as you select {guilabel}`Replace`.
-:::
-
-::::
 
 Store your new recovery key somewhere safe, such as in a password manager.
 
