@@ -7,11 +7,9 @@
 (tpm-fde-set-passphrase)=
 ## Set a disk encryption passphrase
 
-For an additional layer of security, consider adding an **encryption passphrase**.
+For an additional layer of security, consider adding an **encryption passphrase**. The encryption passphrase is an alphanumerical password that you enter every time your computer starts up to unlock the disk. *After installation, you can change the passphrase but you can't disable it.* To learn when you might want to enable the passphrase, see {ref}`tpm-fde-encryption-passphrase`.
 
-The encryption passphrase is an alphanumerical password that you enter every time your computer starts up to unlock the disk. After installation, you can change the passphrase but you can't disable it.
-
-To learn when you might want to enable the passphrase, see {ref}`tpm-fde-encryption-passphrase`.
+Open the Security Center app and go to the Disk Encryption tab.
 
 
 (tpm-fde-get-a-new-recovery-key)=
