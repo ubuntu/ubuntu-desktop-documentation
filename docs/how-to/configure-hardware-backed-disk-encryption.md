@@ -4,18 +4,28 @@
 (configure-hardware-backed-disk-encryption)=
 # Configure hardware-backed disk encryption
 
+On an Ubuntu installation where the hardware-backed disk encryption (TPM/FDE) is enabled, you can configure certain security options. You can also recover access to your disk in certain scenarios.
+
+
 (tpm-fde-set-passphrase)=
 ## Set a disk encryption passphrase
 
-For an additional layer of security, consider adding an **encryption passphrase**. The encryption passphrase is an alphanumerical password that you enter every time your computer starts up to unlock the disk. *After installation, you can change the passphrase but you can't disable it.* To learn when you might want to enable the passphrase, see {ref}`tpm-fde-encryption-passphrase`.
+For an additional layer of security, you can add an encryption passphrase. The encryption passphrase is an alphanumerical password that you enter every time your computer starts up to unlock the disk.
 
-Open the Security Center app and go to the Disk Encryption tab.
+To learn when you might want to enable the passphrase, see {ref}`tpm-fde-encryption-passphrase`.
+
+1. Open the Security Center app.
+1. Go to the Disk Encryption tab.
+1. Click {guilabel}`Add passphrase`.
+1. Enter an alphanumerical password and confirm.
+
+The next time you reboot, your system asks for your passphrase. Alternatively, you can also enter the disk recovery key.
 
 
 (tpm-fde-get-a-new-recovery-key)=
 ## Get a new recovery key
 
-Ubuntu Desktop shows you your disk recovery key right after installation. If you lose your recovery key, replace it as soon as possible. Otherwise, you risk losing access to your data.
+Ubuntu Desktop shows you your disk recovery key right after installation. If you lose your recovery key, replace it as soon as possible. Otherwise, you risk losing access to your data. You can't retrieve the existing recovery key but you can get a new one.
 
 To get the recovery key, you must be logged into your Ubuntu user account.
 
@@ -23,15 +33,12 @@ To get the recovery key, you must be logged into your Ubuntu user account.
 If you can't log in, you have no way to get a new recovery key. In that case, follow {ref}`tpm-fde-no-recovery-key`.
 :::
 
-In Ubuntu 25.10, 26.04 LTS and later, you can't retrieve the existing recovery key but you can get a new one.
-
 You need to be an administrator on your system to replace the recovery key.
 
 1. Go to the {menuselection}`Security Center --> Disk Encryption`.
 1. Select {guilabel}`Replace recovery key…`.
 1. The Security Center displays your new recovery key. The previous recovery key stops working as soon as you select {guilabel}`Replace`.
-
-Store your new recovery key somewhere safe, such as in a password manager.
+1. Store your new recovery key somewhere safe, such as in a password manager.
 
 
 (tpm-fde-no-recovery-key)=
