@@ -35,7 +35,13 @@ Some requirements are only met by relatively few systems. These are stricter tha
 
     - The Boot Guard Authenticated Code Module (ACM) on Intel systems. Forced verification is required for now.
     - Platform Secure Boot (PSB) enabled on AMD systems. Support will be extended to all modern AMD CPUs with a secure processor.
+    
+    :::{note}
+    Certain hardware vendors might enable firmware options that alter the chain of trust, such as the [Absolute Persistence](https://www.absolute.com/platform/persistence) technology.
+
+    The Ubuntu installer alerts you to this. You can choose to disable the feature if you have the permissions or you can ignore the notice to keep the feature enabled.
+    :::
 
 ## Report bugs
 
-If you think that your system should be eligible for TPM/FDE given these requirements, but Ubuntu still doesn't enable TPM/FDE, open a bug.
+If you think that your system should be eligible for TPM/FDE given these requirements, but Ubuntu still doesn't enable TPM/FDE, [open a bug](https://github.com/canonical/secboot/issues/new).
