@@ -24,7 +24,7 @@ To install Ubuntu with hardware-backed encryption:
 1. On the {guilabel}`Disk setup` screen, select {menuselection}`Erase disk and install Ubuntu --> Use hardware-backed disk encryption`.
 
     :::{note}
-    Your system might not support all the required security features. In that case, the installer doesn't allow you to select the hardware-backed disk encryption. For more information, refer to the requirements.
+    Your system might not support all the required security features. In that case, the installer doesn't allow you to select the hardware-backed disk encryption. For more information, refer to {ref}`hardware-backed-disk-encryption-requirements`.
     :::
 
 1. On the {guilabel}`Create your account` screen, set a secure password for all user accounts. Without an encryption passphrase, your data is only as safe as the weakest of the user passwords.
