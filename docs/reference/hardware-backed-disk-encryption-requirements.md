@@ -4,7 +4,7 @@
 (hardware-backed-disk-encryption-requirements)=
 # Hardware-backed disk encryption requirements
 
-Ubuntu checks certain system requirements before it allows you to enable {ref}`hardware-backed disk encryption <hardware-backed-disk-encryption>` (TPM/FDE) on your system. Generally, **most systems based on Intel and AMD processors made since 2021** are compatible with TPM/FDE. However, the requirements are stricter than with other disk encryption solutions, such as BitLocker on Windows. These strict requirements exist to guarantee strong security.
+Ubuntu checks certain system requirements before it allows you to enable {ref}`hardware-backed disk encryption <hardware-backed-disk-encryption>` (TPM/FDE) on your system. Generally, **most systems based on Intel and AMD processors made since 2021** are compatible with TPM/FDE. However, the requirements are stricter than with other disk encryption solutions, such as BitLocker on Windows.
 
 ```{include} /reuse/tpm-fde-disclaimer.txt
 ```
@@ -37,7 +37,7 @@ Your hardware must meet the following requirements to support TPM/FDE:
 
 Most of the listed TPM/FDE requirements are widely supported by the majority of PCs made since 2018. Other hardware-backed disk encryption solutions, such as BitLocker on Microsoft Windows, require a similar set of hardware features.
 
-However, TPM/FDE on Ubuntu also checks for a hardware root of trust. This final requirement is much stricter than with the other solutions. It raises the requirements to PCs made since 2021, generally speaking.
+However, TPM/FDE on Ubuntu also checks for a **hardware root of trust**. This final requirement is much stricter than with the other solutions. It raises the requirements to PCs made since 2021, in general.
 
 With a hardware root of trust, your hardware verifies the UEFI firmware before the firmware runs, based on a read-only piece of code in your CPU. This protects your disk encryption against threats such as malware that targets your firmware, or supply-chain attacks while your hardware is handled after manufacture.
 
