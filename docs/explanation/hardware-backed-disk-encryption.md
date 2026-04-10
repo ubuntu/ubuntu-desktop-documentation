@@ -18,21 +18,21 @@ Hardware-backed disk encryption is a convenient way to keep your data secure. It
 
 When you enable hardware-backed disk encryption, the encryption keys for your disk are automatically generated and stored safely in your computer’s Trusted Platform Module (TPM).
 
-At every startup, the TPM verifies that your computer's hardware and critical boot software have not been altered. If TPM detects any unauthorized changes, it refuses to unlock the disk, unless the user reverts the changes or provides a recovery key. This means that your data is protected even if your device is stolen: the bad actor can't unlock your disk if they remove the disk and install it in another computer.
+At every startup, the TPM verifies that your computer's hardware and critical boot software have not been altered. If the TPM detects any unauthorized changes, it refuses to unlock the disk, unless the user reverts the changes or provides a recovery key. This means that your data is protected even if your device is stolen: the attacker can't unlock your disk if they remove the disk and install it in another computer.
 
-In other words, anyone who wants to access your data must know your user password. This provides more security than an unencrypted Ubuntu installation, where the bad actor can just remove your disk and read your data, or start another system on your computer. This feature is also more convenient than traditional disk encryption, such as LUKS: you only have to remember your user password and there's no additional disk password.
+In other words, anyone who wants to access your data must know your user password. This provides more security than an unencrypted Ubuntu installation, where the attacker can just remove your disk and read your data, or start another system on your computer. This feature is also more convenient than traditional disk encryption, such as LUKS: you only have to remember your user password and there's no additional disk password.
 
 For technical details, see {external:doc}`security-features/storage/encryption-full-disk` in the Ubuntu security documentation.
 
 
-(tpm-fde-recovery-key)
+(tpm-fde-recovery-key)=
 ## Recovery key
 
 A recovery key is a long string of numbers that you can use to recover the data on your encrypted disk. You receive the recovery key at the end of the Ubuntu installation.
 
 You should store it somewhere safe outside of your computer, such as in a cloud-based password manager.
 
-The recovery key is stored in an encrypted form. You can't retrieve it but you can reset it in the Security Center to get a new one. However, you must be able to log into your Ubuntu session before you can reset the recovery key.
+The recovery key is stored securely. You can't retrieve it but you can reset it in the Security Center to get a new one. However, you must be able to log into your Ubuntu session before you can reset the recovery key.
 
 :::{important}
 If you lose your recovery key, you might lose access to your data in certain scenarios. While you're logged in, replace the existing recovery key as soon as possible. See {ref}`tpm-fde-get-a-new-recovery-key`.
@@ -71,7 +71,7 @@ If you have additional encrypted drives or another encrypted operating system on
 
 For example, if you install Ubuntu with hardware-backed disk encryption alongside Microsoft Windows with BitLocker enabled, you need to store both recovery keys for Ubuntu and Windows.
 
-You might need individual recovery keys for each drive in case of the events listed in {ref}`tpm-fde-when-ubuntu-asks-for-your-recovery-key`. Updating firmware with the Firmware Updater in Ubuntu might require you to provide recovery keys for non-Ubuntu drives, too.
+You might need a recovery key per each drive in case of the events listed in {ref}`tpm-fde-when-ubuntu-asks-for-your-recovery-key`. Updating firmware with the Firmware Updater in Ubuntu might require you to provide recovery keys for non-Ubuntu drives, too.
 
 ### Windows BitLocker
 
@@ -87,7 +87,7 @@ When using recovery keys for other platforms, see the relevant vendor’s docume
 (tpm-fde-encryption-passphrase)=
 ## Encryption PIN and passphrase
 
-Optionally, you can set a PIN or passphrase. You enter them every time your computer starts. The PIN is a simple numerical key while the passphrase is an alphanumerical password.
+Optionally, you can set a PIN or passphrase. You enter them every time your computer starts. The PIN is a numeric code while the passphrase is an alphanumerical password.
 
 You can enable, change and disable the PIN or passphrase in the Security Center app.
 
@@ -97,7 +97,7 @@ Both the PIN and passphrase can provide additional security, depending on your u
 
 * In a **server** environment, it's more likely that somebody steals your disk rather than the whole computer. Therefore, you might prefer encryption without a PIN or passphrase, which ensures disk security and doesn't require physical access to reboot the server.
 
-* With a **laptop**, it's more likely that somebody steals your whole computer, for example when traveling. Therefore, you might want to add the disk encryption PIN or passphrase so that your data is protected even before the bad actor can break through your login screen.
+* With a **laptop**, it's more likely that somebody steals your whole computer, for example when traveling. Therefore, you might want to add the disk encryption PIN or passphrase so that your data is protected even before the attacker can break through your login screen.
 
 * With a **desktop** computer, consider which of the risk factors is more likely.
 
