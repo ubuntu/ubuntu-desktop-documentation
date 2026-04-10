@@ -1,0 +1,3 @@
+:::{warning}
+Hardware-backed disk encryption is currently a **Beta feature**. See the current [limitations and known issues](https://documentation.ubuntu.com/release-notes/26.04/changes-since-previous-interim/#limitations-of-tpm-backed-full-disk-encryption).
+:::

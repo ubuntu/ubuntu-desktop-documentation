@@ -8,36 +8,34 @@ relatedlinks: "[TPM-backed &#32; Full &#32; Disk &#32; Encryption &#32; is &#32;
 (hardware-backed-disk-encryption)=
 # Hardware-backed disk encryption
 
-Hardware-backed disk encryption is a convenient way to keep your data secure. It automatically decrypts the data on your disk at startup, while keeping your data encrypted at rest. This eliminates the need to enter a passphrase every time you start up your machine: you just need to enter your user password to log in. Optionally, you can set a disk encryption passphrase for additional security.
+Hardware-backed disk encryption is a convenient way to keep your data secure. It automatically decrypts the data on your disk at startup, while keeping your data encrypted at rest. This eliminates the need to enter a passphrase every time you start up your machine: you just need to enter your user password to log in. Optionally, you can set a disk encryption PIN or passphrase for additional security.
 
-:::{warning}
-Hardware-backed disk encryption is currently an **experimental feature**. Use it only on systems where you don't mind if you accidentally lose   your data.
-
-This feature currently supports only the generic kernel. This means that you can't use this setup on machines that require additional drivers to support webcams or NVIDIA graphics cards. In addition, certain hardware vendors might enable BIOS options that alter the chain of trust.
-:::
+```{include} /reuse/tpm-fde-disclaimer.txt
+```
 
 
 ## How hardware-backed disk encryption works
 
 When you enable hardware-backed disk encryption, the encryption keys for your disk are automatically generated and stored safely in your computer’s Trusted Platform Module (TPM).
 
-At every startup, the TPM verifies that your computer's hardware and critical boot software have not been altered. If TPM detects any unauthorized changes, it refuses to unlock the disk, unless the user reverts the changes or provides a recovery key. This means that your data is protected even if your device is stolen: the bad actor can't unlock your disk if they remove the disk and install it in another computer.
+At every startup, the TPM verifies that your computer's hardware and critical boot software have not been altered. If the TPM detects any unauthorized changes, it refuses to unlock the disk, unless the user reverts the changes or provides a recovery key. This means that your data is protected even if your device is stolen: the attacker can't unlock your disk if they remove the disk and install it in another computer.
 
-In other words, anyone who wants to access your data must know your user password. This provides more security than an unencrypted Ubuntu installation, where the bad actor can just remove your disk and read your data, or start another system on your computer. This feature is also more convenient than traditional disk encryption, such as LUKS: you only have to remember your user password and there's no additional disk password.
+In other words, anyone who wants to access your data must know your user password. This provides more security than an unencrypted Ubuntu installation, where the attacker can just remove your disk and read your data, or start another system on your computer. This feature is also more convenient than traditional disk encryption, such as LUKS: you only have to remember your user password and there's no additional disk password.
 
 For technical details, see {external:doc}`security-features/storage/encryption-full-disk` in the Ubuntu security documentation.
 
 
+(tpm-fde-recovery-key)=
 ## Recovery key
 
-A recovery key is a long string of numbers that you can use to recover the data on your encrypted disk. You receive the recovery key during or after the Ubuntu installation, depending on your Ubuntu release.
+A recovery key is a long string of numbers that you can use to recover the data on your encrypted disk. You receive the recovery key at the end of the Ubuntu installation.
 
 You should store it somewhere safe outside of your computer, such as in a cloud-based password manager.
 
-Ubuntu 24.04 LTS stores the recovery key in a readable form and you can retrieve it. Starting with Ubuntu 25.10, the recovery key is stored in an encrypted form. There, you can't retrieve it but you can reset it in the Security Center to get a new one. However, in both cases you must be able to log into Ubuntu before you can get your recovery key.
+The recovery key is stored securely. You can't retrieve it but you can reset it in the Security Center to get a new one. However, you must be able to log into your Ubuntu session before you can reset the recovery key.
 
 :::{important}
-If you lose your recovery key, you might lose access to your data in certain scenarios. While you're logged in, replace the existing         recovery key as soon as possible. See {ref}`tpm-fde-get-a-new-recovery-key`.
+If you lose your recovery key, you might lose access to your data in certain scenarios. While you're logged in, replace the existing recovery key as soon as possible. See {ref}`tpm-fde-get-a-new-recovery-key`.
 :::
 
 (tpm-fde-when-ubuntu-asks-for-your-recovery-key)=
@@ -49,7 +47,7 @@ You need the recovery key in several different situations:
 * If you **move your disk** to a new computer, you need to enter your recovery key before your new computer can access the data.
 -->
 
-* If you **forget your disk passphrase**, Ubuntu asks for your recovery key to unlock the disk.
+* If you **forget your disk PIN or passphrase**, Ubuntu asks for your recovery key to unlock the disk.
 
 * If you **change the hardware, firmware** or other components of your computer, you need to enter your recovery key to confirm that you trust the new configuration. This includes the following changes:
 
@@ -73,7 +71,7 @@ If you have additional encrypted drives or another encrypted operating system on
 
 For example, if you install Ubuntu with hardware-backed disk encryption alongside Microsoft Windows with BitLocker enabled, you need to store both recovery keys for Ubuntu and Windows.
 
-You might need individual recovery keys for each drive in case of the events listed in {ref}`tpm-fde-when-ubuntu-asks-for-your-recovery-key`. Updating firmware with the Firmware Updater in Ubuntu might require you to provide recovery keys for non-Ubuntu drives, too.
+You might need a recovery key per each drive in case of the events listed in {ref}`tpm-fde-when-ubuntu-asks-for-your-recovery-key`. Updating firmware with the Firmware Updater in Ubuntu might require you to provide recovery keys for non-Ubuntu drives, too.
 
 ### Windows BitLocker
 
@@ -87,27 +85,33 @@ When using recovery keys for other platforms, see the relevant vendor’s docume
 
 
 (tpm-fde-encryption-passphrase)=
-## Encryption passphrase
+## Encryption PIN and passphrase
 
-Optionally, you can set a passphrase for additional security. The encryption passphrase is alphanumerical and you enter it every time your computer starts.
+Optionally, you can set a PIN or passphrase. You enter them every time your computer starts. The PIN is a numeric code while the passphrase is an alphanumerical password.
 
-When you set a passphrase, your disk is encrypted by both the automatically-generated encryption keys, stored in your TPM, and your passphrase. As a result, your passphrase is still needed to decrypt your disk even if the TPM gets compromised. For instance, the passphrase protects you against a malicious firmware update from the TPM manufacturer.
+You can enable, change and disable the PIN or passphrase in the Security Center app.
+
+### PIN and passphrase protection
+
+Both the PIN and passphrase can provide additional security, depending on your use case:
+
+* In a **server** environment, it's more likely that somebody steals your disk rather than the whole computer. Therefore, you might prefer encryption without a PIN or passphrase, which ensures disk security and doesn't require physical access to reboot the server.
+
+* With a **laptop**, it's more likely that somebody steals your whole computer, for example when traveling. Therefore, you might want to add the disk encryption PIN or passphrase so that your data is protected even before the attacker can break through your login screen.
+
+* With a **desktop** computer, consider which of the risk factors is more likely.
+
+### Additional passphrase protection
+
+Compared to the PIN, the passphrase adds protection against attacks targeting your TPM chip.
+
+With the passphrase, your disk is encrypted both by the automatically-generated encryption keys, stored in your TPM, and by your passphrase. As a result, your passphrase is still needed to decrypt your disk even if the TPM gets compromised. For instance, the passphrase protects you against a malicious firmware update from the TPM manufacturer.
 
 Enabling the passphrase is particularly useful in the following cases:
 
 * In security-conscious contexts
 * For users that handle sensitive data
 * For users that might be subject to targeted attacks
-
-Consider the different impact on laptops, desktops and servers as well:
-
-* In a **server** environment, it's more likely that somebody steals your disk rather than the whole computer. Therefore, you might prefer encryption without a passphrase, which ensures disk security and doesn't require physical access to reboot the server.
-
-* With a **laptop**, it's more likely that somebody steals your whole computer when traveling, for example. Therefore, you might want to add the disk encryption passphrase so that your data is protected even before the bad actor tries to break through your login screen.
-
-* With a **desktop** computer, consider which of the risk factors is more likely.
-
-You can enable the encryption passphrase during installation. After installation, you can change the passphrase in the Security Center, but you can't disable it.
 
 
 ## Enable hardware-backed disk encryption
