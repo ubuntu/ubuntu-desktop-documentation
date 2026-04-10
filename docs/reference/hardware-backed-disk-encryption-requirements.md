@@ -11,16 +11,14 @@ Ubuntu checks certain system requirements before it allows you to enable {ref}`h
 
 Your hardware must meet the following requirements to support TPM/FDE:
 
-- Your devices comes with the Unified Extensible Firmware Interface (UEFI) version 2.5 or later with the following features:
+- Your device comes with the Unified Extensible Firmware Interface (UEFI) version 2.5 or later with the following features:
 
     - It meets the Platform Configuration Register (PCR) usage and log requirements of the Trusted Computing Group (TCG) EFI PC Client Platform Profile specification (2.0 family).
     - It implements the TCG EFI Protocol spec (2.0 family). Some older UEFI implementations only support 1.2 family versions of the TCG specifications, which is insufficient for TPM/FDE.
 
 - Your device has a PC-client Trusted Platform Module version 2 (TPM2) chip, version 1.32 of the reference library specification or later.
 
-- Secure Boot is enabled.
-
-    Currently, Ubuntu requires Secure Boot to be in Deployed Mode.
+- Secure Boot is enabled and in Deployed Mode.
 
 - The UEFI firmware is verified or at least measured by a hardware root of trust.
 
@@ -28,9 +26,9 @@ Your hardware must meet the following requirements to support TPM/FDE:
 
     - The Boot Guard Authenticated Code Module (ACM) on Intel systems. Forced verification is required for now.
     - Platform Secure Boot (PSB) enabled on AMD systems.
-    
+
     :::{note}
-    Certain hardware vendors might enable firmware options that alter the chain of trust, such as the [Absolute Persistence](https://www.absolute.com/platform/persistence) technology.
+    Certain hardware vendors might enable firmware options that alter your system's chain of trust, such as the [Absolute Persistence](https://www.absolute.com/platform/persistence) technology.
 
     The Ubuntu installer alerts you to this. You can choose to disable the feature if you have the permissions or you can ignore the notice to keep the feature enabled.
     :::
@@ -43,7 +41,7 @@ However, TPM/FDE on Ubuntu also checks for a hardware root of trust. This final 
 
 With a hardware root of trust, your hardware verifies the UEFI firmware before the firmware runs, based on a read-only piece of code in your CPU. This protects your disk encryption against threats such as malware that targets your firmware, or supply-chain attacks while your hardware is handled after manufacture.
 
-As a consequence of this security requirement, you can't install Ubuntu with TPM/FDE on certain systems that support BitLocker on Microsoft Windows.
+As a consequence of this security requirement, Ubuntu with TPM/FDE can't be installed on certain systems that support BitLocker on Microsoft Windows.
 
 ## Report bugs
 
