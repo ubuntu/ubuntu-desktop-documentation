@@ -22,9 +22,15 @@ To install Ubuntu with hardware-backed encryption:
 
 1. On the {guilabel}`Disk setup` screen, select {menuselection}`Erase disk and install Ubuntu --> Use hardware-backed disk encryption`.
 
-    :::{note}
-    Your system might not support all the required security features. In that case, the installer doesn't allow you to select the hardware-backed disk encryption. For more information, refer to {ref}`hardware-backed-disk-encryption-requirements`.
+    :::{important}
+    **Back up your data.** In this setup, Ubuntu overwrites your whole disk. All files will be deleted on the device where you're installing Ubuntu.
     :::
+    
+1. Check if the installer reports any errors.
+
+    Your system might not support all the required security features. In that case, the installer doesn't allow you to proceed with TPM/FDE. For more information, refer to {ref}`hardware-backed-disk-encryption-requirements`.
+
+    In some cases, your system isn't configured for TPM/FDE but it's possible to reconfigure it. The Ubuntu installer suggests automated or manual actions to resolve this. Some actions might require you to reboot the system to apply the modifications in the firmware.
 
 1. On the {guilabel}`Create your account` screen, set a secure password for all user accounts. Without an encryption passphrase, your data is only as safe as the weakest of the user passwords.
 

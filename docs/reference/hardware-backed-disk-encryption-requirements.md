@@ -6,8 +6,6 @@
 
 Ubuntu checks certain system requirements before it allows you to enable {ref}`hardware-backed disk encryption <hardware-backed-disk-encryption>` (TPM/FDE) on your system. Generally, most systems based on Intel and AMD processors made since 2021 are compatible with TPM/FDE. However, these requirements are stricter than with other disk encryption solutions, such as BitLocker on Windows. These strict requirements exist to guarantee strong security.
 
-In some cases, your system configuration doesn't allow TPM/FDE but it's possible to reconfigure it to support TPM/FDE. The Ubuntu installer suggests automated or manual actions to resolve this. Some of them might require you to reboot the system to apply the modifications.
-
 ```{include} /reuse/tpm-fde-disclaimer.txt
 ```
 
