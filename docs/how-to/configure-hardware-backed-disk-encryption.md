@@ -10,18 +10,18 @@ On an Ubuntu installation where the hardware-backed disk encryption (TPM/FDE) is
 ```
 
 (tpm-fde-set-passphrase)=
-## Set a disk encryption passphrase
+## Set a disk encryption PIN or passphrase
 
-For an additional layer of security, you can add an encryption passphrase. The encryption passphrase is an alphanumerical password that you enter every time your computer starts up to unlock the disk.
+For an additional layer of security, you can add an encryption PIN or passphrase. You enter them every time your computer starts up to unlock the disk.
 
-To learn when you might want to enable the passphrase, see {ref}`tpm-fde-encryption-passphrase`.
+To learn when you might want to enable the PIN or passphrase, see {ref}`tpm-fde-encryption-passphrase`.
 
 1. Open the Security Center app.
 1. Go to the Disk Encryption tab.
-1. Click {guilabel}`Add passphrase`.
-1. Enter an alphanumerical password and confirm.
+1. Click {guilabel}`Add PIN` or {guilabel}`Add passphrase`.
+1. Enter a numeric PIN or an alphanumeric passphrase and confirm.
 
-The next time you reboot, your system asks for your passphrase. Alternatively, you can also enter the disk recovery key.
+The next time you reboot, your system asks for your PIN or passphrase. Alternatively, you can also enter the disk recovery key if you forget your PIN or passphrase.
 
 
 (tpm-fde-get-a-new-recovery-key)=
