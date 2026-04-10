@@ -33,14 +33,7 @@ To install Ubuntu with hardware-backed encryption:
 
 1. On the {guilabel}`Create your account` screen, set a secure password for all user accounts. Without an encryption passphrase, your data is only as safe as the weakest of the user passwords.
 
-1. Once Ubuntu Desktop is installed, you get a recovery key for your encrypted disk. **Store it somewhere safe**, such as in a password manager.
-
-    ::::{tab-set}
-
-    :::{tab-item} Ubuntu 24.04 LTS
-    :sync: ubuntu-24-04
-
-    After installation, start your new system and enter the following command in a terminal:
+1. Once Ubuntu Desktop is installed, use the following command to get a recovery key for your encrypted disk. **Store it somewhere safe**, such as in a password manager.
 
     ```{terminal}
     :copy:
@@ -51,17 +44,6 @@ To install Ubuntu with hardware-backed encryption:
     ```
 
     The command displays your recovery key.
-    :::
-
-    :::{tab-item} Ubuntu 25.10 and newer
-    :sync: ubuntu-25-10
-
-    The Ubuntu installer shows your recovery key when the installation is finished.
-
-    You can save the recovery key as a text file on another USB stick. You can also load the QR code with your phone or take a photo of the screen showing the recovery key.
-    :::
-
-    ::::
 
     :::{important}
     If you lose your recovery key, you might lose access to your data in certain scenarios. While you're logged in, replace the existing recovery key as soon as possible. See {ref}`tpm-fde-get-a-new-recovery-key`.
@@ -80,11 +62,6 @@ To get the recovery key, you must be logged into your Ubuntu user account.
 If you can't log in, you have no way to get a new recovery key. In that case, follow {ref}`tpm-fde-no-recovery-key`.
 :::
 
-::::{tab-set}
-
-:::{tab-item} Ubuntu 24.04 LTS
-:sync: ubuntu-24-04
-
 In Ubuntu 24.04 LTS, you can retrieve the existing recovery key and you can't change it.
 
 To display the recovery key for your encrypted disk, open a terminal and run this command:
@@ -96,21 +73,6 @@ To display the recovery key for your encrypted disk, open a terminal and run thi
 :dir:
 sudo snap recovery --show-keys
 ```
-:::
-
-:::{tab-item} Ubuntu 25.10 and newer
-:sync: ubuntu-25-10
-
-In Ubuntu 25.10 and newer, you can't retrieve the existing recovery key but you can get a new one.
-
-You need to be an administrator on your system to replace the recovery key.
-
-1. Go to the {menuselection}`Security Center --> Disk Encryption`.
-1. Select {guilabel}`Replace recovery key…`.
-1. The Security Center displays your new recovery key. The previous recovery key stops working as soon as you select {guilabel}`Replace`.
-:::
-
-::::
 
 Store your new recovery key somewhere safe, such as in a password manager.
 

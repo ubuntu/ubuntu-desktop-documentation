@@ -11,7 +11,7 @@ relatedlinks: "[TPM-backed &#32; Full &#32; Disk &#32; Encryption &#32; is &#32;
 Hardware-backed disk encryption is a convenient way to keep your data secure. It automatically decrypts the data on your disk at startup, while keeping your data encrypted at rest. This eliminates the need to enter a passphrase every time you start up your machine: you just need to enter your user password to log in. Optionally, you can set a disk encryption passphrase for additional security.
 
 :::{warning}
-Hardware-backed disk encryption is currently an **experimental feature**. Use it only on systems where you don't mind if you accidentally lose   your data.
+Hardware-backed disk encryption is currently an **experimental feature**. Use it only on systems where you don't mind if you accidentally lose your data.
 
 This feature currently supports only the generic kernel. This means that you can't use this setup on machines that require additional drivers to support webcams or NVIDIA graphics cards. In addition, certain hardware vendors might enable BIOS options that alter the chain of trust.
 :::
@@ -34,10 +34,10 @@ A recovery key is a long string of numbers that you can use to recover the data 
 
 You should store it somewhere safe outside of your computer, such as in a cloud-based password manager.
 
-Ubuntu 24.04 LTS stores the recovery key in a readable form and you can retrieve it. Starting with Ubuntu 25.10, the recovery key is stored in an encrypted form. There, you can't retrieve it but you can reset it in the Security Center to get a new one. However, in both cases you must be able to log into Ubuntu before you can get your recovery key.
+Ubuntu 24.04 LTS stores the recovery key in a readable form and you can retrieve it. You must be able to log into Ubuntu before you can get your recovery key.
 
 :::{important}
-If you lose your recovery key, you might lose access to your data in certain scenarios. While you're logged in, replace the existing         recovery key as soon as possible. See {ref}`tpm-fde-get-a-new-recovery-key`.
+If you lose your recovery key, you might lose access to your data in certain scenarios. While you're logged in, replace the existing recovery key as soon as possible. See {ref}`tpm-fde-get-a-new-recovery-key`.
 :::
 
 (tpm-fde-when-ubuntu-asks-for-your-recovery-key)=
