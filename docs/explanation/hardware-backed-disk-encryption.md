@@ -85,29 +85,33 @@ When using recovery keys for other platforms, see the relevant vendor’s docume
 
 
 (tpm-fde-encryption-passphrase)=
-## Encryption PIN or passphrase
+## Encryption PIN and passphrase
 
-Optionally, you can set a PIN or passphrase for additional security. You enter them every time your computer starts.
+Optionally, you can set a PIN or passphrase. You enter them every time your computer starts. The PIN is a simple numerical key while the passphrase is an alphanumerical password.
 
-The PIN is a simple numerical key. The passphrase is an alphanumerical password.
+You can enable, change and disable the PIN or passphrase in the Security Center app.
 
-When you set a passphrase, your disk is encrypted by both the automatically-generated encryption keys, stored in your TPM, and your passphrase. As a result, your passphrase is still needed to decrypt your disk even if the TPM gets compromised. For instance, the passphrase protects you against a malicious firmware update from the TPM manufacturer.
+### PIN and passphrase protection
+
+Both the PIN and passphrase can provide additional security, depending on your use case:
+
+* In a **server** environment, it's more likely that somebody steals your disk rather than the whole computer. Therefore, you might prefer encryption without a PIN or passphrase, which ensures disk security and doesn't require physical access to reboot the server.
+
+* With a **laptop**, it's more likely that somebody steals your whole computer, for example when traveling. Therefore, you might want to add the disk encryption PIN or passphrase so that your data is protected even before the bad actor can break through your login screen.
+
+* With a **desktop** computer, consider which of the risk factors is more likely.
+
+### Additional passphrase protection
+
+Compared to the PIN, the passphrase adds protection against attacks targeting your TPM chip.
+
+With the passphrase, your disk is encrypted both by the automatically-generated encryption keys, stored in your TPM, and by your passphrase. As a result, your passphrase is still needed to decrypt your disk even if the TPM gets compromised. For instance, the passphrase protects you against a malicious firmware update from the TPM manufacturer.
 
 Enabling the passphrase is particularly useful in the following cases:
 
 * In security-conscious contexts
 * For users that handle sensitive data
 * For users that might be subject to targeted attacks
-
-Consider the different impact on laptops, desktops and servers as well:
-
-* In a **server** environment, it's more likely that somebody steals your disk rather than the whole computer. Therefore, you might prefer encryption without a PIN or passphrase, which ensures disk security and doesn't require physical access to reboot the server.
-
-* With a **laptop**, it's more likely that somebody steals your whole computer when traveling, for example. Therefore, you might want to add the disk encryption PIN or passphrase so that your data is protected even before the bad actor can break through your login screen.
-
-* With a **desktop** computer, consider which of the risk factors is more likely.
-
-You can enable, change and disable the PIN or passphrase in the Security Center app.
 
 
 ## Enable hardware-backed disk encryption
