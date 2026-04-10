@@ -24,7 +24,7 @@ Some of the TPM/FDE requirements are widely supported by many systems. As a rule
 
 - Secure Boot is enabled.
 
-    Currently, Ubuntu requires Secure Boot to be in Deployed Mode. Support for User Mode is planned.
+    Currently, Ubuntu requires Secure Boot to be in Deployed Mode.
 
 ## More restrictive requirements
 
@@ -37,7 +37,7 @@ Some requirements are only met by relatively few systems. These are stricter tha
     To verify or measure the firmware, your device must feature a dedicated security chip:
 
     - The Boot Guard Authenticated Code Module (ACM) on Intel systems. Forced verification is required for now.
-    - Platform Secure Boot (PSB) enabled on AMD systems. Support will be extended to all modern AMD CPUs with a secure processor.
+    - Platform Secure Boot (PSB) enabled on AMD systems.
     
     :::{note}
     Certain hardware vendors might enable firmware options that alter the chain of trust, such as the [Absolute Persistence](https://www.absolute.com/platform/persistence) technology.
