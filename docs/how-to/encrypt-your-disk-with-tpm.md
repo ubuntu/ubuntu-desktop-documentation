@@ -8,9 +8,8 @@ Hardware-backed disk encryption protects the data on your disk using the Trusted
 
 To learn how this encryption works, see {ref}`hardware-backed-disk-encryption`.
 
-:::{warning}
-Hardware-backed disk encryption is currently a **Beta feature**. You can't use this setup on machines that require third-party, out-of-tree drivers, such as to support certain webcams or virtualization solutions. Drivers for NVIDIA graphics cards are supported.
-:::
+```{include} /reuse/tpm-fde-disclaimer.txt
+```
 
 
 ## Enable the encryption during installation

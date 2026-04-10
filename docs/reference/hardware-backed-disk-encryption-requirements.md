@@ -8,6 +8,9 @@ Ubuntu checks certain system requirements before it allows you to enable {ref}`h
 
 In some cases, your system configuration doesn't allow TPM/FDE but it's possible to reconfigure it to support TPM/FDE. The Ubuntu installer suggests automated or manual actions to resolve this. Some of them might require you to reboot the system to apply the modifications.
 
+```{include} /reuse/tpm-fde-disclaimer.txt
+```
+
 ## Less restrictive requirements
 
 Some of the TPM/FDE requirements are widely supported by many systems. As a rule of thumb, **PCs made since 2018** are compatible with these requirements:

@@ -6,6 +6,8 @@
 
 On an Ubuntu installation where the hardware-backed disk encryption (TPM/FDE) is enabled, you can configure certain security options. You can also recover access to your disk in certain scenarios.
 
+```{include} /reuse/tpm-fde-disclaimer.txt
+```
 
 (tpm-fde-set-passphrase)=
 ## Set a disk encryption passphrase

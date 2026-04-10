@@ -10,11 +10,8 @@ relatedlinks: "[TPM-backed &#32; Full &#32; Disk &#32; Encryption &#32; is &#32;
 
 Hardware-backed disk encryption is a convenient way to keep your data secure. It automatically decrypts the data on your disk at startup, while keeping your data encrypted at rest. This eliminates the need to enter a passphrase every time you start up your machine: you just need to enter your user password to log in. Optionally, you can set a disk encryption passphrase for additional security.
 
-:::{warning}
-Hardware-backed disk encryption is currently an **experimental feature**. Use it only on systems where you don't mind if you accidentally lose   your data.
-
-This feature currently supports only the generic kernel. This means that you can't use this setup on machines that require additional drivers to support webcams or NVIDIA graphics cards. In addition, certain hardware vendors might enable BIOS options that alter the chain of trust.
-:::
+```{include} /reuse/tpm-fde-disclaimer.txt
+```
 
 
 ## How hardware-backed disk encryption works
