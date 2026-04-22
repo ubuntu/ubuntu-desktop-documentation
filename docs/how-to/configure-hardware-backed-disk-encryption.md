@@ -37,7 +37,7 @@ To learn when you might want to enable the PIN or passphrase, see {ref}`tpm-fde-
     sudo snap install snap-tpmctl
     ```
 
-1. Add PIN or passphrase:
+1. Add a PIN or passphrase:
 
     * PIN:
     
