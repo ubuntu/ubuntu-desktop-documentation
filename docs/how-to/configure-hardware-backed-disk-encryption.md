@@ -16,10 +16,52 @@ For an additional layer of security, you can add an encryption PIN or passphrase
 
 To learn when you might want to enable the PIN or passphrase, see {ref}`tpm-fde-encryption-passphrase`.
 
+::::{tab-set}
+:::{tab-item} Graphical interface
+:sync: gui
 1. Open the Security Center app.
 1. Go to the Disk Encryption tab.
 1. Click {guilabel}`Add PIN` or {guilabel}`Add passphrase`.
 1. Enter a numeric PIN or an alphanumeric passphrase and confirm.
+:::
+
+:::{tab-item} Command line
+:sync: terminal
+1. Make sure that the `snap-tpmctl` tool is installed:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo snap install snap-tpmctl
+    ```
+
+1. Add PIN or passphrase:
+
+    * PIN:
+    
+        ```{terminal}
+        :copy:
+        :user:
+        :host:
+        :dir:
+        sudo snap-tpmctl add-pin
+        ```
+
+    * Passphrase:
+    
+        ```{terminal}
+        :copy:
+        :user:
+        :host:
+        :dir:
+        sudo snap-tpmctl add-passphrase
+        ```
+
+Later, you can change your PIN or passphrase using the `replace-pin` and `replace-passphrase` subcommands.
+:::
+::::
 
 The next time you reboot, your system asks for your PIN or passphrase. Alternatively, you can also enter the disk recovery key if you forget your PIN or passphrase.
 
@@ -37,11 +79,41 @@ If you can't log in, you have no way to get a new recovery key. In that case, fo
 
 You need to be an administrator on your system to replace the recovery key.
 
+::::{tab-set}
+:::{tab-item} Graphical interface
+:sync: gui
+
 1. Go to the {menuselection}`Security Center --> Disk Encryption`.
 1. Select {guilabel}`Replace recovery key…`.
 1. The Security Center displays your new recovery key. The previous recovery key stops working as soon as you select {guilabel}`Replace`.
 1. Store your new recovery key somewhere safe, such as in a password manager.
+:::
 
+:::{tab-item} Command line
+:sync: terminal
+1. Make sure that the `snap-tpmctl` tool is installed:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo snap install snap-tpmctl
+    ```
+
+1. Replace the recovery key:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo snap-tpmctl regenerate-recovery-key
+    ```
+
+1. Store your new recovery key somewhere safe, such as in a password manager.
+:::
+::::
 
 (tpm-fde-no-recovery-key)=
 ## What to do if you don’t have a recovery key
