@@ -115,6 +115,54 @@ You need to be an administrator on your system to replace the recovery key.
 :::
 ::::
 
+
+## Manage recovery keys for an organization
+
+You can centrally manage the recovery keys for multiple systems encrypted with TPM/FDE. This is useful if you're the system administrator at an organization where you need centralized control over all encrypted systems ("escrow"). In this setup, TPM/FDE adds a secondary recovery key on each system. This secondary key is subject to central management.
+
+:::{warning}
+If the local user of the managed system has root privileges, they can modify both recovery keys on their system using the `snap-tpmctl` tool. The Security Center only gives access to the primary, local recovery key.
+:::
+
+Recovery key management is integrated into the **Landscape** systems administration tool. For details, refer to the [Landscape documentation](https://documentation.ubuntu.com/landscape/).
+
+Alternatively, you can build a custom central management solution based on the interfaces provided by the `snap-tpmctl` tool:
+
+:::{dropdown} Relevant commands
+* List all recovery keys:
+
+  ```{terminal}
+  :copy:
+  :user:
+  :host:
+  :dir:
+  sudo snap-tpmctl list-recovery-keys
+  ```
+
+* Add a secondary recovery key:
+
+  ```{terminal}
+  :copy:
+  :user:
+  :host:
+  :dir:
+  sudo snap-tpmctl create-recovery-key
+  ```
+
+* Erase all recovery keys and replace them:
+
+  ```{terminal}
+  :copy:
+  :user:
+  :host:
+  :dir:
+  sudo snap-tpmctl regenerate-recovery-key
+  ```
+
+For other options, refer to the `snap-tpmctl help` command.
+:::
+
+
 (tpm-fde-no-recovery-key)=
 ## What to do if you don’t have a recovery key
 
@@ -129,4 +177,7 @@ If your computer is asking for your recovery key during startup, try undoing any
 1. Reboot your computer.
 1. Try to log in again.
 
-You can also check if the recovery key was automatically stored in the cloud. Recovery keys for the Windows BitLocker encryption may be stored on your Microsoft Account or your organization account. See [Find your BitLocker recovery key](https://support.microsoft.com/en-us/windows/find-your-bitlocker-recovery-key-6b71ad27-0b89-ea08-f143-056f5ab347d6) in the Microsoft Windows documentation.
+You can also check if the recovery key was automatically stored in the cloud:
+
+* If your system is managed via Landscape, contact your Landscape administrator for your recovery key.
+* Recovery keys for the Windows BitLocker encryption may be stored on your Microsoft Account or your organization account. See [Find your BitLocker recovery key](https://support.microsoft.com/en-us/windows/find-your-bitlocker-recovery-key-6b71ad27-0b89-ea08-f143-056f5ab347d6) in the Microsoft Windows documentation.
