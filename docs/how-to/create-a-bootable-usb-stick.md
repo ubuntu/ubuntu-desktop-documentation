@@ -428,6 +428,10 @@ For instructions, see the Ventoy documentation: [Start to use Ventoy](https://ww
 
 Ventoy is available for Linux and Microsoft Windows.
 
+:::{warning}
+Ventoy 1.1.11 (released Apr 2026) has a [known issue](https://github.com/ventoy/Ventoy/issues/3567) that prevents Ubuntu from installing correctly. We recommend using a previous Ventoy release or another USB creation tool.
+:::
+
 (image-writers-etcher)=
 ### balenaEtcher
 
