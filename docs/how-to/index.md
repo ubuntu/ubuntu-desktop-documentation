@@ -14,6 +14,7 @@ record-the-screen
 change-the-default-terminal
 share-your-desktop-remotely
 access-a-remote-desktop
+start-an-application-at-login
 log-in-using-a-smart-card
 enable-smart-cards-in-snapped-browsers
 reconfigure-windows-to-use-ahci
