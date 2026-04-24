@@ -341,11 +341,9 @@ rst_epilog = """
 # NOTE: If set, adding ':manpage:' to an .rst file
 #       adds a link to the corresponding man section at the bottom of the page.
 
-manpages_url = (
-    "https://manpages.ubuntu.com/manpages/"
-    + stable_distro
-    + "/man{section}/{page}.{section}.html"
-)
+# manpages_url = 'https://manpages.ubuntu.com/manpages/{codename}/en/' + \
+#     'man{section}/{page}.{section}.html'
+
 
 # Specifies a reST snippet to be prepended to each .rst file
 # This defines a :center: role that centers table cell content.
