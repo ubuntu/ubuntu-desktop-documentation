@@ -30,6 +30,8 @@ For other use cases, we recommend that you install confined [snap packages](http
 
 1. On the PPA's overview page, look for the {guilabel}`Adding this PPA to your system` heading. Copy the PPA's location, which should look similar to: `ppa:mozillateam/firefox-next`.
 
+1. Install the `software-properties-gtk` package, which provides the Software & Updates application.
+
 1. Open the Software & Updates application.
 
 1. Switch to the Other Software tab.
@@ -83,6 +85,8 @@ You can find many software repositories for Ubuntu outside of the PPA platform. 
 :::{note}
 Before you enable a third-party repository, we recommend that you check if the software is available as a confined [snap packages](https://snapcraft.io/) instead.
 :::
+
+1. Install the `software-properties-gtk` package, which provides the Software & Updates application.
 
 1. Open the Software & Updates application.
 
