@@ -101,6 +101,21 @@ You need to be an administrator on your system to replace the recovery key.
     sudo snap install snap-tpmctl
     ```
 
+1. List the recovery keys on your system:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    snap-tpmctl list-recovery-keys
+
+    Recovery Keys:
+    * default-recovery
+    ```
+
+    Usually, only one recovery key is active, and it's called `default-recovery`. In an enterprise environment or a custom setup, you might find a secondary recovery key.
+
 1. Replace the recovery key:
 
     ```{terminal}
@@ -108,10 +123,14 @@ You need to be an administrator on your system to replace the recovery key.
     :user:
     :host:
     :dir:
-    sudo snap-tpmctl regenerate-recovery-key
+    snap-tpmctl regenerate-recovery-key default-recovery
     ```
 
-1. Store your new recovery key somewhere safe, such as in a password manager.
+    Replace `default-recovery` with the name of your recovery key.
+
+1. The command displays your new recovery key.
+
+    Store it somewhere safe, such as in a password manager.
 :::
 ::::
 
@@ -136,7 +155,7 @@ Alternatively, you can build a custom central management solution based on the i
   :user:
   :host:
   :dir:
-  sudo snap-tpmctl list-recovery-keys
+  snap-tpmctl list-recovery-keys
   ```
 
 * Add a secondary recovery key:
@@ -146,18 +165,22 @@ Alternatively, you can build a custom central management solution based on the i
   :user:
   :host:
   :dir:
-  sudo snap-tpmctl create-recovery-key
+  snap-tpmctl create-recovery-key custom-key
   ```
 
-* Erase all recovery keys and replace them:
+  Replace `custom-key` with a name for your recovery key.
+
+* Replace a recovery key:
 
   ```{terminal}
   :copy:
   :user:
   :host:
   :dir:
-  sudo snap-tpmctl regenerate-recovery-key
+  snap-tpmctl regenerate-recovery-key my-key-name
   ```
+
+  Replace `my-key-name` with the name of your selected recovery key.
 
 For other options, refer to the `snap-tpmctl help` command.
 :::
