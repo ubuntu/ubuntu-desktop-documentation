@@ -6,5 +6,6 @@ You can install or remove applications and other software that comes from Ubuntu
 :::{toctree}
 :maxdepth: 1
 
+install-an-application
 add-a-software-repository
 :::
