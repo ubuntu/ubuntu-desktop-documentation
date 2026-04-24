@@ -8,5 +8,6 @@ You can install or remove applications and other software that comes from Ubuntu
 
 install-an-application
 remove-an-application
+install-languages
 add-a-software-repository
 :::
