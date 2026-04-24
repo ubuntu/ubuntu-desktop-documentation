@@ -19,6 +19,7 @@ reconfigure-windows-to-use-ahci
 turn-off-bitlocker-in-windows
 encrypt-your-disk-with-tpm
 configure-hardware-backed-disk-encryption
+recover-data-from-hardware-backed-disk-encryption
 accessibility/index
 troubleshoot/index
 :::

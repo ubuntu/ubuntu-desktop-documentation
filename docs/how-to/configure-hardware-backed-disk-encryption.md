@@ -181,3 +181,7 @@ You can also check if the recovery key was automatically stored in the cloud:
 
 * If your system is managed via Landscape, contact your Landscape administrator for your recovery key.
 * Recovery keys for the Windows BitLocker encryption may be stored on your Microsoft Account or your organization account. See [Find your BitLocker recovery key](https://support.microsoft.com/en-us/windows/find-your-bitlocker-recovery-key-6b71ad27-0b89-ea08-f143-056f5ab347d6) in the Microsoft Windows documentation.
+
+## Additional resources
+
+- {ref}`recover-data-from-hardware-backed-disk-encryption`
