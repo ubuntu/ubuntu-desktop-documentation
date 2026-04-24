@@ -1,3 +1,6 @@
+```{tags} Software
+```
+
 ---
 relatedlinks: "[Extra &#32 software &#32 - &#32 Ubuntu &#32 Server &#32 documentation](https://ubuntu.com/server/docs/how-to/software/package-management/#extra-repositories), https://ubuntu.com/server/docs/explanation/software/third-party-repository-usage/, https://help.ubuntu.com/community/Repositories/Ubuntu, https://help.ubuntu.com/community/Repositories/CommandLine"
 ---

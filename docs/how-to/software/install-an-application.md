@@ -1,3 +1,6 @@
+```{tags} Software
+```
+
 (install-an-application)=
 # Install an application
 

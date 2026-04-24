@@ -1,3 +1,6 @@
+```{tags} Customization
+```
+
 (start-an-application-at-login)=
 # Start an application at login
 

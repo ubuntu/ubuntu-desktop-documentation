@@ -1,3 +1,6 @@
+```{tags} Software, Customization
+```
+
 (install-languages)=
 # Install languages
 

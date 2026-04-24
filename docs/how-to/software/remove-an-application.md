@@ -1,3 +1,6 @@
+```{tags} Software
+```
+
 (remove-an-application)=
 # Remove an application
 
