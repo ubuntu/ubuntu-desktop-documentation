@@ -44,6 +44,8 @@ If you know your {ref}`recovery key <tpm-fde-recovery-key>`, you can access the 
 
     Replace `/dev/nvme0n1p4` with your device path. Replace `/mnt` with the directory where you want to mount the partition.
 
+1. Enter your recovery key when prompted.
+
 1. In your file browser, open the mount point (such as `/mnt`) to access the data on the encrypted partition.
 
 
