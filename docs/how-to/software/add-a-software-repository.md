@@ -8,14 +8,21 @@ relatedlinks: "[Extra &#32 software &#32 - &#32 Ubuntu &#32 Server &#32 document
 In addition to official Ubuntu sources, software is also available from third-party, community-maintained sources. If you want to install software from a third-party software repository, you must add it to Ubuntu's list of available repositories.
 
 :::{warning}
-Only add software repositories from sources that you trust!
+Only add software repositories from **sources that you trust**.
 
-Third-party software repositories are not checked for security or reliability by Ubuntu members, and may contain software which is harmful to your computer.
+Third-party software repositories are **not checked for security or reliability** by Ubuntu members, and may contain software which is harmful to your computer. By enabling the repository, you're giving access to your system to the repository owners.
+
+If possible, install [snap packages](https://snapcraft.io/) instead. These are confined for security.
 :::
+
 
 ## Add a PPA
 
 Personal Package Archives (PPAs) are software repositories designed for Ubuntu users and are easier to install than other third-party repositories. PPAs are often used to distribute pre-release software so that it can be tested.
+
+:::{note}
+For other use cases, we recommend that you install confined [snap packages](https://snapcraft.io/) instead.
+:::
 
 ::::{tab-set}
 :::{tab-item} Graphical interface
@@ -72,6 +79,10 @@ You can now install software from the PPA.
 ## Add a third-party repository other than PPA
 
 You can find many software repositories for Ubuntu outside of the PPA platform. These are managed using standard Debian tools, and they require more manual steps.
+
+:::{note}
+Before you enable a third-party repository, we recommend that you check if the software is available as a confined [snap packages](https://snapcraft.io/) instead.
+:::
 
 1. Open the Software & Updates application.
 
