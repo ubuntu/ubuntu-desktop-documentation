@@ -7,5 +7,6 @@ You can install or remove applications and other software that comes from Ubuntu
 :maxdepth: 1
 
 install-an-application
+remove-an-application
 add-a-software-repository
 :::

@@ -6,7 +6,7 @@ An application is software that has a graphical user interface (GUI). The Ubuntu
 Applications are available in two formats: snap packages ("snaps") and Debian packages ("Debs"). Some applications are available in both formats. In such a case, the snap will be listed first in App Center.
 
 :::{note}
-You can use App Center to install software that does not have a GUI, too.
+You can also use App Center to install software that doesn't have any GUI, too.
 :::
 
 To install an application:
