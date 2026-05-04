@@ -60,9 +60,7 @@ As an open source project, Ubuntu Desktop warmly welcomes community projects, co
 
 ### Releases
 
-* [Release notes for Ubuntu 24.04 LTS](https://discourse.ubuntu.com/t/noble-numbat-release-notes/39890)
-* [Release notes for Ubuntu 25.10](https://discourse.ubuntu.com/t/questing-quokka-release-notes/59220)
-* [Ubuntu 26.04 LTS Roadmap](https://discourse.ubuntu.com/t/ubuntu-26-04-lts-the-roadmap/72740)
+* [Release notes for Ubuntu 24.04 LTS](https://documentation.ubuntu.com/release-notes/24.04/)
 
 ### Governance and policies
 
