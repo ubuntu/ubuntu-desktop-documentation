@@ -4,7 +4,7 @@
 (keyboard-navigation-shortcuts)=
 # Keyboard navigation shortcuts
 
-This page details keyboard navigation for people who cannot use a mouse or other pointing device, or who want to use a keyboard as much as possible. For keyboard shortcuts that are useful to all users, see Useful keyboard shortcuts instead.
+This page details keyboard navigation for people who cannot use a mouse or other pointing device, or who want to use a keyboard as much as possible.
 
 :::{tip}
 If you cannot use a pointing device like a mouse, you can control the mouse pointer using the numeric keypad on your keyboard. See {ref}`click-and-move-the-mouse-pointer-using-the-keypad` for details.
