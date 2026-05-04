@@ -1,12 +1,6 @@
 # Ubuntu Desktop documentation
 
-**Ubuntu Desktop** is the most popular open-source operating system powering millions of PCs and laptops around the world.
-
-**What can it do?** Ubuntu Desktop supports all your daily computing needs. It offers applications for web browsing, messaging, gaming and content creation, including Firefox, Chrome, Discord, Steam and OBS Studio. It's a primary platform for all major IDEs, game development tools and AI/ML software.
-
-**How is it different?** Compared to other mainstream operating systems, Ubuntu Desktop prioritizes your privacy and security. It's free to download, use, modify and share. Compared to other Linux-based systems, Ubuntu Desktop aims to make open-source software easy and pleasant to use. Thanks to regular releases and commercial support, Ubuntu Desktop is a reliable and predictable platform.
-
-**Is it for me?** Ubuntu Desktop is used by millions of users at home, for development and in enterprise. Anyone with a laptop or a PC is welcome to use Ubuntu Desktop. If you aren't sure, you can try Ubuntu Desktop without making any permanent changes on your computer: {ref}`run it from a USB stick <try-ubuntu-desktop>`.
+Ubuntu Desktop is the most popular open-source operating system powering millions of PCs and laptops around the world. {ref}`Learn more <about-ubuntu-desktop>`.
 
 :::{toctree}
 :hidden:
@@ -31,49 +25,12 @@ _tags/tagsindex
 
 ## In this documentation
 
-* **Introduction**: {ref}`try-ubuntu-desktop`
+* **Introduction**: {ref}`about-ubuntu-desktop` • {ref}`try-ubuntu-desktop`
 * **Installation**: {ref}`create-a-bootable-usb-stick` • {ref}`install-ubuntu-desktop` • {ref}`bitlocker-during-ubuntu-installation` • {ref}`turn-off-bitlocker-in-windows` • {ref}`intel-rst-during-ubuntu-installation` • {ref}`reconfigure-windows-to-use-ahci`
 * **Accessibility**: {ref}`Screen reader tutorial <get-started-with-the-screen-reader>` • {ref}`Enable accessibility features <how-to-accessibility>` • {ref}`accessibility-stack` • {ref}`Reference <reference-accessibility>`
 * **Security**: {ref}`hardware-backed-disk-encryption` • {ref}`Smart card login <log-in-using-a-smart-card>` • {ref}`Smart card in your web browser <enable-smart-cards-in-snapped-browsers>`
 * **Remote access**: {ref}`share-your-desktop-remotely` • {ref}`access-a-remote-desktop`
 * **Customization**: {ref}`change-the-default-terminal`
-
-<!--
-::::{grid} 1 1 2 2
-
-:::{grid-item-card} Tutorial
-:link: /tutorial/index
-:link-type: doc
-
-**Get started**: a hands-on introduction to Ubuntu Desktop for new users
-:::
-
-:::{grid-item-card} How-to guides
-:link: /how-to/index
-:link-type: doc
-
-**Step-by-step guides** covering key operations and common tasks
-:::
-::::
-
-::::{grid} 1 1 2 2
-:reverse:
-
-:::{grid-item-card} Reference
-:link: /reference/index
-:link-type: doc
-
-**Technical information**: cheat sheets, specifications, APIs, architecture
-:::
-
-:::{grid-item-card} Explanation
-:link: /explanation/index
-:link-type: doc
-
-**Concepts**: discussion and clarification of key topics
-:::
-::::
--->
 
 
 ## How this documentation is organized
