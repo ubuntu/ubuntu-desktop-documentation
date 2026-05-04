@@ -1,6 +1,6 @@
 # Ubuntu Desktop documentation
 
-Ubuntu Desktop is the most popular open-source operating system powering millions of PCs and laptops around the world. {ref}`Learn more <about-ubuntu-desktop>`.
+Ubuntu Desktop is an open-source operating system powering millions of PCs and laptops around the world. It supports daily user needs, as well as professional content creation, software development and AI/ML use cases.
 
 :::{toctree}
 :hidden:
@@ -47,13 +47,15 @@ This documentation uses the [Diátaxis documentation structure](https://diataxis
 (project-and-community)=
 ## Project and community
 
-Ubuntu Desktop is an open source project that warmly welcomes community projects, contributions, suggestions, fixes and constructive feedback.
+Ubuntu Desktop is one of the main versions of the Ubuntu operating system, alongside [Ubuntu Server](https://ubuntu.com/server), [Ubuntu on WSL](https://ubuntu.com/wsl) and [Ubuntu Core](https://ubuntu.com/core).
+
+As an open source project, Ubuntu Desktop warmly welcomes community projects, contributions, suggestions, fixes and constructive feedback.
 
 ### Get involved
 
-* [Get support](https://ubuntu.com/support/community-support)
-* [Join our Discourse forum](https://discourse.ubuntu.com/c/project/desktop/)
-* [Join our online chat on Matrix](https://matrix.to/#/#desktop-dev:ubuntu.com)
+* Get [community support](https://ubuntu.com/support/community-support)
+* Join our [Discourse forum](https://discourse.ubuntu.com/c/project/desktop/)
+* Join our [online chat on Matrix](https://matrix.to/#/#desktop-dev:ubuntu.com)
 * [Contribute to this documentation](https://github.com/ubuntu/ubuntu-desktop-documentation/blob/main/CONTRIBUTING.md)
 
 ### Releases
@@ -66,6 +68,9 @@ Ubuntu Desktop is an open source project that warmly welcomes community projects
 
 * [Code of conduct](https://ubuntu.com/community/code-of-conduct)
 
+### Commercial support
+
+Get a subscription for security fixes and compliance profiles with [Ubuntu Pro](https://ubuntu.com/pro).
 
 
 ### Credits
