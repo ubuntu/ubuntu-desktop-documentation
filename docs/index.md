@@ -8,10 +8,6 @@
 
 **Is it for me?** Ubuntu Desktop is used by millions of users at home, for development and in enterprise. Anyone with a laptop or a PC is welcome to use Ubuntu Desktop. If you aren't sure, you can try Ubuntu Desktop without making any permanent changes on your computer: {ref}`run it from a USB stick <try-ubuntu-desktop>`.
 
-:::{caution}
-The Ubuntu Desktop guide is under construction. The current state is a preview. URLs might change at any time and some content is unfinished.
-:::
-
 :::{toctree}
 :hidden:
 :maxdepth: 2
