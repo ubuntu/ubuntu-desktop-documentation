@@ -13,7 +13,7 @@ Original source: <https://discourse.ubuntu.com/t/install-ubuntu-desktop/25312/>
 Original author: Oliver Smith <oliversmith@canonical.com>
 -->
 
-In this tutorial, we'll download and install Ubuntu Desktop 24.04 LTS on your laptop or PC.
+In this tutorial, we'll download and install Ubuntu Desktop 26.04 LTS on your laptop or PC.
 
 If you've never installed an operating system, don't worry: Ubuntu makes the process very easy. You'll encounter a guided installer that will ask you a couple of questions. Whenever you're not sure what to pick, you can just select the default option, which ensures that you end up with a fully usable Ubuntu installation. No deep technical knowledge is required.
 
@@ -30,7 +30,7 @@ While Ubuntu works on a wide range of devices, it's best to use a device listed 
 
 If you can't see your device there, you can always just {ref}`try-ubuntu-desktop` and check if everything works as expected.
 
-```{include} ../reuse/apple-silicon-disclaimer.txt
+```{include} /reuse/apple-silicon-disclaimer.txt
 ```
 
 For guidance on installing Ubuntu on platforms based on architectures other than x86 (including **ARM** or **RISC-V** boards, such as **Raspberry Pi**), see {external+hw:doc}`index`.
@@ -51,7 +51,7 @@ Back up your files from the **USB flash drive**. The drive will be erased.
 <!--
 The docs/reuse/boot-ubuntu-from-usb.txt file is reused between the live system tutorial and the installation tutorial.
 -->
-:::{include} ../reuse/boot-ubuntu-from-usb.txt
+:::{include} /reuse/boot-ubuntu-from-usb.txt
 :::
 
 

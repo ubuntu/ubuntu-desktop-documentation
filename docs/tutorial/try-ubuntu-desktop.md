@@ -8,14 +8,14 @@ sequential_nav: both
 (try-ubuntu-desktop)=
 # Try Ubuntu Desktop
 
-In this tutorial, you'll try Ubuntu Desktop 24.04 LTS on your computer without making any permanent changes. Ubuntu Desktop will run from a USB drive and your data will be safe.
+In this tutorial, you'll try Ubuntu Desktop 26.04 LTS on your computer without making any permanent changes. Ubuntu Desktop will run from a USB drive and your data will be safe.
 
 
 What you’ll need:
 
 * A laptop or PC.
 
-* A flash drive, 8GB or above recommended).
+* A flash drive, 8GB or above recommended.
 
 
 ## Will Ubuntu work on my computer?
@@ -24,7 +24,7 @@ You can test Ubuntu from a USB drive on any computer to see if it works.
 
 You can also try to find your computer on the [Ubuntu certified hardware](https://ubuntu.com/certified?q=&category=Laptop&category=Desktop&limit=20) page. These devices have been tested and confirmed to work well with Ubuntu.
 
-```{include} ../reuse/apple-silicon-disclaimer.txt
+```{include} /reuse/apple-silicon-disclaimer.txt
 ```
 
 For guidance on installing Ubuntu on platforms based on architectures other than x86 (including **ARM** or **RISC-V** boards, such as **Raspberry Pi**), see {external+hw:doc}`index`.
@@ -33,7 +33,7 @@ For guidance on installing Ubuntu on platforms based on architectures other than
 <!--
 The docs/reuse/boot-ubuntu-from-usb.txt file is reused between the live system tutorial and the installation tutorial.
 -->
-:::{include} ../reuse/boot-ubuntu-from-usb.txt
+:::{include} /reuse/boot-ubuntu-from-usb.txt
 :::
 
 
