@@ -8,7 +8,7 @@ Ubuntu releases come in two types with different life cycles: Long Term Support 
 
 ## The difference between release types
 
-LTS releases such as Ubuntu 24.04 LTS are recommended for users looking for a stable environment. LTS releases receive five years of support and security updates.
+LTS releases such as Ubuntu 26.04 LTS are recommended for users looking for a stable environment. LTS releases receive five years of support and security updates.
 
 Interim releases are supported for nine months. They give you a chance to preview new features and updates ahead of the next LTS release.
 
@@ -21,7 +21,7 @@ Before you start upgrading, you need to know which version of Ubuntu you're curr
 ::::{tab-set}
 :::{tab-item} Graphical interface
 :sync: gui
-On Ubuntu Desktop, open the Settings application. Navigate to {menuselection}`System --> About`. Your Ubuntu version is listed in the {guilabel}`Operating System` field. For example, it might say "Ubuntu 24.04.3 LTS".
+On Ubuntu Desktop, open the Settings application. Navigate to {menuselection}`System --> About`. Your Ubuntu version is listed in the {guilabel}`Operating System` field. For example, it might say "Ubuntu 26.04 LTS".
 
 On earlier Ubuntu versions, the information was located on the Details tab.
 :::
@@ -36,8 +36,7 @@ On earlier Ubuntu versions, the information was located on the Details tab.
 :dir:
 lsb_release --description
     
-No LSB modules are available.
-Description:	Ubuntu 24.04.3 LTS
+Description:	Ubuntu 26.04 LTS
 ```
 :::
 ::::
@@ -46,11 +45,13 @@ Description:	Ubuntu 24.04.3 LTS
 (switch-to-interim)=
 ## Switch to interim
 
-If you're currently using an LTS release such as Ubuntu 24.04 LTS, you can configure your system to follow interim releases instead.
+If you're currently using an LTS release such as Ubuntu 26.04 LTS, you can configure your system to follow interim releases instead.
 
 ::::{tab-set}
 :::{tab-item} Graphical interface
 :sync: gui
+1. Install the Software & Updates application, which is available from the `software-properties-gtk` Deb package.
+
 1. Open the Software & Updates application.
 
 1. Go to the {guilabel}`Updates` tab.
@@ -82,6 +83,8 @@ If you're using an interim release of Ubuntu, you can reconfigure your system to
 ::::{tab-set}
 :::{tab-item} Graphical interface
 :sync: gui
+1. Install the Software & Updates application, which is available from the `software-properties-gtk` Deb package.
+
 1. Open the Software & Updates application.
 
 1. Go to the {guilabel}`Updates` tab.
