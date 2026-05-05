@@ -40,11 +40,11 @@ Ubuntu only supports sequential upgrades: from one Long Term Support (LTS) relea
 
 Your Ubuntu installation follows one of these upgrade paths:
 
-* If you're using a **Long Term Support (LTS) release** like most of Ubuntu users, the latest version that you can upgrade to is [Ubuntu 24.04 LTS](https://discourse.ubuntu.com/t/ubuntu-24-04-lts-noble-numbat-release-notes/39890).
+* If you're using a **Long Term Support (LTS) release** like most of Ubuntu users, the latest version that you can upgrade to is [Ubuntu 24.04 LTS](https://documentation.ubuntu.com/release-notes/24.04/).
 
-    Upgrades to the latest LTS release become available after the first point release, such as with Ubuntu 24.04.01. This usually happens several months after the initial release.
+    Upgrades to the latest LTS release become available after the first point release, such as with Ubuntu 26.04.01. This usually happens several months after the initial release.
 
-* If you're using **interim releases**, you can upgrade to [Ubuntu 25.10](https://discourse.ubuntu.com/t/questing-quokka-release-notes/59220).
+* If you're using **interim releases**, you can already upgrade to [Ubuntu 26.04](https://documentation.ubuntu.com/release-notes/26.04/).
 
     Upgrades to the latest interim release become available a few days after the official release date.
 
@@ -158,7 +158,7 @@ The process is interactive. Follow the application's instructions and confirm th
 
 Your new, upgraded Ubuntu starts up. Log in and check that everything works as expected.
 
-Third-party software repositories and PPAs might have been disabled during the release upgrade. Check if you need to re-enable them or find updated versions. You can do this in the Software & Updates application, on the {guilabel}`Other Software` tab.
+Third-party software repositories and PPAs might have been disabled during the release upgrade. Check if you need to re-enable them or find updated versions. You can do this in the Software & Updates application, on the {guilabel}`Other Software` tab. If the application is missing on your system, you can install it from the `software-properties-gtk` Deb package.
 
 
 ## Troubleshooting
@@ -167,13 +167,29 @@ You might encounter these problems when trying to upgrade Ubuntu.
 
 ### The upgrade isn't available
 
-LTS upgrades only become available with the first point release, such as 24.04.1.
+LTS upgrades only become available with the first point release, such as 26.04.1.
 
 Upgrades to the latest interim release become available several days after the official release date. This is to allow time for any critical bugs to be fixed before prompting all users to upgrade. Check again in a few days. If it's been more than a couple of days, look for known issues in the release notes. Some of them might be blocking the upgrade until they're resolved. You can find updates in the attached bug trackers.
 
 If you want to upgrade to an interim release, make sure that your system is {ref}`properly configured <switch-between-an-lts-and-interim-release>`.
 
-You can force the upgrade manually on the command line:
+You can force the upgrade manually:
+
+::::{tab-set}
+:::{tab-item} Graphical interface
+:sync: gui
+
+```{terminal}
+:copy:
+:user:
+:host:
+:dir:
+update-manager
+```
+:::
+
+:::{tab-item} Command line
+:sync: terminal
 
 ```{terminal}
 :copy:
@@ -182,8 +198,26 @@ You can force the upgrade manually on the command line:
 :dir:
 sudo do-release-upgrade
 ```
+:::
+::::
 
 If the normal upgrade path isn't available yet and you know what you're doing, you can also add the `--devel-release` option to upgrade to the latest development release:
+
+::::{tab-set}
+:::{tab-item} Graphical interface
+:sync: gui
+
+```{terminal}
+:copy:
+:user:
+:host:
+:dir:
+update-manager --devel-release
+```
+:::
+
+:::{tab-item} Command line
+:sync: terminal
 
 ```{terminal}
 :copy:
@@ -192,6 +226,8 @@ If the normal upgrade path isn't available yet and you know what you're doing, y
 :dir:
 sudo do-release-upgrade --devel-release
 ```
+:::
+::::
 
 :::{warning}
 Upgrading to a development release isn't supported and might break your system.
