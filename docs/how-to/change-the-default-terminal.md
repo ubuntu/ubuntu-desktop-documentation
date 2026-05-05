@@ -6,41 +6,11 @@
 
 The default terminal, or terminal emulator, is the application that opens when you press {kbd}`Ctrl+Alt+T`. If multiple terminal emulators are installed, you can configure which one is the default.
 
+:::{note}
+This is the current way to set your default terminal on Ubuntu 25.04 and later. If you're using an earlier Ubuntu release, such as 24.04 LTS, switch the version of this guide to 24.04.
+:::
 
-## On Ubuntu 24.04 LTS
-
-1. Enter the following command in a terminal:
-
-    ```{terminal}
-    :copy:
-    :user:
-    :host:
-    :dir:
-    sudo update-alternatives --config x-terminal-emulator
-  
-    There are 2 choices for the alternative x-terminal-emulator (providing /usr/bin/x-terminal-emulator).
-
-      Selection    Path                             Priority   Status
-    ------------------------------------------------------------
-      0            /usr/bin/gnome-terminal.wrapper   40        auto mode
-    * 1            /usr/bin/gnome-terminal.wrapper   40        manual mode
-      2            /usr/bin/kgx                      40        manual mode
-
-    Press <enter> to keep the current choice[*], or type selection number:
-    ```
-
-    It lists the terminal emulators that are available on your system. The current default is marked with an asterisk (`*`).
-
-2. Type the number of your selected terminal and confirm with {kbd}`Enter`.
-
-    If you choose auto mode (0), you let your system pick the default terminal. The default might change with future system updates.
-
-
-## On Ubuntu 25.04 and later
-
-Starting with Ubuntu 25.04, the way to set your default terminal has changed. Since Ubuntu 25.10, the Files application now also respects your configuration when you select {guilabel}`Open in Terminal` from the folder menu.
-
-* Your terminal might enable you to set it as default in the terminal settings. Look for a button similar to {guilabel}`Set as default terminal` in the application preferences. The button might be located in the Behavior or General section.
+* Your terminal might enable you to set it as default in the terminal settings. Look for a button similar to {guilabel}`Set as default terminal` in the application preferences. The button might be located in the *Behavior* or *General* section.
 
 * If your terminal doesn't have such settings, enter its XDG Desktop identifier in the `~/.config/ubuntu-xdg-terminals.list` file. For example:
 
