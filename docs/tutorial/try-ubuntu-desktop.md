@@ -43,15 +43,15 @@ The Ubuntu Desktop installer opens. We'll use it to set a couple of options. The
 
 1. Choose your language.
 
-    ![The Choose your language page](/images/installer/choose-your-language.jpeg)
+    ![The Choose your language page](/images/installer/choose-your-language.png)
 
 1. Select any accessibility settings that your require.
 
-    ![The Accessibility page](/images/installer/accessibility.jpeg)
+    ![The Accessibility page](/images/installer/accessibility.png)
 
 1. Select your keyboard layout.
 
-    ![The Keyboard layout page](/images/installer/keyboard-layout.jpeg)
+    ![The Keyboard layout page](/images/installer/keyboard-layout.png)
 
 1. Connect to your network.
 
@@ -59,7 +59,7 @@ The Ubuntu Desktop installer opens. We'll use it to set a couple of options. The
 
     It also allows you to use a web browser in the Ubuntu preview.
 
-    ![The Internet connection page](/images/installer/internet-connection.jpeg)
+    ![The Internet connection page](/images/installer/internet-connection.png)
 
     The network connection is optional. If you can't connect, the Ubuntu preview will still work.
 
@@ -67,7 +67,7 @@ The Ubuntu Desktop installer opens. We'll use it to set a couple of options. The
 
     Click {guilabel}`Try Ubuntu` so that you can preview Ubuntu without making any changes to your PC.
 
-    ![The Try or install Ubuntu page](/images/installer/try-or-install-ubuntu.jpeg)
+    ![The Try or install Ubuntu page](/images/installer/try-or-install-ubuntu.png)
 
 
 ## Test the Ubuntu preview

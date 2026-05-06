@@ -61,21 +61,21 @@ The Ubuntu Desktop installer opens.
 
 1. Choose your language.
 
-    ![The Choose your language page](/images/installer/choose-your-language.jpeg)
+    ![The Choose your language page](/images/installer/choose-your-language.png)
 
 1. Select any accessibility settings that your require.
 
-    ![The Accessibility page](/images/installer/accessibility.jpeg)
+    ![The Accessibility page](/images/installer/accessibility.png)
 
 1. Select your keyboard layout.
 
-    ![The Keyboard layout page](/images/installer/keyboard-layout.jpeg)
+    ![The Keyboard layout page](/images/installer/keyboard-layout.png)
 
 1. Connect to your network.
 
     This allows Ubuntu to download updates and third party drivers, such as NVIDIA graphics drivers, during installation.
 
-    ![The Internet connection page](/images/installer/internet-connection.jpeg)
+    ![The Internet connection page](/images/installer/internet-connection.png)
 
     The network connection is optional. If you can't connect, the Ubuntu installation will still work.
 
@@ -83,7 +83,7 @@ The Ubuntu Desktop installer opens.
 
     If you click {guilabel}`Try Ubuntu`, you can preview Ubuntu without making any changes to your PC. You can use the preview to test if your hardware works correctly with Ubuntu. You can then return to the installer menu at any time by clicking the {guilabel}`Install Ubuntu` shortcut on the desktop.
 
-    ![The Try or install Ubuntu page](/images/installer/try-or-install-ubuntu.jpeg)
+    ![The Try or install Ubuntu page](/images/installer/try-or-install-ubuntu.png)
 
     To proceed, click {guilabel}`Install Ubuntu`.
 
@@ -156,8 +156,14 @@ If you want to encrypt your data, you can enable disk encryption after you selec
 Select a disk encryption method:
 
 - {guilabel}`Encrypt with a passphrase` is the recommended encryption option.
+
 - {guilabel}`Use hardware-backed encryption` is a more convenient encryption method that only works on recent PCs.
-- Other encryption options are available when you click {guilabel}`Advanced options`. For details, see {ref}`advanced-disk-setup-features`.
+
+    See {ref}`hardware-backed-disk-encryption`.
+
+- Other encryption options are available when you click {guilabel}`Advanced options`.
+
+    See {ref}`advanced-disk-setup-features`.
 
 Depending on which encryption you've selected, the installer might ask you to create a passphrase that you'll need to enter during every system startup to unlock the disk.
 
