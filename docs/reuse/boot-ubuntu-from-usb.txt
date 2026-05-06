@@ -22,7 +22,7 @@ The application that we'll use depends on the system that you're currently using
 <!--
 The docs/reuse/usb-using-gnome-disks.txt file is reused between the live system tutorial, the installation tutorial and the bootable USB how-to guide.
 -->
-```{include} ../reuse/usb-using-gnome-disks.txt
+```{include} /reuse/usb-using-gnome-disks.txt
 ```
 :::
 
@@ -32,7 +32,7 @@ The docs/reuse/usb-using-gnome-disks.txt file is reused between the live system 
 <!--
 The docs/reuse/usb-using-rufus.txt file is reused between the live system tutorial, the installation tutorial and the bootable USB how-to guide.
 -->
-```{include} ../reuse/usb-using-rufus.txt
+```{include} /reuse/usb-using-rufus.txt
 ```
 :::
 
@@ -42,7 +42,7 @@ The docs/reuse/usb-using-rufus.txt file is reused between the live system tutori
 <!--
 The docs/reuse/usb-using-balena-etcher-on-macos.txt file is reused between the live system tutorial, the installation tutorial and the bootable USB how-to guide.
 -->
-```{include} ../reuse/usb-using-balena-etcher-on-macos.txt
+```{include} /reuse/usb-using-balena-etcher-on-macos.txt
 ```
 :::
 

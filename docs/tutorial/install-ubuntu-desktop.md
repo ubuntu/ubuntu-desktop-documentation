@@ -98,11 +98,11 @@ If you encounter this alert, see {ref}`reconfigure-windows-to-use-ahci` to resol
 
 Here, you can select how you want to be guided through the installation and what software you want to install.
 
-1. Choose between {guilabel}`Interactive installation` and {guilabel}`Automated Installation`.
+1. Choose between an interactive and automated installation.
 
     The interactive option is the standard route for most users.
 
-    More advanced users can use the automated installation option to import a configuration file from a web server to standardize multiple installs and add further customization. An example tutorial for Automated installation is available at [Getting started with Autoinstall on Ubuntu Desktop 24.04 LTS](https://blog.local-optimum.net/getting-started-with-autoinstall-on-ubuntu-desktop-24-04-lts-147a1defb2de).
+    With the automated installation options, advanced users can define their installation beforehand to standardize multiple systems and add further customization. These options require you to load a configuration file from another USB stick, from a web server or from the [Landscape](https://ubuntu.com/landscape) administration tool. An example tutorial for an automated installation is available at [Getting started with Autoinstall on Ubuntu Desktop 24.04 LTS](https://blog.local-optimum.net/getting-started-with-autoinstall-on-ubuntu-desktop-24-04-lts-147a1defb2de).
 
     ![The Type of installation page](/images/installer/type-of-installation.jpeg)
 
@@ -141,8 +141,6 @@ Let’s take a moment to review all of the above options in detail.
 
 If you select this option, Ubuntu takes up the entire disk space on the selected drive.
 
-![The Erase disk and install Ubuntu page](/images/installer/erase-disk-and-install-ubuntu.png)
-
 If your PC has multiple hard drives, you can select where Ubuntu is installed. This option allows you to install Ubuntu alongside an existing OS as long as they each have their own drive.
 
 :::{warning}
@@ -151,23 +149,17 @@ Ensure that you're selecting the right drive in this case.
 
 ### Encrypt your data
 
-If you want to encrypt your data, you can enable disk encryption with the {guilabel}`Erase disk and install Ubuntu` option:
+If you want to encrypt your data, you can enable disk encryption after you select the {guilabel}`Erase disk and install Ubuntu` option:
 
-<!-- Not sure where this came from in the original tutorial:
-1. Select {guilabel}`Encrypt the new Ubuntu installation for security`.
--->
+![The Advanced features dialog](/images/installer/advanced-features.jpeg)
 
-1. On the {guilabel}`Disk setup` screen, select {guilabel}`Erase disk and install Ubuntu`.
+Select a disk encryption method:
 
-1. Open {guilabel}`Advanced features`.
+- {guilabel}`Encrypt with a passphrase` is the recommended encryption option.
+- {guilabel}`Use hardware-backed encryption` is a more convenient encryption method that only works on recent PCs.
+- Other encryption options are available when you click {guilabel}`Advanced options`. For details, see {ref}`advanced-disk-setup-features`.
 
-    ![The Advanced features dialog](/images/installer/advanced-features.jpeg)
-
-1. Select a disk encryption method. {guilabel}`Use LVM and encryption` is the recommended encryption option.
-
-For a description of the advanced features, see {ref}`advanced-disk-setup-features`.
-
-If you select either LVM or ZFS encryption, the installer asks you to create a passphrase that you'll need to enter during every system startup to unlock the disk.
+Depending on which encryption you've selected, the installer might ask you to create a passphrase that you'll need to enter during every system startup to unlock the disk.
 
 ![The Disk passphrase page](/images/installer/disk-passphrase.jpeg)
 
