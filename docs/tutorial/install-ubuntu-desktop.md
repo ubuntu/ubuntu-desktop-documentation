@@ -100,13 +100,13 @@ Here, you can select how you want to be guided through the installation and what
 
 1. Choose between an interactive and automated installation.
 
-    The interactive option is the standard route for most users.
+    The **interactive** option is the standard route for most users.
 
-    With the automated installation options, advanced users can define their installation beforehand to standardize multiple systems and add further customization. These options require you to load a configuration file from another USB stick, from a web server or from the [Landscape](https://ubuntu.com/landscape) administration tool. An example tutorial for an automated installation is available at [Getting started with Autoinstall on Ubuntu Desktop 24.04 LTS](https://blog.local-optimum.net/getting-started-with-autoinstall-on-ubuntu-desktop-24-04-lts-147a1defb2de).
+    With the **automated** installation options, advanced users can define their installation beforehand to standardize multiple systems and add further customization. These options require you to load a configuration file from another USB stick, from a web server or from the [Landscape](https://ubuntu.com/landscape) administration tool. An example tutorial for an automated installation is available at [Getting started with Autoinstall on Ubuntu Desktop 24.04 LTS](https://blog.local-optimum.net/getting-started-with-autoinstall-on-ubuntu-desktop-24-04-lts-147a1defb2de).
 
-    ![The Type of installation page](/images/installer/type-of-installation.jpeg)
+    ![The Type of installation page](/images/installer/type-of-installation.png)
 
-    In this tutorial, we'll follow the interactive installation.
+    In this tutorial, we'll follow the **interactive** installation.
 
 1. Choose between the {guilabel}`Default selection` and {guilabel}`Extended selection` options.
 
@@ -114,13 +114,13 @@ Here, you can select how you want to be guided through the installation and what
 
     You can always install all these applications later if you have an internet connection.
 
-    ![The Applications page](/images/installer/applications.jpeg)
+    ![The Applications page](/images/installer/applications.png)
 
 1. Here, you can install third-party software. It can improve device support and performance (for example, NVIDIA graphics drivers) and adds support for additional media formats.
 
     We recommend that you enable both options.
 
-    ![The Optimise your computer page](/images/installer/optimise-your-computer.jpeg)
+    ![The Optimise your computer page](/images/installer/optimise-your-computer.png)
 
 
 ## Disk setup
@@ -133,7 +133,7 @@ Select how Ubuntu should be installed on the disk:
 
 * If your device currently has another operating system installed, you also have the options to install Ubuntu alongside that system.
 
-![The Disk setup page](/images/installer/disk-setup.jpeg)
+![The Disk setup page](/images/installer/disk-setup.png)
 
 Let’s take a moment to review all of the above options in detail.
 
@@ -151,7 +151,7 @@ Ensure that you're selecting the right drive in this case.
 
 If you want to encrypt your data, you can enable disk encryption after you select the {guilabel}`Erase disk and install Ubuntu` option:
 
-![The Advanced features dialog](/images/installer/advanced-features.jpeg)
+![The Encryption and file system page](/images/installer/encryption-and-file-system.png)
 
 Select a disk encryption method:
 
@@ -167,7 +167,7 @@ Select a disk encryption method:
 
 Depending on which encryption you've selected, the installer might ask you to create a passphrase that you'll need to enter during every system startup to unlock the disk.
 
-![The Disk passphrase page](/images/installer/disk-passphrase.jpeg)
+![The Disk passphrase page](/images/installer/disk-passphrase.png)
 
 :::{warning}
 Keep your passphrase safe and don't lose it. Write it down and store it in a safe place outside of your local system. **You won't be able to recover your data without the password.**
@@ -217,21 +217,21 @@ On this screen, enter your name and pick a name for your computer as it will app
 
 You can choose to log in automatically or require a password. If you use your device while traveling, it's recommended to keep {guilabel}`Require my password to log in` enabled.
 
-![The Create your account page](/images/installer/create-your-account.jpeg)
+![The Create your account page](/images/installer/create-your-account.png)
 
 
 ## Select your timezone
 
 Select your location and timezone from the map screen. Ubuntu can detect your location automatically if you're connected to the internet.
 
-![The Select your timezone page](/images/installer/select-your-timezone.jpeg)
+![The Select your timezone page](/images/installer/select-your-timezone.png)
 
 
 ## Ready to install
 
 Here, you can see a summary of your installation configuration. Review  your setup before clicking {guilabel}`Install`.
 
-![The Ready to install page](/images/installer/ready-to-install.jpeg)
+![The Ready to install page](/images/installer/ready-to-install.png)
 
 :::{note}
 If you choose to import an autoinstall configuration at the start of the installation process, the installer takes you directly to this screen to confirm that your configuration is correct.
