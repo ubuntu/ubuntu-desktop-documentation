@@ -244,13 +244,13 @@ Once you proceed, Ubuntu begins the installation process.
 
 Sit back and enjoy the slideshow as Ubuntu installs in the background.
 
-![The installation slideshow](/images/installer/slideshow.jpeg)
+![The installation slideshow](/images/installer/slideshow.png)
 
 Alternatively, you can watch a detailed output of the installation process by clicking the icon in the lower right corner of the window.
 
 When the installation has completed, the installer prompts you to restart your machine. Click {guilabel}`Restart Now`.
 
-![The Installation complete page](/images/installer/installation-complete.jpeg)
+![The Installation complete page](/images/installer/installation-complete.png)
 
 When you restart, Ubuntu asks you to remove your USB flash drive from the device. Then, press {guilabel}`Enter`.
 
@@ -261,30 +261,27 @@ When you restart, Ubuntu asks you to remove your USB flash drive from the device
 
 Enter your disk encryption passphrase if you created one.
 
-![The disk passphrase prompt](/images/unlock-disk.png)
+![The disk passphrase prompt](/images/installer/unlock-disk.png)
 
 At the login screen, enter your user name and password.
 
-![The Ubuntu login screen](/images/login-screen.png)
+![The Ubuntu login screen](/images/installer/login-screen.png)
 
 And that’s it. Welcome to your new Ubuntu Desktop!
 
-![The Ubuntu 24.04 desktop](/images/ubuntu-24-04-desktop.jpeg)
+![The Ubuntu 26.04 desktop](/images/installer/ubuntu-26-04-desktop.jpeg)
 
-The welcome widget will help you with some additional setup options:
+The Initial Setup app will help you with some additional setup options:
 
-* Attaching an [Ubuntu Pro](https://ubuntu.com/pro) free personal or paid subscription to apply additional security patches to your device.
-
-    This option is only available when using a long term support (LTS) version of Ubuntu.
+* Enabling location services.
 
 * Opting into sending device information to Canonical to help improve Ubuntu.
 
     By default, Canonical doesn’t collect device information.
 
+* Customizing the color scheme.
+
 * Downloading additional apps from App Center.
-
-![The Ubuntu welcome widget](/images/welcome-widget.jpeg)
-
 
 
 ## Don't forget to update
