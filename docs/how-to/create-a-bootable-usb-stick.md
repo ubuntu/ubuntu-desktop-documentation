@@ -100,7 +100,7 @@ Startup Disk Creator is intended for Ubuntu images and images of other distribut
 
 ### Using KDE ISO Image Writer
 
-KDE ISO Image Writer is part of the KDE Plasma desktop environment. You can use it on distributions like Kubuntu. It's available for Ubuntu and Kubuntu 25.04, 25.10, 26.04 LTS and later.
+KDE ISO Image Writer is part of the KDE Plasma desktop environment. You can use it on distributions like Kubuntu. It's available for Ubuntu and Kubuntu 26.04 LTS and later.
 
 1. Go to the [releases.ubuntu.com](https://releases.ubuntu.com/) website and find the Ubuntu release that you're writing on your USB stick, such as [Ubuntu 24.04 (Noble Numbat)](https://releases.ubuntu.com/noble/).
 
@@ -181,7 +181,7 @@ The `dd` tool is designed for advanced users. If you specify the wrong options, 
     :user:
     :host:
     :dir:
-    sudo dd if=Downloads/ubuntu-24.04.3-desktop-amd64.iso of=/dev/sda bs=4M conv=fsync status=progress
+    sudo dd if=Downloads/ubuntu-26.04-desktop-amd64.iso of=/dev/sda bs=4M conv=fsync status=progress
     ```
 
     Double-check the file paths in this command:
@@ -199,7 +199,7 @@ The `dd` tool is designed for advanced users. If you specify the wrong options, 
     :user:
     :host:
     :dir:
-    sudo dd if=Downloads/ubuntu-24.04.3-desktop-amd64.iso of=/dev/sda bs=4M conv=fsync status=progress
+    sudo dd if=Downloads/ubuntu-26.04-desktop-amd64.iso of=/dev/sda bs=4M conv=fsync status=progress
 
     6337593344 bytes (6.3 GB, 5.9 GiB) copied, 143 s, 44.3 MB/s6345887744 bytes (6.3 GB, 5.9 GiB) copied, 143.302 s, 44.3 MB/s
 
@@ -321,7 +321,7 @@ This is no longer necessary, and in fact it produces an unusable image:
     :user:
     :host:
     :dir:
-    hdiutil convert Downloads/ubuntu-24.04.3-desktop-amd64.iso -format UDRW -o ubuntu.dmg
+    hdiutil convert Downloads/ubuntu-26.04-desktop-amd64.iso -format UDRW -o ubuntu.dmg
     ```
 -->
 
@@ -377,7 +377,7 @@ This is no longer necessary, and in fact it produces an unusable image:
     :user:
     :host:
     :dir:
-    sudo dd if=Downloads/ubuntu-24.04.3-desktop-amd64.iso of=/dev/rdisk<N> bs=4m
+    sudo dd if=Downloads/ubuntu-26.04-desktop-amd64.iso of=/dev/rdisk<N> bs=4m
     ```
 
     :::{tip}
