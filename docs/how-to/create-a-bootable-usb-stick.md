@@ -102,7 +102,7 @@ Startup Disk Creator is intended for Ubuntu images and images of other distribut
 
 KDE ISO Image Writer is part of the KDE Plasma desktop environment. You can use it on distributions like Kubuntu. It's available for Ubuntu and Kubuntu 26.04 LTS and later.
 
-1. Go to the [releases.ubuntu.com](https://releases.ubuntu.com/) website and find the Ubuntu release that you're writing on your USB stick, such as [Ubuntu 24.04 (Noble Numbat)](https://releases.ubuntu.com/noble/).
+1. Go to the [releases.ubuntu.com](https://releases.ubuntu.com/) website and find the Ubuntu release that you're writing on your USB stick, such as [Ubuntu 26.04 LTS (Resolute Raccoon)](https://releases.ubuntu.com/resolute/).
 
 1. Download the `SHA256SUMS` and `SHA256SUMS.gpg` checksum files. In the file selector, make sure not to attach the `.txt` suffix to the `SHA256SUMS` file. Place the files in the same directory as the Ubuntu image.
 
