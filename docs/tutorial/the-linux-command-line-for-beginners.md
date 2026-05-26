@@ -29,12 +29,12 @@ For a brief history lesson, go to {ref}`why-we-use-the-terminal-on-linux`.
 :::
 * A computer running Ubuntu or some other version of Linux
 
-    Every Linux system includes a command line of one sort or another. This tutorial includes some specific steps for Ubuntu 24.04 but most of the content should work regardless of your Linux distribution.
+    Every Linux system includes a command line of one sort or another. This tutorial includes some specific steps for Ubuntu Desktop but most of the content should work regardless of your Linux distribution.
 
 
 ## Opening a terminal
 
-On an Ubuntu 24.04 system, you can find a launcher for the terminal by clicking on the activities button in the upper left corner of the screen, then typing the first few letters of "terminal", "command", "prompt" or "shell". Yes, the developers have set up the launcher with all the most common synonyms, so you should have no problems finding it.
+On an Ubuntu Desktop system, you can find a launcher for the terminal by clicking on the activities button in the upper left corner of the screen, then typing the first few letters of "terminal", "command", "prompt" or "shell". Yes, the developers have set up the launcher with all the most common synonyms, so you should have no problems finding it.
 
 ![Terminal launcher in Ubuntu 24.04](/images/gnome-terminal-24-04-launch.png)
 

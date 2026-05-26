@@ -269,7 +269,7 @@ At the login screen, enter your user name and password.
 
 And that’s it. Welcome to your new Ubuntu Desktop!
 
-![The Ubuntu 26.04 desktop](/images/installer/ubuntu-26-04-desktop.jpeg)
+![The Ubuntu 26.04 desktop](/images/installer/ubuntu-26-04-desktop.png)
 
 The Initial Setup app will help you with some additional setup options:
 
