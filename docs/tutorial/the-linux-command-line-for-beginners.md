@@ -44,7 +44,7 @@ If you can't find a launcher, or if you just want a faster way to bring up the t
 
 However you launch your terminal, you should end up with a rather dull looking window with an odd bit of text at the top, much like the image below. Depending on your Linux system the colors may not be the same, and the text will likely say something different, but the general layout of a window with a large (mostly empty) text area should be similar.
 
-![A new terminal window in Ubuntu 26.04](/images/ptyxis-24-04.png)
+![A new terminal window in Ubuntu 26.04](/images/ptyxis-26-04.png)
 
 Let's run our first command. Click the mouse into the window to make sure that's where your keystrokes will go, then type the `pwd` command, *all in lower case*. Press the {kbd}`Enter` or {kbd}`Return` key to run it.
 
