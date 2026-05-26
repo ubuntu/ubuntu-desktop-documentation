@@ -1,6 +1,6 @@
 ## Download an Ubuntu image
 
-Get the Ubuntu installation image from the [Download Ubuntu Desktop](https://ubuntu.com/download/desktop) page. Save it to a memorable location on your PC. The downloaded file is called `ubuntu-24.04.3-desktop-amd64.iso` or similar.
+Get the Ubuntu installation image from the [Download Ubuntu Desktop](https://ubuntu.com/download/desktop) page. Save it to a memorable location on your PC. The downloaded file is called `ubuntu-26.04-desktop-amd64.iso` or similar.
 
 ![The Download Ubuntu Desktop page](/images/download-an-ubuntu-image.png)
 
@@ -22,7 +22,7 @@ The application that we'll use depends on the system that you're currently using
 <!--
 The docs/reuse/usb-using-gnome-disks.txt file is reused between the live system tutorial, the installation tutorial and the bootable USB how-to guide.
 -->
-```{include} ../reuse/usb-using-gnome-disks.txt
+```{include} /reuse/usb-using-gnome-disks.txt
 ```
 :::
 
@@ -32,7 +32,7 @@ The docs/reuse/usb-using-gnome-disks.txt file is reused between the live system 
 <!--
 The docs/reuse/usb-using-rufus.txt file is reused between the live system tutorial, the installation tutorial and the bootable USB how-to guide.
 -->
-```{include} ../reuse/usb-using-rufus.txt
+```{include} /reuse/usb-using-rufus.txt
 ```
 :::
 
@@ -42,7 +42,7 @@ The docs/reuse/usb-using-rufus.txt file is reused between the live system tutori
 <!--
 The docs/reuse/usb-using-balena-etcher-on-macos.txt file is reused between the live system tutorial, the installation tutorial and the bootable USB how-to guide.
 -->
-```{include} ../reuse/usb-using-balena-etcher-on-macos.txt
+```{include} /reuse/usb-using-balena-etcher-on-macos.txt
 ```
 :::
 

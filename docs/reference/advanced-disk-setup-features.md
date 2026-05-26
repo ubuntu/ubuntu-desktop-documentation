@@ -4,22 +4,24 @@
 (advanced-disk-setup-features)=
 # Advanced disk setup features
 
-When installing Ubuntu, the installer offers several disk setup options. The following advanced features are available:
+When installing Ubuntu Desktop, the installer offers several disk setup options. The recommended ones are as follows:
 
-None
+No encryption
 : Use regular disk partitioning with no extra features.
 
-Use LVM
-: Logical Volume Management (LVM) makes it easier to create and manage partitions after the installation.
+Encrypt with a passphrase
+: Enable Logical Volume Management (LVM) with disk encryption. This is the recommended option to encrypt your data.
 
-Use LVM and encryption
-: Add a disk encryption layer to LVM. This is the recommended option to encrypt your data.
+Use hardware-backed disk encryption
+: This is a new encryption method that can unlock your disk automatically without a password. For details, see {ref}`hardware-backed-disk-encryption`.
 
-Erase disk and use ZFS
+The following advanced features are available:
+
+Use LVM without encryption
+: LVM makes it easier to create and manage partitions after the installation. For details, see {external:ref}`about-lvm`.
+
+Use ZFS without encryption
 : This advanced file system allows you to create pooled storage volumes that span multiple drives. It supports snapshots and data repair features. It is a powerful option for advanced users.
 
-Erase disk and use ZFS with encryption
+Encrypt with a passphrase using ZFS
 : Use ZFS and enable its data encryption feature.
-
-Enable hardware-backed full disk encryption
-: TPM-backed full disk encryption (FDE) is a new, **experimental** disk encryption feature of Ubuntu Desktop. For details, see {ref}`hardware-backed-disk-encryption`.

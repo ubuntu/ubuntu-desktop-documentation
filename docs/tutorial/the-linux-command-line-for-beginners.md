@@ -29,14 +29,14 @@ For a brief history lesson, go to {ref}`why-we-use-the-terminal-on-linux`.
 :::
 * A computer running Ubuntu or some other version of Linux
 
-    Every Linux system includes a command line of one sort or another. This tutorial includes some specific steps for Ubuntu 24.04 but most of the content should work regardless of your Linux distribution.
+    Every Linux system includes a command line of one sort or another. This tutorial includes some specific steps for Ubuntu Desktop but most of the content should work regardless of your Linux distribution.
 
 
 ## Opening a terminal
 
-On an Ubuntu 24.04 system, you can find a launcher for the terminal by clicking on the activities button in the upper left corner of the screen, then typing the first few letters of "terminal", "command", "prompt" or "shell". Yes, the developers have set up the launcher with all the most common synonyms, so you should have no problems finding it.
+On an Ubuntu Desktop system, you can find a launcher for the terminal by clicking on the activities button in the upper left corner of the screen, then typing the first few letters of "terminal", "command", "prompt" or "shell". Yes, the developers have set up the launcher with all the most common synonyms, so you should have no problems finding it.
 
-![Terminal launcher in Ubuntu 24.04](/images/gnome-terminal-24-04-launch.png)
+![Terminal launcher in Ubuntu 26.04](/images/ptyxis-26-04-launch.png)
 
 Other versions of Linux, or other flavors of Ubuntu, will usually have a terminal launcher located in the same place as your other application launchers. It might be hidden away in a submenu or you might have to search for it from within your launcher, but it's likely to be there somewhere.
 
@@ -44,7 +44,7 @@ If you can't find a launcher, or if you just want a faster way to bring up the t
 
 However you launch your terminal, you should end up with a rather dull looking window with an odd bit of text at the top, much like the image below. Depending on your Linux system the colors may not be the same, and the text will likely say something different, but the general layout of a window with a large (mostly empty) text area should be similar.
 
-![A new terminal window in Ubuntu 24.04](/images/gnome-terminal-24-04.png)
+![A new terminal window in Ubuntu 26.04](/images/ptyxis-26-04.png)
 
 Let's run our first command. Click the mouse into the window to make sure that's where your keystrokes will go, then type the `pwd` command, *all in lower case*. Press the {kbd}`Enter` or {kbd}`Return` key to run it.
 

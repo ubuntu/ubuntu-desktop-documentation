@@ -13,7 +13,7 @@ Original source: <https://discourse.ubuntu.com/t/install-ubuntu-desktop/25312/>
 Original author: Oliver Smith <oliversmith@canonical.com>
 -->
 
-In this tutorial, we'll download and install Ubuntu Desktop 24.04 LTS on your laptop or PC.
+In this tutorial, we'll download and install Ubuntu Desktop 26.04 LTS on your laptop or PC.
 
 If you've never installed an operating system, don't worry: Ubuntu makes the process very easy. You'll encounter a guided installer that will ask you a couple of questions. Whenever you're not sure what to pick, you can just select the default option, which ensures that you end up with a fully usable Ubuntu installation. No deep technical knowledge is required.
 
@@ -30,7 +30,7 @@ While Ubuntu works on a wide range of devices, it's best to use a device listed 
 
 If you can't see your device there, you can always just {ref}`try-ubuntu-desktop` and check if everything works as expected.
 
-```{include} ../reuse/apple-silicon-disclaimer.txt
+```{include} /reuse/apple-silicon-disclaimer.txt
 ```
 
 For guidance on installing Ubuntu on platforms based on architectures other than x86 (including **ARM** or **RISC-V** boards, such as **Raspberry Pi**), see {external+hw:doc}`index`.
@@ -51,7 +51,7 @@ Back up your files from the **USB flash drive**. The drive will be erased.
 <!--
 The docs/reuse/boot-ubuntu-from-usb.txt file is reused between the live system tutorial and the installation tutorial.
 -->
-:::{include} ../reuse/boot-ubuntu-from-usb.txt
+:::{include} /reuse/boot-ubuntu-from-usb.txt
 :::
 
 
@@ -61,21 +61,21 @@ The Ubuntu Desktop installer opens.
 
 1. Choose your language.
 
-    ![The Choose your language page](/images/installer/choose-your-language.jpeg)
+    ![The Choose your language page](/images/installer/choose-your-language.png)
 
 1. Select any accessibility settings that your require.
 
-    ![The Accessibility page](/images/installer/accessibility.jpeg)
+    ![The Accessibility page](/images/installer/accessibility.png)
 
 1. Select your keyboard layout.
 
-    ![The Keyboard layout page](/images/installer/keyboard-layout.jpeg)
+    ![The Keyboard layout page](/images/installer/keyboard-layout.png)
 
 1. Connect to your network.
 
     This allows Ubuntu to download updates and third party drivers, such as NVIDIA graphics drivers, during installation.
 
-    ![The Internet connection page](/images/installer/internet-connection.jpeg)
+    ![The Internet connection page](/images/installer/internet-connection.png)
 
     The network connection is optional. If you can't connect, the Ubuntu installation will still work.
 
@@ -83,7 +83,7 @@ The Ubuntu Desktop installer opens.
 
     If you click {guilabel}`Try Ubuntu`, you can preview Ubuntu without making any changes to your PC. You can use the preview to test if your hardware works correctly with Ubuntu. You can then return to the installer menu at any time by clicking the {guilabel}`Install Ubuntu` shortcut on the desktop.
 
-    ![The Try or install Ubuntu page](/images/installer/try-or-install-ubuntu.jpeg)
+    ![The Try or install Ubuntu page](/images/installer/try-or-install-ubuntu.png)
 
     To proceed, click {guilabel}`Install Ubuntu`.
 
@@ -98,15 +98,15 @@ If you encounter this alert, see {ref}`reconfigure-windows-to-use-ahci` to resol
 
 Here, you can select how you want to be guided through the installation and what software you want to install.
 
-1. Choose between {guilabel}`Interactive installation` and {guilabel}`Automated Installation`.
+1. Choose between an interactive and automated installation.
 
-    The interactive option is the standard route for most users.
+    The **interactive** option is the standard route for most users.
 
-    More advanced users can use the automated installation option to import a configuration file from a web server to standardize multiple installs and add further customization. An example tutorial for Automated installation is available at [Getting started with Autoinstall on Ubuntu Desktop 24.04 LTS](https://blog.local-optimum.net/getting-started-with-autoinstall-on-ubuntu-desktop-24-04-lts-147a1defb2de).
+    With the **automated** installation options, advanced users can define their installation beforehand to standardize multiple systems and add further customization. These options require you to load a configuration file from another USB stick, from a web server or from the [Landscape](https://ubuntu.com/landscape) administration tool. An example tutorial for an automated installation is available at [Getting started with Autoinstall on Ubuntu Desktop 24.04 LTS](https://blog.local-optimum.net/getting-started-with-autoinstall-on-ubuntu-desktop-24-04-lts-147a1defb2de).
 
-    ![The Type of installation page](/images/installer/type-of-installation.jpeg)
+    ![The Type of installation page](/images/installer/type-of-installation.png)
 
-    In this tutorial, we'll follow the interactive installation.
+    In this tutorial, we'll follow the **interactive** installation.
 
 1. Choose between the {guilabel}`Default selection` and {guilabel}`Extended selection` options.
 
@@ -114,13 +114,13 @@ Here, you can select how you want to be guided through the installation and what
 
     You can always install all these applications later if you have an internet connection.
 
-    ![The Applications page](/images/installer/applications.jpeg)
+    ![The Applications page](/images/installer/applications.png)
 
 1. Here, you can install third-party software. It can improve device support and performance (for example, NVIDIA graphics drivers) and adds support for additional media formats.
 
     We recommend that you enable both options.
 
-    ![The Optimise your computer page](/images/installer/optimise-your-computer.jpeg)
+    ![The Optimise your computer page](/images/installer/optimise-your-computer.png)
 
 
 ## Disk setup
@@ -133,15 +133,13 @@ Select how Ubuntu should be installed on the disk:
 
 * If your device currently has another operating system installed, you also have the options to install Ubuntu alongside that system.
 
-![The Disk setup page](/images/installer/disk-setup.jpeg)
+![The Disk setup page](/images/installer/disk-setup.png)
 
 Let’s take a moment to review all of the above options in detail.
 
 ### Erase disk and install Ubuntu
 
 If you select this option, Ubuntu takes up the entire disk space on the selected drive.
-
-![The Erase disk and install Ubuntu page](/images/installer/erase-disk-and-install-ubuntu.png)
 
 If your PC has multiple hard drives, you can select where Ubuntu is installed. This option allows you to install Ubuntu alongside an existing OS as long as they each have their own drive.
 
@@ -151,25 +149,25 @@ Ensure that you're selecting the right drive in this case.
 
 ### Encrypt your data
 
-If you want to encrypt your data, you can enable disk encryption with the {guilabel}`Erase disk and install Ubuntu` option:
+If you want to encrypt your data, you can enable disk encryption after you select the {guilabel}`Erase disk and install Ubuntu` option:
 
-<!-- Not sure where this came from in the original tutorial:
-1. Select {guilabel}`Encrypt the new Ubuntu installation for security`.
--->
+![The Encryption and file system page](/images/installer/encryption-and-file-system.png)
 
-1. On the {guilabel}`Disk setup` screen, select {guilabel}`Erase disk and install Ubuntu`.
+Select a disk encryption method:
 
-1. Open {guilabel}`Advanced features`.
+- {guilabel}`Encrypt with a passphrase` is the recommended encryption option.
 
-    ![The Advanced features dialog](/images/installer/advanced-features.jpeg)
+- {guilabel}`Use hardware-backed encryption` is a more convenient encryption method that only works on recent PCs.
 
-1. Select a disk encryption method. {guilabel}`Use LVM and encryption` is the recommended encryption option.
+    See {ref}`hardware-backed-disk-encryption`.
 
-For a description of the advanced features, see {ref}`advanced-disk-setup-features`.
+- Other encryption options are available when you click {guilabel}`Advanced options`.
 
-If you select either LVM or ZFS encryption, the installer asks you to create a passphrase that you'll need to enter during every system startup to unlock the disk.
+    See {ref}`advanced-disk-setup-features`.
 
-![The Disk passphrase page](/images/installer/disk-passphrase.jpeg)
+Depending on which encryption you've selected, the installer might ask you to create a passphrase that you'll need to enter during every system startup to unlock the disk.
+
+![The Disk passphrase page](/images/installer/disk-passphrase.png)
 
 :::{warning}
 Keep your passphrase safe and don't lose it. Write it down and store it in a safe place outside of your local system. **You won't be able to recover your data without the password.**
@@ -219,21 +217,21 @@ On this screen, enter your name and pick a name for your computer as it will app
 
 You can choose to log in automatically or require a password. If you use your device while traveling, it's recommended to keep {guilabel}`Require my password to log in` enabled.
 
-![The Create your account page](/images/installer/create-your-account.jpeg)
+![The Create your account page](/images/installer/create-your-account.png)
 
 
 ## Select your timezone
 
 Select your location and timezone from the map screen. Ubuntu can detect your location automatically if you're connected to the internet.
 
-![The Select your timezone page](/images/installer/select-your-timezone.jpeg)
+![The Select your timezone page](/images/installer/select-your-timezone.png)
 
 
 ## Ready to install
 
 Here, you can see a summary of your installation configuration. Review  your setup before clicking {guilabel}`Install`.
 
-![The Ready to install page](/images/installer/ready-to-install.jpeg)
+![The Ready to install page](/images/installer/ready-to-install.png)
 
 :::{note}
 If you choose to import an autoinstall configuration at the start of the installation process, the installer takes you directly to this screen to confirm that your configuration is correct.
@@ -246,13 +244,13 @@ Once you proceed, Ubuntu begins the installation process.
 
 Sit back and enjoy the slideshow as Ubuntu installs in the background.
 
-![The installation slideshow](/images/installer/slideshow.jpeg)
+![The installation slideshow](/images/installer/slideshow.png)
 
 Alternatively, you can watch a detailed output of the installation process by clicking the icon in the lower right corner of the window.
 
 When the installation has completed, the installer prompts you to restart your machine. Click {guilabel}`Restart Now`.
 
-![The Installation complete page](/images/installer/installation-complete.jpeg)
+![The Installation complete page](/images/installer/installation-complete.png)
 
 When you restart, Ubuntu asks you to remove your USB flash drive from the device. Then, press {guilabel}`Enter`.
 
@@ -263,30 +261,27 @@ When you restart, Ubuntu asks you to remove your USB flash drive from the device
 
 Enter your disk encryption passphrase if you created one.
 
-![The disk passphrase prompt](/images/unlock-disk.png)
+![The disk passphrase prompt](/images/installer/unlock-disk.png)
 
 At the login screen, enter your user name and password.
 
-![The Ubuntu login screen](/images/login-screen.png)
+![The Ubuntu login screen](/images/installer/login-screen.png)
 
 And that’s it. Welcome to your new Ubuntu Desktop!
 
-![The Ubuntu 24.04 desktop](/images/ubuntu-24-04-desktop.jpeg)
+![The Ubuntu 26.04 desktop](/images/installer/ubuntu-26-04-desktop.png)
 
-The welcome widget will help you with some additional setup options:
+The Initial Setup app will help you with some additional setup options:
 
-* Attaching an [Ubuntu Pro](https://ubuntu.com/pro) free personal or paid subscription to apply additional security patches to your device.
-
-    This option is only available when using a long term support (LTS) version of Ubuntu.
+* Enabling location services.
 
 * Opting into sending device information to Canonical to help improve Ubuntu.
 
     By default, Canonical doesn’t collect device information.
 
+* Customizing the color scheme.
+
 * Downloading additional apps from App Center.
-
-![The Ubuntu welcome widget](/images/welcome-widget.jpeg)
-
 
 
 ## Don't forget to update

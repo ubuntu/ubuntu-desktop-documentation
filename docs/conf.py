@@ -341,8 +341,8 @@ rst_epilog = """
 # NOTE: If set, adding ':manpage:' to an .rst file
 #       adds a link to the corresponding man section at the bottom of the page.
 
-# manpages_url = 'https://manpages.ubuntu.com/manpages/{codename}/en/' + \
-#     'man{section}/{page}.{section}.html'
+manpages_url = 'https://manpages.ubuntu.com/manpages/lts/en/' + \
+    'man{section}/{page}.{section}.html'
 
 
 # Specifies a reST snippet to be prepended to each .rst file
@@ -406,4 +406,3 @@ html_css_files = [
 html_js_files = [
 	'js/bundle.js',
 ]
-

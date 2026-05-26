@@ -8,14 +8,14 @@ sequential_nav: both
 (try-ubuntu-desktop)=
 # Try Ubuntu Desktop
 
-In this tutorial, you'll try Ubuntu Desktop 24.04 LTS on your computer without making any permanent changes. Ubuntu Desktop will run from a USB drive and your data will be safe.
+In this tutorial, you'll try Ubuntu Desktop 26.04 LTS on your computer without making any permanent changes. Ubuntu Desktop will run from a USB drive and your data will be safe.
 
 
 What you’ll need:
 
 * A laptop or PC.
 
-* A flash drive, 8GB or above recommended).
+* A flash drive, 8GB or above recommended.
 
 
 ## Will Ubuntu work on my computer?
@@ -24,7 +24,7 @@ You can test Ubuntu from a USB drive on any computer to see if it works.
 
 You can also try to find your computer on the [Ubuntu certified hardware](https://ubuntu.com/certified?q=&category=Laptop&category=Desktop&limit=20) page. These devices have been tested and confirmed to work well with Ubuntu.
 
-```{include} ../reuse/apple-silicon-disclaimer.txt
+```{include} /reuse/apple-silicon-disclaimer.txt
 ```
 
 For guidance on installing Ubuntu on platforms based on architectures other than x86 (including **ARM** or **RISC-V** boards, such as **Raspberry Pi**), see {external+hw:doc}`index`.
@@ -33,7 +33,7 @@ For guidance on installing Ubuntu on platforms based on architectures other than
 <!--
 The docs/reuse/boot-ubuntu-from-usb.txt file is reused between the live system tutorial and the installation tutorial.
 -->
-:::{include} ../reuse/boot-ubuntu-from-usb.txt
+:::{include} /reuse/boot-ubuntu-from-usb.txt
 :::
 
 
@@ -43,15 +43,15 @@ The Ubuntu Desktop installer opens. We'll use it to set a couple of options. The
 
 1. Choose your language.
 
-    ![The Choose your language page](/images/installer/choose-your-language.jpeg)
+    ![The Choose your language page](/images/installer/choose-your-language.png)
 
 1. Select any accessibility settings that your require.
 
-    ![The Accessibility page](/images/installer/accessibility.jpeg)
+    ![The Accessibility page](/images/installer/accessibility.png)
 
 1. Select your keyboard layout.
 
-    ![The Keyboard layout page](/images/installer/keyboard-layout.jpeg)
+    ![The Keyboard layout page](/images/installer/keyboard-layout.png)
 
 1. Connect to your network.
 
@@ -59,7 +59,7 @@ The Ubuntu Desktop installer opens. We'll use it to set a couple of options. The
 
     It also allows you to use a web browser in the Ubuntu preview.
 
-    ![The Internet connection page](/images/installer/internet-connection.jpeg)
+    ![The Internet connection page](/images/installer/internet-connection.png)
 
     The network connection is optional. If you can't connect, the Ubuntu preview will still work.
 
@@ -67,7 +67,7 @@ The Ubuntu Desktop installer opens. We'll use it to set a couple of options. The
 
     Click {guilabel}`Try Ubuntu` so that you can preview Ubuntu without making any changes to your PC.
 
-    ![The Try or install Ubuntu page](/images/installer/try-or-install-ubuntu.jpeg)
+    ![The Try or install Ubuntu page](/images/installer/try-or-install-ubuntu.png)
 
 
 ## Test the Ubuntu preview

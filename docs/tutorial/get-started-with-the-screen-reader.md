@@ -199,7 +199,7 @@ In other applications, you can use most of the commands that we've covered:
 
 * Only a couple of application support Structural Navigation: Firefox, LibreOffice, Thunderbird and Pidgin. In LibreOffice, you can only use Structural navigation to browse tables in Writer. In editable documents, enable Structural navigation using Orca modifier + {kbd}`Z`.
 
-If you experience difficulty with some applications, you can find tips in [Improve screen reader usability](improve-screen-reader-usability).
+If you experience difficulty with some applications, you can find tips in {ref}`Improve screen reader usability <improve-screen-reader-usability>`.
 
 
 ## Learn more
