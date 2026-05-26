@@ -3,7 +3,6 @@ version_number: "0.1.0"
 formatted_text: "*Multi-line* text\n that uses basic **markup**."
 site_link: "[Website link](https://example.com)"
 a11y_limitations: |
-  :::{warning}
-  Ubuntu 24.04 LTS might present some challenges when using the screen reader. If you experience difficulty, refer to {ref}`improve-screen-reader-usability`.
+  :::{note}
+  Ubuntu Desktop might present some challenges when using the screen reader. If you experience difficulty, refer to {ref}`improve-screen-reader-usability`.
   :::
-
