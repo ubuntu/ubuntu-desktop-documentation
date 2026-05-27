@@ -69,7 +69,7 @@ copyright = "%s CC-BY-SA, %s" % (datetime.date.today().year, author)
 # NOTE: The Open Graph Protocol (OGP) enhances page display in a social graph
 #       and is used by social media platforms; see https://ogp.me/
 
-ogp_site_url = "https://documentation.ubuntu.com/desktop/en/latest/"
+ogp_site_url = "https://ubuntu.com/desktop/docs/en/latest/"
 
 
 # Preview name of the documentation website
@@ -172,7 +172,7 @@ html_theme_options = {
 # TODO: If your documentation is hosted on https://docs.ubuntu.com/,
 #       uncomment and update as needed.
 
-slug = "desktop"
+slug = "desktop/docs"
 
 #######################
 # Sitemap configuration: https://sphinx-sitemap.readthedocs.io/
