@@ -180,7 +180,10 @@ slug = "desktop/docs"
 
 # Use RTD canonical URL to ensure duplicate pages have a specific canonical URL
 
-html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "/")
+# html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "/")
+rtd_version = f"{os.environ.get('READTHEDOCS_VERSION', 'local')}"
+rtd_language = f"{os.environ.get('READTHEDOCS_LANGUAGE', 'local')}"
+html_baseurl = f"https://ubuntu.com/desktop/docs/{rtd_language}/{rtd_version}/"
 
 # sphinx-sitemap uses html_baseurl to generate the full URL for each page:
 
