@@ -100,7 +100,7 @@ Startup Disk Creator is intended for Ubuntu images and images of other distribut
 
 ### Using KDE ISO Image Writer
 
-KDE ISO Image Writer is part of the KDE Plasma desktop environment. You can use it on distributions like Kubuntu. It's available for Ubuntu and Kubuntu 25.04, 25.10, 26.04 LTS and later.
+KDE ISO Image Writer is part of the KDE Plasma desktop environment. You can use it on distributions like Kubuntu. It's available for Ubuntu and Kubuntu 26.04 LTS and later.
 
 1. Go to the [releases.ubuntu.com](https://releases.ubuntu.com/) website and find the Ubuntu release that you're writing on your USB stick, such as [Ubuntu 24.04 (Noble Numbat)](https://releases.ubuntu.com/noble/).
 
@@ -427,6 +427,10 @@ If the previous applications didn't work or you have a special use case, we also
 For instructions, see the Ventoy documentation: [Start to use Ventoy](https://www.ventoy.net/en/doc_start.html).
 
 Ventoy is available for Linux and Microsoft Windows.
+
+:::{warning}
+Ventoy 1.1.11 (released Apr 2026) has a [known issue](https://github.com/ventoy/Ventoy/issues/3567) that prevents Ubuntu from installing correctly. We recommend using a different Ventoy release or another USB creation tool.
+:::
 
 (image-writers-etcher)=
 ### balenaEtcher
