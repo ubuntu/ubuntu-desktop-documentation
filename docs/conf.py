@@ -201,6 +201,9 @@ sitemap_excludes = [
     "genindex/",
     "search/",
     "_tags/",
+    # For some reason, the sitemap featured these malformed elements. Note the double en:
+    # https://ubuntu.com/desktop/docs/en/latest/en/_tags/remote-access/
+    "en/_tags/",
 ]
 
 # TODO: Add more pages to sitemap_excludes if needed. Wildcards are supported.
