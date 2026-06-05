@@ -317,9 +317,11 @@ exclude_patterns = [
 # html_css_files = []
 
 
-# Adds custom JavaScript files, located under 'html_static_path'
-
-# html_js_files = []
+# Adds custom JavaScript files, located under 'html_static_path' (_static/)
+html_js_files = [
+	"js/bundle.js",
+	"js/overwrite_links.js",
+]
 
 
 # Specifies a reST snippet to be appended to each .rst file
@@ -345,8 +347,8 @@ rst_epilog = """
 # NOTE: If set, adding ':manpage:' to an .rst file
 #       adds a link to the corresponding man section at the bottom of the page.
 
-# manpages_url = 'https://manpages.ubuntu.com/manpages/{codename}/en/' + \
-#     'man{section}/{page}.{section}.html'
+manpages_url = 'https://manpages.ubuntu.com/manpages/lts/en/' + \
+    'man{section}/{page}.{section}.html'
 
 
 # Specifies a reST snippet to be prepended to each .rst file
@@ -406,8 +408,3 @@ tags_create_badges = True
 html_css_files = [
 	'cookie-banner.css'
 ]
-# Add JavaScript files (located in .sphinx/_static/)
-html_js_files = [
-	'js/bundle.js',
-]
-
