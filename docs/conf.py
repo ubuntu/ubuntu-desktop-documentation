@@ -317,9 +317,11 @@ exclude_patterns = [
 # html_css_files = []
 
 
-# Adds custom JavaScript files, located under 'html_static_path'
-
-# html_js_files = []
+# Adds custom JavaScript files, located under 'html_static_path' (_static/)
+html_js_files = [
+	"js/bundle.js",
+	"js/overwrite_links.js",
+]
 
 
 # Specifies a reST snippet to be appended to each .rst file
@@ -405,8 +407,4 @@ tags_create_badges = True
 # Add CSS files (located in .sphinx/_static/)
 html_css_files = [
 	'cookie-banner.css'
-]
-# Add JavaScript files (located in .sphinx/_static/)
-html_js_files = [
-	'js/bundle.js',
 ]
