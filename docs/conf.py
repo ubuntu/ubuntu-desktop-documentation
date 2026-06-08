@@ -187,8 +187,9 @@ html_baseurl = f"https://ubuntu.com/desktop/docs/{rtd_language}/{rtd_version}/"
 
 # sphinx-sitemap uses html_baseurl to generate the full URL for each page:
 
-# sitemap_url_scheme = '{link}'
-sitemap_url_scheme = "{lang}{version}{link}"
+sitemap_url_scheme = '{link}'
+# This was used before the domain migration:
+# sitemap_url_scheme = "{lang}{version}{link}"
 
 # Include `lastmod` dates in the sitemap:
 
