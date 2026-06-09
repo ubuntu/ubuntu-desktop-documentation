@@ -69,7 +69,7 @@ copyright = "%s CC-BY-SA, %s" % (datetime.date.today().year, author)
 # NOTE: The Open Graph Protocol (OGP) enhances page display in a social graph
 #       and is used by social media platforms; see https://ogp.me/
 
-ogp_site_url = "https://documentation.ubuntu.com/desktop/en/latest/"
+ogp_site_url = "https://ubuntu.com/desktop/docs/en/latest/"
 
 
 # Preview name of the documentation website
@@ -172,7 +172,7 @@ html_theme_options = {
 # TODO: If your documentation is hosted on https://docs.ubuntu.com/,
 #       uncomment and update as needed.
 
-slug = "desktop"
+slug = "desktop/docs"
 
 #######################
 # Sitemap configuration: https://sphinx-sitemap.readthedocs.io/
@@ -180,12 +180,16 @@ slug = "desktop"
 
 # Use RTD canonical URL to ensure duplicate pages have a specific canonical URL
 
-html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "/")
+# html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "/")
+rtd_version = f"{os.environ.get('READTHEDOCS_VERSION', 'local')}"
+rtd_language = f"{os.environ.get('READTHEDOCS_LANGUAGE', 'local')}"
+html_baseurl = f"https://ubuntu.com/desktop/docs/{rtd_language}/{rtd_version}/"
 
 # sphinx-sitemap uses html_baseurl to generate the full URL for each page:
 
-# sitemap_url_scheme = '{link}'
-sitemap_url_scheme = "{lang}{version}{link}"
+sitemap_url_scheme = '{link}'
+# This was used before the domain migration:
+# sitemap_url_scheme = "{lang}{version}{link}"
 
 # Include `lastmod` dates in the sitemap:
 
@@ -197,6 +201,10 @@ sitemap_excludes = [
     "404/",
     "genindex/",
     "search/",
+    "_tags/",
+    # For some reason, the sitemap featured these malformed elements. Note the double en:
+    # https://ubuntu.com/desktop/docs/en/latest/en/_tags/remote-access/
+    "en/_tags/",
 ]
 
 # TODO: Add more pages to sitemap_excludes if needed. Wildcards are supported.
@@ -206,7 +214,7 @@ sitemap_excludes = [
 # Template and asset locations
 #######################
 
-html_static_path = [".sphinx/_static"]
+html_static_path = ["_static"]
 templates_path = [".sphinx/_templates"]
 
 
@@ -313,9 +321,11 @@ exclude_patterns = [
 # html_css_files = []
 
 
-# Adds custom JavaScript files, located under 'html_static_path'
-
-# html_js_files = []
+# Adds custom JavaScript files, located under 'html_static_path' (_static/)
+html_js_files = [
+	"js/bundle.js",
+	"js/overwrite_links.js",
+]
 
 
 # Specifies a reST snippet to be appended to each .rst file
@@ -401,8 +411,4 @@ tags_create_badges = True
 # Add CSS files (located in .sphinx/_static/)
 html_css_files = [
 	'cookie-banner.css'
-]
-# Add JavaScript files (located in .sphinx/_static/)
-html_js_files = [
-	'js/bundle.js',
 ]
