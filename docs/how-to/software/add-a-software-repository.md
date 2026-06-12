@@ -15,7 +15,7 @@ Only add software repositories from **sources that you trust**.
 
 Third-party software repositories are **not checked for security or reliability** by Ubuntu members, and may contain software which is harmful to your computer. By enabling the repository, you're giving access to your system to the repository owners.
 
-If possible, install [snap packages](https://snapcraft.io/) instead. These are confined for security.
+If possible, install {ref}`snap packages <snap-and-deb-packages>` instead. These are confined for security.
 :::
 
 
@@ -24,7 +24,7 @@ If possible, install [snap packages](https://snapcraft.io/) instead. These are c
 Personal Package Archives (PPAs) are software repositories designed for Ubuntu users and are easier to install than other third-party repositories. PPAs are often used to distribute pre-release software so that it can be tested.
 
 :::{note}
-For other use cases, we recommend that you install confined [snap packages](https://snapcraft.io/) instead.
+For other use cases, we recommend that you install confined {ref}`snap packages <snap-and-deb-packages>` instead.
 :::
 
 ::::{tab-set}
@@ -84,7 +84,7 @@ You can now install software from the PPA.
 You can find many software repositories for Ubuntu outside of the PPA platform. These are managed using standard Debian tools, and they require more manual steps.
 
 :::{note}
-Before you enable a third-party repository, we recommend that you check if the software is available as a confined [snap packages](https://snapcraft.io/) instead.
+Before you enable a third-party repository, we recommend that you check if the software is available as a confined {ref}`snap packages <snap-and-deb-packages>` instead.
 :::
 
 1. Open the Software & Updates application.
