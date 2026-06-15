@@ -384,13 +384,14 @@ if os.path.exists("./reuse/substitutions.yaml"):
 # Add configuration for intersphinx mapping
 
 intersphinx_mapping = {
-    "starter-pack": (
-        "https://canonical-example-product-documentation.readthedocs-hosted.com/en/latest",
-        None,
-    ),
-    "server": ("https://documentation.ubuntu.com/server/", None),
+    "server": ("https://ubuntu.com/server/docs/", None),
     "security": ("https://documentation.ubuntu.com/security/", None),
-    "hw": ("https://canonical-ubuntu-hardware-support.readthedocs-hosted.com/", None),
+    "hw": ("https://documentation.ubuntu.com/hardware-support/", None),
+    "snap": ("https://snapcraft.io/docs/", None),
+    "core": ("https://documentation.ubuntu.com/core/", None),
+    "developers": ("https://ubuntu.com/developers/docs/", None),
+    "project": ("https://documentation.ubuntu.com/project/", None),
+    "release-notes": ("https://documentation.ubuntu.com/release-notes/", None),
 }
 
 # Turn on and configure tags.
