@@ -387,7 +387,7 @@ intersphinx_mapping = {
     "server": ("https://ubuntu.com/server/docs/", None),
     "security": ("https://documentation.ubuntu.com/security/", None),
     "hw": ("https://documentation.ubuntu.com/hardware-support/", None),
-    "snap": ("https://snapcraft.io/docs/", None),
+    "snapcraft": ("https://snapcraft.io/docs/", None),
     "core": ("https://documentation.ubuntu.com/core/", None),
     "developers": ("https://ubuntu.com/developers/docs/", None),
     "project": ("https://documentation.ubuntu.com/project/", None),
