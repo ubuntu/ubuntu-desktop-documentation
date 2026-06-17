@@ -1,3 +1,7 @@
+---
+relatedlinks: "[Get &#32; started &#32; with &#32; snaps](https://snapcraft.io/docs/tutorials/get-started/), [Install &#32; and &#32; manage &#32; deb &#32; packages](https://ubuntu.com/server/docs/how-to/software/package-management/)"
+---
+
 ```{tags} Software
 ```
 
@@ -26,7 +30,7 @@ App permissions
 
 When you search for deb packages in the App Center, it lists applications from the {external:ref}`official Ubuntu repositories <package-archive>`. You can check if an app is a deb package on its App Center page.
 
-You can also use the App Center to install debs that you've downloaded from third-party developers. Note these might add their own repositories and will have unrestricted access to your resources as well, so make sure that you trust the developer.
+You can also use the App Center to install debs that you've downloaded from third-party developers. These might add their own repositories and will have unrestricted access to your resources, so make sure that you trust the developer.
 
 :::{warning}
 Using deb apps from third party developers is discouraged. For details, refer to {external:ref}`third-party-repository-usage`.
