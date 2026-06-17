@@ -6,7 +6,7 @@
 
 An application is software that has a graphical user interface (GUI). You can use *App Center* to remove applications that you no longer use.
 
-Applications are available in two formats: snap packages ("snaps") and Debian packages ("Debs"). Some applications are available in both formats. In such a case, the snap will be listed first in App Center.
+Applications are available in {ref}`two formats <snap-and-deb-packages>`: snap packages ("snaps") and Debian packages ("debs"). Some applications are available in both formats. In such a case, the snap will be listed first in App Center.
 
 :::{note}
 You can also use App Center to remove software that doesn't have any GUI.
