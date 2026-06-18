@@ -21,6 +21,7 @@ Software is a very broad term, and is generally taken to mean a program which yo
 
 Ubuntu uses packages to store everything that a particular program needs to run. A 'package', then, is essentially a collection of files bundled into a single file, which can be handled much more easily. In addition to the files required for the program to run, there are often special files called installation scripts, which copy the files to where they are needed and configure them.
 
+
 ## Source and binary
 
 **Source code** is written by programmers and is essentially a list of instructions to a computer which humans are able to read and write. Computers can only understand this code if it is interpreted for them into a form that they can use directly. One such way of interpreting source code for a computer is by translating or *compiling* it into **binary**, which computers can understand. This binary is then compressed into a *binary package* together with other resources.
@@ -44,6 +45,13 @@ Here, `x86_64` stands for the Intel and AMD 64-bit PC architecture.
 :::
 
 
+## Dependencies
+
+Programs often use some of the same files as each other. Rather than putting these files into each package, a separate package can be installed to provide them for all of the programs that need them. So, to install a program which needs one of these files, the package containing those files must also be installed. When a package depends on another in this way, it is known as a package dependency. By specifying dependencies, packages can be made smaller and simpler, and duplicates of files and programs are mostly removed.
+
+Snap and deb packages have different solutions to package dependencies.
+
+
 ## Snap packages
 
 The App Center on Ubuntu Desktop shows snaps by default, both in the search and on the category pages. Snap apps are usually *sandboxed*. That means that you can limit which system resources they can access.
@@ -64,6 +72,8 @@ Package dependencies
 : When you install a snap package, it makes sure that a base snap such as `core26` is installed for certain underlying resources. A base is a special kind of snap that provides a run-time environment with a minimal set of libraries that are common to most applications. A base snap is usually shared between many applications that need it.
 
   See [Bases](https://documentation.ubuntu.com/snapcraft/stable/reference/bases/) for more details.
+
+  Resources that can't be found in the base snap are often included directly (*bundled*) in the app's snap package.
 
 Package managers
 : On Ubuntu Desktop, you can manage snaps using the App Center. See {ref}`install-or-remove-software`.
@@ -91,9 +101,9 @@ App permissions
 : You can't change the permissions for apps installed from deb packages: they always have full access to your resources.
 
 Package dependencies
-: Programs often use some of the same files as each other. Rather than putting these files into each package, a separate package can be installed to provide them for all of the programs that need them. So, to install a program which needs one of these files, the package containing those files must also be installed. When a package depends on another in this way, it is known as a package dependency. By specifying dependencies, packages can be made smaller and simpler, and duplicates of files and programs are mostly removed.
-
-  When you install a program, its dependencies must be installed at the same time. Usually, most of the required dependencies will already be installed, but a few extras may be needed, too. So, when you install a package, don't be surprised if several other packages are installed too - these are just dependencies which are needed for your chosen package to function properly.
+: When you install a deb package, it often installs many other dependency packages. Applications packaged as debs tend to be broken up into many small packages that can be efficiently reused in different combinations. Sometimes, you'll notice that tens of packages are pulled in for your app, for example. However, many dependencies are already installed by default on Ubuntu.
 
 Package managers
-: A package manager is an application which handles the downloading and installation of packages. Ubuntu includes a few package managers by default, and which one you use depends on how advanced the package management tasks are that you want to achieve. Most people will only need to use the most basic package manager, the Add/Remove tool, which is very easy to use.
+: On Ubuntu Desktop, you can manage debs using the App Center. See {ref}`install-or-remove-software`.
+
+  On the command line, you can use the `apt` tool. See the {external+server:ref}`managing-software` tutorial.
