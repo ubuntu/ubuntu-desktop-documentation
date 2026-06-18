@@ -60,9 +60,15 @@ App permissions
 
   Some snaps, such as developer tools, use {external:ref}`classic confinement <explanation-security-snap-confinement>` and are not sandboxed. They have full access to your resources. The Snap Store team {external:ref}`reviews these apps manually <interfaces-reviewing-classic-confinement-snaps>`.
 
-Dependencies
+Package dependencies
+: When you install a snap package, it makes sure that a base snap such as `core26` is installed for certain underlying resources. A base is a special kind of snap that provides a run-time environment with a minimal set of libraries that are common to most applications. A base snap is usually shared between many applications that need it.
+
+  See [Bases](https://documentation.ubuntu.com/snapcraft/stable/reference/bases/) for more details.
 
 Package managers
+: On Ubuntu Desktop, you can manage snaps using the App Center. See {ref}`install-or-remove-software`.
+
+  On the command line, you can use the `snap` tool. See [the tutorial](https://snapcraft.io/docs/tutorials/get-started/).
 
 ## Deb packages
 
@@ -84,7 +90,7 @@ Updates
 App permissions
 : You can't change the permissions for apps installed from deb packages: they always have full access to your resources.
 
-Dependencies
+Package dependencies
 : Programs often use some of the same files as each other. Rather than putting these files into each package, a separate package can be installed to provide them for all of the programs that need them. So, to install a program which needs one of these files, the package containing those files must also be installed. When a package depends on another in this way, it is known as a package dependency. By specifying dependencies, packages can be made smaller and simpler, and duplicates of files and programs are mostly removed.
 
   When you install a program, its dependencies must be installed at the same time. Usually, most of the required dependencies will already be installed, but a few extras may be needed, too. So, when you install a package, don't be surprised if several other packages are installed too - these are just dependencies which are needed for your chosen package to function properly.
