@@ -42,6 +42,9 @@ Snap and deb packages have different solutions to package dependencies.
 
 The App Center on Ubuntu Desktop shows snaps by default, both in the search and on the category pages. Snap apps are usually *sandboxed*, which means that you can limit which system resources they can access.
 
+App versions
+: Snaps are released independently of your Ubuntu version. You always get the latest version of the app that the authors have published.
+
 Updates
 : All snaps are updated daily by default. You can update immediately on the {guilabel}`Manage` page of the App Center.
 
@@ -76,6 +79,9 @@ You can also use the App Center to install debs that you've downloaded from thir
 Using deb apps from third-party developers is discouraged. For details, refer to {external:ref}`third-party-repository-usage`.
 :::
 
+App versions
+: Most debs are tied to your Ubuntu release. On an LTS version of Ubuntu, certain deb apps might be outdated.
+
 Updates
 : Security updates for deb packages are installed automatically by default. You can apply other updates with the Software Updater.
 
@@ -97,6 +103,44 @@ Package managers
   On the command line, you can use the `apt` tool. See the {external+server:ref}`managing-software` tutorial.
 
 
+## Quick comparison
+
+:::{list-table}
+:header-rows: 1
+:stub-columns: 1
+
+* - 
+  - Snaps
+  - Debs
+
+* - App versions
+  - Usually up-to-date
+  - Tied to your Ubuntu release
+
+* - Updates
+  - Fully automatic
+  - Automatic security updates
+
+* - App permissions
+  - Configurable, sandboxed
+  - Full access to your resources
+
+* - Third-party apps
+  - Protection from third parties
+  - Discouraged
+
+* - Dependencies
+  - A base snap and bundling
+  - Many small packages
+
+* - Disk usage
+  - Usually larger
+  - Usually smaller
+:::
+
+
 ## Which one to install
 
-If an app is available both as a snap and a deb, we generally recommend installing the snap version, especially if the app comes from a third-party developer. The snap usually provides a more recent version of the app and ensures stronger security.
+If an app is available both as a snap and a deb, we generally recommend installing the snap version, especially if the app comes from a third-party developer.
+
+The snap usually provides a more recent version of the app and ensures stronger security.
