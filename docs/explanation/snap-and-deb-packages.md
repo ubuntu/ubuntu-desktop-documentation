@@ -17,9 +17,9 @@ https://help.ubuntu.com/community/InstallingSoftware
 
 ## What a package is
 
-Software is a very broad term, and is generally taken to mean a program which you can run on your computer. However, such programs often need other resources to work. When you install software, thousands of files may be required just to let the program start. When you think that they all have to be put in exactly the right location, and some of those files may might to be changed depending on what type of computer you have, it can all get very complicated.
+Software is a very broad term, and is generally taken to mean a program that you can run on your computer. However, such programs often need other resources to work. When you install software, thousands of files may be required just to let the program start. When you think that they all have to be put in exactly the right location, and some of those files might need to be changed depending on what type of computer you have, it can all get very complicated.
 
-Ubuntu uses packages to store everything that a particular program needs to run. A 'package', then, is essentially a collection of files bundled into a single file, which can be handled much more easily. In addition to the files required for the program to run, there are often special files called installation scripts, which copy the files to where they are needed and configure them.
+Ubuntu uses packages to store everything that a particular program needs to run. A *package*, then, is essentially a collection of files bundled into a single file, which can be handled much more easily. In addition to the files required for the program to run, there are often special files called installation scripts, which copy the files to where they are needed and configure them.
 
 
 ### Source and binary
@@ -40,7 +40,7 @@ Snap and deb packages have different solutions to package dependencies.
 
 ## Snap packages
 
-The App Center on Ubuntu Desktop shows snaps by default, both in the search and on the category pages. Snap apps are usually *sandboxed*. That means that you can limit which system resources they can access.
+The App Center on Ubuntu Desktop shows snaps by default, both in the search and on the category pages. Snap apps are usually *sandboxed*, which means that you can limit which system resources they can access.
 
 Updates
 : All snaps are updated daily by default. You can update immediately on the {guilabel}`Manage` page of the App Center.
@@ -73,7 +73,7 @@ When you search for deb packages in the App Center, it lists applications from t
 You can also use the App Center to install debs that you've downloaded from third-party developers. These might add their own repositories and will have unrestricted access to your resources, so make sure that you trust the developer.
 
 :::{warning}
-Using deb apps from third party developers is discouraged. For details, refer to {external:ref}`third-party-repository-usage`.
+Using deb apps from third-party developers is discouraged. For details, refer to {external:ref}`third-party-repository-usage`.
 :::
 
 Updates
@@ -89,7 +89,7 @@ App permissions
 Package dependencies
 : When you install a deb package, it often installs many other dependency packages. Applications packaged as debs tend to be broken up into many small packages that can be efficiently reused in different combinations. Sometimes, you'll notice that tens of packages are pulled in for your app, for example. However, many dependencies are already installed by default on Ubuntu.
 
-  Thanks to these granular dependencies, debs don't use up much disk space compared to other package formats.
+  Thanks to these granular dependencies, debs use up less disk space than snaps.
 
 Package managers
 : On Ubuntu Desktop, you can manage debs using the App Center. See {ref}`install-or-remove-software`.
