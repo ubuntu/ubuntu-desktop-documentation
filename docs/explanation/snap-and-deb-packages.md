@@ -8,7 +8,7 @@ relatedlinks: "[Get &#32; started &#32; with &#32; snaps](https://snapcraft.io/d
 (snap-and-deb-packages)=
 # Snap and deb packages
 
-You can install apps and other software on Ubuntu using various package formats. The two official, recommended formats are snap and deb packages.
+When installing apps on Ubuntu, you'll come across two official, recommended package formats: snap and deb packages.
 
 <!--
 This page reuses some content originally written for the Community Help Wiki:
