@@ -22,7 +22,7 @@ Software is a very broad term, and is generally taken to mean a program which yo
 Ubuntu uses packages to store everything that a particular program needs to run. A 'package', then, is essentially a collection of files bundled into a single file, which can be handled much more easily. In addition to the files required for the program to run, there are often special files called installation scripts, which copy the files to where they are needed and configure them.
 
 
-## Source and binary
+### Source and binary
 
 **Source code** is written by programmers and is essentially a list of instructions to a computer which humans are able to read and write. Computers can only understand this code if it is interpreted for them into a form that they can use directly. One such way of interpreting source code for a computer is by translating or *compiling* it into **binary**, which computers can understand. This binary is then compressed into a *binary package* together with other resources.
 
@@ -30,22 +30,8 @@ Different computers use different types of binary, so if you make a binary packa
 
 Ubuntu chooses the correct binary packages for your system automatically, so you don't have to worry about picking the right ones.
 
-:::{tip}
-To find out which architecture you're using, open the Terminal app and enter the following command:
 
-```{terminal}
-:copy:
-
-uname -m
-
-x86_64
-```
-
-Here, `x86_64` stands for the Intel and AMD 64-bit PC architecture.
-:::
-
-
-## Dependencies
+### Dependencies
 
 Programs often use some of the same files as each other. Rather than putting these files into each package, a separate package can be installed to provide them for all of the programs that need them. So, to install a program which needs one of these files, the package containing those files must also be installed. When a package depends on another in this way, it is known as a package dependency. By specifying dependencies, packages can be made smaller and simpler, and duplicates of files and programs are mostly removed.
 
@@ -73,7 +59,7 @@ Package dependencies
 
   See [Bases](https://documentation.ubuntu.com/snapcraft/stable/reference/bases/) for more details.
 
-  Resources that can't be found in the base snap are often included directly (*bundled*) in the app's snap package.
+  Resources that can't be found in the base snap are often included directly (*bundled*) in the app's snap package. For this reason, snaps often use more disk space than debs.
 
 Package managers
 : On Ubuntu Desktop, you can manage snaps using the App Center. See {ref}`install-or-remove-software`.
@@ -103,7 +89,14 @@ App permissions
 Package dependencies
 : When you install a deb package, it often installs many other dependency packages. Applications packaged as debs tend to be broken up into many small packages that can be efficiently reused in different combinations. Sometimes, you'll notice that tens of packages are pulled in for your app, for example. However, many dependencies are already installed by default on Ubuntu.
 
+  Thanks to these granular dependencies, debs don't use up much disk space compared to other package formats.
+
 Package managers
 : On Ubuntu Desktop, you can manage debs using the App Center. See {ref}`install-or-remove-software`.
 
   On the command line, you can use the `apt` tool. See the {external+server:ref}`managing-software` tutorial.
+
+
+## Which one to install
+
+If an app is available both as a snap and a deb, we generally recommend installing the snap version, especially if the app comes from a third-party developer. The snap usually provides a more recent version of the app and ensures stronger security.
