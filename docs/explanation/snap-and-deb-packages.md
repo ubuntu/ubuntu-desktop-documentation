@@ -28,7 +28,7 @@ App permissions
 
 ## Deb packages
 
-When you search for deb packages in the App Center, it lists applications from the {external:ref}`official Ubuntu repositories <package-archive>`. You can check if an app is a deb package on its App Center page.
+When you search for deb packages in the App Center, it lists applications from the {external:ref}`official Ubuntu repositories <package-archive>`.
 
 You can also use the App Center to install debs that you've downloaded from third-party developers. These might add their own repositories and will have unrestricted access to your resources, so make sure that you trust the developer.
 
