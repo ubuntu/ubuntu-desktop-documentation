@@ -23,5 +23,4 @@ This error indicates what driver the kernel attempts to load and where it expect
 
 ### See also
 
-* [Hardware problems](https://help.ubuntu.com/stable/ubuntu-help/bluetooth.html.en#problems)
 * [PipeWire troubleshooting guide](https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/Troubleshooting#bluetooth)
