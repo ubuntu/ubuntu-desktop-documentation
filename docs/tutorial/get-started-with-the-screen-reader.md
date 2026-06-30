@@ -32,11 +32,19 @@ Orca uses different keyboard commands depending on the size and layout of your k
 
 2. Type `orca --setup` into the dialog and press {kbd}`Enter`.
 
-    The {guilabel}`Screen Reader Preferences` window opens. The {guilabel}`General` tab is active.
+    The {guilabel}`Screen Reader Preferences` window opens. The {guilabel}`Profiles` tab is active.
+
+3. Using the {kbd}`Arrow Down` key, navigate to the {guilabel}`Commands` tab.
 
 3. Press {kbd}`Tab`. Focus moves to the first element in the window, which is a keyboard layout selector.
 
     Orca announces what your layout is: laptop or desktop.
+
+    If you're using a laptop keyboard, make sure that the laptop layout is selected. You can switch using the arrow keys.
+
+    :::{warning}
+    If you set the desktop layout with a laptop keyboard, you won't be able to enter Orca commands.
+    :::
 
 4. For now, close the preferences window using {kbd}`Alt+F4`. 
 
