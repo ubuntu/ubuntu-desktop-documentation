@@ -48,6 +48,8 @@ Orca uses different keyboard commands depending on the size and layout of your k
 
 4. For now, close the preferences window using {kbd}`Alt+F4`. 
 
+    If you've changed your keyboard layout, the app asks you to save changes. Confirm by selecting {guilabel}`Save to Default and close`.
+
 
 ## The Orca modifier on your keyboard
 
