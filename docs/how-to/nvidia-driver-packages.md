@@ -88,6 +88,7 @@ sudo apt install linux-modules-nvidia-${DRIVER_BRANCH}${SERVER}-$(uname -r)
 
 (e.g. `sudo apt install linux-modules-nvidia-535-$(uname -r)`)
 
+(building-your-own-kernel-modules-using-thenvidia-dkms-package)=
 ### Building your own kernel modules using the NVIDIA DKMS package
 
 We don't recommend using the DKMS modules unless you are running a custom kernel for which the prebuilt drivers are not supported. This is because the DKMS drivers are not signed with Canonical's key and thus do not support Secure Boot.
