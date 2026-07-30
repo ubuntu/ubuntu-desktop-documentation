@@ -15,24 +15,34 @@ relatedlinks: "https://docs.nvidia.com/datacenter/tesla/fabric-manager-user-guid
 If you have an NVIDIA GPU, you can install official NVIDIA drivers to improve desktop and gaming performance or support computing tasks.
 
 :::{warning}
-NVIDIA drivers installed from sources outside of those listed in this guide might potentially overwrite those provided by `ubuntu-drivers` and might break Secure Boot.
+NVIDIA drivers installed from sources outside of those listed in this guide might potentially overwrite those provided by Ubuntu and might break Secure Boot.
 :::
 
 
-## The `ubuntu-drivers` tool
+## Driver management tools
 
-The `ubuntu-drivers` tool relies on the same logic as the "Additional Drivers" graphical tool, and allows more flexibility on desktops and on servers.
+We recommend using the `ubuntu-drivers` tool or the Additional Drivers app to manage drivers. They share the same logic. By default, these tools only install the pre-built, signed drivers, which are known to work with **Secure Boot**.
 
-The `ubuntu-drivers` tool is recommended if your computer uses Secure Boot, since it will, by default, only install the pre-built, signed drivers which are known to work with Secure Boot. (Refer to "Building your own kernel modules using the NVIDIA DKMS package" later in this page if you have a specific use case that requires the DKMS drivers.)
-
-:::{note}
-If you currently have a version of the NVIDIA drivers installed that conflicts with those being installed by `ubuntu-drivers`, `ubuntu-drivers` will uninstall your original drivers before installing the new drivers.
-:::
+Refer to {ref}`building-your-own-kernel-modules-using-thenvidia-dkms-package` if you have a specific use case that requires the DKMS drivers.
 
 
 ## Check driver versions
 
 To check the version of your currently running driver:
+
+::::{tab-set}
+:::{tab-item} Graphical interface
+:sync: gui
+1. Open the Additional Drivers app.
+
+    If you can't find the app on your system, you can install it from the `software-properties-gtk` package.
+
+1. See which driver is selected under "NVIDIA Corporation".
+
+    *Nouveau* is usually pre-selected as the default, open-source driver.
+:::
+:::{tab-item} Command line
+:sync: terminal
 
 ```{terminal}
 :copy:
@@ -41,135 +51,191 @@ To check the version of your currently running driver:
 :dir:
 cat /proc/driver/nvidia/version
 ```
+:::
+::::
 
-## Ensure your system and kernel is up-to-date
-
-```{terminal}
-:copy:
-:user:
-:host:
-:dir:
-sudo apt update && sudo apt upgrade
-```
-
-After the update is complete, reboot your system.
+If you currently have a version of the NVIDIA drivers installed that conflicts with those being installed, `ubuntu-drivers` will uninstall your original drivers before installing the new drivers.
 
 
-## Install the drivers for generic use (e.g. desktop and gaming)
+## Update your system and kernel
+
+1. Apply all updates.
+
+    ::::{tab-set}
+    :::{tab-item} Graphical interface
+    :sync: gui
+    Open the Software Updater app and install all available updates.
+    :::
+    
+    :::{tab-item} Command line
+    :sync: terminal
+    
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo apt update && sudo apt upgrade
+    ```
+    :::
+    ::::
+
+2. After the update is complete, reboot your system.
+
+
+## Install the drivers for desktop and gaming use
 
 For the generic desktop use, we package the **Unified Driver Architecture (UDA)** drivers. You can also find them [on the NVIDIA website](https://www.nvidia.com/en-us/drivers/unix/).
 
-Check the available drivers for your hardware:
+::::{tab-set}
+:::{tab-item} Graphical interface
+:sync: gui
+1. Open the Additional Drivers app.
 
-```{terminal}
-:copy:
-:user:
-:host:
-:dir:
-sudo ubuntu-drivers list
-```
+    If you can't find the app on your system, you can install it from the `software-properties-gtk` package.
 
-You can either rely on automatic detection, which will install the driver that is considered the best match for your hardware:
+1. Under "NVIDIA Corporation", choose your preferred driver version.
 
-```{terminal}
-:copy:
-:user:
-:host:
-:dir:
-sudo ubuntu-drivers install
-```
+    We recommend the most recent NVIDIA driver with the {guilabel}`proprietary, tested` label.
 
-Or you can tell the `ubuntu-drivers` tool which driver you would like installed. If this is the case, you will have to use the driver version (such as `535`) that you saw when you used the `ubuntu-drivers list` command.
+1. Click {guilabel}`Apply changes` and enter your password.
 
-Let's assume we want to install the `535` driver:
+1. When the installation is complete, restart your system for the changes to take effect.
+:::
+:::{tab-item} Command line
+:sync: terminal
+1. Check the available drivers for your hardware:
 
-```{terminal}
-:copy:
-:user:
-:host:
-:dir:
-sudo ubuntu-drivers install nvidia:535
-```
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo ubuntu-drivers list
+    ```
 
-## Install the drivers on servers and/or for computing purposes
+1. Install the drivers.
+
+    You can rely on automatic detection, which will install the driver that is considered the best match for your hardware:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo ubuntu-drivers install
+    ```
+
+    Alternatively, you can specify which driver you want. You have to type the driver version (such as `535`) that you saw when you used the `ubuntu-drivers list` command.
+
+    Let's assume we want to install the `535` driver:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo ubuntu-drivers install nvidia:535
+    ```
+
+1. When the installation is complete, restart your system for the changes to take effect.
+:::
+::::
+
+
+## Install the drivers on servers or for computing purposes
 
 For servers and computing tasks, Ubuntu provides the **Enterprise Ready Drivers ({term}`ERD`)** drivers. Their packages can be recognized by the `-server` suffix. You can read more about these drivers [in the NVIDIA documentation](https://docs.nvidia.com/datacenter/tesla/index.html).
 
 Additionally, Ubuntu provides the **NVIDIA Fabric Manager** and the **NVIDIA Switch Configuration and Query (NSCQ) Library**, which you will only need if you have NVswitch hardware. The Fabric Manager and NSCQ library are only available with the ERDs or `-server` driver versions.
 
-Check the available drivers for your hardware:
+1. Check the available drivers for your hardware:
 
-```{terminal}
-:copy:
-:user:
-:host:
-:dir:
-sudo ubuntu-drivers list --gpgpu
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo ubuntu-drivers list --gpgpu
+    
+    nvidia-driver-470
+    nvidia-driver-470-server
+    nvidia-driver-535
+    nvidia-driver-535-open
+    nvidia-driver-535-server
+    nvidia-driver-535-server-open
+    nvidia-driver-550
+    nvidia-driver-550-open
+    nvidia-driver-550-server
+    nvidia-driver-550-server-open
+    ```
 
-nvidia-driver-470
-nvidia-driver-470-server
-nvidia-driver-535
-nvidia-driver-535-open
-nvidia-driver-535-server
-nvidia-driver-535-server-open
-nvidia-driver-550
-nvidia-driver-550-open
-nvidia-driver-550-server
-nvidia-driver-550-server-open
-```
+1. Install the driver.
 
-You can either rely on automatic detection, which will install the driver that is considered the best match for your hardware:
+    You can rely on automatic detection, which installs the driver that is considered the best match for your hardware:
+    
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo ubuntu-drivers install --gpgpu
+    ```
+    
+    Alternatively, you can specify which driver you want. You have to type the driver version (such as `535`) and the `-server` suffix that you saw when you used the `ubuntu-drivers list --gpgpu` command.
 
-```{terminal}
-:copy:
-:user:
-:host:
-:dir:
-sudo ubuntu-drivers install --gpgpu
-```
+    Let's assume we want to install the `535-server` driver (listed as `nvidia-driver-535-server`):
+    
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo ubuntu-drivers install --gpgpu nvidia:535-server
+    ```
 
-Or you can tell the `ubuntu-drivers` tool which driver you would like installed. If this is the case, you will have to use the driver version (such as `535`) and the `-server` suffix that you saw when you used the `ubuntu-drivers list --gpgpu` command.
+1. You will also want to install the following additional components:
 
-Let's assume we want to install the `535-server` driver (listed as `nvidia-driver-535-server`):
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo apt install nvidia-utils-535-server
+    ```
 
-```{terminal}
-:copy:
-:user:
-:host:
-:dir:
-sudo ubuntu-drivers install --gpgpu nvidia:535-server
-```
+    Replace `535` with your selected driver version.
 
-You will also want to install the following additional components:
+    **TODO:** Are these components useful on Desktop, too? The package seems to contain these files:
+    - /usr/bin/nvidia-bug-report.sh
+    - /usr/bin/nvidia-debugdump
+    - /usr/bin/nvidia-smi
+    - /usr/bin/nvidia-xconfig
 
-```{terminal}
-:copy:
-:user:
-:host:
-:dir:
-sudo apt install nvidia-utils-535-server
-```
+1. (Optional) Install Fabric Manager and the NSCQ library.
 
-### (Optional) Install Fabric Manager and the NSCQ library
+    If your system comes with NVswitch hardware, then you will want to install Fabric Manager and the NVSwitch Configuration and Query library:
+    
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo apt install nvidia-fabricmanager-535 libnvidia-nscq-535
+    ```
+    
+    Replace `535` with your selected driver version.
+    
+    :::{note}
+    While `nvidia-fabricmanager` and `libnvidia-nscq` do not have the same `-server` label in their name, they are really meant to match the `-server` drivers in the Ubuntu archive. For example, `nvidia-fabricmanager-535` matches the `nvidia-driver-535-server` package version (not the `nvidia-driver-535 package`).
+    :::
 
-If your system comes with NVswitch hardware, then you will want to install Fabric Manager and the NVSwitch Configuration and Query library. You can do so by running the following:
-
-```{terminal}
-:copy:
-:user:
-:host:
-:dir:
-sudo apt install nvidia-fabricmanager-535 libnvidia-nscq-535
-```
-
-:::{note}
-While `nvidia-fabricmanager` and `libnvidia-nscq` do not have the same `-server` label in their name, they are really meant to match the `-server` drivers in the Ubuntu archive. For example, `nvidia-fabricmanager-535` will match the `nvidia-driver-535-server` package version (not the `nvidia-driver-535 package`).
-:::
+1. When the installation is complete, restart your system for the changes to take effect.
 
 
 ## Transitional packages to new driver branches
 
-When NVIDIA stops support on a driver branch, then Canonical will transition you to the next supported driver branch automatically if you try to install that driver branch.
+When NVIDIA stops support on a driver branch, Ubuntu will transition you to the next supported driver branch automatically if you try to install that driver branch.
 
 See NVIDIA's [current support matrix](https://docs.nvidia.com/datacenter/tesla/drivers/index.html) in their documentation.
 
