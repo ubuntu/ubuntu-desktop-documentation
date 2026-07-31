@@ -219,7 +219,7 @@ While `nvidia-fabricmanager` and `libnvidia-nscq` do not have the same `-server`
     :user:
     :host:
     :dir:
-    apt-mark showmanual | grep nvidia`.
+    apt-mark showmanual | grep nvidia
     ```
 
 1. Remove any additional packages that may have been installed as a dependency (e.g. the `i386` libraries on `amd64` systems) and which were not caught by the previous command:
