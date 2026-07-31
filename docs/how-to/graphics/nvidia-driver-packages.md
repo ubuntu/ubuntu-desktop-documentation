@@ -22,8 +22,11 @@ If you have an NVIDIA GPU, you can install official NVIDIA drivers as deb packag
 For most Ubuntu users, we recommend following the more automated {ref}`install-nvidia-drivers` guide instead.
 
 :::{warning}
-NVIDIA drivers installed from sources outside of those listed in this guide might potentially overwrite those provided by `ubuntu-drivers` and might break Secure Boot.
+NVIDIA drivers installed from sources outside of those listed in this guide might potentially overwrite those provided by Ubuntu and might break Secure Boot.
+
+We recommend installing the drivers provided by Ubuntu packages rather than downloading drivers from NVIDIA. The Ubuntu packages ensure that you install libraries compatible with your Ubuntu release.
 :::
+
 
 ## Types of NVIDIA drivers
 
