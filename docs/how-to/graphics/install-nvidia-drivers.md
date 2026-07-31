@@ -221,3 +221,9 @@ Additionally, Ubuntu provides the **NVIDIA Fabric Manager** and the **NVIDIA Swi
 When NVIDIA stops support on a driver branch, Ubuntu will transition you to the next supported driver branch automatically if you try to install that driver branch.
 
 See NVIDIA's [current support matrix](https://docs.nvidia.com/datacenter/tesla/drivers/index.html) in their documentation.
+
+
+## Troubleshooting
+
+- {ref}`nvidia-driver-packages`
+- {ref}`troubleshoot-your-nvidia-gpu-and-drivers`
