@@ -12,13 +12,14 @@ relatedlinks: "https://docs.nvidia.com/datacenter/tesla/fabric-manager-user-guid
 (nvidia-driver-packages)=
 # Install NVIDIA driver packages manually
 
-If you have an NVIDIA GPU, you can install official NVIDIA drivers to improve desktop and gaming performance or support computing tasks.
+If you have an NVIDIA GPU, you can install official NVIDIA drivers as deb packages using the APT tool. This is useful in several cases:
 
-This page shows how to install the NVIDIA drivers from the command line using APT. Installing the NVIDIA driver manually means installing the correct kernel modules first, then installing the metapackage for the driver series.
+- You're provisioning Ubuntu on multiple machines and you want to ensure the same driver configuration on all of them.
+- You're running a custom kernel, so you need the DKMS driver.
+- The NVIDIA driver for your kernel version isn't available yet, so you need the DKMS driver.
+- You want to learn how the drivers work on a lower level.
 
-:::{note}
-This guide is intended for advanced users and for troubleshooting. For most Ubuntu users, we recommend following the more automated {ref}`install-nvidia-drivers` guide instead.
-:::
+For most Ubuntu users, we recommend following the more automated {ref}`install-nvidia-drivers` guide instead.
 
 :::{warning}
 NVIDIA drivers installed from sources outside of those listed in this guide might potentially overwrite those provided by `ubuntu-drivers` and might break Secure Boot.
@@ -113,9 +114,11 @@ If your system uses Secure Boot (as most modern Intel and AMD systems do), your 
 (build-your-own-kernel-modules-using-the-nvidia-dkms-package)=
 ### Build your own kernel modules using the NVIDIA DKMS package
 
-You can install the relevant NVIDIA {term}`DKMS` package and `linux-headers` to build the kernel modules, and enroll your own key to sign the modules.
+By using the {term}`DKMS` driver package, you can build the NVIDIA driver for the exact kernel that you're running. This is useful when you're using a custom kernel or when the standard NVIDIA packages are missing or lagging in release.
 
 We don't recommend using the DKMS modules unless you are running a custom kernel for which the prebuilt drivers are not supported. This is because the DKMS drivers are not signed with Canonical's key and thus do not support Secure Boot.
+
+The general procedure is to install the relevant NVIDIA DKMS package and `linux-headers` to build the kernel modules, and enroll your own key to sign the modules.
 
 1. Install the `linux-headers` metapackage for your kernel flavor (e.g. `generic`, `lowlatency`, etc.):
 
