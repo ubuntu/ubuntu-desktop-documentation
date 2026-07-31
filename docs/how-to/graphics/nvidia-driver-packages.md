@@ -14,9 +14,11 @@ relatedlinks: "https://docs.nvidia.com/datacenter/tesla/fabric-manager-user-guid
 
 If you have an NVIDIA GPU, you can install official NVIDIA drivers to improve desktop and gaming performance or support computing tasks.
 
-This page shows how to install the NVIDIA drivers from the command line using APT.
+This page shows how to install the NVIDIA drivers from the command line using APT. Installing the NVIDIA driver manually means installing the correct kernel modules first, then installing the metapackage for the driver series.
 
-Installing the NVIDIA driver manually means installing the correct kernel modules first, then installing the metapackage for the driver series.
+:::{note}
+This guide is intended for advanced users and for troubleshooting. For most Ubuntu users, we recommend following the more automated {ref}`install-nvidia-drivers` guide instead.
+:::
 
 :::{warning}
 NVIDIA drivers installed from sources outside of those listed in this guide might potentially overwrite those provided by `ubuntu-drivers` and might break Secure Boot.
@@ -27,12 +29,12 @@ NVIDIA drivers installed from sources outside of those listed in this guide migh
 We package two types of NVIDIA drivers:
 
 Unified Driver Architecture (UDA) drivers
-: These are recommended for the generic desktop use. You can also find them [on the NVIDIA website](https://www.nvidia.com/en-us/drivers/unix/).
+: These are recommended for the generic desktop use and gaming. They also support computing use cases such as AI and machine learning. You can also find them [on the NVIDIA website](https://www.nvidia.com/en-us/drivers/unix/).
 
 Enterprise Ready Drivers ({term}`ERD`)
-: These are recommended on servers and for computing tasks. Their packages can be recognized by the `-server` suffix. You can read more about these drivers [in the NVIDIA documentation](https://docs.nvidia.com/datacenter/tesla/index.html).
+: These are recommended on servers and for computing tasks. These drivers are stripped down and don't support running a desktop environment. Their packages can be recognized by the `-server` suffix. You can read more about these drivers [in the NVIDIA documentation](https://docs.nvidia.com/datacenter/tesla/index.html).
 
-Additionally, we package the **NVIDIA Fabric Manager** and the **NVIDIA Switch Configuration and Query (NSCQ) Library**, which you will only need if you have NVswitch hardware. The Fabric Manager and NSCQ library are only available with the ERDs or `-server` driver versions.
+Additionally, Ubuntu provides the **NVIDIA Fabric Manager** and the **NVIDIA Switch Configuration and Query (NSCQ) Library**, which you will only need if you have NVswitch hardware. The Fabric Manager and NSCQ library are only available with the ERDs or `-server` driver versions.
 
 ## Check driver versions
 
@@ -48,102 +50,124 @@ cat /proc/driver/nvidia/version
 
 ## Install the kernel modules
 
-If your system uses Secure Boot (as most x86 modern systems do), your kernel will require the kernel modules to be signed. There are two (mutually exclusive) ways to achieve this.
+If your system uses Secure Boot (as most modern Intel and AMD systems do), your kernel will require the kernel modules to be signed. There are two mutually exclusive ways to achieve this:
 
+- {ref}`install-the-pre-compiled-nvidia-modules-for-your-kernel`
+- {ref}`build-your-own-kernel-modules-using-the-nvidia-dkms-package`
+
+(install-the-pre-compiled-nvidia-modules-for-your-kernel)=
 ### Install the pre-compiled NVIDIA modules for your kernel
 
-Install the metapackage for your kernel flavour (e.g. `generic`, `lowlatency`, etc) which is specific to the driver branch (e.g. `535`) that you want to install, and whether you want the compute vs. general display driver (e.g. `-server` or not):
+1. Install the metapackage for your kernel flavor (e.g. `generic`, `lowlatency`, etc.), which is specific to the driver branch (e.g. `535`) that you want to install, and whether you want the compute vs. general display driver (e.g. `-server` or not):
 
-```{terminal}
-:copy:
-:user:
-:host:
-:dir:
-sudo apt install linux-modules-nvidia-${DRIVER_BRANCH}${SERVER}-${LINUX_FLAVOUR}
-```
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo apt install linux-modules-nvidia-${DRIVER_BRANCH}${SERVER}-${LINUX_FLAVOUR}
+    ```
+    
+    For example, install `linux-modules-nvidia-535-generic`.
 
-(e.g. `linux-modules-nvidia-535-generic`)
+1. Check that the modules for your specific kernel/{term}`ABI` were installed by the metapackage:
 
-Check that the modules for your specific kernel/{term}`ABI` were installed by the metapackage:
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo apt-cache policy linux-modules-nvidia-${DRIVER_BRANCH}${SERVER}-$(uname -r)
+    ```
+    
+    For example:
+    
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo apt-cache policy linux-modules-nvidia-535-$(uname -r)
+    ```
 
-```{terminal}
-:copy:
-:user:
-:host:
-:dir:
-sudo apt-cache policy linux-modules-nvidia-${DRIVER_BRANCH}${SERVER}-$(uname -r)
-```
+1. If the modules were not installed for your current running kernel, upgrade to the latest kernel or install them by specifying the running kernel version:
 
-(e.g. `sudo apt-cache policy linux-modules-nvidia-535-$(uname -r)`)
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo apt install linux-modules-nvidia-${DRIVER_BRANCH}${SERVER}-$(uname -r)
+    ```
+    
+    For example:
 
-If the modules were not installed for your current running kernel, upgrade to the latest kernel or install them by specifying the running kernel version:
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo apt install linux-modules-nvidia-535-$(uname -r)
+    ```
 
-```{terminal}
-:copy:
-:user:
-:host:
-:dir:
-sudo apt install linux-modules-nvidia-${DRIVER_BRANCH}${SERVER}-$(uname -r)
-```
+(build-your-own-kernel-modules-using-the-nvidia-dkms-package)=
+### Build your own kernel modules using the NVIDIA DKMS package
 
-(e.g. `sudo apt install linux-modules-nvidia-535-$(uname -r)`)
-
-(building-your-own-kernel-modules-using-thenvidia-dkms-package)=
-### Building your own kernel modules using the NVIDIA DKMS package
+You can install the relevant NVIDIA {term}`DKMS` package and `linux-headers` to build the kernel modules, and enroll your own key to sign the modules.
 
 We don't recommend using the DKMS modules unless you are running a custom kernel for which the prebuilt drivers are not supported. This is because the DKMS drivers are not signed with Canonical's key and thus do not support Secure Boot.
 
-Install the relevant NVIDIA {term}`DKMS` package and `linux-headers` to build the kernel modules, and enroll your own key to sign the modules.
+1. Install the `linux-headers` metapackage for your kernel flavor (e.g. `generic`, `lowlatency`, etc.):
 
-Install the `linux-headers` metapackage for your kernel flavour (e.g. `generic`, `lowlatency`, etc):
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo apt install linux-headers-${LINUX_FLAVOUR}
+    ```
 
-```{terminal}
-:copy:
-:user:
-:host:
-:dir:
-sudo apt install linux-headers-${LINUX_FLAVOUR}
-```
+1. Check that the headers for your specific kernel were installed by the metapackage:
 
-Check that the headers for your specific kernel were installed by the metapackage:
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo apt-cache policy linux-headers-$(uname -r)
+    ```
 
-```{terminal}
-:copy:
-:user:
-:host:
-:dir:
-sudo apt-cache policy linux-headers-$(uname -r)
-```
+1. If the headers for your current running kernel were not installed, install them by specifying the running kernel version:
 
-If the headers for your current running kernel were not installed, install them by specifying the running kernel version:
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo apt install linux-headers-$(uname -r)
+    ```
 
-```{terminal}
-:copy:
-:user:
-:host:
-:dir:
-sudo apt install linux-headers-$(uname -r)
-```
+1. Install the NVIDIA DKMS package for your desired driver series:
 
-Finally, install the NVIDIA DKMS package for your desired driver series (this may automatically guide you through creating and enrolling a new key for Secure Boot):
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo apt install nvidia-dkms-${DRIVER_BRANCH}${SERVER}
+    ```
+    
+    This may automatically guide you through creating and enrolling a new key for Secure Boot.
 
-```{terminal}
-:copy:
-:user:
-:host:
-:dir:
-sudo apt install nvidia-dkms-${DRIVER_BRANCH}${SERVER}
-```
-
-Alternatively, you can use `ubuntu-drivers` to automatically select an appropriate DKMS driver branch:
-
-```{terminal}
-:copy:
-:user:
-:host:
-:dir:
-sudo ubuntu-drivers install --include-dkms
-```
+    Alternatively, you can use `ubuntu-drivers` to automatically select an appropriate DKMS driver branch:
+    
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo ubuntu-drivers install --include-dkms
+    ```
 
 ## Install the user-space drivers and the driver libraries
 
@@ -170,44 +194,42 @@ sudo apt install nvidia-fabricmanager-${DRIVER_BRANCH} libnvidia-nscq-${DRIVER_B
 ```
 
 :::{note}
-While `nvidia-fabricmanager` and `libnvidia-nscq` do not have the same `-server` label in their name, they are really meant to match the `-server` drivers in the Ubuntu archive. For example, `nvidia-fabricmanager-535` will match the `nvidia-driver-535-server` package version (not the `nvidia-driver-535` package).
+While `nvidia-fabricmanager` and `libnvidia-nscq` do not have the same `-server` label in their name, they are really meant to match the `-server` drivers in the Ubuntu archive. For example, `nvidia-fabricmanager-535` matches the `nvidia-driver-535-server` package version (not the `nvidia-driver-535 package`).
 :::
+
 
 ## Switch between pre-compiled and DKMS modules
 
-1. Uninstalling the NVIDIA drivers (below)
+1. Remove all existing NVIDIA packages from your system:
 
-2. Manual driver installation using APT
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo apt --purge remove '*nvidia*${DRIVER_BRANCH}*'
+    ```
+    
+    If you are unsure which `${DRIVER_BRANCH}` to pick for removal, you might look at the installed nvidia packages and see the different `${DRIVER_BRANCH}` numbers that are present on your system.
 
-### Uninstall the NVIDIA drivers
+    Since `autoremove` will take care of all indirect dependencies, it is sufficient to list those that have been directly installed by using `apt-mark`.
+    
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    apt-mark showmanual | grep nvidia`.
+    ```
 
-Remove any NVIDIA packages from your system:
+1. Remove any additional packages that may have been installed as a dependency (e.g. the `i386` libraries on `amd64` systems) and which were not caught by the previous command:
 
-```{terminal}
-:copy:
-:user:
-:host:
-:dir:
-sudo apt --purge remove '*nvidia*${DRIVER_BRANCH}*'
-```
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo apt autoremove
+    ```
 
-If you are unsure which `${DRIVER_BRANCH}` to pick for removal you might look at the installed nvidia packages and see the different `${DRIVER_BRANCH}` numbers that are present on your system.
-Since `autoremove` will take care of all indirect dependencies it is sufficient to list those that have been directly installed by using `apt-mark`.
-
-```{terminal}
-:copy:
-:user:
-:host:
-:dir:
-apt-mark showmanual | grep nvidia`.
-```
-
-Remove any additional packages that may have been installed as a dependency (e.g. the `i386` libraries on amd64 systems) and which were not caught by the previous command:
-
-```{terminal}
-:copy:
-:user:
-:host:
-:dir:
-sudo apt autoremove
-```
+1. Install new drivers by following the earlier sections of this guide: {ref}`nvidia-driver-packages`.

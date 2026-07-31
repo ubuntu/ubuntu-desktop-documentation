@@ -23,7 +23,7 @@ NVIDIA drivers installed from sources outside of those listed in this guide migh
 
 We recommend using the `ubuntu-drivers` tool or the Additional Drivers app to manage drivers. They share the same logic. By default, these tools only install the pre-built, signed drivers, which are known to work with **Secure Boot**.
 
-Refer to {ref}`building-your-own-kernel-modules-using-thenvidia-dkms-package` if you have a specific use case that requires the DKMS drivers.
+Refer to {ref}`build-your-own-kernel-modules-using-the-nvidia-dkms-package` if you have a specific use case that requires the DKMS drivers.
 
 
 ## Check driver versions
@@ -146,7 +146,7 @@ For the generic desktop use and gaming, we package the **Unified Driver Architec
 
 ## Install the drivers on servers or for computing purposes
 
-For servers and computing tasks, Ubuntu provides the **Enterprise Ready Drivers ({term}`ERD`)** drivers. Their packages can be recognized by the `-server` suffix. These drivers are stripped down and don't support running a desktop environment. You can read more about these drivers [in the NVIDIA documentation](https://docs.nvidia.com/datacenter/tesla/index.html).
+For servers and computing tasks, Ubuntu provides the **Enterprise Ready Drivers ({term}`ERD`)** drivers. These drivers are stripped down and don't support running a desktop environment. Their packages can be recognized by the `-server` suffix. You can read more about these drivers [in the NVIDIA documentation](https://docs.nvidia.com/datacenter/tesla/index.html).
 
 Additionally, Ubuntu provides the **NVIDIA Fabric Manager** and the **NVIDIA Switch Configuration and Query (NSCQ) Library**, which you will only need if you have NVswitch hardware. The Fabric Manager and NSCQ library are only available with the ERDs or `-server` driver versions.
 
