@@ -6,7 +6,7 @@
 
 You can monitor the state of your NVIDIA GPU and resolve common issues.
 
-This guide assumes that you're using the proprietary NVIDIA drivers.
+This guide assumes that you're using the proprietary NVIDIA drivers. Refer to {ref}`install-nvidia-drivers` first.
 
 ## Install NVIDIA monitoring and troubleshooting tools
 
