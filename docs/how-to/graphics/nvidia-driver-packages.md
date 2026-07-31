@@ -10,7 +10,7 @@ relatedlinks: "https://docs.nvidia.com/datacenter/tesla/fabric-manager-user-guid
 ```
 
 (nvidia-driver-packages)=
-# Install NVIDIA driver packages manually
+# Select NVIDIA driver packages manually
 
 If you have an NVIDIA GPU, you can install official NVIDIA drivers as deb packages using the APT tool. This is useful in several cases:
 
@@ -116,7 +116,9 @@ If your system uses Secure Boot (as most modern Intel and AMD systems do), your 
 
 By using the {term}`DKMS` driver package, you can build the NVIDIA driver for the exact kernel that you're running. This is useful when you're using a custom kernel or when the standard NVIDIA packages are missing or lagging in release.
 
+:::{warning}
 We don't recommend using the DKMS modules unless you are running a custom kernel for which the prebuilt drivers are not supported. This is because the DKMS drivers are not signed with Canonical's key and thus do not support Secure Boot.
+:::
 
 The general procedure is to install the relevant NVIDIA DKMS package and `linux-headers` to build the kernel modules, and enroll your own key to sign the modules.
 
