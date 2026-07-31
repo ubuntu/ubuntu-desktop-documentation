@@ -85,7 +85,7 @@ If you currently have a version of the NVIDIA drivers installed that conflicts w
 
 ## Install the drivers for desktop and gaming use
 
-For the generic desktop use, we package the **Unified Driver Architecture (UDA)** drivers. You can also find them [on the NVIDIA website](https://www.nvidia.com/en-us/drivers/unix/).
+For the generic desktop use and gaming, we package the **Unified Driver Architecture (UDA)** drivers. These drivers also support computing use cases such as AI and machine learning. You can also find them [on the NVIDIA website](https://www.nvidia.com/en-us/drivers/unix/).
 
 ::::{tab-set}
 :::{tab-item} Graphical interface
@@ -102,6 +102,7 @@ For the generic desktop use, we package the **Unified Driver Architecture (UDA)*
 
 1. When the installation is complete, restart your system for the changes to take effect.
 :::
+
 :::{tab-item} Command line
 :sync: terminal
 1. Check the available drivers for your hardware:
@@ -145,7 +146,7 @@ For the generic desktop use, we package the **Unified Driver Architecture (UDA)*
 
 ## Install the drivers on servers or for computing purposes
 
-For servers and computing tasks, Ubuntu provides the **Enterprise Ready Drivers ({term}`ERD`)** drivers. Their packages can be recognized by the `-server` suffix. You can read more about these drivers [in the NVIDIA documentation](https://docs.nvidia.com/datacenter/tesla/index.html).
+For servers and computing tasks, Ubuntu provides the **Enterprise Ready Drivers ({term}`ERD`)** drivers. Their packages can be recognized by the `-server` suffix. These drivers are stripped down and don't support running a desktop environment. You can read more about these drivers [in the NVIDIA documentation](https://docs.nvidia.com/datacenter/tesla/index.html).
 
 Additionally, Ubuntu provides the **NVIDIA Fabric Manager** and the **NVIDIA Switch Configuration and Query (NSCQ) Library**, which you will only need if you have NVswitch hardware. The Fabric Manager and NSCQ library are only available with the ERDs or `-server` driver versions.
 
