@@ -32,7 +32,7 @@ Unified Driver Architecture (UDA) drivers
 : These are recommended for the generic desktop use and gaming. They also support computing use cases such as AI and machine learning. You can also find them [on the NVIDIA website](https://www.nvidia.com/en-us/drivers/unix/).
 
 Enterprise Ready Drivers ({term}`ERD`)
-: These are recommended on servers and for computing tasks. These drivers are stripped down and don't support running a desktop environment. Their packages can be recognized by the `-server` suffix. You can read more about these drivers [in the NVIDIA documentation](https://docs.nvidia.com/datacenter/tesla/index.html).
+: These are recommended on servers and for computing tasks. These drivers come from an NVIDIA release branch that's qualified and supported for longer on data center GPUs. They omit certain desktop-oriented features. Their packages can be recognized by the `-server` suffix. You can read more about these drivers [in the NVIDIA documentation](https://docs.nvidia.com/datacenter/tesla/index.html).
 
 Additionally, Ubuntu provides the **NVIDIA Fabric Manager** and the **NVIDIA Switch Configuration and Query (NSCQ) Library**, which you will only need if you have NVswitch hardware. The Fabric Manager and NSCQ library are only available with the ERDs or `-server` driver versions.
 
