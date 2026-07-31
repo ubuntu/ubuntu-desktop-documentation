@@ -6,7 +6,7 @@ myst:
 relatedlinks: "https://docs.nvidia.com/datacenter/tesla/fabric-manager-user-guide/index.html, https://www.nvidia.com/en-us/data-center/nvlink/, https://docs.nvidia.com/ai-enterprise/release-8/latest/infra-software/vgpu/features/nvswitch.html"
 ---
 
-```{tags} Reference
+```{tags} How-to guide, Graphics
 ```
 
 (nvidia-driver-packages)=
