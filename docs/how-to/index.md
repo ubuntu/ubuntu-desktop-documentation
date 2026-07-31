@@ -22,8 +22,7 @@ turn-off-bitlocker-in-windows
 encrypt-your-disk-with-tpm
 configure-hardware-backed-disk-encryption
 recover-data-from-hardware-backed-disk-encryption
-install-nvidia-drivers
-nvidia-driver-packages
+graphics/index
 accessibility/index
 troubleshoot/index
 :::
