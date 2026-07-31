@@ -150,6 +150,10 @@ For the generic desktop use and gaming, we package the **Unified Driver Architec
 ::::
 
 
+<!--
+This section is disabled for the Ubuntu Desktop guide.
+It'll be re-enabled in the unified Desktop+Server documentation for Ubuntu OS.
+
 ## Install the drivers on servers or for computing purposes
 
 For servers and computing tasks, Ubuntu provides the **Enterprise Ready Drivers ({term}`ERD`)** drivers. These drivers come from an NVIDIA release branch that's qualified and supported for longer on data center GPUs. They omit certain desktop-oriented features. Their packages can be recognized by the `-server` suffix. You can read more about these drivers [in the NVIDIA documentation](https://docs.nvidia.com/datacenter/tesla/index.html).
@@ -220,6 +224,7 @@ Additionally, Ubuntu provides the **NVIDIA Fabric Manager** and the **NVIDIA Swi
     :::
 
 1. When the installation is complete, restart your system for the changes to take effect.
+-->
 
 
 ## Transitional packages to new driver branches
