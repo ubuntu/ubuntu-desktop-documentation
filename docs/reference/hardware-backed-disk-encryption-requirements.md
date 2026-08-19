@@ -22,7 +22,7 @@ Your hardware must meet the following requirements to support TPM/FDE:
 
 ## Automatic unlocking
 
-Your disk can unlock automatically without a passphrase or a PIN if the UEFI firmware is verified or measured by a **hardware root of trust**. This is generally the case for PCs made since 2021. Automatic unlocking is also known as *TPM-only unlock*.
+Your disk can unlock automatically without a PIN or passphrase if the UEFI firmware is verified or measured by a **hardware root of trust**. This is generally the case for PCs made since 2021. Automatic unlocking is also known as *TPM-only unlock*.
 
 To verify or measure the firmware, your device must feature a dedicated security chip:
 
