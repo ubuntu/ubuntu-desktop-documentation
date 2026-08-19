@@ -87,7 +87,7 @@ When using recovery keys for other platforms, see the relevant vendor’s docume
 
 Optionally, you can set a PIN or passphrase. You enter them every time your computer starts. The PIN is a numeric code while the passphrase is an alphanumerical password.
 
-You can enable, change and disable the PIN or passphrase in the Security Center app.
+You can enable, change and disable the PIN or passphrase in the Security Center app. However, if your system doesn't provide a hardware root of trust, TPM/FDE will always require that you set a PIN or passphrase to ensure a level of security.
 
 ### PIN and passphrase protection
 

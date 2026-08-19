@@ -37,7 +37,7 @@ The Ubuntu installer alerts you to this. You can choose to disable the feature i
 
 With a hardware root of trust, your hardware verifies the UEFI firmware before the firmware runs, based on a read-only piece of code in your CPU. This protects your disk encryption against threats such as malware that targets your firmware, or supply-chain attacks while your hardware is handled after manufacture.
 
-If your systems does not have a hardware root of trust, the Ubuntu installer makes it mandatory to add a PIN or passphrase.
+If your system does not have a hardware root of trust, the TPM/FDE makes it mandatory to add a PIN or passphrase.
 
 ## Report bugs
 
