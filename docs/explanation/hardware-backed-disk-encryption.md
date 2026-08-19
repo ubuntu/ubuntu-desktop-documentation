@@ -43,9 +43,7 @@ If you lose your recovery key, you might lose access to your data in certain sce
 
 You need the recovery key in several different situations:
 
-<!-- To be implemented:
 * If you **move your disk** to a new computer, you need to enter your recovery key before your new computer can access the data.
--->
 
 * If you **forget your disk PIN or passphrase**, Ubuntu asks for your recovery key to unlock the disk.
 
