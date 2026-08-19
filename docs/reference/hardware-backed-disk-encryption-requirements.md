@@ -4,7 +4,7 @@
 (hardware-backed-disk-encryption-requirements)=
 # Hardware-backed disk encryption requirements
 
-Ubuntu checks certain system requirements before it allows you to enable {ref}`hardware-backed disk encryption <hardware-backed-disk-encryption>` (TPM/FDE) on your system. Generally, **most systems based on Intel and AMD processors made since 2021** are compatible with TPM/FDE. However, the requirements are stricter than with other disk encryption solutions, such as BitLocker on Windows.
+Ubuntu checks certain system requirements before it allows you to enable {ref}`hardware-backed disk encryption <hardware-backed-disk-encryption>` (TPM/FDE) on your system. Generally, **most systems based on Intel and AMD processors made since 2018** are compatible with TPM/FDE. On most systems made since 2021, the disk can unlock automatically.
 
 ```{include} /reuse/tpm-fde-disclaimer.txt
 ```
@@ -20,11 +20,9 @@ Your hardware must meet the following requirements to support TPM/FDE:
 
 - Secure Boot is enabled and in Deployed Mode.
 
-## Careful security requirements
+## Automatic unlocking
 
-Most of the listed TPM/FDE requirements are widely supported by the majority of PCs made since 2018. Other hardware-backed disk encryption solutions, such as BitLocker on Microsoft Windows, require a similar set of hardware features.
-
-However, for TPM/FDE the Ubuntu installer also checks if the UEFI firmware is verified or at least measured by a **hardware root of trust** (which is generally the case for PCs made since 2021).
+Your disk can unlock automatically without a passphrase or a PIN if the UEFI firmware is verified or measured by a **hardware root of trust**. This is generally the case for PCs made since 2021. Automatic unlocking is also known as *TPM-only unlock*.
 
 To verify or measure the firmware, your device must feature a dedicated security chip:
 
@@ -39,7 +37,7 @@ The Ubuntu installer alerts you to this. You can choose to disable the feature i
 
 With a hardware root of trust, your hardware verifies the UEFI firmware before the firmware runs, based on a read-only piece of code in your CPU. This protects your disk encryption against threats such as malware that targets your firmware, or supply-chain attacks while your hardware is handled after manufacture.
 
-For this reason and in order to keep a good level of security, if your systems does not have a hardware root of trust, the Ubuntu installer makes it mandatory to add a PIN or passphrase.
+If your systems does not have a hardware root of trust, the Ubuntu installer makes it mandatory to add a PIN or passphrase.
 
 ## Report bugs
 
