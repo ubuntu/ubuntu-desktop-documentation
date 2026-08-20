@@ -31,7 +31,7 @@ Unified Driver Architecture (UDA) drivers
 Enterprise Ready Drivers ({term}`ERD`)
 : These are recommended on servers and for computing tasks. These drivers come from an NVIDIA release branch that's qualified and supported for longer on data center GPUs. They omit certain desktop-oriented features. Their packages can be recognized by the `-server` suffix. You can read more about these drivers [in the NVIDIA documentation](https://docs.nvidia.com/datacenter/tesla/index.html).
 
-Additionally, Ubuntu provides the **NVIDIA Fabric Manager** and the **NVSwitch Configuration and Query (NSCQ) library**, which you will only need if you have NVSwitch hardware. The Fabric Manager and NSCQ library are only available with the ERDs or `-server` driver versions.
+Additionally, Ubuntu provides the **NVIDIA Fabric Manager** and the **NVIDIA Switch Configuration and Query (NSCQ) Library**, which you will only need if you have NVswitch hardware. The Fabric Manager and NSCQ library are only available with the ERDs or `-server` driver versions.
 
 
 ## Install the kernel modules

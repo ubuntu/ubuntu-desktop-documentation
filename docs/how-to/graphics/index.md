@@ -7,6 +7,6 @@ You can configure your graphics card (GPU), install drivers and monitor your GPU
 :maxdepth: 1
 
 install-nvidia-drivers
-nvidia-driver-packages
+build-your-own-nvidia-modules-using-the-dkms-package
 troubleshoot-nvidia
 :::
