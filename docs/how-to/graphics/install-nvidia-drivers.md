@@ -30,7 +30,7 @@ You can also install NVIDIA drivers as deb packages using the APT tool. This is 
 - You're provisioning Ubuntu on multiple machines and you want to ensure the same driver configuration on all of them.
 - You want to learn how the drivers work on a lower level.
 
-In some scenarios, you have to {ref}`install the DKMS driver package <build-your-own-kernel-modules-using-the-nvidia-dkms-package>`, which builds the NVIDIA driver for the exact kernel that you're running. For example:
+In some scenarios, you have to {ref}`install the DKMS driver package <build-your-own-nvidia-modules-using-the-dkms-package>`, which builds the NVIDIA driver for the exact kernel that you're running. For example:
 
 - You're running a custom kernel.
 - The NVIDIA driver for your kernel version isn't available yet.
@@ -360,5 +360,5 @@ See NVIDIA's [current support matrix](https://docs.nvidia.com/datacenter/tesla/d
 
 ## Troubleshooting
 
-- {ref}`nvidia-driver-packages`
+- {ref}`build-your-own-nvidia-modules-using-the-dkms-package`
 - {ref}`troubleshoot-your-nvidia-gpu-and-drivers`
