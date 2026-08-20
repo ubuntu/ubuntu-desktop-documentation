@@ -4,7 +4,7 @@
 (hardware-backed-disk-encryption-requirements)=
 # Hardware-backed disk encryption requirements
 
-Ubuntu checks certain system requirements before it allows you to enable {ref}`hardware-backed disk encryption <hardware-backed-disk-encryption>` (TPM/FDE) on your system. Generally, **most systems based on Intel and AMD processors made since 2018** are compatible with TPM/FDE. On most systems made since 2021, the disk can unlock automatically.
+Ubuntu checks certain system requirements before it allows you to enable {ref}`hardware-backed disk encryption <hardware-backed-disk-encryption>` (TPM/FDE) on your system. Generally, **most systems based on Intel and AMD processors made since 2018** are compatible with TPM/FDE. On most systems made since 2021, the disk can unlock automatically by default.
 
 ```{include} /reuse/tpm-fde-disclaimer.txt
 ```
@@ -37,7 +37,8 @@ The Ubuntu installer alerts you to this. You can choose to disable the feature i
 
 With a hardware root of trust, your hardware verifies the UEFI firmware before the firmware runs, based on a read-only piece of code in your CPU. This protects your disk encryption against threats such as malware that targets your firmware, or supply-chain attacks while your hardware is handled after manufacture.
 
-If your system does not have a hardware root of trust, the TPM/FDE makes it mandatory to add a PIN or passphrase.
+If your system does not have a hardware root of trust, the Ubuntu installer makes it mandatory to add a PIN or passphrase. After installation, you can disable the PIN or passphrase. However, your system won't be protected against the described hardware and firmware threats.
+
 
 ## Report bugs
 
