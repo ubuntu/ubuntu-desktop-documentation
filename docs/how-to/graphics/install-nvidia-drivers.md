@@ -25,7 +25,15 @@ We recommend installing the drivers provided by Ubuntu packages rather than down
 
 We recommend using the `ubuntu-drivers` tool or the Additional Drivers app to manage drivers. They share the same logic. By default, these tools only install the pre-built, signed drivers, which are known to work with **Secure Boot**.
 
-Refer to {ref}`build-your-own-kernel-modules-using-the-nvidia-dkms-package` if you have a specific use case that requires the DKMS drivers.
+You can also install NVIDIA drivers as deb packages using the APT tool. This is useful in certain cases:
+
+- You're provisioning Ubuntu on multiple machines and you want to ensure the same driver configuration on all of them.
+- You want to learn how the drivers work on a lower level.
+
+In some scenarios, you have to {ref}`install the DKMS driver package <build-your-own-kernel-modules-using-the-nvidia-dkms-package>`, which builds the NVIDIA driver for the exact kernel that you're running. For example:
+
+- You're running a custom kernel.
+- The NVIDIA driver for your kernel version isn't available yet.
 
 
 ## Check driver versions
@@ -111,7 +119,7 @@ For the generic desktop use and gaming, we package the **Unified Driver Architec
 1. When the installation is complete, restart your system for the changes to take effect.
 :::
 
-:::{tab-item} Command line
+:::{tab-item} Using `ubuntu-drivers`
 :sync: terminal
 1. Check the available drivers for your hardware:
 
@@ -146,11 +154,65 @@ For the generic desktop use and gaming, we package the **Unified Driver Architec
     :dir:
     sudo ubuntu-drivers install nvidia:535
     ```
+:::
 
-1. When the installation is complete, restart your system for the changes to take effect.
+:::{tab-item} Selecting packages manually
+:sync: nvidia-drivers-manual
+1. Install the metapackage for your kernel flavor (e.g. `generic`, `lowlatency`, etc.), which is specific to the driver branch (e.g. `535`) that you want to install:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo apt install linux-modules-nvidia-${DRIVER_BRANCH}-${LINUX_FLAVOUR}
+    ```
+    
+    For example, install `linux-modules-nvidia-535-generic`.
+
+1. Check that the modules for your specific kernel/{term}`ABI` were installed by the metapackage:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo apt-cache policy linux-modules-nvidia-${DRIVER_BRANCH}-$(uname -r)
+    ```
+    
+    For example:
+    
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo apt-cache policy linux-modules-nvidia-535-$(uname -r)
+    ```
+
+1. If the modules were not installed for your current running kernel, upgrade to the latest kernel or install them by specifying the running kernel version:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo apt install linux-modules-nvidia-${DRIVER_BRANCH}-$(uname -r)
+    ```
+    
+    For example:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo apt install linux-modules-nvidia-535-$(uname -r)
+    ```
 :::
 ::::
 
+When the installation is complete, restart your system for the changes to take effect.
 
 <!--
 This section is disabled for the Ubuntu Desktop guide.
@@ -162,6 +224,9 @@ For servers and computing tasks, Ubuntu provides the **Enterprise Ready Drivers 
 
 Additionally, Ubuntu provides the **NVIDIA Fabric Manager** and the **NVIDIA Switch Configuration and Query (NSCQ) Library**, which you will only need if you have NVswitch hardware. The Fabric Manager and NSCQ library are only available with the ERDs or `-server` driver versions.
 
+::::{tab-set}
+:::{tab-item} Using `ubuntu-drivers`
+:sync: terminal
 1. Check the available drivers for your hardware:
 
     ```{terminal}
@@ -206,26 +271,83 @@ Additionally, Ubuntu provides the **NVIDIA Fabric Manager** and the **NVIDIA Swi
     :dir:
     sudo ubuntu-drivers install --gpgpu nvidia:535-server
     ```
+:::
 
-1. (Optional) Install Fabric Manager and the NSCQ library.
+:::{tab-item} Selecting packages manually
+:sync: nvidia-drivers-manual
+1. Install the metapackage for your kernel flavor (e.g. `generic`, `lowlatency`, etc.), which is specific to the driver branch (e.g. `535`) that you want to install:
 
-    If your system comes with NVswitch hardware, then you will want to install Fabric Manager and the NVSwitch Configuration and Query library:
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo apt install linux-modules-nvidia-${DRIVER_BRANCH}-server-${LINUX_FLAVOUR}
+    ```
+    
+    For example, install `linux-modules-nvidia-535-server-generic`.
+
+1. Check that the modules for your specific kernel/{term}`ABI` were installed by the metapackage:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo apt-cache policy linux-modules-nvidia-${DRIVER_BRANCH}-server-$(uname -r)
+    ```
+    
+    For example:
     
     ```{terminal}
     :copy:
     :user:
     :host:
     :dir:
-    sudo apt install nvidia-fabricmanager-535 libnvidia-nscq-535
+    sudo apt-cache policy linux-modules-nvidia-535-server-$(uname -r)
+    ```
+
+1. If the modules were not installed for your current running kernel, upgrade to the latest kernel or install them by specifying the running kernel version:
+
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo apt install linux-modules-nvidia-${DRIVER_BRANCH}-sever-$(uname -r)
     ```
     
-    Replace `535` with your selected driver version.
-    
-    :::{note}
-    While `nvidia-fabricmanager` and `libnvidia-nscq` do not have the same `-server` label in their name, they are really meant to match the `-server` drivers in the Ubuntu archive. For example, `nvidia-fabricmanager-535` matches the `nvidia-driver-535-server` package version (not the `nvidia-driver-535 package`).
-    :::
+    For example:
 
-1. When the installation is complete, restart your system for the changes to take effect.
+    ```{terminal}
+    :copy:
+    :user:
+    :host:
+    :dir:
+    sudo apt install linux-modules-nvidia-535-sever-$(uname -r)
+    ```
+:::
+::::
+
+::::{dropdown} (Optional) Install Fabric Manager and the NSCQ library
+If your system comes with NVswitch hardware, then you will want to install Fabric Manager and the NVSwitch Configuration and Query library:
+    
+```{terminal}
+:copy:
+:user:
+:host:
+:dir:
+sudo apt install nvidia-fabricmanager-535 libnvidia-nscq-535
+```
+
+Replace `535` with your selected driver version.
+
+:::{note}
+While `nvidia-fabricmanager` and `libnvidia-nscq` do not have the same `-server` label in their name, they are really meant to match the `-server` drivers in the Ubuntu archive. For example, `nvidia-fabricmanager-535` matches the `nvidia-driver-535-server` package version (not the `nvidia-driver-535 package`).
+:::
+::::
+
+When the installation is complete, restart your system for the changes to take effect.
 -->
 
 
