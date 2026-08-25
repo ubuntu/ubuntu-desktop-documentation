@@ -262,7 +262,7 @@ It'll be re-enabled in the unified Desktop+Server documentation for Ubuntu OS.
 
 For servers and computing tasks, Ubuntu provides the **Enterprise Ready Drivers ({term}`ERD`)** drivers. These drivers come from an NVIDIA release branch that's qualified and supported for longer on data center GPUs. They omit certain desktop-oriented features. Their packages can be recognized by the `-server` suffix. You can read more about these drivers [in the NVIDIA documentation](https://docs.nvidia.com/datacenter/tesla/index.html).
 
-Additionally, Ubuntu provides the **NVIDIA Fabric Manager** and the **NVIDIA Switch Configuration and Query (NSCQ) Library**, which you will only need if you have NVswitch hardware. The Fabric Manager and NSCQ library are only available with the ERDs or `-server` driver versions.
+Additionally, Ubuntu provides the **NVIDIA Fabric Manager** and the **NVSwitch Configuration and Query (NSCQ) library**, which you will only need if you have NVSwitch hardware. The Fabric Manager and NSCQ library are only available with the ERDs or `-server` driver versions.
 
 ::::{tab-set}
 :::{tab-item} Using `ubuntu-drivers`
@@ -354,7 +354,7 @@ Additionally, Ubuntu provides the **NVIDIA Fabric Manager** and the **NVIDIA Swi
     :user:
     :host:
     :dir:
-    sudo apt install linux-modules-nvidia-${DRIVER_BRANCH}-sever-$(uname -r)
+    sudo apt install linux-modules-nvidia-${DRIVER_BRANCH}-server-$(uname -r)
     ```
     
     For example:
@@ -364,13 +364,13 @@ Additionally, Ubuntu provides the **NVIDIA Fabric Manager** and the **NVIDIA Swi
     :user:
     :host:
     :dir:
-    sudo apt install linux-modules-nvidia-535-sever-$(uname -r)
+    sudo apt install linux-modules-nvidia-535-server-$(uname -r)
     ```
 :::
 ::::
 
 ::::{dropdown} (Optional) Install Fabric Manager and the NSCQ library
-If your system comes with NVswitch hardware, then you will want to install Fabric Manager and the NVSwitch Configuration and Query library:
+If your system comes with NVSwitch hardware, then you will want to install Fabric Manager and the NVSwitch Configuration and Query library:
     
 ```{terminal}
 :copy:
@@ -383,7 +383,7 @@ sudo apt install nvidia-fabricmanager-535 libnvidia-nscq-535
 Replace `535` with your selected driver version.
 
 :::{note}
-While `nvidia-fabricmanager` and `libnvidia-nscq` do not have the same `-server` label in their name, they are really meant to match the `-server` drivers in the Ubuntu archive. For example, `nvidia-fabricmanager-535` matches the `nvidia-driver-535-server` package version (not the `nvidia-driver-535 package`).
+While `nvidia-fabricmanager` and `libnvidia-nscq` do not have the same `-server` label in their name, they are really meant to match the `-server` drivers in the Ubuntu archive. For example, `nvidia-fabricmanager-535` matches the `nvidia-driver-535-server` package version (not the `nvidia-driver-535` package).
 :::
 ::::
 
