@@ -3,7 +3,7 @@ myst:
   html_meta:
     description: Install NVIDIA drivers on Ubuntu Desktop or Server using the Dynamic Kernel Module Support (DKMS) packages when you're using a custom kernel or when the standard NVIDIA packages are missing or lagging in release.
 
-relatedlinks: "https://docs.nvidia.com/datacenter/tesla/fabric-manager-user-guide/index.html, https://www.nvidia.com/en-us/data-center/nvlink/, https://docs.nvidia.com/ai-enterprise/release-8/latest/infra-software/vgpu/features/nvswitch.html"
+relatedlinks: "https://docs.nvidia.com/datacenter/tesla/drivers/driver-lifecycle.html, https://docs.nvidia.com/datacenter/tesla/fabric-manager-user-guide/index.html, https://www.nvidia.com/en-us/data-center/nvlink/, https://docs.nvidia.com/ai-enterprise/release-8/latest/infra-software/vgpu/features/nvswitch.html"
 ---
 
 ```{tags} How-to guide, Graphics
@@ -152,5 +152,5 @@ You can switch from the pre-compiled NVIDIA drivers to the DKMS modules or the o
 
 1. Install new drivers:
 
-  - To install the pre-compiled drivers, refer to {ref}`install-nvidia-drivers`.
-  - To install the DKMS modules, go back to {ref}`build-your-own-nvidia-modules-using-the-dkms-package`.
+    - To install the pre-compiled drivers, refer to {ref}`install-nvidia-drivers`.
+    - To install the DKMS modules, go back to {ref}`build-your-own-nvidia-modules-using-the-dkms-package`.

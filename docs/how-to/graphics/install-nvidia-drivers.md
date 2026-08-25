@@ -3,7 +3,7 @@ myst:
   html_meta:
     description: Install NVIDIA drivers on Ubuntu using the ubuntu-drivers tool for UDA desktop drivers or ERD server drivers with Fabric Manager.
 
-relatedlinks: "https://docs.nvidia.com/datacenter/tesla/fabric-manager-user-guide/index.html, https://www.nvidia.com/en-us/data-center/nvlink/, https://docs.nvidia.com/ai-enterprise/release-8/latest/infra-software/vgpu/features/nvswitch.html"
+relatedlinks: "https://docs.nvidia.com/datacenter/tesla/drivers/driver-lifecycle.html, https://docs.nvidia.com/datacenter/tesla/fabric-manager-user-guide/index.html, https://www.nvidia.com/en-us/data-center/nvlink/, https://docs.nvidia.com/ai-enterprise/release-8/latest/infra-software/vgpu/features/nvswitch.html"
 ---
 
 ```{tags} How-to guide, Graphics
@@ -36,7 +36,15 @@ In some scenarios, you have to {ref}`install the DKMS driver package <build-your
 - The NVIDIA driver for your kernel version isn't available yet.
 
 
-## Check driver versions
+## Driver versions and branches
+
+NVIDIA drivers come with several different support life cycles, also known as branches.
+
+* Generally, we recommend that you install the **Production Branch** (PB) drivers. These drivers are supported for one year and provide a good balance of performance, latest features and stability.
+* If you need the latest driver, such as to support a newly released game or the latest CUDA APIs, you can opt for the **New Feature Branch** (NFB) drivers.
+* In a regulated enterprise environment, you might prefer the **Long Term Support Branch** (LTSB) drivers, which are supported for three years.
+
+### Check your driver version
 
 To check the version of your currently running driver:
 
@@ -65,6 +73,38 @@ cat /proc/driver/nvidia/version
 ::::
 
 If you currently have a version of the NVIDIA drivers installed that conflicts with those being installed, `ubuntu-drivers` will uninstall your original drivers before installing the new drivers.
+
+### Check a driver's support branch
+
+You can use the following command to check which branch a driver belongs to:
+
+```{terminal}
+:copy:
+:user:
+:host:
+:dir:
+
+apt show nvidia-driver-VERSION | grep ^Support
+```
+
+The output shows the acronym of the branch. For example:
+
+```{terminal}
+:copy:
+:user:
+:host:
+:dir:
+
+apt show nvidia-driver-595 | grep ^Support
+
+Support: PB
+```
+
+### Transitional packages to new driver branches
+
+When NVIDIA stops support on a driver branch, Ubuntu will transition you to the next supported driver branch automatically if you try to install that driver branch.
+
+See NVIDIA's [current support matrix](https://docs.nvidia.com/datacenter/tesla/drivers/index.html) in their documentation.
 
 
 ## Update your system and kernel
@@ -349,13 +389,6 @@ While `nvidia-fabricmanager` and `libnvidia-nscq` do not have the same `-server`
 
 When the installation is complete, restart your system for the changes to take effect.
 -->
-
-
-## Transitional packages to new driver branches
-
-When NVIDIA stops support on a driver branch, Ubuntu will transition you to the next supported driver branch automatically if you try to install that driver branch.
-
-See NVIDIA's [current support matrix](https://docs.nvidia.com/datacenter/tesla/drivers/index.html) in their documentation.
 
 
 ## Troubleshooting
