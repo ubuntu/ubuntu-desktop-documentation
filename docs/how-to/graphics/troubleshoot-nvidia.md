@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Monitor the state and utilization of your NVIDIA drivers on Ubuntu and resolve common driver issues.
+---
+
 ```{tags} How-to guide, Graphics
 ```
 
