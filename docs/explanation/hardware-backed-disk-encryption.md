@@ -43,9 +43,7 @@ If you lose your recovery key, you might lose access to your data in certain sce
 
 You need the recovery key in several different situations:
 
-<!-- To be implemented:
 * If you **move your disk** to a new computer, you need to enter your recovery key before your new computer can access the data.
--->
 
 * If you **forget your disk PIN or passphrase**, Ubuntu asks for your recovery key to unlock the disk.
 
@@ -90,6 +88,8 @@ When using recovery keys for other platforms, see the relevant vendor’s docume
 Optionally, you can set a PIN or passphrase. You enter them every time your computer starts. The PIN is a numeric code while the passphrase is an alphanumerical password.
 
 You can enable, change and disable the PIN or passphrase in the Security Center app.
+
+If your system doesn't provide a hardware root of trust, the Ubuntu installer requires that you set a PIN or passphrase to ensure a level of security. You can disable it after installation.
 
 ### PIN and passphrase protection
 

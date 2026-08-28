@@ -12,7 +12,7 @@ On an Ubuntu installation where the hardware-backed disk encryption (TPM/FDE) is
 (tpm-fde-set-passphrase)=
 ## Set a disk encryption PIN or passphrase
 
-For an additional layer of security, you can add an encryption PIN or passphrase. You enter them every time your computer starts up to unlock the disk.
+For an additional layer of security, you can add an encryption PIN or passphrase. You enter them every time your computer starts up to unlock the disk. A PIN or passphrase is also required on systems that don't provide a hardware root of trust, though you can disable it afterward.
 
 To learn when you might want to enable the PIN or passphrase, see {ref}`tpm-fde-encryption-passphrase`.
 

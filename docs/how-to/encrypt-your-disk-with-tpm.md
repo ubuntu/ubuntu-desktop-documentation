@@ -28,7 +28,7 @@ To install Ubuntu with hardware-backed encryption:
     
 1. Check if the installer reports any errors.
 
-    Your system might not support all the required security features. In that case, the installer doesn't allow you to proceed with TPM/FDE. For more information, refer to {ref}`hardware-backed-disk-encryption-requirements`.
+    Your system might not support all the required security features. In that case, the installer doesn't allow you to proceed with TPM/FDE, or it requires that you set a PIN or a passphrase. For more information, refer to {ref}`hardware-backed-disk-encryption-requirements`.
 
     In some cases, your system isn't configured for TPM/FDE but it's possible to reconfigure it. The Ubuntu installer suggests automated or manual actions to resolve this. Some actions might require you to reboot the system to apply the modifications in the firmware.
 
@@ -44,7 +44,7 @@ To install Ubuntu with hardware-backed encryption:
     If you lose your recovery key, you might lose access to your data in certain scenarios. While you're logged in, replace the existing recovery key as soon as possible. See {ref}`tpm-fde-get-a-new-recovery-key`.
     :::
 
-1. After starting your new Ubuntu Desktop system, you can optionally {ref}`tpm-fde-set-passphrase`.
+1. After starting your new Ubuntu Desktop system, you can {ref}`configure a disk encryption PIN or passphrase <tpm-fde-set-passphrase>`.
 
 ## Configure the encryption after installation
 
