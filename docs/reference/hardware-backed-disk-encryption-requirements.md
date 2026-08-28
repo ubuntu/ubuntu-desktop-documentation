@@ -4,7 +4,7 @@
 (hardware-backed-disk-encryption-requirements)=
 # Hardware-backed disk encryption requirements
 
-Ubuntu checks certain system requirements before it allows you to enable {ref}`hardware-backed disk encryption <hardware-backed-disk-encryption>` (TPM/FDE) on your system. Generally, **most systems based on Intel and AMD processors made since 2021** are compatible with TPM/FDE. However, the requirements are stricter than with other disk encryption solutions, such as BitLocker on Windows.
+Ubuntu checks certain system requirements before it allows you to enable {ref}`hardware-backed disk encryption <hardware-backed-disk-encryption>` (TPM/FDE) on your system. Generally, **most systems based on Intel and AMD processors made since 2018** are compatible with TPM/FDE. On most systems made since 2021, the disk can unlock automatically by default.
 
 ```{include} /reuse/tpm-fde-disclaimer.txt
 ```
@@ -20,28 +20,25 @@ Your hardware must meet the following requirements to support TPM/FDE:
 
 - Secure Boot is enabled and in Deployed Mode.
 
-- The UEFI firmware is verified or at least measured by a hardware root of trust.
+## Automatic unlocking
 
-    To verify or measure the firmware, your device must feature a dedicated security chip:
+Your disk can unlock automatically without a PIN or passphrase if the UEFI firmware is verified or measured by a **hardware root of trust**. This is generally the case for PCs made since 2021. Automatic unlocking is also known as *TPM-only unlock*.
 
-    - The Boot Guard Authenticated Code Module (ACM) on Intel systems. Forced verification is required for now.
-    - Platform Secure Boot (PSB) enabled on AMD systems.
+To verify or measure the firmware, your device must feature a dedicated security chip:
 
-    :::{note}
-    Certain hardware vendors might enable firmware options that alter your system's chain of trust, such as the [Absolute Persistence](https://www.absolute.com/platform/persistence) technology.
+- The Boot Guard Authenticated Code Module (ACM) on Intel systems.
+- Platform Secure Boot (PSB) enabled on AMD systems.
 
-    The Ubuntu installer alerts you to this. You can choose to disable the feature if you have the permissions or you can ignore the notice to keep the feature enabled.
-    :::
+:::{note}
+Certain hardware vendors might enable firmware options that alter your system's chain of trust, such as the [Absolute Persistence](https://www.absolute.com/platform/persistence) technology.
 
-## Strict security requirements
-
-Most of the listed TPM/FDE requirements are widely supported by the majority of PCs made since 2018. Other hardware-backed disk encryption solutions, such as BitLocker on Microsoft Windows, require a similar set of hardware features.
-
-However, TPM/FDE on Ubuntu also checks for a **hardware root of trust**. This final requirement is much stricter than with the other solutions. It raises the requirements to PCs made since 2021, in general.
+The Ubuntu installer alerts you to this. You can choose to disable the feature if you have the permissions or you can ignore the notice to keep the feature enabled.
+:::
 
 With a hardware root of trust, your hardware verifies the UEFI firmware before the firmware runs, based on a read-only piece of code in your CPU. This protects your disk encryption against threats such as malware that targets your firmware, or supply-chain attacks while your hardware is handled after manufacture.
 
-As a consequence of this security requirement, Ubuntu with TPM/FDE can't be installed on certain systems that support BitLocker on Microsoft Windows.
+If your system does not have a hardware root of trust, the Ubuntu installer makes it mandatory to add a PIN or passphrase. After installation, you can disable the PIN or passphrase. However, your system won't be protected against the described hardware and firmware threats.
+
 
 ## Report bugs
 
