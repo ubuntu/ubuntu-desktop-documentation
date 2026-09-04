@@ -429,7 +429,7 @@ This is the default configuration, but we document it for completeness:
 :user:
 :host:
 :dir:
-gdm-config smartcard --required
+sudo gdm-config smartcard --required
 ```
 
 ### Enable smart card access with password fallback
@@ -441,14 +441,14 @@ Using this PAM configuration smart card access will tried first, if no smart car
 :user:
 :host:
 :dir:
-gdm-config smartcard --enable
+sudo gdm-config smartcard --enable
 ```
 ```{terminal}
 :copy:
 :user:
 :host:
 :dir:
-gdm-config password --enable
+sudo gdm-config password --enable
 ```
 
 ### Disable password access in GDM settings
@@ -460,7 +460,7 @@ This can be done to prevent the `gdm-password` PAM configuration to be loaded. I
 :user:
 :host:
 :dir:
-gdm-config password --disable
+sudo gdm-config password --disable
 ```
 
 ### Disable smart card access in GDM settings
@@ -472,7 +472,7 @@ Smart card authentication is always used when a token is inserted in the reader.
 :user:
 :host:
 :dir:
-gdm-config smartcard --disable
+sudo gdm-config smartcard --disable
 ```
 
 ### Lock GDM settings for users
