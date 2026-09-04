@@ -419,19 +419,13 @@ Every time the configuration is changed SSSD should be restarted (`systemctl res
 
 ## Configure GDM
 
-GDM is the default desktop manager in GNOME and Ubuntu, it does not require any particular configuration to work with smart cards authentication, but system administrators may still want to customize it.
+GDM is the default desktop manager in GNOME and Ubuntu. You can configure whether GDM requires password authentication or smart card authentication, or if it lets you choose the authentication method at login.
 
-When a supported smart-card is inserted in GDM or in GNOME Shell lock screen, the `/etc/pam.d/gdm-smartcard` PAM configuration will be loaded and that controls how authentication must be done.
+The configuration is saved in the `/etc/pam.d/gdm-smartcard` PAM file.
 
-:::{note}
-Use `update-alternatives` to control the default mode interactively.
+### Require smart card authentication
 
-The `gdm-smartcard` PAM configuration implementation can be selected just running `sudo update-alternatives --config gdm-smartcard`.
-:::
-
-### Enable smart card only access
-
-Using this PAM configuration smart card access will be the sole method to login.
+With this PAM configuration, users need a smart card to log in.
 
 This is the default configuration, but we document it for completeness:
 
@@ -440,66 +434,67 @@ This is the default configuration, but we document it for completeness:
 :user:
 :host:
 :dir:
-update-alternatives --set gdm-smartcard /etc/pam.d/gdm-smartcard-sssd-exclusive
+sudo gdm-config smartcard --required
 ```
 
 ### Enable smart card access with password fallback
 
-Using this PAM configuration smart card access will tried first, if no smart card is available or the smart card verification fails, the password authentication will be used instead
+Using this PAM configuration smart card access will tried first, if no smart card is available or the smart card verification fails, the password authentication will be used instead:
 
 ```{terminal}
 :copy:
 :user:
 :host:
 :dir:
-update-alternatives --set gdm-smartcard /etc/pam.d/gdm-smartcard-sssd-or-password
+sudo gdm-config smartcard --enable
+```
+```{terminal}
+:copy:
+:user:
+:host:
+:dir:
+sudo gdm-config password --enable
 ```
 
 ### Disable password access in GDM settings
 
-This can be done to prevent the `gdm-password` PAM configuration to be loaded, it's not normally required as we already have profiles to avoid this, but it could be useful in some scenarios
+This can be done to prevent the `gdm-password` PAM configuration to be loaded. It's not normally required as we already have profiles to avoid this, but it could be useful in some scenarios:
 
 ```{terminal}
 :copy:
 :user:
 :host:
 :dir:
-sudo -u gdm env DCONF_PROFILE=gdm gsettings set org.gnome.login-screen enable-password-authentication false
+sudo gdm-config password --disable
 ```
 
 ### Disable smart card access in GDM settings
 
-Smart card authentication is always used when a token is inserted in the reader. There are cases in which this is not the wanted behavior, so it can be disabled at all.
+Smart card authentication is always used when a token is inserted in the reader. There are cases where this is not the wanted behavior, so it can be disabled:
 
 ```{terminal}
 :copy:
 :user:
 :host:
 :dir:
-sudo -u gdm env DCONF_PROFILE=gdm gsettings set org.gnome.login-screen enable-smartcard-authentication false
+sudo gdm-config smartcard --disable
 ```
 
 ### Lock GDM settings for users
 
-These GSettings can be locked for users so that for example it's possible to use smart cards only to login but they are disabled for unlock, or to ensure that user can't disable smart card authentication for unlocking.
+You can prevent users from changing the authentication settings. This is done by locking certain GSettings values.
 
-:::{note}
-This is done through the GNOME `dconf` locking system. You can read more about this at {manpage}`dconf(7)` or in the [GNOME documentation](https://help.gnome.org/admin/system-admin-guide/stable/dconf-lockdown.html.en).
-:::
+For example, you can configure that smart cards are required for login but they're disabled for unlock. Or, you can prevent users from disabling smart card authentication for unlocking.
 
-An example to configure it could be:
+In the following example, smart card login is enabled, password login is disabled, and these settings are locked:
 
-1. Create the `dconf` profile. This may not be required if a such file is already present:
+1. If the `/etc/dconf/profile/user` file doesn't exist yet, create it with the following content:
 
-    ```{terminal}
-    :copy:
-    :user:
-    :host:
-    :dir:
-    cat << EOF | sudo tee -a /etc/dconf/profile/user
+    ```{code-block} ini
+    :caption: `/etc/dconf/profile/user`
+
     user-db:user
     system-db:local
-    EOF
     ```
 
 2. Create the `locks` directory:
@@ -512,46 +507,34 @@ An example to configure it could be:
     sudo mkdir -p /etc/dconf/db/local.d/locks
     ```
 
-3. Disable password authentication:
+3. To disable password authentication, create the `/etc/dconf/db/local.d/00_gdm-password-disable` file with the following content:
 
-    ```{terminal}
-    :copy:
-    :user:
-    :host:
-    :dir:
-    cat << EOF | sudo tee -a /etc/dconf/db/local.d/00_gdm-password-disable
+    ```{code-block} ini
+    :caption: `/etc/dconf/db/local.d/00_gdm-password-disable`
+
     [org/gnome/login-screen]
     enable-password-authentication=false
-    EOF
     ```
 
-4. Enable smart card authentication:
+4. To enable smart card authentication, create the `/etc/dconf/db/local.d/00_gdm-smartcard-enable` file with the following content:
 
-    ```{terminal}
-    :copy:
-    :user:
-    :host:
-    :dir:
-    cat << EOF | sudo tee -a /etc/dconf/db/local.d/00_gdm-smartcard-enable
+    ```{code-block} ini
+    :caption:  `/etc/dconf/db/local.d/00_gdm-smartcard-enable`
+
     [org/gnome/login-screen]
     enable-smartcard-authentication=true
-    EOF
     ```
 
-5. Make these options non-user configurable:
+5. To lock the settings for users, create the `/etc/dconf/db/local.d/locks/00_gdm-smartcard-locks` file with the following content:
 
-    ```{terminal}
-    :copy:
-    :user:
-    :host:
-    :dir:
-    cat << EOF | sudo tee -a /etc/dconf/db/local.d/locks/00_gdm-smartcard-locks
+    ```{code-block} ini
+    :caption: `/etc/dconf/db/local.d/locks/00_gdm-smartcard-locks`
+
     /org/gnome/login-screen/enable-password-authentication
     /org/gnome/login-screen/enable-smartcard-authentication
-    EOF
     ```
 
-6. Update system database:
+6. Update the system database:
 
     ```{terminal}
     :copy:
@@ -560,6 +543,8 @@ An example to configure it could be:
     :dir:
     sudo dconf update
     ```
+
+For more information on the GNOME `dconf` locking system, refer to {manpage}`dconf(7)` or the [GNOME documentation](https://help.gnome.org/admin/system-admin-guide/stable/dconf-lockdown.html.en).
 
 ### Troubleshooting
 
