@@ -312,7 +312,7 @@ This is just **an example**.
 Configuration shown here must be adapted to match specific cases.
 :::
 
-When using only local users, SSSD can be configured to define an `implicit_domain` that maps all the local users.
+When using only local users, SSSD can be configured to define a `local` domain that maps all the local users.
 
 Certificates can be associated to users using the card certificate subject, so in our example:
 
@@ -330,11 +330,16 @@ The `sssd.conf` configuration for the user `foo` would be:
 
 ```ini
 [sssd]
-enable_files_domain = True
 services = pam
+domains = local
 
-[certmap/implicit_files/foo]
+[certmap/local/foo]
 matchrule = <SUBJECT>.*CN=TRVMRC[A-Z0-9]+/6090033068507002\.UyMnHxfF3gkAeBYHhxa6V1Edazs=.*
+
+[domain/local]
+id_provider = proxy
+proxy_lib_name = files
+local_auth_policy = only
 
 [pam]
 pam_cert_auth = True
