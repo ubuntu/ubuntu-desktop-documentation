@@ -418,10 +418,6 @@ GDM is the default desktop manager in GNOME and Ubuntu. You can configure whethe
 
 The configuration is saved in the `/etc/pam.d/gdm-smartcard` PAM file.
 
-:::{note}
-Starting with Ubuntu 26.10, the login screen features a menu button where you can select between all the enabled authentication methods.
-:::
-
 ### Require smart card authentication
 
 With this PAM configuration, users need a smart card to log in.
@@ -470,10 +466,6 @@ sudo gdm-config password --disable
 ### Disable smart card access in GDM settings
 
 Smart card authentication is always used when a token is inserted in the reader. There are cases where this is not the wanted behavior, so it can be disabled.
-
-:::{note}
-Starting with Ubuntu 26.10, you can select a different authentication method using a menu on the login screen even when a smart cards is inserted.
-:::
 
 ```{terminal}
 :copy:
