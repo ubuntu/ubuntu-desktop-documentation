@@ -489,6 +489,8 @@ You can prevent users from changing the authentication settings. This is done by
 
 For example, you can configure that smart cards are required for login but they're disabled for unlock. Or, you can prevent users from disabling smart card authentication for unlocking.
 
+Without applying this lock, users could set up their own configuration that overrides the system-wide authentication settings.
+
 In the following example, smart card login is enabled, password login is disabled, and these settings are locked:
 
 1. If the `/etc/dconf/profile/user` file doesn't exist yet, create it with the following content:
