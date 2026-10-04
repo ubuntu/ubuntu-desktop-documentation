@@ -5,7 +5,7 @@ Ubuntu Desktop is the most popular open-source operating system powering million
 
 ## What can it do?
 
-Ubuntu Desktop supports all your daily computing needs. It offers applications for web browsing, messaging, gaming and content creation, including Firefox, Chrome, Discord, Steam and OBS Studio. It's a primary platform for all major IDEs, game development tools and AI/ML software.
+Ubuntu Desktop supports many common daily computing needs. It offers applications for web browsing, messaging, gaming and content creation, including Firefox, Chrome, Discord, Steam and OBS Studio. It's a primary platform for all major IDEs, game development tools and AI/ML software.
 
 ## How is it different?
 
