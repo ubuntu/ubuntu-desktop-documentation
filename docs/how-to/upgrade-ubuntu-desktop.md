@@ -34,11 +34,11 @@ Ubuntu only supports sequential upgrades: from one Long Term Support (LTS) relea
 
 Your Ubuntu installation follows one of these upgrade paths:
 
-* If you're using a **Long Term Support (LTS) release** like most of Ubuntu users, the latest version that you can upgrade to is [Ubuntu 24.04 LTS](https://documentation.ubuntu.com/release-notes/24.04/).
+* If you're using a **Long Term Support (LTS) release** like most of Ubuntu users, the latest version that you can upgrade to is [Ubuntu 26.04 LTS](https://documentation.ubuntu.com/release-notes/26.04/).
 
     Upgrades to the latest LTS release become available after the first point release, such as with Ubuntu 26.04.01. This usually happens several months after the initial release.
 
-* If you're using **interim releases**, you can already upgrade to [Ubuntu 26.04](https://documentation.ubuntu.com/release-notes/26.04/).
+* If you're using **interim releases**, you can also upgrade to [Ubuntu 26.04](https://documentation.ubuntu.com/release-notes/26.04/).
 
     Upgrades to the latest interim release become available a few days after the official release date.
 
