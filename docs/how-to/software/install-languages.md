@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Add further languages to Ubuntu Desktop, including translations, dictionaries and other language support components.
+---
+
 ```{tags} Software, Customization
 ```
 

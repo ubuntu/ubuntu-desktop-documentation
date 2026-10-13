@@ -1,3 +1,8 @@
+---
+myst:
+  html_meta:
+    description: Manage multiple Orca configurations with profiles, and choose how progress bar updates are spoken, shown in Braille or beeped.
+---
 
 # Profiles 
 

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Use Orca commands to browse web pages, read in caret mode, check formatting, fill forms, read tables and follow live regions.
+---
+
 ```{tags} Accessibility
 ```
 

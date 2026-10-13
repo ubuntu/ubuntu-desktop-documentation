@@ -1,3 +1,8 @@
+---
+myst:
+  html_meta:
+    description: Configure Orca Braille preferences, including BRLTTY support, word wrap, contracted Braille with liblouis and abbreviated role names.
+---
 
 # Braille preferences
 

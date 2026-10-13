@@ -1,3 +1,8 @@
+---
+myst:
+  html_meta:
+    description: Configure Orca key bindings, including the Orca Modifier keys, the key bindings table and unbound commands.
+---
 
 # Key bindings preferences
 

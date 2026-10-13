@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Install a graphical application on Ubuntu Desktop using App Center, as a snap or deb package.
+---
+
 ```{tags} Software
 ```
 

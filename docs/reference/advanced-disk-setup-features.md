@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Reference for advanced disk setup options in the Ubuntu Desktop installer, including LVM, ZFS and passphrase encryption with ZFS.
+---
+
 ```{tags} Installation
 ```
 

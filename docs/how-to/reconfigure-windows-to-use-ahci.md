@@ -1,4 +1,7 @@
 ---
+myst:
+  html_meta:
+    description: Switch Windows from Intel RST to AHCI so Ubuntu can install alongside it, and repair Windows boot problems afterward.
 relatedlinks: "[BCDBoot &#32 Command-Line &#32 Options](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/bcdboot-command-line-options-techref-di)"
 ---
 

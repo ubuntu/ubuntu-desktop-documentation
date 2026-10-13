@@ -1,4 +1,8 @@
-
+---
+myst:
+  html_meta:
+    description: Configure which text attributes Orca speaks or shows in Braille, such as font, style and alignment, and reorder or reset them.
+---
 
 # Text attributes preferences
 

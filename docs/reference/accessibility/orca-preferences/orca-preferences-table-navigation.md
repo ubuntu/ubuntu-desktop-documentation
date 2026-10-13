@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Configure how Orca announces cell coordinates, spans and headers and skips blank cells when you navigate tables.
+---
+
 # Table navigation preferences
 
 The following options allow you to customize how Orca behaves when navigating within a table in applications that support Structural Navigation, see {ref}`orca-navigate-the-document-structure`.

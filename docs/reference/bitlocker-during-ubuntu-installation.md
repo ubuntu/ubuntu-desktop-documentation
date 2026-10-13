@@ -1,4 +1,7 @@
 ---
+myst:
+  html_meta:
+    description: Understand why the Ubuntu installer asks you to deactivate BitLocker, and what you can do before installing Ubuntu alongside Windows.
 relatedlinks: "[BitLocker &#32; overview &#32; by &#32; Microsoft](https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/)"
 ---
 

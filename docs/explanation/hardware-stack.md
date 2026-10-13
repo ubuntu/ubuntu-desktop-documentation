@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Learn how the Ubuntu Desktop Bluetooth stack works, including kernel modules, firmware, HCI and Bluetooth profiles, and how they fit together.
+---
+
 (hardware-stack)=
 # Hardware stack
 

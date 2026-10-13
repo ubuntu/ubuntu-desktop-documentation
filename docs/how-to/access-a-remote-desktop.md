@@ -1,4 +1,7 @@
 ---
+myst:
+  html_meta:
+    description: View or control another computer's desktop from Ubuntu Desktop using the Remmina app over the RDP or VNC protocol.
 relatedlinks: "[Console-based screen sharing](https://documentation.ubuntu.com/server/reference/other-tools/terminal-multiplexers/#console-based-screen-sharing)"
 ---
 

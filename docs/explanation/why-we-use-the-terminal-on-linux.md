@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Learn why the terminal is still central to Linux, from its Unix origins and low resource use to shell scripting and remote administration.
+---
+
 (why-we-use-the-terminal-on-linux)=
 # Why we use the terminal on Linux
 

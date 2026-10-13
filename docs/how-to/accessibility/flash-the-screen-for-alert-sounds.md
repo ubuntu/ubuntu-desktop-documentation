@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Turn on visual alerts so the screen or window flashes instead of playing an alert sound if you can't hear it or need silence.
+---
+
 ```{tags} Accessibility
 ```
 

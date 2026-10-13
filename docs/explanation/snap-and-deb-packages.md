@@ -1,4 +1,7 @@
 ---
+myst:
+  html_meta:
+    description: Compare snap and deb packages on Ubuntu Desktop, how each is built, installed and updated, and when you might prefer one over the other.
 relatedlinks: "[Get &#32; started &#32; with &#32; snaps](https://snapcraft.io/docs/tutorials/get-started/), [Install &#32; and &#32; manage &#32; deb &#32; packages](https://ubuntu.com/server/docs/how-to/software/package-management/)"
 ---
 

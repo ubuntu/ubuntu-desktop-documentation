@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Unlock and access the data on a disk protected by hardware-backed encryption using your recovery key.
+---
+
 ```{tags} Security
 ```
 

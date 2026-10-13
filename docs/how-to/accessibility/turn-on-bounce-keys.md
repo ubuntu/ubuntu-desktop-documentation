@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Turn on bounce keys to ignore rapidly repeated key presses, for example if hand tremors cause you to press a key twice.
+---
+
 ```{tags} Accessibility
 ```
 

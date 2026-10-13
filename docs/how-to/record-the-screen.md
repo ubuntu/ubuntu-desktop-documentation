@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Record a video of your whole screen or a selected region on Ubuntu Desktop, and enable hardware acceleration for better performance.
+---
+
 (record-the-screen)=
 # Record the screen
 

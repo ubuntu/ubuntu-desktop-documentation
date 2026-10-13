@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Set up Ubuntu Desktop accessibility features for visual, hearing and mobility impairments, including the Orca screen reader and keyboard options.
+---
+
 ```{tags} Accessibility
 ```
 

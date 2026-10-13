@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Set or change a disk encryption PIN or passphrase, replace the recovery key and manage recovery keys with snap-tpmctl on TPM/FDE systems.
+---
+
 ```{tags} Installation, Security
 ```
 

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Enable TPM-backed full disk encryption when you install Ubuntu Desktop to protect your data with your computer's security chip.
+---
+
 ```{tags} Installation, Security
 ```
 
