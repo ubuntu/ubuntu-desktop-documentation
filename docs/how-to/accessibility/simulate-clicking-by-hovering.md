@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Turn on Hover Click to click or drag by holding the pointer over a control, and adjust the delay and motion threshold.
+---
+
 ```{tags} Accessibility
 ```
 

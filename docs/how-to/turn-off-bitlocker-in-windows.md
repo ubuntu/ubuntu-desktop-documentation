@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Turn off Windows BitLocker disk encryption so that Ubuntu can access your data and be installed alongside Windows.
+---
+
 ```{tags} Installation, Security, Windows
 ```
 

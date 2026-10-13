@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Turn on high contrast in Ubuntu Desktop to make windows and buttons easier to see without changing the screen brightness.
+---
+
 ```{tags} Accessibility
 ```
 

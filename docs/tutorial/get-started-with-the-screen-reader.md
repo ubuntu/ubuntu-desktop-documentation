@@ -1,4 +1,7 @@
 ---
+myst:
+  html_meta:
+    description: Learn to start the Orca screen reader, set its keyboard layout and modifier, and read web pages in Firefox with keyboard commands.
 sequential_nav: both
 ---
 

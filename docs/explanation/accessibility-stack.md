@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Understand the software and hardware layers behind Ubuntu Desktop accessibility, including AT-SPI, GTK, Orca, BRLTTY, USB and Bluetooth.
+---
+
 ```{tags} Accessibility
 ```
 

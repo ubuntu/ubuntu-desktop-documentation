@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Turn on the Orca screen reader in Ubuntu Desktop so it speaks the user interface, and find out how to install and control it.
+---
+
 ```{tags} Accessibility
 ```
 

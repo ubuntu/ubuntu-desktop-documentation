@@ -1,3 +1,8 @@
+---
+myst:
+  html_meta:
+    description: Configure Orca speech preferences, including enabling speech, verbosity, punctuation level and spoken context.
+---
 
 (orca-speech-preferences)=
 # Speech preferences

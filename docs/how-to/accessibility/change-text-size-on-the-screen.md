@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Make text larger in Ubuntu Desktop using Large Text, Tweaks or application shortcuts if you have difficulty reading the screen.
+---
+
 ```{tags} Accessibility
 ```
 

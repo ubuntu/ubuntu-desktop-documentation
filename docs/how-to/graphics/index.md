@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Install NVIDIA GPU drivers, use DKMS packages when standard drivers are unavailable, and monitor and troubleshoot your GPU.
+---
+
 (graphics)=
 # Graphics
 

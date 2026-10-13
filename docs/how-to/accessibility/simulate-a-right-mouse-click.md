@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Turn on simulated secondary click to right-click by holding down the left mouse button, and set how long you must hold it.
+---
+
 ```{tags} Accessibility
 ```
 

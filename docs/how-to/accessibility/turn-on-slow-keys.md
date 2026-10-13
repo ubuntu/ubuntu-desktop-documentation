@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Turn on slow keys to add a delay between pressing a key and the letter appearing, and set the acceptance delay and sounds.
+---
+
 ```{tags} Accessibility
 ```
 

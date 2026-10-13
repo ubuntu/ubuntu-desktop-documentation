@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Use only the keyboard to launch and switch applications, navigate menus and move around the Ubuntu Desktop interface without a mouse.
+---
+
 ```{tags} Accessibility, Keyboard
 ```
 

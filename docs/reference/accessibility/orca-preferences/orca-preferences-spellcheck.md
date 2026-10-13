@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Configure how Orca presents spell checker information, such as spelling misspelled words and suggestions and speaking error context.
+---
+
 # Spellcheck preferences
 
 Orca tries to provide a consistent user experience when interacting with application spell checkers. For applications where this enhanced support has been provided, you will find several options which you can adjust to get the verbosity level that works best for you.

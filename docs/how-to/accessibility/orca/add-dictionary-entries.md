@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Add, edit or remove entries in the Orca pronunciation dictionary to fix words that your speech synthesizer mispronounces.
+---
+
 ```{tags} Accessibility
 ```
 

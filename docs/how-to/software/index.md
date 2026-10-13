@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Install, remove and add software on Ubuntu Desktop, including applications, language support and third-party repositories.
+---
+
 (install-or-remove-software)=
 # Install or remove software
 

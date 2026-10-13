@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Reference of keyboard shortcuts for navigating user interfaces, the desktop and windows in Ubuntu Desktop without a mouse.
+---
+
 ```{tags} Keyboard
 ```
 

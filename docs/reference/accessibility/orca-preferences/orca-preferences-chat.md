@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Configure how Orca behaves in instant messaging and IRC chat clients, such as announcing chatroom names and typing status.
+---
+
 # Chat preferences
 
 The following options allow you to customize how Orca behaves when providing access to instant messaging and internet relay chat clients.

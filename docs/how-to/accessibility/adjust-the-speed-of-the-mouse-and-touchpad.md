@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Change the pointer speed of your mouse or touchpad in Ubuntu Desktop if the pointer moves too fast or too slowly.
+---
+
 ```{tags} Accessibility, Customization
 ```
 

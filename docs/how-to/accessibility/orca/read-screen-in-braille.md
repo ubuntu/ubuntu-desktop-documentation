@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Set up Orca with a Braille display through BRLTTY, use display commands, change the language table and fix detection problems.
+---
+
 ```{tags} Accessibility
 ```
 

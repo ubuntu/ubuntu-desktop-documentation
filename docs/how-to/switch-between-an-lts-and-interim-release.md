@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Reconfigure Ubuntu Desktop to follow the LTS or interim release upgrade path, and learn how the two release types differ.
+---
+
 ```{tags} Updates, Support
 ```
 

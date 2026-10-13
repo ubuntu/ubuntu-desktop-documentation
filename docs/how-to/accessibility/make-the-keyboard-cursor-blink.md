@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Make the keyboard cursor blink in text fields on Ubuntu Desktop so that it's easier to locate.
+---
+
 ```{tags} Accessibility
 ```
 

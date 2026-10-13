@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Check the system requirements for hardware-backed disk encryption on Ubuntu Desktop, including the TPM, UEFI firmware and automatic unlocking.
+---
+
 ```{tags} Installation, Security
 ```
 

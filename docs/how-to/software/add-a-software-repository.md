@@ -1,4 +1,7 @@
 ---
+myst:
+  html_meta:
+    description: Add a PPA or other third-party software repository to Ubuntu Desktop, and understand the security risks of untrusted sources.
 relatedlinks: "[Extra &#32 software &#32 - &#32 Ubuntu &#32 Server &#32 documentation](https://ubuntu.com/server/docs/how-to/software/package-management/#extra-repositories), https://ubuntu.com/server/docs/explanation/software/third-party-repository-usage/"
 ---
 

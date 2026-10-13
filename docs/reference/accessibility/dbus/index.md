@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Reference for the AT-SPI D-Bus XML interfaces that assistive technologies use to inspect and control UI elements on Ubuntu Desktop.
+---
+
 ```{tags} Accessibility
 ```
 

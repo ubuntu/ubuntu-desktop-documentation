@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Turn on Mouse Keys to move the pointer and click using the numeric keypad if you can't use a mouse or other pointing device.
+---
+
 ```{tags} Accessibility
 ```
 

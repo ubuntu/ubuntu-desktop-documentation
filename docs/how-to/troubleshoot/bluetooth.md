@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Troubleshoot Bluetooth problems on Ubuntu Desktop, such as missing proprietary firmware for your Bluetooth adapter.
+---
+
 (troubleshoot-bluetooth)=
 # Bluetooth 
 
