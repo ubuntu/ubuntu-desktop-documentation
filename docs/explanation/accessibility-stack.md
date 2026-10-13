@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Understand the software layers that make Ubuntu Desktop accessible, from AT-SPI and the Orca screen reader to toolkit and desktop interfaces.
+---
+
 ```{tags} Accessibility
 ```
 

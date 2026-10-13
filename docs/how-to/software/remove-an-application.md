@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Remove applications you no longer use from Ubuntu Desktop with App Center, and learn what happens to dependent applications.
+---
+
 ```{tags} Software
 ```
 

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Reference for Orca preferences that customize screen reader behavior in all applications, such as key echo, speech, Braille and voices.
+---
+
 ```{tags} Accessibility
 ```
 

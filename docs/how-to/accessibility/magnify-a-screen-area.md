@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Turn on the zoom feature to magnify part of the screen in Ubuntu Desktop, and adjust magnification, mouse tracking, crosshairs and colors.
+---
+
 ```{tags} Accessibility
 ```
 

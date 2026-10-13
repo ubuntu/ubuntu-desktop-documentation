@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Change the default terminal emulator that opens when you press Ctrl+Alt+T on Ubuntu Desktop 25.04 and later.
+---
+
 ```{tags} Customization
 ```
 

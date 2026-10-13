@@ -1,4 +1,7 @@
 ---
+myst:
+  html_meta:
+    description: Learn to start the Orca screen reader on Ubuntu Desktop and use the interface without relying on vision.
 sequential_nav: both
 ---
 

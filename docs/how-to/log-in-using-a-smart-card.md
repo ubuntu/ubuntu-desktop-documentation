@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Configure smart card login on Ubuntu Desktop using SSSD, GDM and the GNOME Settings Daemon instead of a password.
+---
+
 ```{tags} Security
 ```
 

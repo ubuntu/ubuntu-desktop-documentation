@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Use Orca screen reader commands to identify windows, interact with interface elements and read text on the Ubuntu Desktop screen.
+---
+
 ```{tags} Accessibility
 ```
 

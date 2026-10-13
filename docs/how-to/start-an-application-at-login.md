@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Set an application to start automatically when you log in to Ubuntu Desktop.
+---
+
 ```{tags} Customization
 ```
 

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Find the accessibility menu on the top bar of Ubuntu Desktop, enable it in Settings, and reach it using the keyboard.
+---
+
 ```{tags} Accessibility
 ```
 

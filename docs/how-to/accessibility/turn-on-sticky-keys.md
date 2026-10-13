@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Turn on sticky keys to enter keyboard shortcuts one key at a time instead of holding several keys at once.
+---
+
 ```{tags} Accessibility
 ```
 

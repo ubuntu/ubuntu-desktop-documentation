@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Fix common Orca screen reader issues on Ubuntu Desktop, such as keyboard layout mismatches and applications that start before Orca.
+---
+
 ```{tags} Accessibility
 ```
 

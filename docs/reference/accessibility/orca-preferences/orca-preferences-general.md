@@ -1,3 +1,8 @@
+---
+myst:
+  html_meta:
+    description: Configure Orca general preferences, including the keyboard layout that sets the Orca Modifier and how tooltips are presented.
+---
 
 # General preferences
 

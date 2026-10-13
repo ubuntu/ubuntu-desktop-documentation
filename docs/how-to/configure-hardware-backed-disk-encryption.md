@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Set, change or remove a disk encryption PIN or passphrase and generate a new recovery key on a TPM-encrypted Ubuntu Desktop installation.
+---
+
 ```{tags} Installation, Security
 ```
 

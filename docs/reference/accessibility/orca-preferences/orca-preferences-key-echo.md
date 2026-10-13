@@ -1,3 +1,8 @@
+---
+myst:
+  html_meta:
+    description: Configure Orca key echo to choose whether keys, characters, words or sentences are spoken as you type.
+---
 
 # Key echo preferences
 

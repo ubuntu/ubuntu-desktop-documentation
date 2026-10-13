@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Turn on the on-screen keyboard in Ubuntu Desktop to type without a physical keyboard, and enter symbols or change input sources.
+---
+
 ```{tags} Accessibility, Keyboard
 ```
 

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Use Orca screen reader commands to browse web pages, read long documents with caret navigation and move through tables.
+---
+
 ```{tags} Accessibility
 ```
 

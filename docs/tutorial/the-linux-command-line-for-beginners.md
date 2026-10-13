@@ -1,4 +1,7 @@
 ---
+myst:
+  html_meta:
+    description: Learn the basics of the Linux command line, including the shell, terminal, files and directories, through practical exercises.
 sequential_nav: both
 ---
 

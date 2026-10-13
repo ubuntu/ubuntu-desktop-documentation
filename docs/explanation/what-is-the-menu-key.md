@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Learn what the Menu key on your keyboard does in Ubuntu Desktop, how it opens context menus, and what to use if your keyboard lacks one.
+---
+
 ```{tags} Keyboard
 ```
 

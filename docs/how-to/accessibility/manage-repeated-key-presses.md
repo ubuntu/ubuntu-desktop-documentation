@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Control how a key repeats when you hold it down on Ubuntu Desktop by turning repeat keys off or changing the delay and speed.
+---
+
 ```{tags} Accessibility
 ```
 

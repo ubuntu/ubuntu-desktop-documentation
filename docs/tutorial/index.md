@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Tutorials that introduce Ubuntu Desktop to new users, covering how to try it, install it, use the screen reader and the command line.
+---
+
 (tutorials)=
 # Tutorials
 

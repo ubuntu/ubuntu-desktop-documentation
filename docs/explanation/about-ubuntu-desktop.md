@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Learn what Ubuntu Desktop is, what it can do, how it differs from other operating systems and whether it's the right choice for you.
+---
+
 (about-ubuntu-desktop)=
 # About Ubuntu Desktop
 

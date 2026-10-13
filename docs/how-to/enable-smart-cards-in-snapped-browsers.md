@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Configure Firefox or Chromium installed from a snap to use your smart card for authentication and signing content.
+---
+
 ```{tags} Security
 ```
 

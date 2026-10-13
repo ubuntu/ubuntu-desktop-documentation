@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Install NVIDIA drivers, Fabric Manager and monitoring tools, and fix driver issues, in Ubuntu Desktop and Server. Includes DKMS options.
+---
+
 (graphics)=
 # Graphics
 

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    description: Use the Orca screen reader with a refreshable Braille display through BRLTTY, including disabling speech and Braille display commands.
+---
+
 ```{tags} Accessibility
 ```
 

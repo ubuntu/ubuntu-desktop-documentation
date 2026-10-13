@@ -1,4 +1,7 @@
 ---
+myst:
+  html_meta:
+    description: Try Ubuntu Desktop 26.04 LTS from a USB stick on your computer without making any permanent changes.
 sequential_nav: both
 ---
 
