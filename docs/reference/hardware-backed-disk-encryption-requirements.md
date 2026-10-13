@@ -12,9 +12,6 @@ myst:
 
 Ubuntu checks certain system requirements before it allows you to enable {ref}`hardware-backed disk encryption <hardware-backed-disk-encryption>` (TPM/FDE) on your system. Generally, **most systems based on Intel and AMD processors made since 2018** are compatible with TPM/FDE. On most systems made since 2021, the disk can unlock automatically by default.
 
-```{include} /reuse/tpm-fde-disclaimer.txt
-```
-
 Your hardware must meet the following requirements to support TPM/FDE:
 
 - Your device comes with the Unified Extensible Firmware Interface (UEFI) version 2.5 or later with the following features:
