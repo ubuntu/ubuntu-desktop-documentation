@@ -1,7 +1,7 @@
 ---
 myst:
   html_meta:
-    description: Turn a USB stick into Ubuntu installation media from Ubuntu, Windows or macOS so you can try or install Ubuntu Desktop.
+    description: Turn a USB stick into Ubuntu installation media from Ubuntu, Windows or macOS so you can try or install Ubuntu.
 ---
 
 ```{tags} Installation, Windows, macOS
