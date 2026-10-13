@@ -14,8 +14,6 @@ Hardware-backed disk encryption protects the data on your disk using the Trusted
 
 To learn how this encryption works, see {ref}`hardware-backed-disk-encryption`.
 
-```{include} /reuse/tpm-fde-disclaimer.txt
-```
 
 
 ## Enable the encryption during installation
