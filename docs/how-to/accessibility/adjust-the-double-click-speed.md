@@ -1,7 +1,7 @@
 ---
 myst:
   html_meta:
-    description: Change how quickly you must press the mouse button twice for a double-click on Ubuntu Desktop, and fix accidental double-clicks.
+    description: Change how quickly you must press the mouse button twice to double-click on Ubuntu Desktop, and check for a faulty mouse.
 ---
 
 ```{tags} Accessibility, Customization

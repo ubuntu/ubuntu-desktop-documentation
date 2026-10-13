@@ -1,7 +1,7 @@
 ---
 myst:
   html_meta:
-    description: Learn the basics of the Linux command line, including the shell, terminal, files and directories, through practical exercises.
+    description: Learn to navigate and manage files, chain commands with pipes, and use sudo safely in the Linux terminal through hands-on exercises.
 sequential_nav: both
 ---
 

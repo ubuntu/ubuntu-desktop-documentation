@@ -1,7 +1,7 @@
 ---
 myst:
   html_meta:
-    description: Download and install Ubuntu Desktop 26.04 LTS on your laptop or PC, step by step, with the graphical installer.
+    description: Install Ubuntu Desktop 26.04 LTS on your laptop or PC from a USB stick using the graphical installer, including disk setup and encryption.
 sequential_nav: both
 ---
 

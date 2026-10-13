@@ -1,7 +1,7 @@
 ---
 myst:
   html_meta:
-    description: Learn to start the Orca screen reader on Ubuntu Desktop and use the interface without relying on vision.
+    description: Learn to start the Orca screen reader, set its keyboard layout and modifier, and read web pages in Firefox with keyboard commands.
 sequential_nav: both
 ---
 

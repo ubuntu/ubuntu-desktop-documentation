@@ -1,7 +1,7 @@
 ---
 myst:
   html_meta:
-    description: Set, change or remove a disk encryption PIN or passphrase and generate a new recovery key on a TPM-encrypted Ubuntu Desktop installation.
+    description: Set or change a disk encryption PIN or passphrase, replace the recovery key and manage recovery keys with snap-tpmctl on TPM/FDE systems.
 ---
 
 ```{tags} Installation, Security

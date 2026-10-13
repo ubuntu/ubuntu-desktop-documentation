@@ -1,7 +1,7 @@
 ---
 myst:
   html_meta:
-    description: Use Orca screen reader commands to identify windows, interact with interface elements and read text on the Ubuntu Desktop screen.
+    description: Use Orca commands to identify windows, review text with Flat Review, find objects, set bookmarks and read the time or chat messages.
 ---
 
 ```{tags} Accessibility

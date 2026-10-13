@@ -1,7 +1,7 @@
 ---
 myst:
   html_meta:
-    description: Configure Orca voice preferences, including voice types, the speech system and synthesizer, and the person, rate and pitch.
+    description: Configure Orca voice preferences, including voice types, the speech system and synthesizer, plus person, rate, pitch and volume.
 ---
 
 # Voice preferences

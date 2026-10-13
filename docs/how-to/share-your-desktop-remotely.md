@@ -1,7 +1,7 @@
 ---
 myst:
   html_meta:
-    description: Let others view or control your Ubuntu Desktop remotely by enabling Desktop Sharing and Remote Control in Settings.
+    description: Share your desktop over RDP with Desktop Sharing or Remote Login, find the connection details and open the firewall ports.
 relatedlinks: "[Console-based &#32 screen &#32 sharing](https://documentation.ubuntu.com/server/reference/other-tools/terminal-multiplexers/#console-based-screen-sharing)"
 ---
 

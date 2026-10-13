@@ -1,7 +1,7 @@
 ---
 myst:
   html_meta:
-    description: Use the Orca screen reader with a refreshable Braille display through BRLTTY, including disabling speech and Braille display commands.
+    description: Set up Orca with a Braille display through BRLTTY, use display commands, change the language table and fix detection problems.
 ---
 
 ```{tags} Accessibility
