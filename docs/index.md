@@ -66,6 +66,7 @@ As an open source project, Ubuntu Desktop warmly welcomes community projects, co
 
 ### Releases
 
+* {external:ref}`Release notes for Ubuntu 26.10 <ubuntu-26.10-release-notes>`
 * {external:ref}`Release notes for Ubuntu 26.04 LTS <ubuntu-26.04-lts-release-notes>`
 * {external:ref}`Release notes for Ubuntu 24.04 LTS <ubuntu-24.04-lts-release-notes>`
 

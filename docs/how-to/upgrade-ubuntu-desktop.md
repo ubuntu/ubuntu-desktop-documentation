@@ -41,7 +41,7 @@ Your Ubuntu installation follows one of these upgrade paths:
 
     Upgrades to the latest LTS release become available after the first point release, such as with Ubuntu 26.04.01. This usually happens several months after the initial release.
 
-* If you're using **interim releases**, you can also upgrade to [Ubuntu 26.04](https://documentation.ubuntu.com/release-notes/26.04/).
+* If you're using **interim releases**, you can upgrade to [Ubuntu 26.10](https://documentation.ubuntu.com/release-notes/26.10/).
 
     Upgrades to the latest interim release become available a few days after the official release date.
 
