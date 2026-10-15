@@ -335,6 +335,8 @@ If you backed up your data, you can now move them back into Ubuntu. If you backe
 
 Check out our picks for [Top 10 apps for a fresh Linux install in 2021](https://ubuntu.com/blog/top-10-apps-for-a-fresh-linux-install-in-2021).
 
+Keep your system safe. Consider enabling [Ubuntu Pro](https://ubuntu.com/pro) in the Security Center to receive extended security updates. Ubuntu Pro is free for personal use on up to 5 machines.
+
 If you have any issues, please contact us via the [Ubuntu Discourse](https://discourse.ubuntu.com/), or visit [Ask Ubuntu](https://askubuntu.com/).
 
 You can also read the latest news about Ubuntu Desktop on the [Ubuntu Blog](https://ubuntu.com/blog/desktop).

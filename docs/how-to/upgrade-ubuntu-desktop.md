@@ -240,6 +240,12 @@ You can also {ref}`reinstall Ubuntu <install-ubuntu-desktop>` from scratch to ge
 
 You can return to an earlier LTS release by reinstalling Ubuntu. Downgrading the existing system isn't supported. Make sure that the release that you choose still receives security updates.
 
+:::{note}
+To extend the support lifetime of your Ubuntu LTS system, consider enabling [Ubuntu Pro](https://ubuntu.com/pro) in the Security Center. You also receive security updates to community-maintained packages and get access to certain enterprise features.
+
+Ubuntu Pro is free for personal use on up to 5 machines.
+:::
+
 Consider [Ubuntu flavors](https://ubuntu.com/desktop/flavors). These are community projects that provide alternative desktop environments and default applications. They might run better on older hardware while still being based on the latest Ubuntu release. However, flavors aren't supported by Canonical.
 
 ### The system powered off during the upgrade
