@@ -39,7 +39,7 @@ Using deb apps from third party developers is discouraged. For details, refer to
 Updates
 : Security updates for deb packages are installed automatically by default. You can apply other updates with the Software Updater.
 
-  For extended security updates, you can enable [Ubuntu Pro](https://ubuntu.com/pro) in the Security Center. Ubuntu Pro is free for personal use on up to 5 machines.
+  For extended security updates, you can enable [Ubuntu Pro](https://ubuntu.com/pro) in Software & Updates. Ubuntu Pro is free for personal use on up to 5 machines.
 
   For advanced settings, refer to {external:ref}`automatic-updates`.
 
