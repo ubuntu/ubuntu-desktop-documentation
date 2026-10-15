@@ -20,6 +20,13 @@ Interim releases are supported for nine months. They give you a chance to previe
 
 To learn more about the life cycle of Ubuntu releases, see [The Ubuntu lifecycle and release cadence](https://ubuntu.com/about/release-cycle).
 
+:::{note}
+To extend the support lifetime of your Ubuntu LTS system, consider enabling [Ubuntu Pro](https://ubuntu.com/pro) in the Security Center. You also receive security updates to community-maintained packages and get access to certain enterprise features.
+
+Ubuntu Pro is free for personal use on up to 5 machines.
+:::
+
+
 ## Determine your current release
 
 Before you start upgrading, you need to know which version of Ubuntu you're currently using and whether it's an LTS or interim release.
