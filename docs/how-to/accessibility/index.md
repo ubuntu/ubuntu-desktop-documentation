@@ -18,6 +18,7 @@ Ubuntu aims at making the operating system, and its derivatives, usable by as ma
 find-the-accessibility-menu
 :::
 
+(accessibility-visual)=
 ## Visual impairments
 
 ### Blindness
@@ -43,6 +44,7 @@ magnify-a-screen-area
 make-the-keyboard-cursor-blink
 :::
 
+(accessibility-hearing)=
 ## Hearing impairments
 
 :::{toctree}
@@ -52,6 +54,7 @@ flash-the-screen-for-alert-sounds
 :::
 
 
+(accessibility-mobility)=
 ## Mobility impairments
 
 ### Mouse movement
