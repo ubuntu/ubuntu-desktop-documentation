@@ -20,7 +20,7 @@ Related test plan: <https://wiki.ubuntu.com/DesktopTeam/TestPlans/RemoteDesktop>
 
 You can view or control the desktop environment on another computer where desktop sharing is enabled. The desktop sharing works over the Remote Desktop Protocol (RDP) or the Virtual Network Computing (VNC) protocol.
 
-On Ubuntu, we recommend using the Remmina application to access a remote desktop. It supports both RDP and VNC.
+On Ubuntu, we recommend using the Remmina application to access a remote desktop. Remmina supports both the Remote Desktop Protocol (RDP) and Virtual Network Computing (VNC) protocols.
 
 We'll refer to the system that shares its desktop as the *server*. We'll call the system that accesses the shared desktop remotely the *client*.
 
